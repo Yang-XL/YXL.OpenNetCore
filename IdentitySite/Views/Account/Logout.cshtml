@@ -1,0 +1,31 @@
+﻿@using Microsoft.AspNetCore.Mvc.Rendering
+@using ViewModels.IdentitySite.Account
+@model ViewModels.IdentitySite.Account.LogoutViewModel
+    
+    
+
+
+
+<div class="login-content">
+
+    <h1>Logoutd</h1>
+    <p> Would you like to logout of IdentityServer? </p>
+
+    @using (Html.BeginForm("Logout", "Account", FormMethod.Post, new {@class = "login-form"}))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary()
+        <div class="row">
+            <div class="col-xs-8">
+                @Html.TextBoxFor(a => a.LogoutId, new {@class = "form-control", autocomplete = "off"})
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8 text-left">
+                <p>
+                <button class="btn blue" type="submit">注&nbsp;&nbsp;&nbsp;销</button>
+                <p>
+            </div>
+        </div>
+    }
+</div>

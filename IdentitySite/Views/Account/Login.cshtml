@@ -1,0 +1,35 @@
+﻿  @model ViewModels.IdentitySite.Account.LoginInputModel
+<h1>用户登录</h1>
+<p> 旨在打造一个全平台、全应用的用户登录授权方式 </p>
+<form asp-action="Login" class="login-form" method="post">
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(a=>a.ReturnUrl,null)
+    <div class="row">
+        <div class="col-xs-6">
+            <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="用户名" name="LoginName" required/>
+        </div>
+        <div class="col-xs-6">
+            <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="密码" name="LoginPassword" required/>
+        </div>
+    </div>
+    <div class="alert alert-danger display-hide">
+        <button class="close" data-close="alert"></button>
+        <span>请输入您的用户名密码</span>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="rem-password">
+                <p>
+                    记住我
+                    <input type="checkbox" class="rem-checkbox" name="Remember"/>
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-8 text-right">
+            <div class="forgot-password">
+                <a href="javascript:;" id="forget-password" class="forget-password">忘记密码?</a>
+            </div>
+            <button class="btn blue" type="submit">登录</button>
+        </div>
+    </div>
+</form>

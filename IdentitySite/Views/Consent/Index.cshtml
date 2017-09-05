@@ -1,0 +1,76 @@
+﻿@using System.Linq
+@using Microsoft.AspNetCore.Mvc.Rendering
+@using ViewModels.IdentitySite.Consent
+@model ViewModels.IdentitySite.Consent.ConsentViewModel
+
+
+<div class="login-content">
+    <h1>统一授权管理平台登录</h1>
+    <p> 应用程序：@Model.ClientName </p>
+    @if (Model.ClientLogoUrl != null)
+    {
+        <div class="row">
+            <img src="@Model.ClientLogoUrl">
+        </div>
+    }
+    <div class="row">
+        <div class="col-sm-8">
+            @Html.Partial("_ValidationSummary")
+            @using (Html.BeginForm("Index", "Consent", FormMethod.Post, new {@class = "login-form"}))
+            {
+                @Html.HiddenFor(a => a.ReturnUrl)
+                <div>授权第三方获取您的如下信息</div>
+                if (Model.IdentityScopes.Any())
+                {
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="glyphicon glyphicon-user"></span>
+                            个人信息
+                        </div>
+                        <ul class="list-group">
+                            @foreach (var scope in Model.IdentityScopes)
+                            {
+                                @Html.Partial("_ScopeListItem", scope)
+                            }
+                        </ul>
+                    </div>
+                }
+                if (Model.ResourceScopes.Any())
+                {
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="glyphicon glyphicon-tasks"></span>
+                            Application Access
+                        </div>
+                        <ul class="list-group">
+                            @foreach (var scope in Model.ResourceScopes)
+                            {
+                                @Html.Partial("_ScopeListItem", scope)
+                            }
+                        </ul>
+                    </div>
+                }
+                if (Model.AllowRememberConsent)
+                {
+                    <div class="row">
+                        <label>
+                            <input class="consent-scopecheck" asp-for="RememberConsent"/>
+                            <strong>Remember My Decision</strong>
+                        </label>
+                    </div>
+                }
+                <div class="row">
+                    <button name="button" type="submit" value="yes" class="btn btn-primary" autofocus>允许</button>
+                    <button name="button" type="submit" value="no" class="btn">拒绝</button>
+                    @if (Model.ClientUrl != null)
+                    {
+                        <a class="pull-right btn btn-default" target="_blank" href="@Model.ClientUrl">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                            <strong>@Model.ClientName</strong>
+                        </a>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</div>

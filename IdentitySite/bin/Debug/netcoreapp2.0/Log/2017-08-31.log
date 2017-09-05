@@ -1,0 +1,1035 @@
+﻿2017-08-31 09:02:51.932  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 09:02:51.942  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 09:02:51.969  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 09:02:52.455  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 09:02:52.695  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 09:02:53.993  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 09:02:54.004  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 09:02:54.018  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 09:02:54.026  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 09:02:54.038  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 09:02:54.067  IdentitySite.Services.IdentityService.ResourceStore   Debug: FindIdentityResourcesByScopeAsync scopeNames is openid, profile
+2017-08-31 09:02:54.073  IdentitySite.Services.IdentityService.ResourceStore   Debug: FindApiResourcesByScopeAsync scopeNames is openid, profile
+2017-08-31 09:02:54.269  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+WHERE [a].[ApiType] = 1
+2017-08-31 09:02:56.093  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+WHERE [a].[ApiType] = 0
+2017-08-31 09:36:01.268  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 09:36:01.276  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 09:36:01.299  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 09:36:01.846  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 09:36:02.079  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 09:36:04.103  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 09:36:04.764  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 2685.1863ms
+2017-08-31 09:36:04.787  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/bootstrap/dist/css/bootstrap.min.css  
+2017-08-31 09:36:04.789  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-08-31 09:36:04.793  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/jquery/dist/jquery.min.js  
+2017-08-31 09:36:04.816  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: The file /lib/bootstrap/dist/js/bootstrap.min.js was not modified
+2017-08-31 09:36:04.826  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2017-08-31 09:36:04.858  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2980.8727ms 200 text/html; charset=utf-8
+2017-08-31 09:36:04.876  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: The file /lib/jquery/dist/jquery.min.js was not modified
+2017-08-31 09:36:04.903  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 50.1501ms 304 application/javascript
+2017-08-31 09:36:04.917  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 65.2526ms 304 text/css
+2017-08-31 09:36:04.983  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 99.6092ms 304 application/javascript
+2017-08-31 09:36:05.040  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/jquery-validation/dist/additional-methods.min.js  
+2017-08-31 09:36:05.068  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/jquery-validation/dist/jquery.validate.min.js  
+2017-08-31 09:36:05.071  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/pages/js/login-5.min.js  
+2017-08-31 09:36:05.078  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: The file /lib/jquery-validation/dist/additional-methods.min.js was not modified
+2017-08-31 09:36:05.084  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: The file /pages/js/login-5.min.js was not modified
+2017-08-31 09:36:05.111  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: The file /lib/jquery-validation/dist/jquery.validate.min.js was not modified
+2017-08-31 09:36:05.114  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 140.9589ms 304 application/javascript
+2017-08-31 09:36:05.158  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 63.8401ms 304 application/javascript
+2017-08-31 09:36:05.191  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 60.594ms 304 application/javascript
+2017-08-31 09:36:08.549  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 09:36:08.568  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 09:36:08.583  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 09:36:08.589  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 09:36:08.602  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 09:36:08.852  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 09:36:28.762  IdentityServer4.Hosting.IdentityServerMiddleware   Critical: Unhandled exception: AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Api -> ApiResource
+PermissionSystem.Models.Api -> IdentityServer4.Models.ApiResource
+
+Type Map configuration:
+Api -> ApiResource
+PermissionSystem.Models.Api -> IdentityServer4.Models.ApiResource
+
+Property:
+Scopes ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Char -> Scope
+System.Char -> IdentityServer4.Models.Scope
+   at lambda_method(Closure , Char , Scope , ResolutionContext )
+   at AutoMapper.ResolutionContext.Map[TSource,TDestination](TSource source, TDestination destination)
+   at lambda_method(Closure , Api , ApiResource , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Api , ApiResource , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TSource,TDestination](TSource source)
+   at ViewModels.Mapper.EntityMapper.MapTo[TSource,TDestination](TSource source) in D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\Mapper\EntityMapper.cs:line 9
+   at ViewModels.Mapper.MappingExtensions.ToApiResourceModel(Api entity) in D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\Mapper\MappingExtensions.cs:line 49
+   at IdentitySite.Services.IdentityService.ResourceStore.<>c.<GetAllResourcesAsync>b__6_3(Api n) in D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Services\IdentityService\ResourceStore.cs:line 48
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Collections.Generic.HashSet`1.UnionWith(IEnumerable`1 other)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection, IEqualityComparer`1 comparer)
+   at IdentityServer4.Models.Resources..ctor(IEnumerable`1 identityResources, IEnumerable`1 apiResources)
+   at IdentitySite.Services.IdentityService.ResourceStore.<GetAllResourcesAsync>d__6.MoveNext() in D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Services\IdentityService\ResourceStore.cs:line 49
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Stores.IResourceStoreExtensions.<GetAllEnabledResourcesAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.ResponseHandling.DiscoveryResponseGenerator.<CreateDiscoveryDocumentAsync>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Endpoints.DiscoveryEndpoint.<ExecuteDiscoDocAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.<Invoke>d__4.MoveNext()
+2017-08-31 09:36:28.815  Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware   Error: An unhandled exception has occurred while executing the request
+
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Api -> ApiResource
+PermissionSystem.Models.Api -> IdentityServer4.Models.ApiResource
+
+Type Map configuration:
+Api -> ApiResource
+PermissionSystem.Models.Api -> IdentityServer4.Models.ApiResource
+
+Property:
+Scopes ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Char -> Scope
+System.Char -> IdentityServer4.Models.Scope
+   at lambda_method(Closure , Char , Scope , ResolutionContext )
+   at AutoMapper.ResolutionContext.Map[TSource,TDestination](TSource source, TDestination destination)
+   at lambda_method(Closure , Api , ApiResource , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Api , ApiResource , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TSource,TDestination](TSource source)
+   at ViewModels.Mapper.EntityMapper.MapTo[TSource,TDestination](TSource source) in D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\Mapper\EntityMapper.cs:line 9
+   at ViewModels.Mapper.MappingExtensions.ToApiResourceModel(Api entity) in D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\Mapper\MappingExtensions.cs:line 49
+   at IdentitySite.Services.IdentityService.ResourceStore.<>c.<GetAllResourcesAsync>b__6_3(Api n) in D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Services\IdentityService\ResourceStore.cs:line 48
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Collections.Generic.HashSet`1.UnionWith(IEnumerable`1 other)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection, IEqualityComparer`1 comparer)
+   at IdentityServer4.Models.Resources..ctor(IEnumerable`1 identityResources, IEnumerable`1 apiResources)
+   at IdentitySite.Services.IdentityService.ResourceStore.<GetAllResourcesAsync>d__6.MoveNext() in D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Services\IdentityService\ResourceStore.cs:line 49
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Stores.IResourceStoreExtensions.<GetAllEnabledResourcesAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.ResponseHandling.DiscoveryResponseGenerator.<CreateDiscoveryDocumentAsync>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Endpoints.DiscoveryEndpoint.<ExecuteDiscoDocAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at IdentityServer4.Hosting.IdentityServerMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.FederatedSignOutMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.<Invoke>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-08-31 09:36:28.904  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 20355.5303ms 500 text/html; charset=utf-8
+2017-08-31 09:37:22.386  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 09:37:22.396  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 09:37:22.417  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 09:37:22.845  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 09:37:23.072  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 09:37:25.092  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 09:37:25.772  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 2701.4311ms
+2017-08-31 09:37:25.795  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2968.6017ms 200 text/html; charset=utf-8
+2017-08-31 09:37:28.663  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 09:37:28.674  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 09:37:28.681  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 09:37:28.701  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 20.8511ms
+2017-08-31 09:37:28.737  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 46.8358ms 200 text/html; charset=utf-8
+2017-08-31 09:37:31.792  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 09:37:31.803  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 09:37:31.819  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 09:37:31.825  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 09:37:31.838  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 09:37:32.080  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 09:37:38.856  IdentityServer4.Hosting.IdentityServerMiddleware   Critical: Unhandled exception: AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Api -> ApiResource
+PermissionSystem.Models.Api -> IdentityServer4.Models.ApiResource
+
+Type Map configuration:
+Api -> ApiResource
+PermissionSystem.Models.Api -> IdentityServer4.Models.ApiResource
+
+Property:
+Scopes ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+String -> Scope
+System.String -> IdentityServer4.Models.Scope
+   at lambda_method(Closure , String , Scope , ResolutionContext )
+   at AutoMapper.ResolutionContext.Map[TSource,TDestination](TSource source, TDestination destination)
+   at lambda_method(Closure , Api , ApiResource , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Api , ApiResource , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TSource,TDestination](TSource source)
+   at ViewModels.Mapper.EntityMapper.MapTo[TSource,TDestination](TSource source) in D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\Mapper\EntityMapper.cs:line 9
+   at ViewModels.Mapper.MappingExtensions.ToApiResourceModel(Api entity) in D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\Mapper\MappingExtensions.cs:line 49
+   at IdentitySite.Services.IdentityService.ResourceStore.<>c.<GetAllResourcesAsync>b__6_3(Api n) in D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Services\IdentityService\ResourceStore.cs:line 48
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Collections.Generic.HashSet`1.UnionWith(IEnumerable`1 other)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection, IEqualityComparer`1 comparer)
+   at IdentityServer4.Models.Resources..ctor(IEnumerable`1 identityResources, IEnumerable`1 apiResources)
+   at IdentitySite.Services.IdentityService.ResourceStore.<GetAllResourcesAsync>d__6.MoveNext() in D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Services\IdentityService\ResourceStore.cs:line 49
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Stores.IResourceStoreExtensions.<GetAllEnabledResourcesAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.ResponseHandling.DiscoveryResponseGenerator.<CreateDiscoveryDocumentAsync>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Endpoints.DiscoveryEndpoint.<ExecuteDiscoDocAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.<Invoke>d__4.MoveNext()
+2017-08-31 09:37:38.921  Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware   Error: An unhandled exception has occurred while executing the request
+
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Api -> ApiResource
+PermissionSystem.Models.Api -> IdentityServer4.Models.ApiResource
+
+Type Map configuration:
+Api -> ApiResource
+PermissionSystem.Models.Api -> IdentityServer4.Models.ApiResource
+
+Property:
+Scopes ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+String -> Scope
+System.String -> IdentityServer4.Models.Scope
+   at lambda_method(Closure , String , Scope , ResolutionContext )
+   at AutoMapper.ResolutionContext.Map[TSource,TDestination](TSource source, TDestination destination)
+   at lambda_method(Closure , Api , ApiResource , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Api , ApiResource , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TSource,TDestination](TSource source)
+   at ViewModels.Mapper.EntityMapper.MapTo[TSource,TDestination](TSource source) in D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\Mapper\EntityMapper.cs:line 9
+   at ViewModels.Mapper.MappingExtensions.ToApiResourceModel(Api entity) in D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\Mapper\MappingExtensions.cs:line 49
+   at IdentitySite.Services.IdentityService.ResourceStore.<>c.<GetAllResourcesAsync>b__6_3(Api n) in D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Services\IdentityService\ResourceStore.cs:line 48
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Collections.Generic.HashSet`1.UnionWith(IEnumerable`1 other)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection, IEqualityComparer`1 comparer)
+   at IdentityServer4.Models.Resources..ctor(IEnumerable`1 identityResources, IEnumerable`1 apiResources)
+   at IdentitySite.Services.IdentityService.ResourceStore.<GetAllResourcesAsync>d__6.MoveNext() in D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Services\IdentityService\ResourceStore.cs:line 49
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Stores.IResourceStoreExtensions.<GetAllEnabledResourcesAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.ResponseHandling.DiscoveryResponseGenerator.<CreateDiscoveryDocumentAsync>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Endpoints.DiscoveryEndpoint.<ExecuteDiscoDocAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at IdentityServer4.Hosting.IdentityServerMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.FederatedSignOutMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.<Invoke>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-08-31 09:37:39.030  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 7222.2643ms 500 text/html; charset=utf-8
+2017-08-31 09:38:26.872  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 09:38:26.881  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 09:38:26.905  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 09:38:27.420  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 09:38:27.421  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 09:38:27.504  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 09:38:27.534  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 09:38:27.548  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 09:38:27.584  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 09:38:27.757  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 09:38:27.938  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 09:38:30.127  IdentityServer4.Hosting.IdentityServerMiddleware   Critical: Unhandled exception: AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Api -> ApiResource
+PermissionSystem.Models.Api -> IdentityServer4.Models.ApiResource
+
+Type Map configuration:
+Api -> ApiResource
+PermissionSystem.Models.Api -> IdentityServer4.Models.ApiResource
+
+Property:
+Scopes ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Scope -> ICollection`1
+IdentityServer4.Models.Scope -> System.Collections.Generic.ICollection`1[[IdentityServer4.Models.Scope, IdentityServer4, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+   at lambda_method(Closure , Scope , ICollection`1 , ResolutionContext )
+   at AutoMapper.ResolutionContext.Map[TSource,TDestination](TSource source, TDestination destination)
+   at lambda_method(Closure , Api , ApiResource , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Api , ApiResource , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TSource,TDestination](TSource source)
+   at ViewModels.Mapper.EntityMapper.MapTo[TSource,TDestination](TSource source) in D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\Mapper\EntityMapper.cs:line 9
+   at ViewModels.Mapper.MappingExtensions.ToApiResourceModel(Api entity) in D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\Mapper\MappingExtensions.cs:line 49
+   at IdentitySite.Services.IdentityService.ResourceStore.<>c.<GetAllResourcesAsync>b__6_3(Api n) in D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Services\IdentityService\ResourceStore.cs:line 48
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Collections.Generic.HashSet`1.UnionWith(IEnumerable`1 other)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection, IEqualityComparer`1 comparer)
+   at IdentityServer4.Models.Resources..ctor(IEnumerable`1 identityResources, IEnumerable`1 apiResources)
+   at IdentitySite.Services.IdentityService.ResourceStore.<GetAllResourcesAsync>d__6.MoveNext() in D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Services\IdentityService\ResourceStore.cs:line 49
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Stores.IResourceStoreExtensions.<GetAllEnabledResourcesAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.ResponseHandling.DiscoveryResponseGenerator.<CreateDiscoveryDocumentAsync>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Endpoints.DiscoveryEndpoint.<ExecuteDiscoDocAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.<Invoke>d__4.MoveNext()
+2017-08-31 09:38:30.184  Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware   Error: An unhandled exception has occurred while executing the request
+
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Api -> ApiResource
+PermissionSystem.Models.Api -> IdentityServer4.Models.ApiResource
+
+Type Map configuration:
+Api -> ApiResource
+PermissionSystem.Models.Api -> IdentityServer4.Models.ApiResource
+
+Property:
+Scopes ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Scope -> ICollection`1
+IdentityServer4.Models.Scope -> System.Collections.Generic.ICollection`1[[IdentityServer4.Models.Scope, IdentityServer4, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]
+   at lambda_method(Closure , Scope , ICollection`1 , ResolutionContext )
+   at AutoMapper.ResolutionContext.Map[TSource,TDestination](TSource source, TDestination destination)
+   at lambda_method(Closure , Api , ApiResource , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Api , ApiResource , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TSource,TDestination](TSource source)
+   at ViewModels.Mapper.EntityMapper.MapTo[TSource,TDestination](TSource source) in D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\Mapper\EntityMapper.cs:line 9
+   at ViewModels.Mapper.MappingExtensions.ToApiResourceModel(Api entity) in D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\Mapper\MappingExtensions.cs:line 49
+   at IdentitySite.Services.IdentityService.ResourceStore.<>c.<GetAllResourcesAsync>b__6_3(Api n) in D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Services\IdentityService\ResourceStore.cs:line 48
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Collections.Generic.HashSet`1.UnionWith(IEnumerable`1 other)
+   at System.Collections.Generic.HashSet`1..ctor(IEnumerable`1 collection, IEqualityComparer`1 comparer)
+   at IdentityServer4.Models.Resources..ctor(IEnumerable`1 identityResources, IEnumerable`1 apiResources)
+   at IdentitySite.Services.IdentityService.ResourceStore.<GetAllResourcesAsync>d__6.MoveNext() in D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Services\IdentityService\ResourceStore.cs:line 49
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Stores.IResourceStoreExtensions.<GetAllEnabledResourcesAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.ResponseHandling.DiscoveryResponseGenerator.<CreateDiscoveryDocumentAsync>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Endpoints.DiscoveryEndpoint.<ExecuteDiscoDocAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at IdentityServer4.Hosting.IdentityServerMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.FederatedSignOutMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.<Invoke>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-08-31 09:38:30.290  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2935.1784ms 500 text/html; charset=utf-8
+2017-08-31 09:38:32.266  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 09:38:32.915  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 5165.3685ms
+2017-08-31 09:38:32.924  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 5574.8131ms 200 text/html; charset=utf-8
+2017-08-31 09:39:11.691  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 09:39:11.700  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 09:39:11.730  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 09:39:12.273  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 09:39:12.497  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 09:39:14.521  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 09:39:15.216  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 2721.7841ms
+2017-08-31 09:39:15.249  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2986.9537ms 200 text/html; charset=utf-8
+2017-08-31 09:39:19.142  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 09:39:19.150  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 09:39:19.164  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 09:39:19.173  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 09:39:19.182  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 09:39:19.424  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 10:36:26.329  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 10:36:26.336  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 10:36:26.353  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 10:36:26.643  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 10:36:26.771  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 10:36:28.730  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 10:36:29.237  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 10:36:29.238  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 10:36:29.243  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 10:36:29.244  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 10:36:29.249  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 10:36:29.363  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 2595.9856ms
+2017-08-31 10:36:29.367  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2738.7561ms 200 text/html; charset=utf-8
+2017-08-31 10:36:29.447  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 10:36:29.520  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 284.146ms 200 application/json
+2017-08-31 10:36:29.575  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/favicon.ico  
+2017-08-31 10:36:29.581  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/favicon.ico'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\favicon.ico'
+2017-08-31 10:36:29.610  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 34.3656ms 200 image/x-icon
+2017-08-31 10:40:21.839  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 10:40:21.845  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 10:40:21.860  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 10:40:22.214  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 10:40:22.325  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 10:40:24.194  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 10:40:24.802  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 2481.1463ms
+2017-08-31 10:40:24.812  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2607.84ms 200 text/html; charset=utf-8
+2017-08-31 10:40:24.815  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/font-awesome/css/font-awesome.css  
+2017-08-31 10:40:24.818  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/simple-line-icons/simple-line-icons.min.css  
+2017-08-31 10:40:24.820  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/font-awesome/css/font-awesome.css'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\font-awesome\css\font-awesome.css'
+2017-08-31 10:40:24.821  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/uniform/css/uniform.default.min.css'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\uniform\css\uniform.default.min.css'
+2017-08-31 10:40:24.824  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/simple-line-icons/simple-line-icons.min.css'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\simple-line-icons\simple-line-icons.min.css'
+2017-08-31 10:40:24.827  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/bootstrap/dist/css/bootstrap.min.css  
+2017-08-31 10:40:24.829  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/bootstrap-switch/css/bootstrap-switch.min.css  
+2017-08-31 10:40:24.830  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/select2/css/select2.min.css  
+2017-08-31 10:40:24.830  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/bootstrap-switch/css/bootstrap-switch.min.css'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\bootstrap-switch\css\bootstrap-switch.min.css'
+2017-08-31 10:40:24.831  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/select2/css/select2.min.css'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\select2\css\select2.min.css'
+2017-08-31 10:40:24.891  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2017-08-31 10:40:24.898  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 83.0484ms 200 text/css
+2017-08-31 10:40:24.903  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 73.0279ms 200 text/css
+2017-08-31 10:40:24.908  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 88.6855ms 200 text/css
+2017-08-31 10:40:24.908  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/select2/css/select2-bootstrap.min.css  
+2017-08-31 10:40:24.909  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/select2/css/select2-bootstrap.min.css'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\select2\css\select2-bootstrap.min.css'
+2017-08-31 10:40:24.911  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 93.2963ms 200 text/css
+2017-08-31 10:40:24.914  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/css/components.min.css  
+2017-08-31 10:40:24.915  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/css/components.min.css'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\css\components.min.css'
+2017-08-31 10:40:24.921  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/css/plugins.min.css  
+2017-08-31 10:40:24.922  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/css/plugins.min.css'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\css\plugins.min.css'
+2017-08-31 10:40:24.926  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/pages/css/login-5.min.css  
+2017-08-31 10:40:24.927  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/pages/css/login-5.min.css'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\pages\css\login-5.min.css'
+2017-08-31 10:40:24.928  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 98.4372ms 200 text/css
+2017-08-31 10:40:24.932  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/jquery/dist/jquery.min.js  
+2017-08-31 10:40:24.933  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\jquery\dist\jquery.min.js'
+2017-08-31 10:40:24.935  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 14.1812ms 200 text/css
+2017-08-31 10:40:24.945  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-08-31 10:40:24.946  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.min.js'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js'
+2017-08-31 10:40:24.953  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/js.cookie.min.js  
+2017-08-31 10:40:24.954  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 45.6805ms 200 text/css
+2017-08-31 10:40:24.954  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/js.cookie.min.js'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\js.cookie.min.js'
+2017-08-31 10:40:24.961  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js  
+2017-08-31 10:40:24.963  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\bootstrap-hover-dropdown\bootstrap-hover-dropdown.min.js'
+2017-08-31 10:40:24.969  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 141.2793ms 200 text/css
+2017-08-31 10:40:24.979  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 18.1922ms 200 application/javascript
+2017-08-31 10:40:24.983  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/jquery-slimscroll/jquery.slimscroll.min.js  
+2017-08-31 10:40:24.985  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/jquery-slimscroll/jquery.slimscroll.min.js'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\jquery-slimscroll\jquery.slimscroll.min.js'
+2017-08-31 10:40:24.987  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 34.4563ms 200 application/javascript
+2017-08-31 10:40:24.991  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 8.1743ms 200 application/javascript
+2017-08-31 10:40:24.992  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/jquery.blockui.min.js  
+2017-08-31 10:40:24.992  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/jquery.blockui.min.js'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\jquery.blockui.min.js'
+2017-08-31 10:40:24.994  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 3.3188ms 200 application/javascript
+2017-08-31 10:40:24.999  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/bootstrap-switch/js/bootstrap-switch.min.js  
+2017-08-31 10:40:24.997  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/uniform/jquery.uniform.min.js  
+2017-08-31 10:40:25.001  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/bootstrap-switch/js/bootstrap-switch.min.js'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\bootstrap-switch\js\bootstrap-switch.min.js'
+2017-08-31 10:40:25.001  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/uniform/jquery.uniform.min.js'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\uniform\jquery.uniform.min.js'
+2017-08-31 10:40:25.001  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/jquery-validation/dist/jquery.validate.min.js  
+2017-08-31 10:40:25.002  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js'
+2017-08-31 10:40:25.002  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 70.0731ms 200 application/javascript
+2017-08-31 10:40:25.010  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 95.8599ms 200 text/css
+2017-08-31 10:40:25.015  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/jquery-validation/dist/additional-methods.min.js  
+2017-08-31 10:40:25.017  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/jquery-validation/dist/additional-methods.min.js'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\jquery-validation\dist\additional-methods.min.js'
+2017-08-31 10:40:25.017  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 20.208ms 200 application/javascript
+2017-08-31 10:40:25.022  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 20.9329ms 200 application/javascript
+2017-08-31 10:40:25.022  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/select2/js/select2.full.min.js  
+2017-08-31 10:40:25.027  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/select2/js/select2.full.min.js'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\select2\js\select2.full.min.js'
+2017-08-31 10:40:25.032  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 32.0448ms 200 application/javascript
+2017-08-31 10:40:25.032  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/backstretch/jquery.backstretch.min.js  
+2017-08-31 10:40:25.033  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/backstretch/jquery.backstretch.min.js'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\backstretch\jquery.backstretch.min.js'
+2017-08-31 10:40:25.035  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2.6687ms 200 application/javascript
+2017-08-31 10:40:25.036  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/js/app.min.js  
+2017-08-31 10:40:25.036  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/js/app.min.js'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\js\app.min.js'
+2017-08-31 10:40:25.041  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 19.4395ms 200 application/javascript
+2017-08-31 10:40:25.042  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/pages/js/login-5.min.js  
+2017-08-31 10:40:25.043  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/pages/js/login-5.min.js'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\pages\js\login-5.min.js'
+2017-08-31 10:40:25.044  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 1.7781ms 200 application/javascript
+2017-08-31 10:40:25.048  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 32.099ms 200 application/javascript
+2017-08-31 10:40:25.051  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 15.1309ms 200 application/javascript
+2017-08-31 10:40:25.059  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 113.5736ms 200 application/javascript
+2017-08-31 10:40:25.098  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/images/login/login/bg1.jpg  
+2017-08-31 10:40:25.099  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/images/login/login/bg1.jpg'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\images\login\login\bg1.jpg'
+2017-08-31 10:40:25.114  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 16.2384ms 200 image/jpeg
+2017-08-31 10:40:25.143  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/lib/simple-line-icons/fonts/Simple-Line-Icons.woff  
+2017-08-31 10:40:25.144  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/simple-line-icons/fonts/Simple-Line-Icons.woff'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\lib\simple-line-icons\fonts\Simple-Line-Icons.woff'
+2017-08-31 10:40:25.158  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 14.8102ms 200 application/font-woff
+2017-08-31 10:40:25.280  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/images/login/login/bg2.jpg  
+2017-08-31 10:40:25.280  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/images/login/login/bg3.jpg  
+2017-08-31 10:40:25.281  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/images/login/login/bg2.jpg'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\images\login\login\bg2.jpg'
+2017-08-31 10:40:25.282  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/images/login/login/bg3.jpg'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\images\login\login\bg3.jpg'
+2017-08-31 10:40:25.288  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 7.5091ms 200 image/jpeg
+2017-08-31 10:40:25.298  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 17.1059ms 200 image/jpeg
+2017-08-31 10:40:47.703  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 10:40:47.704  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 10:40:47.709  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 10:40:47.710  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 10:40:47.716  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 10:40:47.873  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 10:40:47.940  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 237.8834ms 200 application/json
+2017-08-31 10:45:27.682  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 10:45:27.688  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 10:45:27.702  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 10:45:27.892  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 10:45:27.927  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 10:45:27.931  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 10:45:27.931  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 10:45:27.936  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 10:45:28.091  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 10:45:28.164  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 283.3779ms 200 application/json
+2017-08-31 10:52:33.860  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 10:52:33.864  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 10:52:33.884  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 10:52:34.092  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 10:52:34.202  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 10:52:36.001  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 10:52:36.577  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 2380.343ms
+2017-08-31 10:52:36.590  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2506.1759ms 200 text/html; charset=utf-8
+2017-08-31 10:52:39.592  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 10:52:39.595  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 10:52:39.599  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 10:52:39.600  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 10:52:39.604  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 10:52:39.765  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 10:52:39.831  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 239.3103ms 200 application/json
+2017-08-31 10:53:01.186  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 10:53:01.190  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 10:53:01.209  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 10:53:01.439  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 10:53:01.552  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 10:53:03.384  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 10:53:03.521  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 10:53:03.523  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 10:53:03.527  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 10:53:03.527  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 10:53:03.533  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 10:53:03.692  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 10:53:03.770  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 248.4722ms 200 application/json
+2017-08-31 10:53:03.986  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 2440.2645ms
+2017-08-31 10:53:03.988  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2560.9497ms 200 text/html; charset=utf-8
+2017-08-31 10:53:05.770  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 10:53:05.772  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 10:53:05.774  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 10:53:05.775  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 10:53:05.776  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 10:53:05.786  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 10:53:05.788  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 17.6342ms 200 application/json
+2017-08-31 10:53:05.819  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/favicon.ico  
+2017-08-31 10:53:05.823  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/favicon.ico'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\favicon.ico'
+2017-08-31 10:53:05.828  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 7.6977ms 200 image/x-icon
+2017-08-31 10:53:08.245  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/connect/userinfo  
+2017-08-31 10:53:08.247  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /connect/userinfo matched to endpoint type Userinfo
+2017-08-31 10:53:08.251  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2017-08-31 10:53:08.251  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2017-08-31 10:53:08.258  IdentityServer4.Endpoints.UserInfoEndpoint   Debug: Start userinfo request
+2017-08-31 10:53:08.264  IdentityServer4.Validation.BearerTokenUsageValidator   Debug: Bearer token not found
+2017-08-31 10:53:08.265  IdentityServer4.Endpoints.UserInfoEndpoint   Error: No access token found.
+2017-08-31 10:53:08.269  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 24.3172ms 401 
+2017-08-31 10:53:11.268  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 10:53:11.270  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 10:53:11.271  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 10:53:11.274  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 3.712ms
+2017-08-31 10:53:11.276  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 7.1977ms 200 text/html; charset=utf-8
+2017-08-31 10:53:14.702  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration/jwks  
+2017-08-31 10:53:14.703  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2017-08-31 10:53:14.703  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 10:53:14.704  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration/jwks
+2017-08-31 10:53:14.708  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start key discovery request
+2017-08-31 10:53:14.727  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 25.212ms 200 application/json
+2017-08-31 10:53:24.662  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration/jwks  
+2017-08-31 10:53:24.663  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2017-08-31 10:53:24.664  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 10:53:24.665  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration/jwks
+2017-08-31 10:53:24.666  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start key discovery request
+2017-08-31 10:53:24.666  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 4.706ms 200 application/json
+2017-08-31 10:54:32.353  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 10:54:32.356  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 10:54:32.372  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 10:54:32.650  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 10:54:32.759  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 10:54:34.533  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 10:54:35.155  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 2399.2201ms
+2017-08-31 10:54:35.161  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2521.7267ms 200 text/html; charset=utf-8
+2017-08-31 10:54:35.886  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 10:54:35.887  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 10:54:35.894  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 10:54:35.895  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 10:54:35.899  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 10:54:36.055  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 10:54:36.119  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 233.1956ms 200 application/json
+2017-08-31 10:54:39.996  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/connect/checksession  
+2017-08-31 10:54:39.999  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /connect/checksession matched to endpoint type Checksession
+2017-08-31 10:54:40.000  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2017-08-31 10:54:40.002  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2017-08-31 10:54:40.004  IdentityServer4.Endpoints.CheckSessionEndpoint   Debug: Rendering check session result
+2017-08-31 10:54:40.010  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 13.7919ms 200 text/html; charset=UTF-8
+2017-08-31 10:54:42.900  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 10:54:42.902  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 10:54:42.902  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 10:54:42.903  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 10:54:42.904  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 10:54:42.910  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 10:54:42.912  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 11.4826ms 200 application/json
+2017-08-31 10:54:42.940  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/favicon.ico  
+2017-08-31 10:54:42.944  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/favicon.ico'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\favicon.ico'
+2017-08-31 10:54:42.952  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 11.4089ms 200 image/x-icon
+2017-08-31 10:54:53.110  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/connect/checksession  
+2017-08-31 10:54:53.111  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /connect/checksession matched to endpoint type Checksession
+2017-08-31 10:54:53.112  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2017-08-31 10:54:53.112  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2017-08-31 10:54:53.113  IdentityServer4.Endpoints.CheckSessionEndpoint   Debug: Rendering check session result
+2017-08-31 10:54:53.114  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 4.0161ms 200 text/html; charset=UTF-8
+2017-08-31 10:54:55.324  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/connect/token  
+2017-08-31 10:54:55.325  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /connect/token matched to endpoint type Token
+2017-08-31 10:54:55.331  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2017-08-31 10:54:55.332  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2017-08-31 10:54:55.336  IdentityServer4.Endpoints.TokenEndpoint   Warning: Invalid HTTP request for token endpoint
+2017-08-31 10:54:55.342  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 18.2285ms 400 application/json
+2017-08-31 10:55:00.388  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/connect/userinfo  
+2017-08-31 10:55:00.390  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /connect/userinfo matched to endpoint type Userinfo
+2017-08-31 10:55:00.393  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2017-08-31 10:55:00.394  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2017-08-31 10:55:00.402  IdentityServer4.Endpoints.UserInfoEndpoint   Debug: Start userinfo request
+2017-08-31 10:55:00.406  IdentityServer4.Validation.BearerTokenUsageValidator   Debug: Bearer token not found
+2017-08-31 10:55:00.407  IdentityServer4.Endpoints.UserInfoEndpoint   Error: No access token found.
+2017-08-31 10:55:00.409  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 21.3232ms 401 
+2017-08-31 10:55:02.788  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/connect/token  
+2017-08-31 10:55:02.789  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /connect/token matched to endpoint type Token
+2017-08-31 10:55:02.790  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2017-08-31 10:55:02.790  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2017-08-31 10:55:02.791  IdentityServer4.Endpoints.TokenEndpoint   Warning: Invalid HTTP request for token endpoint
+2017-08-31 10:55:02.792  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 4.5042ms 400 application/json
+2017-08-31 10:59:01.317  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 10:59:01.320  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 10:59:01.336  IdentityServer4.Hosting.CookieConfiguration   Debug: Using hosting application's CookieAuthentication middleware with scheme: Cookies
+2017-08-31 10:59:02.296  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 10:59:02.365  Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware   Error: An unhandled exception has occurred while executing the request
+
+System.InvalidOperationException: No authentication handler is configured to authenticate for the scheme: Cookies
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.<AuthenticateAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Services.DefaultUserSession.<GetCurrentSessionIdAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Services.DefaultUserSession.<EnsureSessionIdCookieAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.FederatedSignOutMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.<Invoke>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-08-31 10:59:02.408  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 123.9774ms 500 text/html; charset=utf-8
+2017-08-31 11:02:54.163  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 11:02:54.173  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 11:02:54.199  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 11:02:54.549  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 11:02:54.673  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 11:02:56.457  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 11:02:57.069  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 2398.4946ms
+2017-08-31 11:02:57.075  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2539.2124ms 200 text/html; charset=utf-8
+2017-08-31 11:03:14.146  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 11:03:14.151  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 11:03:14.166  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 11:03:14.601  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 11:03:14.644  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 11:03:14.649  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 11:03:14.649  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 11:03:14.653  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 11:03:14.724  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 11:03:14.813  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 11:03:14.900  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 313.4768ms 200 application/json
+2017-08-31 11:03:16.709  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 11:03:17.287  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 2567.8662ms
+2017-08-31 11:03:17.295  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2705.8988ms 200 text/html; charset=utf-8
+2017-08-31 11:03:22.040  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 11:03:22.042  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 11:03:22.043  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 11:03:22.044  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 11:03:22.045  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 11:03:22.049  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 11:03:22.051  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 11.7854ms 200 application/json
+2017-08-31 11:04:41.985  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 11:04:41.989  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 11:04:42.006  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 11:04:42.255  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 11:04:42.371  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 11:04:43.339  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 11:04:43.340  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 11:04:43.346  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 11:04:43.347  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 11:04:43.351  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 11:04:43.509  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 11:04:43.586  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 245.8874ms 200 application/json
+2017-08-31 11:04:44.352  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 11:04:44.944  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 2576.7846ms
+2017-08-31 11:04:44.947  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2703.8218ms 200 text/html; charset=utf-8
+2017-08-31 11:06:50.975  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 11:06:50.979  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 11:06:50.997  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 11:06:51.415  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 11:06:51.536  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 11:06:52.591  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 11:06:52.593  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 11:06:52.609  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 11:06:52.610  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 11:06:52.615  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 11:06:52.781  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 11:06:52.855  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 263.9328ms 200 application/json
+2017-08-31 11:06:53.348  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 11:06:53.907  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 2375.3076ms
+2017-08-31 11:06:53.910  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2507.0364ms 200 text/html; charset=utf-8
+2017-08-31 11:10:51.354  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 11:10:51.357  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 11:10:51.380  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 11:10:51.807  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 11:10:51.865  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 11:10:51.867  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 11:10:51.871  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 11:10:51.872  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 11:10:51.876  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 11:10:51.926  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 11:10:52.042  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 11:10:52.119  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 253.9248ms 200 application/json
+2017-08-31 11:10:53.778  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 11:10:54.356  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 2436.6182ms
+2017-08-31 11:10:54.358  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2562.1816ms 200 text/html; charset=utf-8
+2017-08-31 11:12:53.261  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 11:12:53.266  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 11:12:53.286  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 11:12:53.473  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 11:12:53.604  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 11:12:55.443  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 11:12:56.019  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 2418.3402ms
+2017-08-31 11:12:56.024  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2561.5523ms 200 text/html; charset=utf-8
+2017-08-31 11:12:56.109  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 11:12:56.110  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 11:12:56.116  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 11:12:56.117  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 11:12:56.123  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 11:12:56.283  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 11:12:56.350  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 240.835ms 200 application/json
+2017-08-31 11:12:56.381  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/favicon.ico  
+2017-08-31 11:12:56.388  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/favicon.ico'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\favicon.ico'
+2017-08-31 11:12:56.392  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 11.0843ms 200 image/x-icon
+2017-08-31 11:14:39.217  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 11:14:39.221  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 11:14:39.243  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 11:14:39.442  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 11:14:39.552  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 11:14:41.358  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 11:14:41.935  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 2387.9651ms
+2017-08-31 11:14:41.943  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2511.5436ms 200 text/html; charset=utf-8
+2017-08-31 11:14:43.780  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 11:14:43.781  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 11:14:43.785  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 11:14:43.787  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 11:14:43.793  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 11:14:43.947  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 11:14:44.013  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 233.2142ms 200 application/json
+2017-08-31 11:14:44.042  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/favicon.ico  
+2017-08-31 11:14:44.046  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/favicon.ico'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\favicon.ico'
+2017-08-31 11:14:44.051  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 8.8328ms 200 image/x-icon
+2017-08-31 11:16:20.199  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 11:16:20.202  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 11:16:20.221  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 11:16:20.692  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 11:16:20.803  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 11:16:22.757  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 11:16:23.396  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 2598.2794ms
+2017-08-31 11:16:23.401  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2722.2771ms 200 text/html; charset=utf-8
+2017-08-31 11:16:32.830  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 11:16:32.832  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 11:16:32.836  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 11:16:32.837  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 11:16:32.842  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 11:16:33.011  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 11:16:33.081  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 251.0094ms 200 application/json
+2017-08-31 11:16:33.104  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/favicon.ico  
+2017-08-31 11:16:33.111  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/favicon.ico'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\wwwroot\favicon.ico'
+2017-08-31 11:16:33.117  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 13.1052ms 200 image/x-icon
+2017-08-31 11:18:55.998  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/connect/endsession  
+2017-08-31 11:18:55.999  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /connect/endsession matched to endpoint type Endsession
+2017-08-31 11:18:56.004  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Endsession, successfully created handler: IdentityServer4.Endpoints.EndSessionEndpoint
+2017-08-31 11:18:56.005  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.EndSessionEndpoint for /connect/endsession
+2017-08-31 11:18:56.018  IdentityServer4.Endpoints.EndSessionEndpoint   Debug: Processing signout request for anonymous
+2017-08-31 11:18:56.027  IdentityServer4.Validation.EndSessionRequestValidator   Debug: Start end session request validation
+2017-08-31 11:18:56.058  IdentityServer4.Hosting.IdentityServerMiddleware   Critical: Unhandled exception: System.NullReferenceException: Object reference not set to an instance of an object.
+   at IdentityServer4.Services.DefaultUserSession.<GetClientListPropertyValueAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Services.DefaultUserSession.<GetClientListAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Validation.EndSessionRequestValidator.<ValidateAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Endpoints.EndSessionEndpoint.<ProcessSignoutAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Endpoints.EndSessionEndpoint.<ProcessAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.<Invoke>d__4.MoveNext()
+2017-08-31 11:18:56.081  Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware   Error: An unhandled exception has occurred while executing the request
+
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at IdentityServer4.Services.DefaultUserSession.<GetClientListPropertyValueAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Services.DefaultUserSession.<GetClientListAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Validation.EndSessionRequestValidator.<ValidateAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Endpoints.EndSessionEndpoint.<ProcessSignoutAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Endpoints.EndSessionEndpoint.<ProcessAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at IdentityServer4.Hosting.IdentityServerMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.FederatedSignOutMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.<Invoke>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-08-31 11:18:56.122  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 123.8542ms 500 text/html; charset=utf-8
+2017-08-31 11:24:50.859  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/connect/authorize  
+2017-08-31 11:24:50.860  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /connect/authorize matched to endpoint type Authorize
+2017-08-31 11:24:50.866  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2017-08-31 11:24:50.866  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2017-08-31 11:24:50.876  IdentityServer4.Endpoints.AuthorizeEndpoint   Debug: Start authorize request
+2017-08-31 11:24:50.882  IdentityServer4.Endpoints.AuthorizeEndpoint   Debug: No user present in authorize request
+2017-08-31 11:24:50.887  IdentityServer4.Validation.AuthorizeRequestValidator   Debug: Start authorize request protocol validation
+2017-08-31 11:24:50.907  IdentityServer4.Validation.AuthorizeRequestValidator   Error: client_id is missing or too long
+{
+  "SubjectId": "anonymous",
+  "RequestedScopes": "",
+  "Raw": {}
+}
+2017-08-31 11:24:50.910  IdentityServer4.Endpoints.AuthorizeEndpoint   Error: Request validation failed
+2017-08-31 11:24:50.911  IdentityServer4.Endpoints.AuthorizeEndpoint   Information: {
+  "SubjectId": "anonymous",
+  "RequestedScopes": "",
+  "Raw": {}
+}
+2017-08-31 11:24:50.928  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 69.0974ms 302 
+2017-08-31 11:24:50.933  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/home/error?errorId=CfDJ8ECGCikUVX1HsEI_-gAmK4b1MAx5e13vFoU6ymUtgW9oDwYmimQ4YCH94rw2U2Vc8utnHqJiNhqdVCQAK5Vd9KZujzr-b3gKtrovNySnuLMNtdnZfgV2pgGDVwb5Sj71O0Pjeux1I4dQMpK5xvNTqDKt1lLtHwsWG9HrDd-g84M5itMTWUGCagz8rnIWDs2ZQtr_n_prc7MLe_0OkbPv4ZpjyewaAzYviqqA0_o_i6GiV8mnCmqy0pg0ul-PLE1PnfJE3teT1MvOV2RAOQX7I8TZ7QM7A_DlmCGupYXi7alp  
+2017-08-31 11:24:50.936  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Error (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 11:24:51.218  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Shared/Error.cshtml.
+2017-08-31 11:24:51.225  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Error (IdentitySite) in 289.0515ms
+2017-08-31 11:24:51.225  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 292.7723ms 200 text/html; charset=utf-8
+2017-08-31 11:24:51.424  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/home/favicon.ico  
+2017-08-31 11:24:51.427  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 3.4603ms 404 
+2017-08-31 11:24:55.818  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration/jwks  
+2017-08-31 11:24:55.820  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2017-08-31 11:24:55.821  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 11:24:55.822  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration/jwks
+2017-08-31 11:24:55.826  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start key discovery request
+2017-08-31 11:24:55.842  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 22.9425ms 200 application/json
+2017-08-31 11:29:21.840  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-31 11:29:21.845  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-31 11:29:21.862  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)
+2017-08-31 11:29:22.107  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/  
+2017-08-31 11:29:22.227  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method IdentitySite.Controllers.HomeController.Index (IdentitySite) with arguments ((null)) - ModelState is Valid
+2017-08-31 11:29:23.164  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:17539/.well-known/openid-configuration  
+2017-08-31 11:29:23.166  IdentityServer4.Hosting.EndpointRouter   Debug: Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2017-08-31 11:29:23.171  IdentityServer4.Hosting.EndpointRouter   Debug: Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2017-08-31 11:29:23.172  IdentityServer4.Hosting.IdentityServerMiddleware   Information: Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2017-08-31 11:29:23.177  IdentityServer4.Endpoints.DiscoveryEndpoint   Debug: Start discovery request
+2017-08-31 11:29:23.335  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Action], [a].[ApiType], [a].[ApplicationID], [a].[Area], [a].[Assembly], [a].[Controller], [a].[CreateDate], [a].[DisplayName], [a].[MethodName], [a].[UpdateDate]
+FROM [Api] AS [a]
+2017-08-31 11:29:23.410  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 245.5215ms 200 application/json
+2017-08-31 11:29:24.071  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-08-31 11:29:24.637  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action IdentitySite.Controllers.HomeController.Index (IdentitySite) in 2417.0804ms
+2017-08-31 11:29:24.640  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2545.7328ms 200 text/html; charset=utf-8

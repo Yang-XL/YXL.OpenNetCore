@@ -1,0 +1,12 @@
+D:\ProjectTest\NetCore\YXL.OpenNetCore\WebSite
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=WebSite
+--content-root=D:\ProjectTest\NetCore\YXL.OpenNetCore\WebSite
+--file=D:\ProjectTest\NetCore\YXL.OpenNetCore\WebSite\Views\Home\About.cshtml
+--file=D:\ProjectTest\NetCore\YXL.OpenNetCore\WebSite\Views\Home\Contact.cshtml
+--file=D:\ProjectTest\NetCore\YXL.OpenNetCore\WebSite\Views\Home\Index.cshtml
+--file=D:\ProjectTest\NetCore\YXL.OpenNetCore\WebSite\Views\Shared\Error.cshtml
+--file=D:\ProjectTest\NetCore\YXL.OpenNetCore\WebSite\Views\Shared\_Layout.cshtml
+--file=D:\ProjectTest\NetCore\YXL.OpenNetCore\WebSite\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=D:\ProjectTest\NetCore\YXL.OpenNetCore\WebSite\Views\_ViewImports.cshtml
+--file=D:\ProjectTest\NetCore\YXL.OpenNetCore\WebSite\Views\_ViewStart.cshtml

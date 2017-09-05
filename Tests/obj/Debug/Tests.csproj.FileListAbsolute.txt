@@ -1,0 +1,16 @@
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Tests\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Tests\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Tests\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Tests\bin\Debug\Tests.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Tests\bin\Debug\Tests.pdb
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Tests\obj\Debug\Tests.csproj.CoreCompileInputs.cache
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Tests\obj\Debug\Tests.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Tests\obj\Debug\Tests.pdb

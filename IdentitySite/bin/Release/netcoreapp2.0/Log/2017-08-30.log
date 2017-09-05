@@ -1,0 +1,3 @@
+﻿2017-08-30 10:59:02.974  Microsoft.EntityFrameworkCore.Infrastructure   Information: Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2017-08-30 10:59:02.980  IdentityServer4.Startup   Information: You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2017-08-30 10:59:03.002  IdentityServer4.Hosting.CookieConfiguration   Debug: Using built-in cookie authentication service for sign-in (idsrv) and external authentication (idsrv.external)

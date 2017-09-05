@@ -1,0 +1,459 @@
+﻿2017-09-01 12:42:00.872  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 12:42:00.876  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: meinian was not authenticated. Failure message: Not authenticated
+2017-09-01 12:42:00.879  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization failed for user: (null).
+2017-09-01 12:42:00.881  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2017-09-01 12:42:00.885  Microsoft.AspNetCore.Mvc.ChallengeResult   Information: Executing ChallengeResult with authentication schemes (meinian).
+2017-09-01 12:42:00.888  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was challenged.
+2017-09-01 12:42:00.891  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 15.324ms
+2017-09-01 12:42:00.893  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 22.0855ms 302 
+2017-09-01 12:47:40.224  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 12:47:40.230  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: meinian was not authenticated. Failure message: Not authenticated
+2017-09-01 12:47:40.240  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization failed for user: (null).
+2017-09-01 12:47:40.244  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2017-09-01 12:47:40.253  Microsoft.AspNetCore.Mvc.ChallengeResult   Information: Executing ChallengeResult with authentication schemes (meinian).
+2017-09-01 12:47:40.256  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was challenged.
+2017-09-01 12:47:40.260  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 29.8359ms
+2017-09-01 12:47:40.264  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 39.9581ms 302 
+2017-09-01 12:52:23.965  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/  
+2017-09-01 12:52:24.094  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Index (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 12:52:26.519  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-01 12:52:26.839  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Index (WebSite) in 2751.8004ms
+2017-09-01 12:52:26.853  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2902.7166ms 200 text/html; charset=utf-8
+2017-09-01 12:52:27.905  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 12:52:27.921  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: meinian was not authenticated. Failure message: Not authenticated
+2017-09-01 12:52:27.928  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization failed for user: (null).
+2017-09-01 12:52:27.931  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2017-09-01 12:52:27.935  Microsoft.AspNetCore.Mvc.ChallengeResult   Information: Executing ChallengeResult with authentication schemes (meinian).
+2017-09-01 12:52:28.125  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was challenged.
+2017-09-01 12:52:28.128  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 216.9816ms
+2017-09-01 12:52:28.132  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 227.0421ms 302 
+2017-09-01 12:56:38.819  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 12:56:38.823  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: meinian was not authenticated. Failure message: Not authenticated
+2017-09-01 12:56:38.826  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization failed for user: (null).
+2017-09-01 12:56:38.830  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2017-09-01 12:56:38.832  Microsoft.AspNetCore.Mvc.ChallengeResult   Information: Executing ChallengeResult with authentication schemes (meinian).
+2017-09-01 12:56:38.837  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was challenged.
+2017-09-01 12:56:38.839  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 16.6447ms
+2017-09-01 12:56:38.843  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 23.8489ms 302 
+2017-09-01 13:09:01.523  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 13:09:01.529  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: meinian was not authenticated. Failure message: Not authenticated
+2017-09-01 13:09:01.532  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization failed for user: (null).
+2017-09-01 13:09:01.535  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2017-09-01 13:09:01.538  Microsoft.AspNetCore.Mvc.ChallengeResult   Information: Executing ChallengeResult with authentication schemes (meinian).
+2017-09-01 13:09:01.541  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was challenged.
+2017-09-01 13:09:01.544  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 15.1793ms
+2017-09-01 13:09:01.547  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 24.8611ms 302 
+2017-09-01 13:09:47.036  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 13:09:47.040  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: meinian was not authenticated. Failure message: Not authenticated
+2017-09-01 13:09:47.043  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization failed for user: (null).
+2017-09-01 13:09:47.046  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2017-09-01 13:09:47.050  Microsoft.AspNetCore.Mvc.ChallengeResult   Information: Executing ChallengeResult with authentication schemes (meinian).
+2017-09-01 13:09:47.053  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was challenged.
+2017-09-01 13:09:47.056  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 15.7512ms
+2017-09-01 13:09:47.059  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 23.2075ms 302 
+2017-09-01 13:18:38.848  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 13:18:38.856  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: meinian was not authenticated. Failure message: Not authenticated
+2017-09-01 13:18:38.859  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization failed for user: (null).
+2017-09-01 13:18:38.862  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2017-09-01 13:18:38.868  Microsoft.AspNetCore.Mvc.ChallengeResult   Information: Executing ChallengeResult with authentication schemes (meinian).
+2017-09-01 13:18:38.872  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was challenged.
+2017-09-01 13:18:38.875  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 20.4316ms
+2017-09-01 13:18:38.878  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 31.4883ms 302 
+2017-09-01 13:19:09.778  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 13:19:09.783  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: meinian was not authenticated. Failure message: Not authenticated
+2017-09-01 13:19:09.785  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization failed for user: (null).
+2017-09-01 13:19:09.788  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2017-09-01 13:19:09.790  Microsoft.AspNetCore.Mvc.ChallengeResult   Information: Executing ChallengeResult with authentication schemes (meinian).
+2017-09-01 13:19:09.793  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was challenged.
+2017-09-01 13:19:09.797  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 14.5376ms
+2017-09-01 13:19:09.801  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 23.1565ms 302 
+2017-09-01 13:19:11.475  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 13:19:11.479  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: meinian was not authenticated. Failure message: Not authenticated
+2017-09-01 13:19:11.482  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization failed for user: (null).
+2017-09-01 13:19:11.485  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2017-09-01 13:19:11.489  Microsoft.AspNetCore.Mvc.ChallengeResult   Information: Executing ChallengeResult with authentication schemes (meinian).
+2017-09-01 13:19:11.492  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was challenged.
+2017-09-01 13:19:11.495  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 16.026ms
+2017-09-01 13:19:11.501  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 26.162ms 302 
+2017-09-01 13:22:11.227  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://www.yxl.com:5001/signin-oidc application/x-www-form-urlencoded 1384
+2017-09-01 13:22:11.294  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies signed in.
+2017-09-01 13:22:11.298  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 72.3608ms 302 
+2017-09-01 13:22:11.304  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 13:22:11.308  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 13:22:11.310  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was successfully authenticated.
+2017-09-01 13:22:11.316  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization was successful for user: 00000000-0000-0000-0000-000000000001.
+2017-09-01 13:22:11.320  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.About (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 13:22:11.510  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-01 13:22:11.521  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 214.0498ms
+2017-09-01 13:22:11.525  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 221.2633ms 200 text/html; charset=utf-8
+2017-09-01 13:22:17.263  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 13:22:17.268  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 13:22:17.272  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was successfully authenticated.
+2017-09-01 13:22:17.275  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization was successful for user: 00000000-0000-0000-0000-000000000001.
+2017-09-01 13:22:17.278  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.About (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 13:22:17.281  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-01 13:22:17.284  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 16.4619ms
+2017-09-01 13:22:17.287  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 24.2418ms 200 text/html; charset=utf-8
+2017-09-01 13:22:18.198  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/  
+2017-09-01 13:22:18.202  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Index (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 13:22:18.207  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-01 13:22:18.211  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Index (WebSite) in 9.0259ms
+2017-09-01 13:22:18.217  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 18.2817ms 200 text/html; charset=utf-8
+2017-09-01 13:22:18.895  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 13:22:18.900  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 13:22:18.903  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was successfully authenticated.
+2017-09-01 13:22:18.909  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization was successful for user: 00000000-0000-0000-0000-000000000001.
+2017-09-01 13:22:18.912  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.About (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 13:22:18.915  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-01 13:22:18.919  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 18.9331ms
+2017-09-01 13:22:18.924  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 28.6967ms 200 text/html; charset=utf-8
+2017-09-01 13:26:49.393  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 13:26:49.398  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 13:26:49.400  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was successfully authenticated.
+2017-09-01 13:26:49.404  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization was successful for user: 00000000-0000-0000-0000-000000000001.
+2017-09-01 13:26:49.407  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.About (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 13:26:49.600  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-01 13:26:49.609  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 210.8541ms
+2017-09-01 13:26:49.612  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 219.159ms 200 text/html; charset=utf-8
+2017-09-01 13:50:59.197  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/  
+2017-09-01 13:50:59.319  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Index (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 13:51:01.830  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-01 13:51:02.158  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Index (WebSite) in 2846.6708ms
+2017-09-01 13:51:02.170  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2988.4217ms 200 text/html; charset=utf-8
+2017-09-01 13:51:14.574  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 13:51:14.591  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 13:51:14.594  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was successfully authenticated.
+2017-09-01 13:51:14.603  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization was successful for user: 00000000-0000-0000-0000-000000000001.
+2017-09-01 13:51:14.606  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.About (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 13:51:14.795  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-01 13:51:14.805  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 224.4529ms
+2017-09-01 13:51:14.808  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 233.9875ms 200 text/html; charset=utf-8
+2017-09-01 13:51:38.157  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/Contact  
+2017-09-01 13:51:38.162  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Contact (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 13:51:38.282  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Contact.cshtml.
+2017-09-01 13:51:38.289  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Contact (WebSite) in 126.8235ms
+2017-09-01 13:51:38.292  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 135.4697ms 200 text/html; charset=utf-8
+2017-09-01 13:51:48.083  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/Contact  
+2017-09-01 13:51:48.087  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Contact (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 13:51:48.214  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Contact.cshtml.
+2017-09-01 13:51:48.222  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Contact (WebSite) in 135.8244ms
+2017-09-01 13:51:48.227  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 143.4022ms 200 text/html; charset=utf-8
+2017-09-01 13:51:48.268  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/favicon.ico  
+2017-09-01 13:51:48.276  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/favicon.ico'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\WebSite\wwwroot\favicon.ico'
+2017-09-01 13:51:48.292  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 23.5192ms 200 image/x-icon
+2017-09-01 13:54:31.558  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/Contact  
+2017-09-01 13:54:31.681  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Contact (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 13:54:34.080  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Contact.cshtml.
+2017-09-01 13:54:34.474  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Contact (WebSite) in 2798.8581ms
+2017-09-01 13:54:34.487  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2941.1683ms 200 text/html; charset=utf-8
+2017-09-01 13:54:36.259  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/Logout  
+2017-09-01 13:54:36.270  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Logout (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 13:54:36.286  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies signed out.
+2017-09-01 13:54:36.624  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 13:54:36.629  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian signed out.
+2017-09-01 13:54:36.632  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Logout (WebSite) in 362.4638ms
+2017-09-01 13:54:36.637  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 377.7865ms 302 
+2017-09-01 13:55:46.857  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/signout-callback-oidc?state=CfDJ8ECGCikUVX1HsEI_-gAmK4aNyUzdpqlXWakI_7GZlAOZcBAzqAgUrB1zpWzbvIBR30wIR53axo_9msv7kx_CRQyCOY-DFwtaWHBzhKUmr5vlJuTyIAmgNWiU8BfA0lZBkA8iRVvZo20dF19pBKNFUrQbJ791WKZForZW1aHfmW1i  
+2017-09-01 13:55:46.863  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 6.1877ms 302 
+2017-09-01 13:55:46.868  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/  
+2017-09-01 13:55:46.873  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Index (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 13:55:47.119  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-01 13:55:47.134  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Index (WebSite) in 260.7669ms
+2017-09-01 13:55:47.139  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 270.5417ms 200 text/html; charset=utf-8
+2017-09-01 13:55:52.434  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 13:55:52.445  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: meinian was not authenticated. Failure message: Not authenticated
+2017-09-01 13:55:52.452  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization failed for user: (null).
+2017-09-01 13:55:52.456  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2017-09-01 13:55:52.461  Microsoft.AspNetCore.Mvc.ChallengeResult   Information: Executing ChallengeResult with authentication schemes (meinian).
+2017-09-01 13:55:52.467  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was challenged.
+2017-09-01 13:55:52.471  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 29.4748ms
+2017-09-01 13:55:52.474  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 39.2922ms 302 
+2017-09-01 13:56:01.479  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://www.yxl.com:5001/signin-oidc application/x-www-form-urlencoded 1384
+2017-09-01 13:56:01.524  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies signed in.
+2017-09-01 13:56:01.528  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 48.6841ms 302 
+2017-09-01 13:56:01.534  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 13:56:01.538  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 13:56:01.541  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was successfully authenticated.
+2017-09-01 13:56:01.545  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization was successful for user: 00000000-0000-0000-0000-000000000001.
+2017-09-01 13:56:01.548  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.About (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 13:56:01.732  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-01 13:56:01.739  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 201.5248ms
+2017-09-01 13:56:01.742  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 207.9496ms 200 text/html; charset=utf-8
+2017-09-01 13:56:28.820  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/Contact  
+2017-09-01 13:56:28.823  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Contact (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 13:56:28.826  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Contact.cshtml.
+2017-09-01 13:56:28.830  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Contact (WebSite) in 6.9174ms
+2017-09-01 13:56:28.834  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 14.0029ms 200 text/html; charset=utf-8
+2017-09-01 13:56:29.883  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/Logout  
+2017-09-01 13:56:29.886  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Logout (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 13:56:29.890  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies signed out.
+2017-09-01 13:56:29.893  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 13:56:29.897  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian signed out.
+2017-09-01 13:56:29.900  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Logout (WebSite) in 13.4028ms
+2017-09-01 13:56:29.902  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 19.5848ms 302 
+2017-09-01 14:06:00.988  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/signout-callback-oidc?state=CfDJ8ECGCikUVX1HsEI_-gAmK4bOf1oeDOcFi1W0mfD1BvTB4Ea3lz9wz_5VGWEu-rcYfQ-ATCLtr0yerjqB72dagv91PHEYYdPclBsF61KEoGb6JnNWgFq2hwVOxnFZdbhRIlKOVf5psPYChvQy6rnXwLxX4AxwIlccQN6mWjk3vjM_  
+2017-09-01 14:06:00.998  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 9.9528ms 302 
+2017-09-01 14:06:01.004  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/  
+2017-09-01 14:06:01.011  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Index (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:06:01.014  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-01 14:06:01.019  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Index (WebSite) in 8.6028ms
+2017-09-01 14:06:01.026  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 22.2414ms 200 text/html; charset=utf-8
+2017-09-01 14:06:02.369  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 14:06:02.373  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: meinian was not authenticated. Failure message: Not authenticated
+2017-09-01 14:06:02.376  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization failed for user: (null).
+2017-09-01 14:06:02.379  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2017-09-01 14:06:02.381  Microsoft.AspNetCore.Mvc.ChallengeResult   Information: Executing ChallengeResult with authentication schemes (meinian).
+2017-09-01 14:06:02.384  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was challenged.
+2017-09-01 14:06:02.386  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 13.2774ms
+2017-09-01 14:06:02.390  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 21.4986ms 302 
+2017-09-01 14:06:14.584  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://www.yxl.com:5001/signin-oidc application/x-www-form-urlencoded 1384
+2017-09-01 14:06:14.589  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies signed in.
+2017-09-01 14:06:14.593  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 8.8443ms 302 
+2017-09-01 14:06:14.599  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 14:06:14.603  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 14:06:14.605  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was successfully authenticated.
+2017-09-01 14:06:14.609  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization was successful for user: 00000000-0000-0000-0000-000000000001.
+2017-09-01 14:06:14.612  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.About (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:06:14.615  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-01 14:06:14.618  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 15.5058ms
+2017-09-01 14:06:14.621  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 21.6895ms 200 text/html; charset=utf-8
+2017-09-01 14:06:16.750  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/Contact  
+2017-09-01 14:06:16.754  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Contact (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:06:16.758  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Contact.cshtml.
+2017-09-01 14:06:16.761  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Contact (WebSite) in 7.0466ms
+2017-09-01 14:06:16.765  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 14.9786ms 200 text/html; charset=utf-8
+2017-09-01 14:06:17.936  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/Logout  
+2017-09-01 14:06:17.940  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Logout (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:06:17.942  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies signed out.
+2017-09-01 14:06:17.945  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 14:06:17.948  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian signed out.
+2017-09-01 14:06:17.951  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Logout (WebSite) in 11.2126ms
+2017-09-01 14:06:17.956  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 21.2728ms 302 
+2017-09-01 14:06:20.542  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/signout-callback-oidc?state=CfDJ8ECGCikUVX1HsEI_-gAmK4bBxZeDufxXKxdlEvYnMSa7mNeJKZvjtDsu5ZobAfUAluIKehNx0OQP-0tfUOW_oUB1N2zNsNEZ_07GS4dinkjm9zUSdsl-zW3nQgiZPP1f5nZAVNrq9gmepsC11Y8TUTzCTt-R-_5NRHO51uPkq_jG  
+2017-09-01 14:06:20.548  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 5.2945ms 302 
+2017-09-01 14:06:20.554  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/  
+2017-09-01 14:06:20.558  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Index (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:06:20.563  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-01 14:06:20.572  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Index (WebSite) in 13.5831ms
+2017-09-01 14:06:20.577  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 22.499ms 200 text/html; charset=utf-8
+2017-09-01 14:08:23.095  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 14:08:23.102  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: meinian was not authenticated. Failure message: Not authenticated
+2017-09-01 14:08:23.109  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization failed for user: (null).
+2017-09-01 14:08:23.114  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2017-09-01 14:08:23.120  Microsoft.AspNetCore.Mvc.ChallengeResult   Information: Executing ChallengeResult with authentication schemes (meinian).
+2017-09-01 14:08:23.126  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was challenged.
+2017-09-01 14:08:23.129  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 27.0116ms
+2017-09-01 14:08:23.131  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 36.7909ms 302 
+2017-09-01 14:08:28.642  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://www.yxl.com:5001/signin-oidc application/x-www-form-urlencoded 1384
+2017-09-01 14:08:28.646  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies signed in.
+2017-09-01 14:08:28.651  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 8.6144ms 302 
+2017-09-01 14:08:28.659  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 14:08:28.662  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 14:08:28.666  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was successfully authenticated.
+2017-09-01 14:08:28.670  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization was successful for user: 00000000-0000-0000-0000-000000000001.
+2017-09-01 14:08:28.673  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.About (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:08:28.675  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-01 14:08:28.679  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 16.5289ms
+2017-09-01 14:08:28.683  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 23.1379ms 200 text/html; charset=utf-8
+2017-09-01 14:08:31.150  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 14:08:31.155  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 14:08:31.157  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was successfully authenticated.
+2017-09-01 14:08:31.160  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization was successful for user: 00000000-0000-0000-0000-000000000001.
+2017-09-01 14:08:31.162  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.About (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:08:31.165  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-01 14:08:31.169  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 14.7922ms
+2017-09-01 14:08:31.172  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 22.0041ms 200 text/html; charset=utf-8
+2017-09-01 14:08:32.022  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 14:08:32.026  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 14:08:32.030  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was successfully authenticated.
+2017-09-01 14:08:32.033  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization was successful for user: 00000000-0000-0000-0000-000000000001.
+2017-09-01 14:08:32.036  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.About (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:08:32.038  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-01 14:08:32.041  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 15.6835ms
+2017-09-01 14:08:32.047  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 24.6065ms 200 text/html; charset=utf-8
+2017-09-01 14:11:38.287  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/Contact  
+2017-09-01 14:11:38.291  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Contact (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:11:38.295  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Contact.cshtml.
+2017-09-01 14:11:38.299  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Contact (WebSite) in 8.4489ms
+2017-09-01 14:11:38.303  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 15.5373ms 200 text/html; charset=utf-8
+2017-09-01 14:11:39.541  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/Logout  
+2017-09-01 14:11:39.545  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Logout (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:11:39.548  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies signed out.
+2017-09-01 14:11:39.551  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 14:11:39.554  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian signed out.
+2017-09-01 14:11:39.557  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Logout (WebSite) in 11.2995ms
+2017-09-01 14:11:39.560  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 18.9123ms 302 
+2017-09-01 14:11:46.200  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/signout-callback-oidc?state=CfDJ8ECGCikUVX1HsEI_-gAmK4aXsgPxWz4ZVujYeXqtnY1okiJ57FKOHgkXycAE8FhjVRV-1ZRxkcg3bE6yh-MiTzPvZYTXMS554ProkNMSVTkWRV5M8TqPHQmeza_wG4ItY5RoJQrk_uZs6QV2bvv0WJcnZ8R_uwSEqCaamI5Dl4-2  
+2017-09-01 14:11:46.207  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 6.4472ms 302 
+2017-09-01 14:11:46.211  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/  
+2017-09-01 14:11:46.215  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Index (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:11:46.225  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-01 14:11:46.229  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Index (WebSite) in 14.1379ms
+2017-09-01 14:11:46.236  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 25.1828ms 200 text/html; charset=utf-8
+2017-09-01 14:11:47.438  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 14:11:47.442  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: meinian was not authenticated. Failure message: Not authenticated
+2017-09-01 14:11:47.445  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization failed for user: (null).
+2017-09-01 14:11:47.449  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2017-09-01 14:11:47.452  Microsoft.AspNetCore.Mvc.ChallengeResult   Information: Executing ChallengeResult with authentication schemes (meinian).
+2017-09-01 14:11:47.455  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was challenged.
+2017-09-01 14:11:47.458  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 16.162ms
+2017-09-01 14:11:47.460  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 22.9137ms 302 
+2017-09-01 14:11:52.323  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://www.yxl.com:5001/signin-oidc application/x-www-form-urlencoded 1384
+2017-09-01 14:11:52.330  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies signed in.
+2017-09-01 14:11:52.334  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 10.6741ms 302 
+2017-09-01 14:11:52.339  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 14:11:52.345  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 14:11:52.348  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was successfully authenticated.
+2017-09-01 14:11:52.352  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization was successful for user: 00000000-0000-0000-0000-000000000001.
+2017-09-01 14:11:52.355  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.About (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:11:52.360  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-01 14:11:52.363  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 19.0996ms
+2017-09-01 14:11:52.367  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 27.7676ms 200 text/html; charset=utf-8
+2017-09-01 14:12:22.341  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/Contact  
+2017-09-01 14:12:22.349  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Contact (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:12:22.351  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Contact.cshtml.
+2017-09-01 14:12:22.355  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Contact (WebSite) in 6.0825ms
+2017-09-01 14:12:22.361  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 19.2574ms 200 text/html; charset=utf-8
+2017-09-01 14:12:23.333  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/Logout  
+2017-09-01 14:12:23.336  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Logout (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:12:23.343  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies signed out.
+2017-09-01 14:12:23.347  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 14:12:23.349  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian signed out.
+2017-09-01 14:12:23.361  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Logout (WebSite) in 24.8637ms
+2017-09-01 14:12:23.363  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 30.7631ms 302 
+2017-09-01 14:12:37.471  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/signout-callback-oidc?state=CfDJ8ECGCikUVX1HsEI_-gAmK4bSXpP6O16H4DiHTEpcVWtJ06RVDFPMbnVOm0QL2bKO5FcfhV1n_GgZ_Ez8CAAUljatTzj7hx98ot1wF5DoTxjwEt4UW7tXp7bxDKtGG2o6XjPQI7rShvckpNp9ZA3YfUES7YTUmUx3jGQWZLZo_7Gl  
+2017-09-01 14:12:37.477  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 6.7064ms 302 
+2017-09-01 14:12:37.485  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/  
+2017-09-01 14:12:37.490  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Index (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:12:37.493  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-01 14:12:37.498  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Index (WebSite) in 8.8325ms
+2017-09-01 14:12:37.504  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 19.4357ms 200 text/html; charset=utf-8
+2017-09-01 14:12:46.366  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 14:12:46.371  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: meinian was not authenticated. Failure message: Not authenticated
+2017-09-01 14:12:46.373  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization failed for user: (null).
+2017-09-01 14:12:46.377  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2017-09-01 14:12:46.380  Microsoft.AspNetCore.Mvc.ChallengeResult   Information: Executing ChallengeResult with authentication schemes (meinian).
+2017-09-01 14:12:46.383  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was challenged.
+2017-09-01 14:12:46.385  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 14.5417ms
+2017-09-01 14:12:46.388  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 21.6561ms 302 
+2017-09-01 14:12:56.569  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://www.yxl.com:5001/signin-oidc application/x-www-form-urlencoded 1384
+2017-09-01 14:12:56.576  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies signed in.
+2017-09-01 14:12:56.579  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 9.6471ms 302 
+2017-09-01 14:12:56.585  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 14:12:56.589  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 14:12:56.592  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was successfully authenticated.
+2017-09-01 14:12:56.595  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization was successful for user: 00000000-0000-0000-0000-000000000001.
+2017-09-01 14:12:56.600  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.About (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:12:56.604  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-01 14:12:56.607  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 18.3324ms
+2017-09-01 14:12:56.610  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 25.2944ms 200 text/html; charset=utf-8
+2017-09-01 14:20:30.461  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 14:20:30.468  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 14:20:30.472  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was successfully authenticated.
+2017-09-01 14:20:30.474  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization was successful for user: 00000000-0000-0000-0000-000000000001.
+2017-09-01 14:20:30.477  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.About (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:20:30.480  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-01 14:20:30.485  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 18.2541ms
+2017-09-01 14:20:30.489  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 28.0674ms 200 text/html; charset=utf-8
+2017-09-01 14:20:57.663  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/lib/bootstrap/dist/css/bootstrap.css.map  
+2017-09-01 14:20:57.685  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css.map'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\WebSite\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map'
+2017-09-01 14:20:57.781  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 117.8079ms 200 text/plain
+2017-09-01 14:22:24.854  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 14:22:24.862  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 14:22:24.872  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was successfully authenticated.
+2017-09-01 14:22:24.876  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization was successful for user: 00000000-0000-0000-0000-000000000001.
+2017-09-01 14:22:24.878  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.About (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:22:24.881  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-01 14:22:24.887  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 25.0539ms
+2017-09-01 14:22:24.891  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 36.2623ms 200 text/html; charset=utf-8
+2017-09-01 14:22:24.926  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/lib/bootstrap/dist/css/bootstrap.css  
+2017-09-01 14:22:24.941  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/css/site.css  
+2017-09-01 14:22:24.941  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/js/site.js?v=7mkNbU1tgQL1bUeZe3j2R151hKLhLDKO4BBaR-iqCy0  
+2017-09-01 14:22:24.944  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\WebSite\wwwroot\lib\bootstrap\dist\css\bootstrap.css'
+2017-09-01 14:22:24.944  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/lib/bootstrap/dist/js/bootstrap.js  
+2017-09-01 14:22:24.944  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/lib/jquery/dist/jquery.js  
+2017-09-01 14:22:24.951  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/css/site.css'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\WebSite\wwwroot\css\site.css'
+2017-09-01 14:22:24.954  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/js/site.js'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\WebSite\wwwroot\js\site.js'
+2017-09-01 14:22:24.959  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.js'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\WebSite\wwwroot\lib\bootstrap\dist\js\bootstrap.js'
+2017-09-01 14:22:24.961  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\ProjectTest\NetCore\YXL.OpenNetCore\WebSite\wwwroot\lib\jquery\dist\jquery.js'
+2017-09-01 14:22:24.971  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 29.8443ms 200 text/css
+2017-09-01 14:22:24.973  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 32.1747ms 200 application/javascript
+2017-09-01 14:22:24.978  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 34.5147ms 200 application/javascript
+2017-09-01 14:22:24.989  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 62.8295ms 200 text/css
+2017-09-01 14:22:25.060  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 113.9479ms 200 application/javascript
+2017-09-01 14:22:59.444  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/Contact  
+2017-09-01 14:22:59.450  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Contact (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:22:59.456  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Contact.cshtml.
+2017-09-01 14:22:59.462  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Contact (WebSite) in 11.7819ms
+2017-09-01 14:22:59.472  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 28.3157ms 200 text/html; charset=utf-8
+2017-09-01 14:23:00.111  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/Logout  
+2017-09-01 14:23:00.115  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Logout (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:23:00.118  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies signed out.
+2017-09-01 14:23:00.126  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 14:23:00.133  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian signed out.
+2017-09-01 14:23:00.136  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Logout (WebSite) in 20.7795ms
+2017-09-01 14:23:00.139  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 27.3981ms 302 
+2017-09-01 14:23:08.853  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/signout-callback-oidc?state=CfDJ8ECGCikUVX1HsEI_-gAmK4Zy42o97FefWjP8eHHz486Gc_W_2IZyHdEzCzTAFv7keI495xw6ny5y0ipm2cVRg1f5BImwU7lReOhXQJPUWcwCmbWSXUaVymOZKch-zshZdAzyH-xQz2MfKPZIawQUfhBk01dl1XXS3HDjEn8P1u8A  
+2017-09-01 14:23:08.860  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 6.8587ms 302 
+2017-09-01 14:23:08.871  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/  
+2017-09-01 14:23:08.883  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Index (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:23:08.889  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-01 14:23:08.896  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Index (WebSite) in 13.2614ms
+2017-09-01 14:23:08.908  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 37.3518ms 200 text/html; charset=utf-8
+2017-09-01 14:23:10.908  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 14:23:10.913  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: meinian was not authenticated. Failure message: Not authenticated
+2017-09-01 14:23:10.917  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization failed for user: (null).
+2017-09-01 14:23:10.920  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2017-09-01 14:23:10.934  Microsoft.AspNetCore.Mvc.ChallengeResult   Information: Executing ChallengeResult with authentication schemes (meinian).
+2017-09-01 14:23:10.941  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was challenged.
+2017-09-01 14:23:10.947  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 33.6279ms
+2017-09-01 14:23:10.952  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 43.9155ms 302 
+2017-09-01 14:23:27.793  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://www.yxl.com:5001/signin-oidc application/x-www-form-urlencoded 1384
+2017-09-01 14:23:27.801  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies signed in.
+2017-09-01 14:23:27.804  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 10.6882ms 302 
+2017-09-01 14:23:27.815  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 14:23:27.827  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 14:23:27.833  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was successfully authenticated.
+2017-09-01 14:23:27.836  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization was successful for user: 00000000-0000-0000-0000-000000000001.
+2017-09-01 14:23:27.838  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.About (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 14:23:27.843  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-01 14:23:27.846  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 19.4386ms
+2017-09-01 14:23:27.849  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 34.9166ms 200 text/html; charset=utf-8
+2017-09-01 15:02:04.738  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/Contact  
+2017-09-01 15:02:04.744  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Contact (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 15:02:04.754  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Contact.cshtml.
+2017-09-01 15:02:04.761  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Contact (WebSite) in 17.2339ms
+2017-09-01 15:02:04.768  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 28.3381ms 200 text/html; charset=utf-8
+2017-09-01 15:02:05.900  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/Logout  
+2017-09-01 15:02:05.904  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Logout (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 15:02:05.907  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies signed out.
+2017-09-01 15:02:05.911  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 15:02:05.914  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian signed out.
+2017-09-01 15:02:05.918  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Logout (WebSite) in 13.6331ms
+2017-09-01 15:02:05.921  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 21.1198ms 302 
+2017-09-01 15:02:12.295  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/signout-callback-oidc?state=CfDJ8ECGCikUVX1HsEI_-gAmK4Z3cGxgD_tUGcxNV6XzlLDN7C78tEeGd4no45sJqZ6tkE4BxL-A3F1VqLgBSBPr3ANOwyZJaPVxaMXw4TKupxIek1AJUuTc58WvECbgXNfyC26NsbC4SmrRksHNmwuNoNaGoWvGL0ZdQSkDl16ooUmJ  
+2017-09-01 15:02:12.301  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 5.4895ms 302 
+2017-09-01 15:02:12.305  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/  
+2017-09-01 15:02:12.311  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Index (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 15:02:12.315  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-01 15:02:12.320  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Index (WebSite) in 10.4435ms
+2017-09-01 15:02:12.324  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 18.4867ms 200 text/html; charset=utf-8
+2017-09-01 15:02:13.598  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 15:02:13.601  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: meinian was not authenticated. Failure message: Not authenticated
+2017-09-01 15:02:13.604  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization failed for user: (null).
+2017-09-01 15:02:13.608  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2017-09-01 15:02:13.611  Microsoft.AspNetCore.Mvc.ChallengeResult   Information: Executing ChallengeResult with authentication schemes (meinian).
+2017-09-01 15:02:13.614  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was challenged.
+2017-09-01 15:02:13.616  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 14.9872ms
+2017-09-01 15:02:13.619  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 21.3065ms 302 
+2017-09-01 15:02:15.941  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://www.yxl.com:5001/signin-oidc application/x-www-form-urlencoded 1384
+2017-09-01 15:02:15.947  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies signed in.
+2017-09-01 15:02:15.950  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 9.285ms 302 
+2017-09-01 15:02:15.957  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://www.yxl.com:5001/Home/About  
+2017-09-01 15:02:15.962  Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   Information: AuthenticationScheme: Cookies was successfully authenticated.
+2017-09-01 15:02:15.965  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was successfully authenticated.
+2017-09-01 15:02:15.969  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization was successful for user: 00000000-0000-0000-0000-000000000001.
+2017-09-01 15:02:15.973  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.About (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 15:02:15.978  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-01 15:02:15.982  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 20.5736ms
+2017-09-01 15:02:15.988  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 30.3917ms 200 text/html; charset=utf-8

@@ -1,0 +1,11 @@
+D:\ProjectTest\NetCore\YXL.OpenNetCore\PermissionSystem\bin\Debug\netcoreapp2.0\PermissionSystem.deps.json
+D:\ProjectTest\NetCore\YXL.OpenNetCore\PermissionSystem\bin\Debug\netcoreapp2.0\PermissionSystem.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\PermissionSystem\obj\Debug\netcoreapp2.0\PermissionSystem.csproj.CoreCompileInputs.cache
+D:\ProjectTest\NetCore\YXL.OpenNetCore\PermissionSystem\obj\Debug\netcoreapp2.0\PermissionSystem.AssemblyInfoInputs.cache
+D:\ProjectTest\NetCore\YXL.OpenNetCore\PermissionSystem\obj\Debug\netcoreapp2.0\PermissionSystem.AssemblyInfo.cs
+D:\ProjectTest\NetCore\YXL.OpenNetCore\PermissionSystem\obj\Debug\netcoreapp2.0\PermissionSystem.csprojResolveAssemblyReference.cache
+D:\ProjectTest\NetCore\YXL.OpenNetCore\PermissionSystem\bin\Debug\netcoreapp2.0\PermissionSystem.pdb
+D:\ProjectTest\NetCore\YXL.OpenNetCore\PermissionSystem\bin\Debug\netcoreapp2.0\Core.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\PermissionSystem\bin\Debug\netcoreapp2.0\Core.pdb
+D:\ProjectTest\NetCore\YXL.OpenNetCore\PermissionSystem\obj\Debug\netcoreapp2.0\PermissionSystem.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\PermissionSystem\obj\Debug\netcoreapp2.0\PermissionSystem.pdb

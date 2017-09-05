@@ -1,0 +1,13 @@
+D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\bin\Release\netcoreapp2.0\ViewModels.deps.json
+D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\bin\Release\netcoreapp2.0\ViewModels.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\bin\Release\netcoreapp2.0\ViewModels.pdb
+D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\bin\Release\netcoreapp2.0\Core.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\bin\Release\netcoreapp2.0\PermissionSystem.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\bin\Release\netcoreapp2.0\PermissionSystem.pdb
+D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\bin\Release\netcoreapp2.0\Core.pdb
+D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\obj\Release\netcoreapp2.0\ViewModels.csprojResolveAssemblyReference.cache
+D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\obj\Release\netcoreapp2.0\ViewModels.csproj.CoreCompileInputs.cache
+D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\obj\Release\netcoreapp2.0\ViewModels.AssemblyInfoInputs.cache
+D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\obj\Release\netcoreapp2.0\ViewModels.AssemblyInfo.cs
+D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\obj\Release\netcoreapp2.0\ViewModels.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\ViewModels\obj\Release\netcoreapp2.0\ViewModels.pdb

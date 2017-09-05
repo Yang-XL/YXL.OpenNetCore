@@ -1,0 +1,14 @@
+D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=IdentitySite
+--content-root=D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite
+--file=D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Views\Account\Login.cshtml
+--file=D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Views\Grants\Index.cshtml
+--file=D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Views\Home\About.cshtml
+--file=D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Views\Home\Contact.cshtml
+--file=D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Views\Home\Index.cshtml
+--file=D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Views\Shared\Error.cshtml
+--file=D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Views\Shared\_Layout.cshtml
+--file=D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Views\_ViewImports.cshtml
+--file=D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\Views\_ViewStart.cshtml

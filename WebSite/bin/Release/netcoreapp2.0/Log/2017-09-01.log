@@ -1,0 +1,18 @@
+﻿2017-09-01 11:25:04.243  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:14049/  
+2017-09-01 11:25:04.369  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Index (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 11:25:06.730  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-01 11:25:07.084  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Index (WebSite) in 2712.7935ms
+2017-09-01 11:25:07.091  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2863.493ms 200 text/html; charset=utf-8
+2017-09-01 11:25:10.979  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:14049/Home/About  
+2017-09-01 11:25:10.994  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: meinian was not authenticated. Failure message: Not authenticated
+2017-09-01 11:25:11.002  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Information: Authorization failed for user: (null).
+2017-09-01 11:25:11.007  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2017-09-01 11:25:11.011  Microsoft.AspNetCore.Mvc.ChallengeResult   Information: Executing ChallengeResult with authentication schemes (meinian).
+2017-09-01 11:25:11.154  Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler   Information: AuthenticationScheme: meinian was challenged.
+2017-09-01 11:25:11.157  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.About (WebSite) in 172.2007ms
+2017-09-01 11:25:11.161  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 182.5816ms 302 
+2017-09-01 11:26:15.446  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:14049/  
+2017-09-01 11:26:15.570  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method WebSite.Controllers.HomeController.Index (WebSite) with arguments ((null)) - ModelState is Valid
+2017-09-01 11:26:17.999  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-01 11:26:18.351  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action WebSite.Controllers.HomeController.Index (WebSite) in 2788.3735ms
+2017-09-01 11:26:18.365  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 2935.8859ms 200 text/html; charset=utf-8

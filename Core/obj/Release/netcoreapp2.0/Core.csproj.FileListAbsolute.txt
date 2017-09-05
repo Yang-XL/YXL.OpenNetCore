@@ -1,0 +1,9 @@
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Core\bin\Release\netcoreapp2.0\Core.deps.json
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Core\bin\Release\netcoreapp2.0\Core.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Core\bin\Release\netcoreapp2.0\Core.pdb
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Core\obj\Release\netcoreapp2.0\Core.csprojResolveAssemblyReference.cache
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Core\obj\Release\netcoreapp2.0\Core.csproj.CoreCompileInputs.cache
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Core\obj\Release\netcoreapp2.0\Core.AssemblyInfoInputs.cache
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Core\obj\Release\netcoreapp2.0\Core.AssemblyInfo.cs
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Core\obj\Release\netcoreapp2.0\Core.dll
+D:\ProjectTest\NetCore\YXL.OpenNetCore\Core\obj\Release\netcoreapp2.0\Core.pdb

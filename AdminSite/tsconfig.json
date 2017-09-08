@@ -1,0 +1,12 @@
+﻿{
+  "compilerOptions": {
+    "allowJs": true, // 这些设置适用于.js文件以及.ts文件
+    "noEmit": true // 在编译时不要在此项目中编译JS（或TS）文件
+  },
+  // 不要在“node_modules”或“bower_components”下找到任何JavaScript
+  "exclude": [
+    "wwwroot/assets/layouts",
+    "wwwroot/assets/global/plugins"
+    //"bower_components"
+  ]
+}

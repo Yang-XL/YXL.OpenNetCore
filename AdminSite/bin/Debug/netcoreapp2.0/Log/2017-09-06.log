@@ -1,0 +1,769 @@
+﻿2017-09-06 13:47:08.753  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-06 13:47:08.768  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE [a].[Code] = N''
+2017-09-06 13:47:08.772  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-06 13:47:08.776  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-06 13:47:08.782  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 9.4082ms
+2017-09-06 13:47:08.786  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 33.3809ms 200 text/html; charset=utf-8
+2017-09-06 13:48:50.035  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-06 13:48:55.021  Microsoft.AspNetCore.Server.Kestrel   Warning: Heartbeat took longer than "00:00:01" at "09/06/2017 05:48:54 +00:00".
+2017-09-06 13:48:55.343  Microsoft.AspNetCore.Server.Kestrel   Warning: Heartbeat took longer than "00:00:01" at "09/06/2017 05:48:52 +00:00".
+2017-09-06 13:48:56.053  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE [a].[Code] = N''
+2017-09-06 13:50:05.735  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-06 13:50:08.550  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-06 13:50:09.651  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 3902.699ms
+2017-09-06 13:50:09.661  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/simple-line-icons/simple-line-icons.min.css  
+2017-09-06 13:50:09.669  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css  
+2017-09-06 13:50:09.679  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/font-awesome/css/font-awesome.min.css  
+2017-09-06 13:50:09.692  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap/css/bootstrap.min.css  
+2017-09-06 13:50:09.698  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/font-awesome/css/font-awesome.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\font-awesome\css\font-awesome.min.css'
+2017-09-06 13:50:09.706  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 79672.8784ms 200 text/html; charset=utf-8
+2017-09-06 13:50:09.740  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-switch\css\bootstrap-switch.min.css'
+2017-09-06 13:50:09.766  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap/css/bootstrap.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap\css\bootstrap.min.css'
+2017-09-06 13:50:09.782  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/simple-line-icons/simple-line-icons.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\simple-line-icons\simple-line-icons.min.css'
+2017-09-06 13:50:09.807  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 98.5944ms 200 text/css
+2017-09-06 13:50:09.825  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 139.9156ms 200 text/css
+2017-09-06 13:50:09.832  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/uniform/css/uniform.default.css  
+2017-09-06 13:50:09.838  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 116.1776ms 200 text/css
+2017-09-06 13:50:09.866  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jqvmap/jqvmap/jqvmap.css  
+2017-09-06 13:50:09.867  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/uniform/css/uniform.default.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\uniform\css\uniform.default.css'
+2017-09-06 13:50:09.873  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/morris/morris.css  
+2017-09-06 13:50:09.889  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css  
+2017-09-06 13:50:09.908  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jqvmap/jqvmap/jqvmap.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jqvmap\jqvmap\jqvmap.css'
+2017-09-06 13:50:09.930  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/morris/morris.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\morris\morris.css'
+2017-09-06 13:50:09.935  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 76.8799ms 200 text/css
+2017-09-06 13:50:09.958  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 97.0129ms 200 text/css
+2017-09-06 13:50:09.967  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 57.8543ms 200 text/css
+2017-09-06 13:50:09.971  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/fullcalendar/fullcalendar.min.css  
+2017-09-06 13:50:09.990  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/layout.min.css  
+2017-09-06 13:50:09.999  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-daterangepicker\daterangepicker.min.css'
+2017-09-06 13:50:10.003  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/css/components.min.css  
+2017-09-06 13:50:10.041  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/css/layout.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\layout.min.css'
+2017-09-06 13:50:10.064  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/css/plugins.min.css  
+2017-09-06 13:50:10.058  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/fullcalendar/fullcalendar.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\fullcalendar\fullcalendar.min.css'
+2017-09-06 13:50:10.070  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/css/components.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\css\components.min.css'
+2017-09-06 13:50:10.105  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 162.9185ms 200 text/css
+2017-09-06 13:50:10.126  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 114.8848ms 200 text/css
+2017-09-06 13:50:10.134  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 403.1839ms 200 text/css
+2017-09-06 13:50:10.167  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/css/plugins.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\css\plugins.min.css'
+2017-09-06 13:50:10.193  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/custom.min.css  
+2017-09-06 13:50:10.214  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/themes/darkblue.min.css  
+2017-09-06 13:50:10.218  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 177.7188ms 200 text/css
+2017-09-06 13:50:10.235  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 191.597ms 200 text/css
+2017-09-06 13:50:10.238  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 231.0612ms 200 text/css
+2017-09-06 13:50:10.244  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/css/custom.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\custom.min.css'
+2017-09-06 13:50:10.254  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/css/themes/darkblue.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\themes\darkblue.min.css'
+2017-09-06 13:50:10.255  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery.min.js  
+2017-09-06 13:50:10.271  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 103.8633ms 200 text/css
+2017-09-06 13:50:10.299  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery.min.js'
+2017-09-06 13:50:10.300  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 101.0954ms 200 text/css
+2017-09-06 13:50:10.305  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap/js/bootstrap.min.js  
+2017-09-06 13:50:10.318  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js  
+2017-09-06 13:50:10.339  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js  
+2017-09-06 13:50:10.370  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/js.cookie.min.js  
+2017-09-06 13:50:10.376  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery-slimscroll\jquery.slimscroll.min.js'
+2017-09-06 13:50:10.383  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap/js/bootstrap.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap\js\bootstrap.min.js'
+2017-09-06 13:50:10.404  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 92.2052ms 200 application/javascript
+2017-09-06 13:50:10.427  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/js.cookie.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\js.cookie.min.js'
+2017-09-06 13:50:10.435  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-hover-dropdown\bootstrap-hover-dropdown.min.js'
+2017-09-06 13:50:10.466  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery.blockui.min.js  
+2017-09-06 13:50:10.474  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.4.0  
+2017-09-06 13:50:10.508  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 128.4599ms 200 application/javascript
+2017-09-06 13:50:10.552  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/simple-line-icons/fonts/Simple-Line-Icons.woff  
+2017-09-06 13:50:10.554  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.woff2'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\font-awesome\fonts\fontawesome-webfont.woff2'
+2017-09-06 13:50:10.569  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery.blockui.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery.blockui.min.js'
+2017-09-06 13:50:10.610  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 144.6111ms 200 application/javascript
+2017-09-06 13:50:10.619  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 150.3165ms 200 application/javascript
+2017-09-06 13:50:10.622  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 115.1641ms 200 font/woff2
+2017-09-06 13:50:10.633  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/simple-line-icons/fonts/Simple-Line-Icons.woff'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\simple-line-icons\fonts\Simple-Line-Icons.woff'
+2017-09-06 13:50:10.653  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/sidebar_toggler_icon_darkblue.png  
+2017-09-06 13:50:10.663  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 120.9119ms 200 application/font-woff
+2017-09-06 13:50:10.678  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/icon-color.png  
+2017-09-06 13:50:10.682  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/sidebar_toggler_icon_darkblue.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\sidebar_toggler_icon_darkblue.png'
+2017-09-06 13:50:10.681  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/img/syncfusion-icons-white.png  
+2017-09-06 13:50:10.695  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/icon-color.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\icon-color.png'
+2017-09-06 13:50:10.715  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 445.0956ms 200 application/javascript
+2017-09-06 13:50:10.718  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/img/syncfusion-icons-white.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\img\syncfusion-icons-white.png'
+2017-09-06 13:50:10.759  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 79.353ms 200 image/png
+2017-09-06 13:50:10.771  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 73.0953ms 200 image/png
+2017-09-06 13:50:10.783  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/logo.png  
+2017-09-06 13:50:10.791  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/avatar3_small.jpg  
+2017-09-06 13:50:10.816  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/avatar3_small.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\avatar3_small.jpg'
+2017-09-06 13:50:10.818  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js  
+2017-09-06 13:50:10.828  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/uniform/jquery.uniform.min.js  
+2017-09-06 13:50:10.864  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 60.7284ms 200 image/jpeg
+2017-09-06 13:50:10.866  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/logo.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\logo.png'
+2017-09-06 13:50:10.875  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/uniform/jquery.uniform.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\uniform\jquery.uniform.min.js'
+2017-09-06 13:50:10.900  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 185.8742ms 200 image/png
+2017-09-06 13:50:10.921  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 82.0984ms 200 application/javascript
+2017-09-06 13:50:10.935  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/moment.min.js  
+2017-09-06 13:50:10.955  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/morris/morris.min.js  
+2017-09-06 13:50:10.966  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js  
+2017-09-06 13:50:10.967  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-switch\js\bootstrap-switch.min.js'
+2017-09-06 13:50:10.972  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/moment.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\moment.min.js'
+2017-09-06 13:50:10.988  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-daterangepicker\daterangepicker.min.js'
+2017-09-06 13:50:11.020  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/morris/morris.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\morris\morris.min.js'
+2017-09-06 13:50:11.030  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 176.0353ms 200 application/javascript
+2017-09-06 13:50:11.045  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 77.3465ms 200 application/javascript
+2017-09-06 13:50:11.095  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 57.389ms 200 application/javascript
+2017-09-06 13:50:11.115  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 103.8142ms 200 application/javascript
+2017-09-06 13:50:11.130  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js  
+2017-09-06 13:50:11.148  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery.sparkline.min.js  
+2017-09-06 13:50:11.219  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery-easypiechart\jquery.easypiechart.min.js'
+2017-09-06 13:50:11.247  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/scripts/app.min.js  
+2017-09-06 13:50:11.270  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery.sparkline.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery.sparkline.min.js'
+2017-09-06 13:50:11.318  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 187.4083ms 200 application/javascript
+2017-09-06 13:50:11.352  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/scripts/app.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\scripts\app.min.js'
+2017-09-06 13:50:11.371  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/morris/raphael-min.js  
+2017-09-06 13:50:11.446  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 183.2417ms 200 application/javascript
+2017-09-06 13:50:11.452  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/pages/scripts/dashboard.min.js  
+2017-09-06 13:50:11.548  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/pages/scripts/dashboard.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\pages\scripts\dashboard.min.js'
+2017-09-06 13:50:11.559  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/scripts/demo.min.js  
+2017-09-06 13:50:11.576  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 154.3204ms 200 application/javascript
+2017-09-06 13:50:11.584  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/morris/raphael-min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\morris\raphael-min.js'
+2017-09-06 13:50:11.646  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/scripts/demo.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\scripts\demo.min.js'
+2017-09-06 13:50:11.681  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/scripts/layout.min.js  
+2017-09-06 13:50:11.682  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/global/scripts/quick-sidebar.min.js  
+2017-09-06 13:50:11.685  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 1018.7413ms 200 image/png
+2017-09-06 13:50:11.719  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 1273.8552ms 200 application/javascript
+2017-09-06 13:50:11.724  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/scripts/layout.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\scripts\layout.min.js'
+2017-09-06 13:50:11.760  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar2.jpg  
+2017-09-06 13:50:11.761  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/global/scripts/quick-sidebar.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\global\scripts\quick-sidebar.min.js'
+2017-09-06 13:50:11.775  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 162.0933ms 200 application/javascript
+2017-09-06 13:50:11.784  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 120.4924ms 200 application/javascript
+2017-09-06 13:50:11.835  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout3/img/avatar2.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar2.jpg'
+2017-09-06 13:50:11.841  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar1.jpg  
+2017-09-06 13:50:11.853  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 113.0993ms 200 image/jpeg
+2017-09-06 13:50:11.901  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar3.jpg  
+2017-09-06 13:50:11.903  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout3/img/avatar1.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar1.jpg'
+2017-09-06 13:50:11.913  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/scripts/menu.js  
+2017-09-06 13:50:11.930  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 732.8236ms 200 application/javascript
+2017-09-06 13:50:11.936  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/icon-color-close.png  
+2017-09-06 13:50:11.963  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout3/img/avatar3.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar3.jpg'
+2017-09-06 13:50:11.999  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/icon-color-close.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\icon-color-close.png'
+2017-09-06 13:50:12.007  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/scripts/menu.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\scripts\menu.js'
+2017-09-06 13:50:12.035  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 172.7517ms 200 application/javascript
+2017-09-06 13:50:12.037  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 97.1434ms 200 image/png
+2017-09-06 13:50:12.041  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 519.7276ms 200 application/javascript
+2017-09-06 13:50:12.084  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 202.519ms 200 image/jpeg
+2017-09-06 13:50:12.087  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 236.8477ms 200 image/jpeg
+2017-09-06 13:50:12.146  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/favicon.ico  
+2017-09-06 13:50:12.154  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/favicon.ico'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\favicon.ico'
+2017-09-06 13:50:12.167  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 34.371ms 200 image/x-icon
+2017-09-06 13:50:15.890  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/home/index  
+2017-09-06 13:52:10.498  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-06 13:52:57.616  Microsoft.AspNetCore.Server.Kestrel   Warning: Heartbeat took longer than "00:00:01" at "09/06/2017 05:52:12 +00:00".
+2017-09-06 13:52:57.864  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE [a].[Code] = N''
+2017-09-06 13:52:57.940  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-06 13:53:00.666  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-06 13:53:01.796  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 3833.1499ms
+2017-09-06 13:53:01.819  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 51341.3852ms 200 text/html; charset=utf-8
+2017-09-06 13:57:11.245  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-06 13:57:21.369  Microsoft.AspNetCore.Server.Kestrel   Warning: Heartbeat took longer than "00:00:01" at "09/06/2017 05:57:18 +00:00".
+2017-09-06 13:57:21.606  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE [a].[Code] = N''
+2017-09-06 13:57:21.682  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-06 13:57:24.536  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-06 13:57:25.643  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 3938.3231ms
+2017-09-06 13:57:25.665  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 14451.0223ms 200 text/html; charset=utf-8
+2017-09-06 13:57:32.685  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/home/about  
+2017-09-06 14:00:42.833  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-06 14:00:45.282  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE [a].[Code] = N''
+2017-09-06 14:00:45.365  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-06 14:00:48.092  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-06 14:00:49.171  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 3792.9035ms
+2017-09-06 14:00:49.194  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 6385.7479ms 200 text/html; charset=utf-8
+2017-09-06 14:00:53.610  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/about  
+2017-09-06 14:00:56.947  AdminSite.Core.AdminRouter   Debug: Key is controller，Value is Home
+2017-09-06 14:00:56.957  AdminSite.Core.AdminRouter   Debug: Key is action，Value is About
+2017-09-06 14:00:56.973  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE [a].[Code] = N''
+2017-09-06 14:00:56.996  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 3373.7623ms 404 
+2017-09-06 14:07:15.937  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-06 14:07:16.092  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-06 14:07:18.285  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-06 14:07:19.166  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 3084.1607ms
+2017-09-06 14:07:19.178  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 3254.1927ms 200 text/html; charset=utf-8
+2017-09-06 14:07:19.181  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/font-awesome/css/font-awesome.min.css  
+2017-09-06 14:07:19.185  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap/css/bootstrap.min.css  
+2017-09-06 14:07:19.187  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/uniform/css/uniform.default.css  
+2017-09-06 14:07:19.192  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/simple-line-icons/simple-line-icons.min.css  
+2017-09-06 14:07:19.196  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap/css/bootstrap.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap\css\bootstrap.min.css'
+2017-09-06 14:07:19.196  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/font-awesome/css/font-awesome.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\font-awesome\css\font-awesome.min.css'
+2017-09-06 14:07:19.197  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/uniform/css/uniform.default.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\uniform\css\uniform.default.css'
+2017-09-06 14:07:19.202  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/simple-line-icons/simple-line-icons.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\simple-line-icons\simple-line-icons.min.css'
+2017-09-06 14:07:19.207  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 26.0424ms 200 text/css
+2017-09-06 14:07:19.207  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 22.217ms 200 text/css
+2017-09-06 14:07:19.210  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 22.2459ms 200 text/css
+2017-09-06 14:07:19.213  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 20.9707ms 200 text/css
+2017-09-06 14:07:19.220  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css  
+2017-09-06 14:07:19.225  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css  
+2017-09-06 14:07:19.227  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/morris/morris.css  
+2017-09-06 14:07:19.229  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/fullcalendar/fullcalendar.min.css  
+2017-09-06 14:07:19.236  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-switch\css\bootstrap-switch.min.css'
+2017-09-06 14:07:19.239  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-daterangepicker\daterangepicker.min.css'
+2017-09-06 14:07:19.241  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/morris/morris.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\morris\morris.css'
+2017-09-06 14:07:19.243  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/fullcalendar/fullcalendar.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\fullcalendar\fullcalendar.min.css'
+2017-09-06 14:07:19.253  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 28.1284ms 200 text/css
+2017-09-06 14:07:19.255  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jqvmap/jqvmap/jqvmap.css  
+2017-09-06 14:07:19.255  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 35.7129ms 200 text/css
+2017-09-06 14:07:19.255  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 28.0517ms 200 text/css
+2017-09-06 14:07:19.259  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 29.486ms 200 text/css
+2017-09-06 14:07:19.269  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/themes/darkblue.min.css  
+2017-09-06 14:07:19.272  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jqvmap/jqvmap/jqvmap.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jqvmap\jqvmap\jqvmap.css'
+2017-09-06 14:07:19.274  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/layout.min.css  
+2017-09-06 14:07:19.276  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/css/plugins.min.css  
+2017-09-06 14:07:19.279  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/custom.min.css  
+2017-09-06 14:07:19.284  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/css/themes/darkblue.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\themes\darkblue.min.css'
+2017-09-06 14:07:19.287  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 31.3921ms 200 text/css
+2017-09-06 14:07:19.290  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/css/layout.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\layout.min.css'
+2017-09-06 14:07:19.295  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/css/plugins.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\css\plugins.min.css'
+2017-09-06 14:07:19.299  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/css/custom.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\custom.min.css'
+2017-09-06 14:07:19.303  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 33.1866ms 200 text/css
+2017-09-06 14:07:19.305  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery.min.js  
+2017-09-06 14:07:19.310  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 36.0375ms 200 text/css
+2017-09-06 14:07:19.313  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/css/components.min.css  
+2017-09-06 14:07:19.318  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 39.698ms 200 text/css
+2017-09-06 14:07:19.327  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 50.7371ms 200 text/css
+2017-09-06 14:07:19.342  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery.min.js'
+2017-09-06 14:07:19.349  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/css/components.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\css\components.min.css'
+2017-09-06 14:07:19.370  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 64.9293ms 200 application/javascript
+2017-09-06 14:07:19.403  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 90.2715ms 200 text/css
+2017-09-06 14:07:19.411  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap/js/bootstrap.min.js  
+2017-09-06 14:07:19.416  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap/js/bootstrap.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap\js\bootstrap.min.js'
+2017-09-06 14:07:19.420  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 9.5349ms 200 application/javascript
+2017-09-06 14:07:19.437  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/js.cookie.min.js  
+2017-09-06 14:07:19.440  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js  
+2017-09-06 14:07:19.440  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/uniform/jquery.uniform.min.js  
+2017-09-06 14:07:19.442  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js  
+2017-09-06 14:07:19.443  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js  
+2017-09-06 14:07:19.444  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/js.cookie.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\js.cookie.min.js'
+2017-09-06 14:07:19.446  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-switch\js\bootstrap-switch.min.js'
+2017-09-06 14:07:19.449  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/uniform/jquery.uniform.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\uniform\jquery.uniform.min.js'
+2017-09-06 14:07:19.451  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-hover-dropdown\bootstrap-hover-dropdown.min.js'
+2017-09-06 14:07:19.454  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery-slimscroll\jquery.slimscroll.min.js'
+2017-09-06 14:07:19.456  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 19.402ms 200 application/javascript
+2017-09-06 14:07:19.460  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 20.4174ms 200 application/javascript
+2017-09-06 14:07:19.463  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 23.3434ms 200 application/javascript
+2017-09-06 14:07:19.467  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 24.8428ms 200 application/javascript
+2017-09-06 14:07:19.472  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 28.5739ms 200 application/javascript
+2017-09-06 14:07:19.474  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/moment.min.js  
+2017-09-06 14:07:19.478  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js  
+2017-09-06 14:07:19.481  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/morris/morris.min.js  
+2017-09-06 14:07:19.484  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/morris/raphael-min.js  
+2017-09-06 14:07:19.486  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js  
+2017-09-06 14:07:19.488  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/moment.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\moment.min.js'
+2017-09-06 14:07:19.491  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-daterangepicker\daterangepicker.min.js'
+2017-09-06 14:07:19.493  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/morris/morris.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\morris\morris.min.js'
+2017-09-06 14:07:19.496  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/morris/raphael-min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\morris\raphael-min.js'
+2017-09-06 14:07:19.498  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery-easypiechart\jquery.easypiechart.min.js'
+2017-09-06 14:07:19.501  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 26.8958ms 200 application/javascript
+2017-09-06 14:07:19.504  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery.blockui.min.js  
+2017-09-06 14:07:19.508  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 26.9863ms 200 application/javascript
+2017-09-06 14:07:19.511  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 33.8473ms 200 application/javascript
+2017-09-06 14:07:19.526  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 39.628ms 200 application/javascript
+2017-09-06 14:07:19.530  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery.sparkline.min.js  
+2017-09-06 14:07:19.537  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery.blockui.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery.blockui.min.js'
+2017-09-06 14:07:19.543  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.4.0  
+2017-09-06 14:07:19.546  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/pages/scripts/dashboard.min.js  
+2017-09-06 14:07:19.548  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/scripts/app.min.js  
+2017-09-06 14:07:19.550  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery.sparkline.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery.sparkline.min.js'
+2017-09-06 14:07:19.553  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 49.4391ms 200 application/javascript
+2017-09-06 14:07:19.556  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.woff2'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\font-awesome\fonts\fontawesome-webfont.woff2'
+2017-09-06 14:07:19.558  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/pages/scripts/dashboard.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\pages\scripts\dashboard.min.js'
+2017-09-06 14:07:19.562  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/scripts/app.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\scripts\app.min.js'
+2017-09-06 14:07:19.567  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 82.6607ms 200 application/javascript
+2017-09-06 14:07:19.572  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/simple-line-icons/fonts/Simple-Line-Icons.woff  
+2017-09-06 14:07:19.577  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 46.9275ms 200 application/javascript
+2017-09-06 14:07:19.582  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 38.9853ms 200 font/woff2
+2017-09-06 14:07:19.589  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 40.7541ms 200 application/javascript
+2017-09-06 14:07:19.609  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 62.501ms 200 application/javascript
+2017-09-06 14:07:19.610  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/simple-line-icons/fonts/Simple-Line-Icons.woff'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\simple-line-icons\fonts\Simple-Line-Icons.woff'
+2017-09-06 14:07:19.633  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/scripts/layout.min.js  
+2017-09-06 14:07:19.641  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/sidebar_toggler_icon_darkblue.png  
+2017-09-06 14:07:19.642  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 69.7565ms 200 application/font-woff
+2017-09-06 14:07:19.642  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/img/syncfusion-icons-white.png  
+2017-09-06 14:07:19.650  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/scripts/layout.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\scripts\layout.min.js'
+2017-09-06 14:07:19.652  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/icon-color.png  
+2017-09-06 14:07:19.653  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/sidebar_toggler_icon_darkblue.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\sidebar_toggler_icon_darkblue.png'
+2017-09-06 14:07:19.656  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/logo.png  
+2017-09-06 14:07:19.658  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/img/syncfusion-icons-white.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\img\syncfusion-icons-white.png'
+2017-09-06 14:07:19.668  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/avatar3_small.jpg  
+2017-09-06 14:07:19.670  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/icon-color.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\icon-color.png'
+2017-09-06 14:07:19.674  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 32.6057ms 200 image/png
+2017-09-06 14:07:19.677  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/logo.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\logo.png'
+2017-09-06 14:07:19.683  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 41.4767ms 200 image/png
+2017-09-06 14:07:19.690  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/avatar3_small.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\avatar3_small.jpg'
+2017-09-06 14:07:19.694  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 42.6041ms 200 image/png
+2017-09-06 14:07:19.700  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/scripts/demo.min.js  
+2017-09-06 14:07:19.703  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 70.066ms 200 application/javascript
+2017-09-06 14:07:19.710  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/global/scripts/quick-sidebar.min.js  
+2017-09-06 14:07:19.716  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 48.2017ms 200 image/jpeg
+2017-09-06 14:07:19.719  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/scripts/menu.js  
+2017-09-06 14:07:19.724  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/scripts/demo.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\scripts\demo.min.js'
+2017-09-06 14:07:19.740  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar2.jpg  
+2017-09-06 14:07:19.753  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/global/scripts/quick-sidebar.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\global\scripts\quick-sidebar.min.js'
+2017-09-06 14:07:19.755  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar3.jpg  
+2017-09-06 14:07:19.762  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/scripts/menu.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\scripts\menu.js'
+2017-09-06 14:07:19.768  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 111.5418ms 200 image/png
+2017-09-06 14:07:19.771  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout3/img/avatar2.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar2.jpg'
+2017-09-06 14:07:19.775  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 74.384ms 200 application/javascript
+2017-09-06 14:07:19.778  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout3/img/avatar3.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar3.jpg'
+2017-09-06 14:07:19.785  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 75.5922ms 200 application/javascript
+2017-09-06 14:07:19.793  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar1.jpg  
+2017-09-06 14:07:19.794  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 75.309ms 200 application/javascript
+2017-09-06 14:07:19.805  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/icon-color-close.png  
+2017-09-06 14:07:19.809  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 69.0955ms 200 image/jpeg
+2017-09-06 14:07:19.817  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 61.6331ms 200 image/jpeg
+2017-09-06 14:07:19.823  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout3/img/avatar1.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar1.jpg'
+2017-09-06 14:07:19.836  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/icon-color-close.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\icon-color-close.png'
+2017-09-06 14:07:19.847  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 53.8982ms 200 image/jpeg
+2017-09-06 14:07:19.851  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 46.0003ms 200 image/png
+2017-09-06 14:07:29.929  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/about  
+2017-09-06 14:07:29.933  AdminSite.Core.AdminRouter   Debug: Key is controller，Value is Home
+2017-09-06 14:07:29.936  AdminSite.Core.AdminRouter   Debug: Key is action，Value is About
+2017-09-06 14:07:29.942  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.About (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-06 14:07:30.068  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-06 14:07:30.078  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.About (AdminSite) in 135.8956ms
+2017-09-06 14:07:30.082  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 153.1835ms 200 text/html; charset=utf-8
+2017-09-06 14:07:40.738  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/about/1  
+2017-09-06 14:07:40.742  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 4.5661ms 404 
+2017-09-06 14:08:23.103  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/about/1  
+2017-09-06 14:08:23.229  AdminSite.Core.AdminRouter   Debug: Key is controller，Value is Home
+2017-09-06 14:08:23.233  AdminSite.Core.AdminRouter   Debug: Key is action，Value is About
+2017-09-06 14:08:23.268  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.About (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-06 14:08:25.224  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-06 14:08:26.384  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.About (AdminSite) in 3122.7974ms
+2017-09-06 14:08:26.396  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 3307.2384ms 200 text/html; charset=utf-8
+2017-09-06 14:08:26.614  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/about/favicon.ico  
+2017-09-06 14:08:26.617  AdminSite.Core.AdminRouter   Debug: Key is controller，Value is Home
+2017-09-06 14:08:26.620  AdminSite.Core.AdminRouter   Debug: Key is action，Value is About
+2017-09-06 14:08:26.625  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.About (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-06 14:08:26.629  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-06 14:08:26.634  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.About (AdminSite) in 8.8116ms
+2017-09-06 14:08:26.638  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 24.5481ms 200 text/html; charset=utf-8
+2017-09-06 14:09:27.597  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/about/1  
+2017-09-06 14:09:27.656  AdminSite.Core.AdminRouter   Debug: Key is controller，Value is Home
+2017-09-06 14:09:27.659  AdminSite.Core.AdminRouter   Debug: Key is action，Value is About
+2017-09-06 14:09:27.695  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.About (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-06 14:09:29.638  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-06 14:09:30.791  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.About (AdminSite) in 3104.5516ms
+2017-09-06 14:09:30.804  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 3220.7238ms 200 text/html; charset=utf-8
+2017-09-06 14:09:30.924  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/about/favicon.ico  
+2017-09-06 14:09:30.930  AdminSite.Core.AdminRouter   Debug: Key is controller，Value is Home
+2017-09-06 14:09:30.933  AdminSite.Core.AdminRouter   Debug: Key is action，Value is About
+2017-09-06 14:09:30.937  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.About (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-06 14:09:30.940  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-06 14:09:30.947  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.About (AdminSite) in 10.694ms
+2017-09-06 14:09:30.951  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 27.1271ms 200 text/html; charset=utf-8
+2017-09-06 14:10:03.960  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/about/1  
+2017-09-06 14:10:04.079  AdminSite.Core.AdminRouter   Debug: Key is controller，Value is Home
+2017-09-06 14:10:04.083  AdminSite.Core.AdminRouter   Debug: Key is action，Value is About
+2017-09-06 14:10:04.095  Microsoft.AspNetCore.Mvc.Internal.ActionSelector   Error: Request matched multiple actions resulting in ambiguity. Matching actions: AdminSite.Controllers.HomeController.About (AdminSite)
+AdminSite.Controllers.HomeController.About (AdminSite)
+2017-09-06 14:10:04.130  Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware   Error: An unhandled exception has occurred while executing the request
+
+Microsoft.AspNetCore.Mvc.Internal.AmbiguousActionException: Multiple actions matched. The following actions matched route data and had all constraints satisfied:
+
+AdminSite.Controllers.HomeController.About (AdminSite)
+AdminSite.Controllers.HomeController.About (AdminSite)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionSelector.SelectBestCandidate(RouteContext context, IReadOnlyList`1 candidates)
+   at Microsoft.AspNetCore.Mvc.Internal.MvcRouteHandler.RouteAsync(RouteContext context)
+   at AdminSite.Core.AdminRouter.<RouteAsync>d__4.MoveNext() in D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\Core\AdminRouter.cs:line 46
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Routing.RouteCollection.<RouteAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-09-06 14:10:04.169  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 222.9458ms 500 text/html; charset=utf-8
+2017-09-06 14:11:14.625  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/about/1  
+2017-09-06 14:11:14.742  AdminSite.Core.AdminRouter   Debug: Key is controller，Value is Home
+2017-09-06 14:11:14.745  AdminSite.Core.AdminRouter   Debug: Key is action，Value is About
+2017-09-06 14:11:14.802  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.About (AdminSite) with arguments (0) - ModelState is Valid
+2017-09-06 14:11:16.692  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-06 14:11:17.879  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.About (AdminSite) in 3090.2141ms
+2017-09-06 14:11:17.892  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 3278.5564ms 200 text/html; charset=utf-8
+2017-09-06 14:11:18.091  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/about/favicon.ico  
+2017-09-06 14:11:18.096  AdminSite.Core.AdminRouter   Debug: Key is controller，Value is Home
+2017-09-06 14:11:18.099  AdminSite.Core.AdminRouter   Debug: Key is action，Value is About
+2017-09-06 14:11:18.105  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.About (AdminSite) with arguments (0) - ModelState is Valid
+2017-09-06 14:11:18.110  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-06 14:11:18.115  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.About (AdminSite) in 10.4881ms
+2017-09-06 14:11:18.124  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 32.5275ms 200 text/html; charset=utf-8
+2017-09-06 14:11:23.952  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/about/2  
+2017-09-06 14:11:23.956  AdminSite.Core.AdminRouter   Debug: Key is controller，Value is Home
+2017-09-06 14:11:23.959  AdminSite.Core.AdminRouter   Debug: Key is action，Value is About
+2017-09-06 14:11:23.963  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.About (AdminSite) with arguments (0) - ModelState is Valid
+2017-09-06 14:11:23.966  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-06 14:11:23.970  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.About (AdminSite) in 7.3767ms
+2017-09-06 14:11:23.975  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 22.744ms 200 text/html; charset=utf-8
+2017-09-06 14:11:24.106  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/about/favicon.ico  
+2017-09-06 14:11:24.111  AdminSite.Core.AdminRouter   Debug: Key is controller，Value is Home
+2017-09-06 14:11:24.116  AdminSite.Core.AdminRouter   Debug: Key is action，Value is About
+2017-09-06 14:11:24.120  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.About (AdminSite) with arguments (0) - ModelState is Valid
+2017-09-06 14:11:24.123  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2017-09-06 14:11:24.130  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.About (AdminSite) in 10.0721ms
+2017-09-06 14:11:24.134  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 27.3262ms 200 text/html; charset=utf-8
+2017-09-06 14:30:54.730  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-06 14:30:54.883  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-06 14:30:57.102  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-06 14:30:57.982  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 3105.4137ms
+2017-09-06 14:30:57.992  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 3274.6868ms 200 text/html; charset=utf-8
+2017-09-06 14:30:58.059  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/scripts/menu.js  
+2017-09-06 14:30:58.068  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: The file /assets/global/scripts/menu.js was not modified
+2017-09-06 14:30:58.073  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 14.6559ms 304 application/javascript
+2017-09-06 14:35:29.946  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-06 14:35:30.099  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-06 14:35:32.295  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-06 14:35:33.220  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 3129.0641ms
+2017-09-06 14:35:33.227  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 3294.8343ms 200 text/html; charset=utf-8
+2017-09-06 14:35:33.361  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/favicon.ico  
+2017-09-06 14:35:33.370  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/favicon.ico'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\favicon.ico'
+2017-09-06 14:35:33.383  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 21.8514ms 200 image/x-icon
+2017-09-06 16:06:55.216  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-06 16:06:55.367  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-06 16:06:57.761  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-06 16:06:58.656  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 3295.7814ms
+2017-09-06 16:06:58.667  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 3463.9765ms 200 text/html; charset=utf-8
+2017-09-06 16:06:58.738  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/scripts/menu.js  
+2017-09-06 16:06:58.747  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: The file /assets/global/scripts/menu.js was not modified
+2017-09-06 16:06:58.752  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 13.5276ms 304 application/javascript
+2017-09-06 16:07:53.932  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-06 16:07:53.936  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-06 16:07:53.940  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-06 16:07:54.079  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 143.6284ms
+2017-09-06 16:07:54.083  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 151.5744ms 200 text/html; charset=utf-8
+2017-09-06 16:07:54.231  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/favicon.ico  
+2017-09-06 16:07:54.234  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/favicon.ico'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\favicon.ico'
+2017-09-06 16:07:54.249  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 18.1897ms 200 image/x-icon
+2017-09-06 16:11:00.502  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-06 16:11:00.506  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-06 16:11:00.509  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-06 16:11:00.648  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 142.2345ms
+2017-09-06 16:11:00.653  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 151.2661ms 200 text/html; charset=utf-8
+2017-09-06 16:11:00.666  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css  
+2017-09-06 16:11:00.666  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/font-awesome/css/font-awesome.min.css  
+2017-09-06 16:11:00.669  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/simple-line-icons/simple-line-icons.min.css  
+2017-09-06 16:11:00.671  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/uniform/css/uniform.default.css  
+2017-09-06 16:11:00.674  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-switch\css\bootstrap-switch.min.css'
+2017-09-06 16:11:00.677  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/font-awesome/css/font-awesome.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\font-awesome\css\font-awesome.min.css'
+2017-09-06 16:11:00.680  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/simple-line-icons/simple-line-icons.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\simple-line-icons\simple-line-icons.min.css'
+2017-09-06 16:11:00.682  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/uniform/css/uniform.default.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\uniform\css\uniform.default.css'
+2017-09-06 16:11:00.684  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 17.2143ms 200 text/css
+2017-09-06 16:11:00.690  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 23.118ms 200 text/css
+2017-09-06 16:11:00.692  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 22.9618ms 200 text/css
+2017-09-06 16:11:00.694  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 22.4618ms 200 text/css
+2017-09-06 16:11:00.698  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/morris/morris.css  
+2017-09-06 16:11:00.702  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap/css/bootstrap.min.css  
+2017-09-06 16:11:00.711  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/fullcalendar/fullcalendar.min.css  
+2017-09-06 16:11:00.712  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/css/components.min.css  
+2017-09-06 16:11:00.714  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/morris/morris.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\morris\morris.css'
+2017-09-06 16:11:00.716  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap/css/bootstrap.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap\css\bootstrap.min.css'
+2017-09-06 16:11:00.722  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/fullcalendar/fullcalendar.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\fullcalendar\fullcalendar.min.css'
+2017-09-06 16:11:00.724  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/css/components.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\css\components.min.css'
+2017-09-06 16:11:00.726  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css  
+2017-09-06 16:11:00.728  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jqvmap/jqvmap/jqvmap.css  
+2017-09-06 16:11:00.732  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 33.9364ms 200 text/css
+2017-09-06 16:11:00.739  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 28.7653ms 200 text/css
+2017-09-06 16:11:00.740  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-daterangepicker\daterangepicker.min.css'
+2017-09-06 16:11:00.744  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jqvmap/jqvmap/jqvmap.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jqvmap\jqvmap\jqvmap.css'
+2017-09-06 16:11:00.750  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/css/plugins.min.css  
+2017-09-06 16:11:00.753  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/layout.min.css  
+2017-09-06 16:11:00.756  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 54.2106ms 200 text/css
+2017-09-06 16:11:00.759  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 32.7234ms 200 text/css
+2017-09-06 16:11:00.774  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/css/plugins.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\css\plugins.min.css'
+2017-09-06 16:11:00.776  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/css/layout.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\layout.min.css'
+2017-09-06 16:11:00.778  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/custom.min.css  
+2017-09-06 16:11:00.780  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/themes/darkblue.min.css  
+2017-09-06 16:11:00.788  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 37.9753ms 200 text/css
+2017-09-06 16:11:00.793  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 64.1897ms 200 text/css
+2017-09-06 16:11:00.796  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/css/custom.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\custom.min.css'
+2017-09-06 16:11:00.805  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/css/themes/darkblue.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\themes\darkblue.min.css'
+2017-09-06 16:11:00.811  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 57.5602ms 200 text/css
+2017-09-06 16:11:00.818  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery.min.js  
+2017-09-06 16:11:00.821  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 42.954ms 200 text/css
+2017-09-06 16:11:00.828  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 47.7761ms 200 text/css
+2017-09-06 16:11:00.836  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery.min.js'
+2017-09-06 16:11:00.845  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 132.7134ms 200 text/css
+2017-09-06 16:11:00.851  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 33.0377ms 200 application/javascript
+2017-09-06 16:11:00.881  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap/js/bootstrap.min.js  
+2017-09-06 16:11:00.885  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js  
+2017-09-06 16:11:00.886  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap/js/bootstrap.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap\js\bootstrap.min.js'
+2017-09-06 16:11:00.886  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery.blockui.min.js  
+2017-09-06 16:11:00.886  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/js.cookie.min.js  
+2017-09-06 16:11:00.891  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery-slimscroll\jquery.slimscroll.min.js'
+2017-09-06 16:11:00.893  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js  
+2017-09-06 16:11:00.895  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery.blockui.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery.blockui.min.js'
+2017-09-06 16:11:00.897  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/js.cookie.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\js.cookie.min.js'
+2017-09-06 16:11:00.899  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 13.7524ms 200 application/javascript
+2017-09-06 16:11:00.902  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-hover-dropdown\bootstrap-hover-dropdown.min.js'
+2017-09-06 16:11:00.907  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/uniform/jquery.uniform.min.js  
+2017-09-06 16:11:00.909  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 22.8024ms 200 application/javascript
+2017-09-06 16:11:00.912  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js  
+2017-09-06 16:11:00.915  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 33.7658ms 200 application/javascript
+2017-09-06 16:11:00.918  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/uniform/jquery.uniform.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\uniform\jquery.uniform.min.js'
+2017-09-06 16:11:00.921  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/moment.min.js  
+2017-09-06 16:11:00.925  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-switch\js\bootstrap-switch.min.js'
+2017-09-06 16:11:00.928  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js  
+2017-09-06 16:11:00.931  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 44.3062ms 200 application/javascript
+2017-09-06 16:11:00.933  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/moment.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\moment.min.js'
+2017-09-06 16:11:00.938  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 45.1263ms 200 application/javascript
+2017-09-06 16:11:00.941  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-daterangepicker\daterangepicker.min.js'
+2017-09-06 16:11:00.944  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/morris/morris.min.js  
+2017-09-06 16:11:00.947  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 39.688ms 200 application/javascript
+2017-09-06 16:11:00.950  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/morris/raphael-min.js  
+2017-09-06 16:11:00.956  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 44.3389ms 200 application/javascript
+2017-09-06 16:11:00.960  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/morris/morris.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\morris\morris.min.js'
+2017-09-06 16:11:00.965  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js  
+2017-09-06 16:11:00.970  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/morris/raphael-min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\morris\raphael-min.js'
+2017-09-06 16:11:00.980  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 58.135ms 200 application/javascript
+2017-09-06 16:11:00.988  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 44.2144ms 200 application/javascript
+2017-09-06 16:11:00.996  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery-easypiechart\jquery.easypiechart.min.js'
+2017-09-06 16:11:01.007  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 57.2818ms 200 application/javascript
+2017-09-06 16:11:01.010  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 81.3181ms 200 application/javascript
+2017-09-06 16:11:01.011  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/simple-line-icons/fonts/Simple-Line-Icons.woff  
+2017-09-06 16:11:01.032  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 67.717ms 200 application/javascript
+2017-09-06 16:11:01.042  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.4.0  
+2017-09-06 16:11:01.046  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/img/syncfusion-icons-white.png  
+2017-09-06 16:11:01.050  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/simple-line-icons/fonts/Simple-Line-Icons.woff'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\simple-line-icons\fonts\Simple-Line-Icons.woff'
+2017-09-06 16:11:01.063  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.woff2'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\font-awesome\fonts\fontawesome-webfont.woff2'
+2017-09-06 16:11:01.065  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/sidebar_toggler_icon_darkblue.png  
+2017-09-06 16:11:01.070  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/img/syncfusion-icons-white.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\img\syncfusion-icons-white.png'
+2017-09-06 16:11:01.074  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/icon-color.png  
+2017-09-06 16:11:01.077  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 65.3969ms 200 application/font-woff
+2017-09-06 16:11:01.082  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/sidebar_toggler_icon_darkblue.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\sidebar_toggler_icon_darkblue.png'
+2017-09-06 16:11:01.088  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 41.4132ms 200 image/png
+2017-09-06 16:11:01.092  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/icon-color.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\icon-color.png'
+2017-09-06 16:11:01.095  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 53.4918ms 200 font/woff2
+2017-09-06 16:11:01.103  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/logo.png  
+2017-09-06 16:11:01.107  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/avatar3_small.jpg  
+2017-09-06 16:11:01.110  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 44.82ms 200 image/png
+2017-09-06 16:11:01.115  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 40.8074ms 200 image/png
+2017-09-06 16:11:01.125  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/logo.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\logo.png'
+2017-09-06 16:11:01.128  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/avatar3_small.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\avatar3_small.jpg'
+2017-09-06 16:11:01.131  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery.sparkline.min.js  
+2017-09-06 16:11:01.140  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/scripts/app.min.js  
+2017-09-06 16:11:01.141  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 38.8625ms 200 image/png
+2017-09-06 16:11:01.145  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/pages/scripts/dashboard.min.js  
+2017-09-06 16:11:01.149  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery.sparkline.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery.sparkline.min.js'
+2017-09-06 16:11:01.153  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/scripts/app.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\scripts\app.min.js'
+2017-09-06 16:11:01.157  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/scripts/demo.min.js  
+2017-09-06 16:11:01.159  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/pages/scripts/dashboard.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\pages\scripts\dashboard.min.js'
+2017-09-06 16:11:01.163  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 32.3023ms 200 application/javascript
+2017-09-06 16:11:01.166  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 25.5969ms 200 application/javascript
+2017-09-06 16:11:01.176  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/scripts/demo.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\scripts\demo.min.js'
+2017-09-06 16:11:01.178  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 33.1962ms 200 application/javascript
+2017-09-06 16:11:01.181  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/scripts/layout.min.js  
+2017-09-06 16:11:01.183  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/global/scripts/quick-sidebar.min.js  
+2017-09-06 16:11:01.191  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 83.7835ms 200 image/jpeg
+2017-09-06 16:11:01.194  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar2.jpg  
+2017-09-06 16:11:01.197  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/scripts/layout.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\scripts\layout.min.js'
+2017-09-06 16:11:01.199  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/global/scripts/quick-sidebar.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\global\scripts\quick-sidebar.min.js'
+2017-09-06 16:11:01.201  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar3.jpg  
+2017-09-06 16:11:01.206  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout3/img/avatar2.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar2.jpg'
+2017-09-06 16:11:01.208  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 27.4555ms 200 application/javascript
+2017-09-06 16:11:01.211  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/scripts/menu.js  
+2017-09-06 16:11:01.214  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout3/img/avatar3.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar3.jpg'
+2017-09-06 16:11:01.216  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 59.2264ms 200 application/javascript
+2017-09-06 16:11:01.219  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar1.jpg  
+2017-09-06 16:11:01.223  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/scripts/menu.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\scripts\menu.js'
+2017-09-06 16:11:01.225  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 23.8313ms 200 image/jpeg
+2017-09-06 16:11:01.227  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/icon-color-close.png  
+2017-09-06 16:11:01.230  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout3/img/avatar1.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar1.jpg'
+2017-09-06 16:11:01.231  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 48.4849ms 200 application/javascript
+2017-09-06 16:11:01.234  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 40.1168ms 200 image/jpeg
+2017-09-06 16:11:01.238  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/icon-color-close.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\icon-color-close.png'
+2017-09-06 16:11:01.241  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 29.536ms 200 application/javascript
+2017-09-06 16:11:01.243  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 24.3364ms 200 image/jpeg
+2017-09-06 16:11:01.249  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 22.0592ms 200 image/png
+2017-09-06 16:11:01.301  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/favicon.ico  
+2017-09-06 16:11:01.305  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/favicon.ico'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\favicon.ico'
+2017-09-06 16:11:01.310  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 8.7439ms 200 image/x-icon
+2017-09-06 16:13:56.923  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-06 16:13:56.926  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-06 16:13:56.929  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-06 16:13:57.218  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 291.8832ms
+2017-09-06 16:13:57.222  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 299.1057ms 200 text/html; charset=utf-8
+2017-09-06 16:13:57.470  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/favicon.ico  
+2017-09-06 16:13:57.473  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/favicon.ico'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\favicon.ico'
+2017-09-06 16:13:57.475  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 5.5431ms 200 image/x-icon
+2017-09-06 16:14:57.466  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-06 16:14:57.472  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-06 16:14:57.475  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-06 16:14:57.644  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 172.1769ms
+2017-09-06 16:14:57.649  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 182.5797ms 200 text/html; charset=utf-8
+2017-09-06 16:14:57.665  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css  
+2017-09-06 16:14:57.666  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/font-awesome/css/font-awesome.min.css  
+2017-09-06 16:14:57.666  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap/css/bootstrap.min.css  
+2017-09-06 16:14:57.666  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/uniform/css/uniform.default.css  
+2017-09-06 16:14:57.667  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/simple-line-icons/simple-line-icons.min.css  
+2017-09-06 16:14:57.670  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-switch\css\bootstrap-switch.min.css'
+2017-09-06 16:14:57.679  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/font-awesome/css/font-awesome.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\font-awesome\css\font-awesome.min.css'
+2017-09-06 16:14:57.682  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap/css/bootstrap.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap\css\bootstrap.min.css'
+2017-09-06 16:14:57.685  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/uniform/css/uniform.default.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\uniform\css\uniform.default.css'
+2017-09-06 16:14:57.687  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/simple-line-icons/simple-line-icons.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\simple-line-icons\simple-line-icons.min.css'
+2017-09-06 16:14:57.690  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 24.8239ms 200 text/css
+2017-09-06 16:14:57.698  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 33.184ms 200 text/css
+2017-09-06 16:14:57.704  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css  
+2017-09-06 16:14:57.707  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 40.3843ms 200 text/css
+2017-09-06 16:14:57.710  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 43.2215ms 200 text/css
+2017-09-06 16:14:57.717  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/morris/morris.css  
+2017-09-06 16:14:57.728  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/fullcalendar/fullcalendar.min.css  
+2017-09-06 16:14:57.731  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-daterangepicker\daterangepicker.min.css'
+2017-09-06 16:14:57.734  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jqvmap/jqvmap/jqvmap.css  
+2017-09-06 16:14:57.737  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/css/components.min.css  
+2017-09-06 16:14:57.740  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/morris/morris.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\morris\morris.css'
+2017-09-06 16:14:57.746  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/fullcalendar/fullcalendar.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\fullcalendar\fullcalendar.min.css'
+2017-09-06 16:14:57.747  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 43.3504ms 200 text/css
+2017-09-06 16:14:57.751  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jqvmap/jqvmap/jqvmap.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jqvmap\jqvmap\jqvmap.css'
+2017-09-06 16:14:57.754  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/css/components.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\css\components.min.css'
+2017-09-06 16:14:57.755  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 89.6054ms 200 text/css
+2017-09-06 16:14:57.762  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 33.9236ms 200 text/css
+2017-09-06 16:14:57.766  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/css/plugins.min.css  
+2017-09-06 16:14:57.769  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 52.8067ms 200 text/css
+2017-09-06 16:14:57.774  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 39.4876ms 200 text/css
+2017-09-06 16:14:57.786  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/themes/darkblue.min.css  
+2017-09-06 16:14:57.791  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/layout.min.css  
+2017-09-06 16:14:57.794  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/css/plugins.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\css\plugins.min.css'
+2017-09-06 16:14:57.798  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/custom.min.css  
+2017-09-06 16:14:57.811  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery.min.js  
+2017-09-06 16:14:57.812  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/css/themes/darkblue.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\themes\darkblue.min.css'
+2017-09-06 16:14:57.819  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/css/layout.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\layout.min.css'
+2017-09-06 16:14:57.822  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 85.1832ms 200 text/css
+2017-09-06 16:14:57.826  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/css/custom.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\custom.min.css'
+2017-09-06 16:14:57.831  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery.min.js'
+2017-09-06 16:14:57.845  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 78.6327ms 200 text/css
+2017-09-06 16:14:57.847  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 61.3163ms 200 text/css
+2017-09-06 16:14:57.853  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 54.5836ms 200 text/css
+2017-09-06 16:14:57.862  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 71.0558ms 200 text/css
+2017-09-06 16:14:57.876  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 65.3709ms 200 application/javascript
+2017-09-06 16:14:57.896  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/js.cookie.min.js  
+2017-09-06 16:14:57.899  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js  
+2017-09-06 16:14:57.899  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap/js/bootstrap.min.js  
+2017-09-06 16:14:57.899  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery.blockui.min.js  
+2017-09-06 16:14:57.910  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/js.cookie.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\js.cookie.min.js'
+2017-09-06 16:14:57.913  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-hover-dropdown\bootstrap-hover-dropdown.min.js'
+2017-09-06 16:14:57.917  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap/js/bootstrap.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap\js\bootstrap.min.js'
+2017-09-06 16:14:57.920  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery.blockui.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery.blockui.min.js'
+2017-09-06 16:14:57.931  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 35.1241ms 200 application/javascript
+2017-09-06 16:14:57.935  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 36.4743ms 200 application/javascript
+2017-09-06 16:14:57.940  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js  
+2017-09-06 16:14:57.946  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/uniform/jquery.uniform.min.js  
+2017-09-06 16:14:57.962  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.4.0  
+2017-09-06 16:14:57.967  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/simple-line-icons/fonts/Simple-Line-Icons.woff  
+2017-09-06 16:14:57.971  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery-slimscroll\jquery.slimscroll.min.js'
+2017-09-06 16:14:57.975  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/uniform/jquery.uniform.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\uniform\jquery.uniform.min.js'
+2017-09-06 16:14:57.979  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.woff2'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\font-awesome\fonts\fontawesome-webfont.woff2'
+2017-09-06 16:14:57.982  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/simple-line-icons/fonts/Simple-Line-Icons.woff'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\simple-line-icons\fonts\Simple-Line-Icons.woff'
+2017-09-06 16:14:57.986  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 86.7525ms 200 application/javascript
+2017-09-06 16:14:57.992  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 46.2549ms 200 application/javascript
+2017-09-06 16:14:57.996  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 34.5836ms 200 font/woff2
+2017-09-06 16:14:58.001  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 34.8476ms 200 application/font-woff
+2017-09-06 16:14:58.011  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 112.0528ms 200 application/javascript
+2017-09-06 16:14:58.021  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/img/syncfusion-icons-white.png  
+2017-09-06 16:14:58.025  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 85.2047ms 200 application/javascript
+2017-09-06 16:14:58.031  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/sidebar_toggler_icon_darkblue.png  
+2017-09-06 16:14:58.042  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/img/syncfusion-icons-white.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\img\syncfusion-icons-white.png'
+2017-09-06 16:14:58.052  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/icon-color.png  
+2017-09-06 16:14:58.053  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/logo.png  
+2017-09-06 16:14:58.056  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/sidebar_toggler_icon_darkblue.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\sidebar_toggler_icon_darkblue.png'
+2017-09-06 16:14:58.060  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 39.7807ms 200 image/png
+2017-09-06 16:14:58.070  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/icon-color.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\icon-color.png'
+2017-09-06 16:14:58.076  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/logo.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\logo.png'
+2017-09-06 16:14:58.080  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/avatar3_small.jpg  
+2017-09-06 16:14:58.083  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/moment.min.js  
+2017-09-06 16:14:58.086  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js  
+2017-09-06 16:14:58.097  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 44.2484ms 200 image/png
+2017-09-06 16:14:58.101  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/avatar3_small.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\avatar3_small.jpg'
+2017-09-06 16:14:58.103  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/moment.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\moment.min.js'
+2017-09-06 16:14:58.106  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-switch\js\bootstrap-switch.min.js'
+2017-09-06 16:14:58.112  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js  
+2017-09-06 16:14:58.115  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 35.4345ms 200 image/jpeg
+2017-09-06 16:14:58.118  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 34.6593ms 200 application/javascript
+2017-09-06 16:14:58.122  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 35.4345ms 200 application/javascript
+2017-09-06 16:14:58.127  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-daterangepicker\daterangepicker.min.js'
+2017-09-06 16:14:58.130  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/morris/morris.min.js  
+2017-09-06 16:14:58.135  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 104.0083ms 200 image/png
+2017-09-06 16:14:58.145  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 93.2892ms 200 image/png
+2017-09-06 16:14:58.150  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 38.2287ms 200 application/javascript
+2017-09-06 16:14:58.153  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/morris/morris.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\morris\morris.min.js'
+2017-09-06 16:14:58.155  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery.sparkline.min.js  
+2017-09-06 16:14:58.160  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/scripts/app.min.js  
+2017-09-06 16:14:58.165  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/morris/raphael-min.js  
+2017-09-06 16:14:58.170  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 39.782ms 200 application/javascript
+2017-09-06 16:14:58.174  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery.sparkline.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery.sparkline.min.js'
+2017-09-06 16:14:58.181  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/scripts/app.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\scripts\app.min.js'
+2017-09-06 16:14:58.184  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/morris/raphael-min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\morris\raphael-min.js'
+2017-09-06 16:14:58.187  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/scripts/layout.min.js  
+2017-09-06 16:14:58.189  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 33.718ms 200 application/javascript
+2017-09-06 16:14:58.194  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 34.0621ms 200 application/javascript
+2017-09-06 16:14:58.197  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js  
+2017-09-06 16:14:58.201  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/scripts/layout.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\scripts\layout.min.js'
+2017-09-06 16:14:58.205  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/pages/scripts/dashboard.min.js  
+2017-09-06 16:14:58.209  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/scripts/demo.min.js  
+2017-09-06 16:14:58.212  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery-easypiechart\jquery.easypiechart.min.js'
+2017-09-06 16:14:58.217  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 30.504ms 200 application/javascript
+2017-09-06 16:14:58.221  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/pages/scripts/dashboard.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\pages\scripts\dashboard.min.js'
+2017-09-06 16:14:58.223  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/scripts/demo.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\scripts\demo.min.js'
+2017-09-06 16:14:58.228  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/global/scripts/quick-sidebar.min.js  
+2017-09-06 16:14:58.231  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/scripts/menu.js  
+2017-09-06 16:14:58.233  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 28.2365ms 200 application/javascript
+2017-09-06 16:14:58.236  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 39.2291ms 200 application/javascript
+2017-09-06 16:14:58.240  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/global/scripts/quick-sidebar.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\global\scripts\quick-sidebar.min.js'
+2017-09-06 16:14:58.244  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/scripts/menu.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\scripts\menu.js'
+2017-09-06 16:14:58.248  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar2.jpg  
+2017-09-06 16:14:58.252  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar3.jpg  
+2017-09-06 16:14:58.255  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 26.8682ms 200 application/javascript
+2017-09-06 16:14:58.259  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 50.2749ms 200 application/javascript
+2017-09-06 16:14:58.263  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout3/img/avatar2.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar2.jpg'
+2017-09-06 16:14:58.266  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout3/img/avatar3.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar3.jpg'
+2017-09-06 16:14:58.268  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar1.jpg  
+2017-09-06 16:14:58.270  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/icon-color-close.png  
+2017-09-06 16:14:58.273  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 42.046ms 200 application/javascript
+2017-09-06 16:14:58.276  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 111.2262ms 200 application/javascript
+2017-09-06 16:14:58.281  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout3/img/avatar1.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar1.jpg'
+2017-09-06 16:14:58.284  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/icon-color-close.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\icon-color-close.png'
+2017-09-06 16:14:58.286  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 37.3393ms 200 image/jpeg
+2017-09-06 16:14:58.289  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 37.6334ms 200 image/jpeg
+2017-09-06 16:14:58.292  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 23.9474ms 200 image/jpeg
+2017-09-06 16:14:58.300  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 29.7981ms 200 image/png
+2017-09-06 16:14:58.368  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/favicon.ico  
+2017-09-06 16:14:58.371  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/favicon.ico'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\favicon.ico'
+2017-09-06 16:14:58.376  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 7.8106ms 200 image/x-icon
+2017-09-06 16:15:25.943  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/themes/light.min.css  
+2017-09-06 16:15:25.949  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/css/themes/light.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\themes\light.min.css'
+2017-09-06 16:15:25.952  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 9.3203ms 200 text/css
+2017-09-06 16:15:25.973  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/sidebar_toggler_icon_light.png  
+2017-09-06 16:15:25.980  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/sidebar_toggler_icon_light.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\sidebar_toggler_icon_light.png'
+2017-09-06 16:15:25.984  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 10.4666ms 200 image/png
+2017-09-06 16:15:28.910  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/themes/blue.min.css  
+2017-09-06 16:15:28.915  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/css/themes/blue.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\themes\blue.min.css'
+2017-09-06 16:15:28.918  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 8.0569ms 200 text/css
+2017-09-06 16:15:28.952  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/sidebar_toggler_icon_blue.png  
+2017-09-06 16:15:28.959  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/sidebar_toggler_icon_blue.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\sidebar_toggler_icon_blue.png'
+2017-09-06 16:15:28.963  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 12.0965ms 200 image/png
+2017-09-06 16:15:30.223  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/css/components-rounded.min.css  
+2017-09-06 16:15:30.228  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/css/components-rounded.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\css\components-rounded.min.css'
+2017-09-06 16:15:30.239  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 15.6726ms 200 text/css

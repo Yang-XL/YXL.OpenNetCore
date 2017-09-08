@@ -45,7 +45,7 @@ namespace Service.PermissionSystem
                 IQueryable<Menu> queryable = _dbSet;
                 if (!string.IsNullOrEmpty(queryString))
                 {
-                    queryable = _dbSet.Where(n => n.Name.StartsWith(queryString) || n.PyCode.StartsWith(queryString));
+                    queryable = _dbSet.Where(n => n.Name.Contains(queryString) || n.PyCode.Contains(queryString));
                 }
 
                 var query = from n in queryable

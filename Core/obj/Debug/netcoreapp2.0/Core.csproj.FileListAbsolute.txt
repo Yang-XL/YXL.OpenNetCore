@@ -6,3 +6,12 @@ D:\ProjectTest\NetCore\YXL.OpenNetCore\Core\obj\Debug\netcoreapp2.0\Core.Assembl
 D:\ProjectTest\NetCore\YXL.OpenNetCore\Core\bin\Debug\netcoreapp2.0\Core.pdb
 D:\ProjectTest\NetCore\YXL.OpenNetCore\Core\obj\Debug\netcoreapp2.0\Core.dll
 D:\ProjectTest\NetCore\YXL.OpenNetCore\Core\obj\Debug\netcoreapp2.0\Core.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Core\bin\Debug\netcoreapp2.0\Core.deps.json
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Core\bin\Debug\netcoreapp2.0\Core.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Core\bin\Debug\netcoreapp2.0\Core.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Core\obj\Debug\netcoreapp2.0\Core.csproj.CoreCompileInputs.cache
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Core\obj\Debug\netcoreapp2.0\Core.AssemblyInfoInputs.cache
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Core\obj\Debug\netcoreapp2.0\Core.AssemblyInfo.cs
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Core\obj\Debug\netcoreapp2.0\Core.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Core\obj\Debug\netcoreapp2.0\Core.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Core\obj\Debug\netcoreapp2.0\Core.csprojResolveAssemblyReference.cache

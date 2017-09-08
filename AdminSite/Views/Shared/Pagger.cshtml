@@ -1,0 +1,30 @@
+﻿@model ViewModels.Common.PaggerModel
+@if (Model.Source != null && Model.Source.TotalCount>0)
+{
+    <div class="row">
+        <div class="col-md-3 col-sm-3" style="padding-top: 16px;">
+            <div class="dataTables_info"> 共 @Model.Source.TotalCount 数据 @Model.Source.TotalPage 页 </div>
+        </div>
+        <div class="col-md-8 col-sm-8">
+            @if (Model.AjaxOptions != null)
+            {
+                <div class="dataTables_paginate text-right">
+                    <pager current-page="@Model.Source.PageIndex"
+                           total-page="@Model.Source.TotalPage"
+                           setting-link-attr-data-ajax="@Model.IsAjaxString"
+                           setting-link-attr-data-ajax-mode="@Model.AjaxOptions.Mode"
+                           setting-link-attr-data-ajax-method="@Model.AjaxOptions.Method"
+                           setting-link-attr-data-ajax-search-form="#@Model.AjaxOptions.SearchForm"
+                           setting-link-attr-data-ajax-update="#@Model.AjaxOptions.UpdateTag"/>
+                </div>
+            }
+            else
+            {
+                <div class="dataTables_paginate text-right">
+                    <pager current-page="@Model.Source.PageIndex"total-page="@Model.Source.TotalPage" />
+                </div>
+            }
+
+        </div>
+    </div>
+}

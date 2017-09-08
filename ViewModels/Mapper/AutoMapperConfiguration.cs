@@ -25,8 +25,6 @@ namespace ViewModels.Mapper
             MapperConfiguration = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<MenuViewModel, Menu>()
-                    .ForMember(m => m.ParentID,
-                        map => map.MapFrom(vm => vm.IsNav ? vm.ParentID : vm.ParentAuthoritys))
                     .ForMember(m => m.PyCode,
                         map => map.MapFrom(vm => vm.Name.ToPyCode()));;
                 cfg.CreateMap<Menu, MenuViewModel>();

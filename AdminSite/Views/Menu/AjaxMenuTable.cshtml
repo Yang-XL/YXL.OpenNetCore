@@ -1,0 +1,57 @@
+﻿@using Sakura.AspNetCore
+@using ViewModels.AdminWeb.Nav
+@using ViewModels.Common
+@model IPagedList<MenuViewModel>
+<table class="table table-bordered table-striped table-condensed flip-content">
+    <thead class="flip-content">
+    <tr>
+        <th>菜单名称</th>
+        <th>父级菜单</th>
+        <th>应用程序</th>
+        <th> Controller </th>
+        <th> Action</th>
+        <th> 导航菜单 </th>
+        <th> 描述 </th>
+        <th> 操作 </th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (Model != null && Model.Any())
+    {
+        foreach (var menu in Model)
+        {
+            <tr>
+                <td> @menu.Name </td>
+                <td> @menu.ParentMenuName </td>
+                <td> @menu.ApplicationName </td>
+                <td> @menu.ControllerName</td>
+                <td> @menu.ActionName</td>
+                <td> @if (menu.IsNav)
+                     {
+                         <span>是</span>
+                     }
+                     else
+                     {
+                         <span>否</span>
+                     }
+                </td>
+
+                <td> @menu.Description</td>
+                <td>
+                    <a asp-controller="Menu" asp-action="Detial" asp-route-id="@menu.ID"  class="btn btn-link btn-sm font-green-turquoise" title="详细">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                    <a asp-controller="Menu" asp-action="Modify" asp-route-id="@menu.ID"   class="btn btn-link btn-sm font-green-turquoise" title="修改菜单信息">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                    <a asp-controller="Menu" asp-action="Remove" class="btn btn-link btn-sm font-green-turquoise" title="删除">
+                        <i class="fa fa-remove"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>
+@Html.Partial("Pagger", new PaggerModel(Model, new AjaxOptions("tableResult", "seachForm")))
+

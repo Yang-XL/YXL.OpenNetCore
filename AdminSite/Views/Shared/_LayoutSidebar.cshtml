@@ -1,0 +1,124 @@
+﻿<!-- BEGIN SIDEBAR -->
+<div class="page-sidebar-wrapper">
+    <!-- BEGIN SIDEBAR -->
+    <!-- DOC: 设置data-auto-scroll =“false”以禁止侧边栏自动滚动/聚焦 -->
+    <!-- DOC: 更改data-auto-speed =“200”可调整子菜单上下滑动速度 -->
+    <div class="page-sidebar navbar-collapse collapse">
+        <!-- BEGIN SIDEBAR MENU -->
+        <!-- DOC: 在“page-sidebar-menu”之后应用“page-sidebar-menu-light”类来启用光边栏菜单样式（无边框） -->
+        <!-- DOC: 在“page-sidebar-menu”之后应用“page-sidebar-menu-hover-submenu”类，以启用可悬停（悬停与手风琴）子菜单模式 -->
+        <!-- DOC: 在“page-sidebar-menu”之后应用“page-sidebar-menu-closed”类来折叠（“page-sidebar-closed”类必须应用于body元素）侧边栏子菜单模式 -->
+        <!-- DOC: 设置data-auto-scroll =“false”以禁止侧边栏自动滚动/聚焦 -->
+        <!-- DOC: 设置data-keep-expand =“true”以保持子菜单的扩展 -->
+        <!-- DOC: 设置data-auto-speed =“200”来调整子菜单上下滑动速度 -->
+        <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" 
+            data-slide-speed="200" style="padding-top: 20px" >
+            <!-- DOC: 要从侧边栏中删除侧边栏切换器，您只需要完全删除以下“sidebar-toggler-wrapper”LI元素 -->
+            <li class="sidebar-toggler-wrapper hide">
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                <div class="sidebar-toggler"></div>
+                <!-- END SIDEBAR TOGGLER BUTTON -->
+            </li>
+            <li class="nav-item start">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-home"></i>
+                    <span class="title">报表</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item start">
+                        <a asp-action="Index" asp-controller="Home"  class="nav-link ">
+                            <i class="icon-bar-chart"></i>
+                            <span class="badge badge-success">1</span>
+                            <span class="title">Index</span>
+                        </a>
+                    </li>
+                    <li  class="nav-item start">
+                        <a asp-action="About" asp-controller="Home" class="nav-link ">
+                            <i class="icon-bulb"></i>
+                            <span class="title">About</span>
+                            <span class="badge badge-success">1</span>
+                        </a>
+                    </li>
+                    <li class="nav-item start">
+                        <a href="#" class="nav-link ">
+                            <i class="icon-graph"></i>
+                            <span class="title">物流</span>
+                            <span class="badge badge-danger">5</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="heading">
+                <h3 class="uppercase">基础权限系统</h3>
+            </li>
+            <li class="nav-item active open">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-diamond"></i>
+                    <span class="title">系统管理</span>
+                    <span class="selected"></span>
+                    <span class="arrow open"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item active open">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <span class="title">用户权限</span>
+                            <span class="selected"></span>
+                            <span class="arrow open"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">组织架构</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">权限管理</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active open">
+                                <a href="#" class="nav-link">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">用户管理</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <span class="title">开发人员配置</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">应用程序</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-action="Index" asp-controller="Menu" class="nav-link">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">菜单管理</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="icon-bulb"></i>
+                                    <span class="title">应用程序接口</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- END SIDEBAR MENU -->
+        <!-- END SIDEBAR MENU -->
+    </div>
+    <!-- END SIDEBAR -->
+</div>
+<!-- END SIDEBAR -->

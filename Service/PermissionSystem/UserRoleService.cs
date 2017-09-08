@@ -12,7 +12,6 @@ using Core.Repository.Ef;
 using IService;
 using PermissionSystem.Models;
 using PermissionSystem;
-using PermissionSystem;
 namespace Service.PermissionSystem
 {
     public class UserRoleService  :EfRepository< UserRole>,IUserRoleService

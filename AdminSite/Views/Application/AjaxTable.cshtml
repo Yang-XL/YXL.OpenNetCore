@@ -1,0 +1,40 @@
+﻿@using Sakura.AspNetCore
+@using ViewModels.Common
+@model IPagedList<PermissionSystem.Models.Application>
+<table class="table table-bordered table-striped table-condensed flip-content">
+    <thead class="flip-content">
+    <tr>
+        <th>菜单名称</th>
+        <th> 编码 </th>
+        <th> 拼音码 </th>
+        <th> 显示顺序 </th>
+        <th> 描述 </th>
+        <th> 操作 </th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (Model != null && Model.Any())
+    {
+        foreach (var application in Model)
+        {
+            <tr>
+                <td> @application.Name </td>
+                <td> @application.Code </td>
+                <td> @application.PyCode </td>
+                <td> @application.ShowIndex</td>
+                <td> @application.Description</td>
+                <td>
+                    <a  asp-action="Detial" asp-route-id="@application.ID"  class="btn btn-link btn-sm font-green-turquoise" title="详细信息">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                    <a  asp-action="Modify" asp-route-id="@application.ID"   class="btn btn-link btn-sm font-green-turquoise" title="修改应用程序信息">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>
+@Html.Partial("Pagger", new PaggerModel(Model, new AjaxOptions("tableResult", "seachForm")))
+

@@ -1,7 +1,52 @@
-﻿
-@{
-    ViewData["Title"] = "Application";
-}
+﻿@using Controls.SelectZtree
+@model Sakura.AspNetCore.IPagedList<PermissionSystem.Models.Application>
 
-<h2>Application</h2>
+<h2 class="page-title">
+</h2>
+<div class="row">
+    <div class="portlet box green">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift"></i>应用程序列表 
+            </div>
+            <div class="actions">
+                <a class="btn btn-default btn-sm" href="javascript:;">
+                    <i class="fa fa-refresh"></i> 刷新
+                </a>
+                <a class="btn btn-default btn-sm" asp-action="Create">
+                    <i class="fa fa-plus"></i> 新增
+                </a>
+            </div>
+        </div>
+        <div class="portlet-body">
+            <div class="form">
+                <form class="form-horizontal" id="seachForm" asp-action="Index" data-ajax="true"  data-ajax-update="#tableResult" data-ajax-mode="replace" data-ajax-method="Post">
+                    @Html.AntiForgeryToken()
+                    <div class="form-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">快速搜索</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="queryString" id="queryString" placeholder="名称、编码、拼音码">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn green" >
+                                    <i class="fa  fa-search"></i>
+                                    搜索
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="tableResult">
+                @Html.Partial("AjaxTable",Model)
+            </div>
+        </div>
+    </div>
+</div>
+
 

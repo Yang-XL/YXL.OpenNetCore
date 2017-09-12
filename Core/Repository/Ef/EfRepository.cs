@@ -79,14 +79,14 @@ namespace Core.Repository.Ef
             return entity != null;
         }
 
-        public IPagedList<TEntity> GetPaged<TProperty>(int pageIndex, int pageSize, Func<TEntity, TProperty> keySelector, Expression<Func<TEntity, bool>> predicate)
+        public IPagedList<TEntity> GetPaged<TProperty>(int pageIndex, int pageSize, Func<TEntity, TProperty> sortKey, Expression<Func<TEntity, bool>> predicate)
         {
-            return _dbSet.Where(predicate).OrderBy(keySelector).ToPagedList(pageSize,pageIndex);
+            return _dbSet.Where(predicate).OrderBy(sortKey).ToPagedList(pageSize,pageIndex);
         }
 
-        public Task<IPagedList<TEntity>> GetPagedAsync<TProperty>(int pageIndex, int pageSize, Func<TEntity, TProperty> keySelector, Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default(CancellationToken))
+        public Task<IPagedList<TEntity>> GetPagedAsync<TProperty>(int pageIndex, int pageSize, Func<TEntity, TProperty> sortKey, Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default(CancellationToken))
         {
-            return Task.Run(() => GetPaged(pageIndex, pageSize, keySelector, predicate), cancellationToken);
+            return Task.Run(() => GetPaged(pageIndex, pageSize, sortKey, predicate), cancellationToken);
         }
 
         public TEntity Single(Guid id)

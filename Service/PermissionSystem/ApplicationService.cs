@@ -9,10 +9,16 @@
 // ===================================================================
 
 using System;
+using System.Linq;
+using System.Threading.Tasks;
 using Core.Repository.Ef;
 using IService;
 using PermissionSystem.Models;
 using PermissionSystem;
+using Sakura.AspNetCore;
+using ViewModels.AdminWeb.Application;
+using ViewModels.AdminWeb.Nav;
+
 namespace Service.PermissionSystem
 {
     public class ApplicationService  : EfRepository<Application>,IApplicationService
@@ -20,7 +26,8 @@ namespace Service.PermissionSystem
       public ApplicationService(PermissionSystemContext context):base(context)
         {
             
-        }		
-				
+        }
+      
+
     }
 }

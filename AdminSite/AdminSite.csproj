@@ -357,6 +357,12 @@
     <None Include="wwwroot\assets\global\plugins\morris\spec\viz\visual_specs.js" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Views\Application\Index.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
   <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 
 </Project>

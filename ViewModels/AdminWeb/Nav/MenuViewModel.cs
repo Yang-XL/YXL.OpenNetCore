@@ -83,5 +83,19 @@ namespace ViewModels.AdminWeb.Nav
         [Display(Name = "菜单类型", Description = "所有的应用程序")]
         public int MenuType { get; set; }
 
+        /// <summary>
+        /// 1：菜单分组
+        /// 2：导航菜单
+        /// 3：权限菜单
+        /// </summary>
+        [Display(Name = "菜单类型", Description = "所有的应用程序")]
+        public string MenuTypeName {get { return MenuTypeList.FirstOrDefault(a => a.Value == MenuType.ToString()).Text; } }
+
+        public IEnumerable<SelectListItem> MenuTypeList => new List<SelectListItem>
+        {
+            new SelectListItem{Text =  "分组菜单",Value = "1"},
+            new SelectListItem{Text =  "导航菜单",Value = "2"},
+            new SelectListItem{Text =  "权限菜单",Value = "3"}
+        };
     }
 }

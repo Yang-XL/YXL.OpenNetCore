@@ -1,0 +1,46 @@
+﻿@using Controls.Layout
+@using ViewModels.AdminWeb.Nav
+@model NavViewModel
+
+    <div class="page-sidebar-wrapper">
+        <div class="page-sidebar navbar-collapse collapse">
+            <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true"
+                data-slide-speed="200" style="padding-top: 20px">
+                @*
+                    /*
+                    *利用JS可做快速访问
+                    */
+                    <li class="nav-item start">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-home"></i>
+                        <span class="title">报表</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item start">
+                            <a asp-action="Index" asp-controller="Home" class="nav-link ">
+                                <i class="icon-bar-chart"></i>
+                                <span class="badge badge-success">1</span>
+                                <span class="title">Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item start">
+                            <a asp-action="About" asp-controller="Home" class="nav-link ">
+                                <i class="icon-bulb"></i>
+                                <span class="title">About</span>
+                                <span class="badge badge-success">1</span>
+                            </a>
+                        </li>
+                        <li class="nav-item start">
+                            <a href="#" class="nav-link ">
+                                <i class="icon-graph"></i>
+                                <span class="title">物流</span>
+                                <span class="badge badge-danger">5</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>*@
+                @Html.MenuNavItem(Model)
+            </ul>
+        </div>
+    </div>

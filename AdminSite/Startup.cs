@@ -1,4 +1,5 @@
 ﻿using AdminSite.Core;
+using AutoMapper;
 using Core;
 using Core.FileManager;
 using Core.Log.FileLog;

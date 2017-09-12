@@ -3,8 +3,10 @@ using AutoMapper;
 using Core.Utility.Extensions;
 using IdentityServer4.Models;
 using PermissionSystem.Models;
+using ViewModels.AdminWeb;
 using ViewModels.AdminWeb.Application;
 using ViewModels.AdminWeb.Nav;
+using ViewModels.IdentitySite;
 
 namespace ViewModels.Mapper
 {
@@ -24,30 +26,8 @@ namespace ViewModels.Mapper
         {
             MapperConfiguration = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<MenuViewModel, Menu>()
-                    .ForMember(m => m.PyCode,
-                        map => map.MapFrom(vm => vm.Name.ToPyCode()));;
-                cfg.CreateMap<Menu, MenuViewModel>();
-
-                cfg.CreateMap<Application, ApplicationViewModel>();
-                cfg.CreateMap<ApplicationViewModel, Application>();
-
-                
-                //    .ForMember(m => m.MethodName, map => map.MapFrom(vm => vm.Name))
-                //    .ForMember(m=>m.DisplayName, map => map.MapFrom(vm => vm.DisplayName));
-                //cfg.CreateMap<ApiResource, Api>()
-                //    .ForMember(m => m.MethodName, map => map.MapFrom(vm => vm.Name))
-                //    .ForMember(m => m.DisplayName, map => map.MapFrom(vm => vm.DisplayName));
-
-
-                cfg.CreateMap<Api, IdentityResource>()
-                    .ForMember(m => m.Name, map => map.MapFrom(vm => vm.MethodName))
-                    .ForMember(m => m.DisplayName, map => map.MapFrom(vm => vm.DisplayName));
-                cfg.CreateMap<Api, ApiResource>()
-                    .ForMember(m => m.Name, map => map.MapFrom(vm => vm.MethodName))
-                    .ForMember(m => m.DisplayName, map => map.MapFrom(vm => vm.DisplayName))
-                    .ForMember(m=>m.Scopes,map=>map.MapFrom(vm =>new[]{ new Scope(vm.MethodName)}));
-
+                cfg.AddProfile<AdminWebProfile>();
+                cfg.AddProfile<IdentityProfile>();
             });
             return Mapper = MapperConfiguration.CreateMapper();
         }

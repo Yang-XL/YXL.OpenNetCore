@@ -1,6 +1,5 @@
 ﻿using IdentityServer4.Models;
 using PermissionSystem.Models;
-using PermissionSystem.Models;
 using ViewModels.AdminWeb.Application;
 using ViewModels.AdminWeb.Nav;
 
@@ -23,7 +22,6 @@ namespace ViewModels.Mapper
             return entity.MapTo<Menu, MenuViewModel>();
         }
 
-
         public static Application ToEntity(this ApplicationViewModel model)
         {
             return model.MapTo<ApplicationViewModel, Application>();
@@ -38,8 +36,6 @@ namespace ViewModels.Mapper
         {
             return entity.MapTo<Application, ApplicationViewModel>();
         }
-
-
         public static IdentityResource ToIdentityResourceModel(this Api entity)
         {
             return entity.MapTo<Api, IdentityResource>();

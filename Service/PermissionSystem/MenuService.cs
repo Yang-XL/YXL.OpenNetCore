@@ -38,17 +38,22 @@ namespace Service.PermissionSystem
             _logger = loggerFactory.CreateLogger<MenuService>();
         }
 
-        public Task<IPagedList<MenuViewModel>> PageMenuViewModel(int pageSize, int pageIndex, string queryString)
+        public Task<IPagedList<MenuViewModel>> PageMenuViewModel(int pageSize, int pageIndex, string queryString,Guid? parentID = null)
         {
             return Task.Run<IPagedList<MenuViewModel>>(() =>
             {
                 IQueryable<Menu> queryable = _dbSet;
                 if (!string.IsNullOrEmpty(queryString))
                 {
-                    queryable = _dbSet.Where(n => n.Name.Contains(queryString) || n.PyCode.Contains(queryString));
+                    queryable = queryable.Where(n => n.Name.Contains(queryString) || n.PyCode.Contains(queryString));
+                }
+                if (parentID.HasValue)
+                {
+                    queryable = queryable.Where(a => a.ParentID == parentID);
                 }
 
                 var query = from n in queryable
+                            orderby n.ShowIndex
                     select new MenuViewModel
                     {
                         ID = n.ID,
@@ -70,5 +75,34 @@ namespace Service.PermissionSystem
                 return query.ToPagedList(pageSize, pageIndex);
             });
         }
+
+        public Task<MenuViewModel> GetMenuViewModel(Guid rid)
+        {
+            var query = from n in _dbSet
+                where n.ID == rid
+                select new MenuViewModel
+                {
+                    ID = n.ID,
+                    ApplicationName = n.ApplicationID_Model.Name,
+                    ActionName = n.ActionName,
+                    ApplicationID = n.ApplicationID,
+                    Code = n.Code,
+                    ControllerName = n.ControllerName,
+                    CreateDate = n.CreateDate,
+                    Description = n.Description,
+                    IconCss = n.IconCss,
+                    IsNav = n.IsNav,
+                    Name = n.Name,
+                    ShowIndex = n.ShowIndex,
+                    ParentID = n.ParentID,
+                    ParentMenuName = n.ParentID == default(Guid)
+                        ? "--根目录--"
+                        : _dbSet.FirstOrDefault(a => a.ID == n.ParentID).Name,
+                    MenuType = n.IsNav ? (string.IsNullOrEmpty(n.ActionName) ? 1 : 2) : 3
+                };
+            return query.FirstOrDefaultAsync();
+        }
     }
+
+
 }

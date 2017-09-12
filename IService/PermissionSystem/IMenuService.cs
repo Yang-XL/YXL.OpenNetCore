@@ -22,6 +22,8 @@ namespace IService
 {
     public interface IMenuService : IEfRepository<Menu>
     {
-        Task<IPagedList<MenuViewModel>> PageMenuViewModel(int pageSize, int pageIndex,string queryString);
+        Task<IPagedList<MenuViewModel>> PageMenuViewModel(int pageSize, int pageIndex,string queryString,Guid? parentID = null);
+
+        Task<MenuViewModel> GetMenuViewModel(Guid rid);
     }
 }

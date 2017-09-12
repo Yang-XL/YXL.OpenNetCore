@@ -22,7 +22,6 @@
     <link href="~/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css" rel="stylesheet" type="text/css"/>
     <link href="~/assets/global/plugins/morris/morris.css" rel="stylesheet" type="text/css"/>
     <link href="~/assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css"/>
-    <link href="~/assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css"/>
     
     @RenderSection("style_page", false)
     <!-- END PAGE LEVEL PLUGINS -->
@@ -41,10 +40,10 @@
 @Html.Partial("_LayoutHeader")
 <div class="clearfix"> </div>
 <div class="page-container">
-    @Html.Partial("_LayoutSidebar")
+    @await Component.InvokeAsync("SideBar")
     <div class="page-content-wrapper">
         <div class="page-content">
-            
+            @await Component.InvokeAsync("SiteMap")
             @RenderBody()
             <div class="clearfix"></div>
         </div>
@@ -82,7 +81,10 @@
 <script src="/assets/layouts/layout/scripts/layout.min.js" type="text/javascript"></script>
 <script src="/assets/layouts/layout/scripts/demo.min.js" type="text/javascript"></script>
 <script src="/assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
-    <script src="/assets/global/scripts/menu.js"></script>
+<script src="/assets/global/scripts/menu.js"></script>
+    
+
+
 <!-- END THEME LAYOUT SCRIPTS -->
 
 </body>

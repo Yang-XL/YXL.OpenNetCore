@@ -6381,3 +6381,548 @@ WHERE [n].[ApplicationID] = @__applicationId_0
 2017-09-08 13:36:37.422  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/favicon.ico  
 2017-09-08 13:36:37.428  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/favicon.ico'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\favicon.ico'
 2017-09-08 13:36:37.435  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 12.5635ms 200 image/x-icon
+2017-09-08 15:09:43.177  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-08 15:09:43.360  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-08 15:09:45.704  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-08 15:09:46.648  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 3293.9176ms
+2017-09-08 15:09:46.660  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 3496.2622ms 200 text/html; charset=utf-8
+2017-09-08 15:10:00.034  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu  
+2017-09-08 15:10:00.118  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-08 15:10:00.177  Microsoft.EntityFrameworkCore.Query   Warning: Query: '(from Menu n in DbSet<Menu> select new MenuViewModel{ { 
+    ID = [n].ID, , 
+    ApplicationName =...' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2017-09-08 15:10:00.336  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (31ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+    WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+    THEN N'--根目录--' ELSE (
+        SELECT TOP(1) [a].[Name]
+        FROM [Menu] AS [a]
+        WHERE [a].[ID] = [n].[ParentID]
+    )
+END AS [ParentMenuName]
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2017-09-08 15:10:00.375  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-08 15:10:00.534  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Menu/Index.cshtml.
+2017-09-08 15:10:01.120  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 1061.6335ms
+2017-09-08 15:10:01.125  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 1091.0974ms 200 text/html; charset=utf-8
+2017-09-08 15:10:04.615  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Create  
+2017-09-08 15:10:04.621  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.Create (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-08 15:10:05.131  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Menu/Create.cshtml.
+2017-09-08 15:10:05.199  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[Name] AS [Text], CONVERT(VARCHAR(36), [n].[ID]) AS [Value]
+FROM [Application] AS [n]
+2017-09-08 15:10:05.221  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.Create (AdminSite) in 599.9273ms
+2017-09-08 15:10:05.225  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 609.9481ms 200 text/html; charset=utf-8
+2017-09-08 15:10:05.246  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/jquery.ztree.intput.select.js  
+2017-09-08 15:10:05.251  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/pages/model.create.js?v=1.0.0.0  
+2017-09-08 15:10:05.257  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: The file /pages/model.create.js was not modified
+2017-09-08 15:10:05.257  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: The file /lib/ztree.3.5.26/jquery.ztree.intput.select.js was not modified
+2017-09-08 15:10:05.264  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 18.1281ms 304 application/javascript
+2017-09-08 15:10:05.264  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 13.1013ms 304 application/javascript
+2017-09-08 15:10:05.349  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 50
+2017-09-08 15:10:05.378  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (00000000-0000-0000-0000-000000000001) - ModelState is Valid
+2017-09-08 15:10:05.388  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor   Information: Executing JsonResult, writing value Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[<>f__AnonymousType0`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-08 15:10:05.446  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (1ms) [Parameters=[@__applicationId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n].[ParentID] AS [pId], [n].[Name]
+FROM [Menu] AS [n]
+WHERE [n].[ApplicationID] = @__applicationId_0
+2017-09-08 15:10:05.461  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 106.0933ms
+2017-09-08 15:10:05.465  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 116.3816ms 200 application/json; charset=utf-8
+2017-09-08 15:10:06.819  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/styles/metroStyle/img/metro.png  
+2017-09-08 15:10:06.824  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: The file /lib/ztree.3.5.26/styles/metroStyle/img/metro.png was not modified
+2017-09-08 15:10:06.827  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 8.2779ms 304 image/png
+2017-09-08 15:26:08.925  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu  
+2017-09-08 15:26:09.057  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-08 15:26:09.115  Microsoft.EntityFrameworkCore.Query   Warning: Query: '(from Menu n in DbSet<Menu> select new MenuViewModel{ { 
+    ID = [n].ID, , 
+    ApplicationName =...' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2017-09-08 15:26:09.259  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (28ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+    WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+    THEN N'--根目录--' ELSE (
+        SELECT TOP(1) [a].[Name]
+        FROM [Menu] AS [a]
+        WHERE [a].[ID] = [n].[ParentID]
+    )
+END AS [ParentMenuName]
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2017-09-08 15:26:09.294  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-08 15:26:11.882  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Menu/Index.cshtml.
+2017-09-08 15:26:13.156  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 4124.3863ms
+2017-09-08 15:26:13.170  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 4261.5931ms 200 text/html; charset=utf-8
+2017-09-08 15:27:29.962  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu application/x-www-form-urlencoded; charset=UTF-8 234
+2017-09-08 15:27:30.006  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (, 2) - ModelState is Valid
+2017-09-08 15:27:30.016  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (4ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+    WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+    THEN N'--根目录--' ELSE (
+        SELECT TOP(1) [a].[Name]
+        FROM [Menu] AS [a]
+        WHERE [a].[ID] = [n].[ParentID]
+    )
+END AS [ParentMenuName]
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2017-09-08 15:27:30.022  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-08 15:27:30.027  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.PartialViewResultExecutor   Information: Executing PartialViewResult, running view at path /Views/Menu/AjaxMenuTable.cshtml.
+2017-09-08 15:27:30.031  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 55.8395ms
+2017-09-08 15:27:30.036  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 73.9013ms 200 text/html; charset=utf-8
+2017-09-08 15:49:50.870  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 50
+2017-09-08 15:49:50.880  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (00000000-0000-0000-0000-000000000002) - ModelState is Valid
+2017-09-08 15:49:50.888  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor   Information: Executing JsonResult, writing value Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[<>f__AnonymousType0`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-08 15:49:50.938  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (1ms) [Parameters=[@__applicationId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n].[ParentID] AS [pId], [n].[Name]
+FROM [Menu] AS [n]
+WHERE [n].[ApplicationID] = @__applicationId_0
+2017-09-08 15:49:50.941  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 61.9956ms
+2017-09-08 15:49:50.944  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 74.3272ms 200 application/json; charset=utf-8
+2017-09-08 15:51:22.492  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Create  
+2017-09-08 15:51:22.503  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.Create (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-08 15:51:22.993  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Menu/Create.cshtml.
+2017-09-08 15:51:23.046  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[Name] AS [Text], CONVERT(VARCHAR(36), [n].[ID]) AS [Value]
+FROM [Application] AS [n]
+2017-09-08 15:51:23.069  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.Create (AdminSite) in 566.7237ms
+2017-09-08 15:51:23.072  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 580.4444ms 200 text/html; charset=utf-8
+2017-09-08 15:51:23.090  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/font-awesome/css/font-awesome.min.css  
+2017-09-08 15:51:23.090  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/simple-line-icons/simple-line-icons.min.css  
+2017-09-08 15:51:23.097  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/uniform/css/uniform.default.css  
+2017-09-08 15:51:23.097  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap/css/bootstrap.min.css  
+2017-09-08 15:51:23.099  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css  
+2017-09-08 15:51:23.101  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/font-awesome/css/font-awesome.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\font-awesome\css\font-awesome.min.css'
+2017-09-08 15:51:23.101  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/simple-line-icons/simple-line-icons.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\simple-line-icons\simple-line-icons.min.css'
+2017-09-08 15:51:23.102  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css  
+2017-09-08 15:51:23.102  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/uniform/css/uniform.default.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\uniform\css\uniform.default.css'
+2017-09-08 15:51:23.105  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap/css/bootstrap.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap\css\bootstrap.min.css'
+2017-09-08 15:51:23.107  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-daterangepicker\daterangepicker.min.css'
+2017-09-08 15:51:23.114  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-switch\css\bootstrap-switch.min.css'
+2017-09-08 15:51:23.119  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 29.5938ms 200 text/css
+2017-09-08 15:51:23.123  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 32.4973ms 200 text/css
+2017-09-08 15:51:23.128  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 29.2163ms 200 text/css
+2017-09-08 15:51:23.130  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/morris/morris.css  
+2017-09-08 15:51:23.131  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 33.7844ms 200 text/css
+2017-09-08 15:51:23.134  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/fullcalendar/fullcalendar.min.css  
+2017-09-08 15:51:23.139  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 41.1893ms 200 text/css
+2017-09-08 15:51:23.140  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 38.4231ms 200 text/css
+2017-09-08 15:51:23.140  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jqvmap/jqvmap/jqvmap.css  
+2017-09-08 15:51:23.146  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/morris/morris.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\morris\morris.css'
+2017-09-08 15:51:23.148  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/styles/metroStyle/metroStyle.css  
+2017-09-08 15:51:23.152  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/fullcalendar/fullcalendar.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\fullcalendar\fullcalendar.min.css'
+2017-09-08 15:51:23.158  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/css/plugins.min.css  
+2017-09-08 15:51:23.161  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/css/components.min.css  
+2017-09-08 15:51:23.163  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jqvmap/jqvmap/jqvmap.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jqvmap\jqvmap\jqvmap.css'
+2017-09-08 15:51:23.166  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 35.8233ms 200 text/css
+2017-09-08 15:51:23.168  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/ztree.3.5.26/styles/metroStyle/metroStyle.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\ztree.3.5.26\styles\metroStyle\metroStyle.css'
+2017-09-08 15:51:23.177  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/css/plugins.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\css\plugins.min.css'
+2017-09-08 15:51:23.178  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 44.0682ms 200 text/css
+2017-09-08 15:51:23.179  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/css/components.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\css\components.min.css'
+2017-09-08 15:51:23.185  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/layout.min.css  
+2017-09-08 15:51:23.190  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 49.8756ms 200 text/css
+2017-09-08 15:51:23.196  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 47.288ms 200 text/css
+2017-09-08 15:51:23.197  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/themes/darkblue.min.css  
+2017-09-08 15:51:23.203  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/css/layout.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\layout.min.css'
+2017-09-08 15:51:23.205  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/custom.min.css  
+2017-09-08 15:51:23.211  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery.min.js  
+2017-09-08 15:51:23.213  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 54.3491ms 200 text/css
+2017-09-08 15:51:23.214  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/css/themes/darkblue.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\themes\darkblue.min.css'
+2017-09-08 15:51:23.220  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 58.6161ms 200 text/css
+2017-09-08 15:51:23.223  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/css/custom.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\custom.min.css'
+2017-09-08 15:51:23.228  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 42.5871ms 200 text/css
+2017-09-08 15:51:23.231  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery.min.js'
+2017-09-08 15:51:23.240  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 43.1519ms 200 text/css
+2017-09-08 15:51:23.249  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 43.3937ms 200 text/css
+2017-09-08 15:51:23.265  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 53.5899ms 200 application/javascript
+2017-09-08 15:51:23.276  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap/js/bootstrap.min.js  
+2017-09-08 15:51:23.279  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js  
+2017-09-08 15:51:23.279  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js  
+2017-09-08 15:51:23.279  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/js.cookie.min.js  
+2017-09-08 15:51:23.279  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/jquery.blockui.min.js  
+2017-09-08 15:51:23.285  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap/js/bootstrap.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap\js\bootstrap.min.js'
+2017-09-08 15:51:23.288  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-hover-dropdown\bootstrap-hover-dropdown.min.js'
+2017-09-08 15:51:23.292  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery-slimscroll\jquery.slimscroll.min.js'
+2017-09-08 15:51:23.293  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/js.cookie.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\js.cookie.min.js'
+2017-09-08 15:51:23.299  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/jquery.blockui.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\jquery.blockui.min.js'
+2017-09-08 15:51:23.316  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/uniform/jquery.uniform.min.js  
+2017-09-08 15:51:23.316  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 39.6261ms 200 application/javascript
+2017-09-08 15:51:23.320  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/uniform/jquery.uniform.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\uniform\jquery.uniform.min.js'
+2017-09-08 15:51:23.322  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 42.7606ms 200 application/javascript
+2017-09-08 15:51:23.326  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 47.4971ms 200 application/javascript
+2017-09-08 15:51:23.333  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 54.5258ms 200 application/javascript
+2017-09-08 15:51:23.335  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 19.7853ms 200 application/javascript
+2017-09-08 15:51:23.338  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.4.0  
+2017-09-08 15:51:23.343  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 63.8677ms 200 application/javascript
+2017-09-08 15:51:23.344  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/simple-line-icons/fonts/Simple-Line-Icons.woff  
+2017-09-08 15:51:23.350  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/logo.png  
+2017-09-08 15:51:23.354  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/sidebar_toggler_icon_darkblue.png  
+2017-09-08 15:51:23.361  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/avatar3_small.jpg  
+2017-09-08 15:51:23.363  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.woff2'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\font-awesome\fonts\fontawesome-webfont.woff2'
+2017-09-08 15:51:23.366  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js  
+2017-09-08 15:51:23.376  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/simple-line-icons/fonts/Simple-Line-Icons.woff'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\simple-line-icons\fonts\Simple-Line-Icons.woff'
+2017-09-08 15:51:23.379  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/sidebar_toggler_icon_darkblue.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\sidebar_toggler_icon_darkblue.png'
+2017-09-08 15:51:23.379  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/logo.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\logo.png'
+2017-09-08 15:51:23.379  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/img/avatar3_small.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\avatar3_small.jpg'
+2017-09-08 15:51:23.383  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-switch\js\bootstrap-switch.min.js'
+2017-09-08 15:51:23.389  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 35.142ms 200 image/png
+2017-09-08 15:51:23.393  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 54.0226ms 200 font/woff2
+2017-09-08 15:51:23.401  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/moment.min.js  
+2017-09-08 15:51:23.401  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 56.8258ms 200 application/font-woff
+2017-09-08 15:51:23.402  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 40.8042ms 200 image/jpeg
+2017-09-08 15:51:23.402  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 51.8779ms 200 image/png
+2017-09-08 15:51:23.409  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 42.7917ms 200 application/javascript
+2017-09-08 15:51:23.415  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js  
+2017-09-08 15:51:23.416  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/moment.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\moment.min.js'
+2017-09-08 15:51:23.425  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/morris/morris.min.js  
+2017-09-08 15:51:23.429  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/morris/raphael-min.js  
+2017-09-08 15:51:23.433  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/lib/Microsoft.jQuery.Unobtrusive.Ajax-master/jquery.unobtrusive-ajax.js  
+2017-09-08 15:51:23.441  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\bootstrap-daterangepicker\daterangepicker.min.js'
+2017-09-08 15:51:23.446  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 45.3947ms 200 application/javascript
+2017-09-08 15:51:23.448  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/morris/morris.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\morris\morris.min.js'
+2017-09-08 15:51:23.457  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/morris/raphael-min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\morris\raphael-min.js'
+2017-09-08 15:51:23.461  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/Microsoft.jQuery.Unobtrusive.Ajax-master/jquery.unobtrusive-ajax.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\Microsoft.jQuery.Unobtrusive.Ajax-master\jquery.unobtrusive-ajax.js'
+2017-09-08 15:51:23.470  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/jquery.ztree.core.js  
+2017-09-08 15:51:23.470  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 55.8511ms 200 application/javascript
+2017-09-08 15:51:23.477  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/jquery.ztree.intput.select.js  
+2017-09-08 15:51:23.491  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 65.1695ms 200 application/javascript
+2017-09-08 15:51:23.496  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 67.4361ms 200 application/javascript
+2017-09-08 15:51:23.497  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 63.9757ms 200 application/javascript
+2017-09-08 15:51:23.519  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/ztree.3.5.26/jquery.ztree.core.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\ztree.3.5.26\jquery.ztree.core.js'
+2017-09-08 15:51:23.523  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/scripts/app.min.js  
+2017-09-08 15:51:23.526  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/lib/ztree.3.5.26/jquery.ztree.intput.select.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\ztree.3.5.26\jquery.ztree.intput.select.js'
+2017-09-08 15:51:23.530  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/pages/model.create.js?v=1.0.0.0  
+2017-09-08 15:51:23.536  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/scripts/layout.min.js  
+2017-09-08 15:51:23.541  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 70.1671ms 200 application/javascript
+2017-09-08 15:51:23.544  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/scripts/app.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\scripts\app.min.js'
+2017-09-08 15:51:23.547  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 70.4724ms 200 application/javascript
+2017-09-08 15:51:23.556  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/scripts/demo.min.js  
+2017-09-08 15:51:23.557  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/pages/model.create.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\pages\model.create.js'
+2017-09-08 15:51:23.560  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/scripts/layout.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\scripts\layout.min.js'
+2017-09-08 15:51:23.565  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 42.0364ms 200 application/javascript
+2017-09-08 15:51:23.570  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout/scripts/demo.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\scripts\demo.min.js'
+2017-09-08 15:51:23.576  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 44.7263ms 200 application/javascript
+2017-09-08 15:51:23.577  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/global/scripts/quick-sidebar.min.js  
+2017-09-08 15:51:23.578  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/scripts/menu.js  
+2017-09-08 15:51:23.583  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar2.jpg  
+2017-09-08 15:51:23.582  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 45.0916ms 200 application/javascript
+2017-09-08 15:51:23.589  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 32.8097ms 200 application/javascript
+2017-09-08 15:51:23.591  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar3.jpg  
+2017-09-08 15:51:23.594  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/global/scripts/quick-sidebar.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\global\scripts\quick-sidebar.min.js'
+2017-09-08 15:51:23.596  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/scripts/menu.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\scripts\menu.js'
+2017-09-08 15:51:23.599  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout3/img/avatar2.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar2.jpg'
+2017-09-08 15:51:23.601  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar1.jpg  
+2017-09-08 15:51:23.606  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout3/img/avatar3.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar3.jpg'
+2017-09-08 15:51:23.608  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 31.0146ms 200 application/javascript
+2017-09-08 15:51:23.611  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 33.3351ms 200 application/javascript
+2017-09-08 15:51:23.618  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 34.9836ms 200 image/jpeg
+2017-09-08 15:51:23.618  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/layouts/layout3/img/avatar1.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar1.jpg'
+2017-09-08 15:51:23.622  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 30.5909ms 200 image/jpeg
+2017-09-08 15:51:23.627  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 50
+2017-09-08 15:51:23.632  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 30.3433ms 200 image/jpeg
+2017-09-08 15:51:23.637  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (00000000-0000-0000-0000-000000000001) - ModelState is Valid
+2017-09-08 15:51:23.643  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor   Information: Executing JsonResult, writing value Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[<>f__AnonymousType0`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-08 15:51:23.648  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (1ms) [Parameters=[@__applicationId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n].[ParentID] AS [pId], [n].[Name]
+FROM [Menu] AS [n]
+WHERE [n].[ApplicationID] = @__applicationId_0
+2017-09-08 15:51:23.658  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/uniform/images/sprite.png  
+2017-09-08 15:51:23.664  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/assets/global/plugins/uniform/images/sprite.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\uniform\images\sprite.png'
+2017-09-08 15:51:23.668  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 30.7782ms
+2017-09-08 15:51:23.676  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 18.3244ms 200 image/png
+2017-09-08 15:51:23.677  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 50.0648ms 200 application/json; charset=utf-8
+2017-09-08 15:51:23.725  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/favicon.ico  
+2017-09-08 15:51:23.728  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/favicon.ico'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\favicon.ico'
+2017-09-08 15:51:23.732  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 6.5495ms 200 image/x-icon
+2017-09-08 15:52:10.846  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/styles/metroStyle/img/metro.png  
+2017-09-08 15:52:10.852  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: The file /lib/ztree.3.5.26/styles/metroStyle/img/metro.png was not modified
+2017-09-08 15:52:10.856  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 9.4681ms 304 image/png
+2017-09-08 15:52:12.794  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 50
+2017-09-08 15:52:12.799  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (00000000-0000-0000-0000-000000000002) - ModelState is Valid
+2017-09-08 15:52:12.803  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor   Information: Executing JsonResult, writing value Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[<>f__AnonymousType0`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-08 15:52:12.808  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (1ms) [Parameters=[@__applicationId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n].[ParentID] AS [pId], [n].[Name]
+FROM [Menu] AS [n]
+WHERE [n].[ApplicationID] = @__applicationId_0
+2017-09-08 15:52:12.812  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 13.7662ms
+2017-09-08 15:52:12.816  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 21.7539ms 200 application/json; charset=utf-8
+2017-09-08 16:45:58.041  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu application/x-www-form-urlencoded; charset=UTF-8 234
+2017-09-08 16:45:58.286  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (, 1) - ModelState is Valid
+2017-09-08 16:45:58.336  Microsoft.EntityFrameworkCore.Query   Warning: Query: '(from Menu n in DbSet<Menu> select new MenuViewModel{ { 
+    ID = [n].ID, , 
+    ApplicationName =...' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2017-09-08 16:45:58.478  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (28ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+    WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+    THEN N'--根目录--' ELSE (
+        SELECT TOP(1) [a].[Name]
+        FROM [Menu] AS [a]
+        WHERE [a].[ID] = [n].[ParentID]
+    )
+END AS [ParentMenuName]
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2017-09-08 16:45:58.511  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-08 16:46:00.914  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.PartialViewResultExecutor   Information: Executing PartialViewResult, running view at path /Views/Menu/AjaxMenuTable.cshtml.
+2017-09-08 16:46:01.216  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 2979.3749ms
+2017-09-08 16:46:01.223  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 3195.7254ms 200 text/html; charset=utf-8
+2017-09-08 16:46:11.569  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu application/x-www-form-urlencoded; charset=UTF-8 234
+2017-09-08 16:46:11.575  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (, 2) - ModelState is Valid
+2017-09-08 16:46:11.581  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (0ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+    WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+    THEN N'--根目录--' ELSE (
+        SELECT TOP(1) [a].[Name]
+        FROM [Menu] AS [a]
+        WHERE [a].[ID] = [n].[ParentID]
+    )
+END AS [ParentMenuName]
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2017-09-08 16:46:11.585  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-08 16:46:11.589  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.PartialViewResultExecutor   Information: Executing PartialViewResult, running view at path /Views/Menu/AjaxMenuTable.cshtml.
+2017-09-08 16:46:11.593  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 20.3616ms
+2017-09-08 16:46:11.597  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 28.2009ms 200 text/html; charset=utf-8
+2017-09-08 16:46:12.161  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu application/x-www-form-urlencoded; charset=UTF-8 234
+2017-09-08 16:46:12.164  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (, 1) - ModelState is Valid
+2017-09-08 16:46:12.168  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (0ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+    WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+    THEN N'--根目录--' ELSE (
+        SELECT TOP(1) [a].[Name]
+        FROM [Menu] AS [a]
+        WHERE [a].[ID] = [n].[ParentID]
+    )
+END AS [ParentMenuName]
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2017-09-08 16:46:12.172  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-08 16:46:12.175  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.PartialViewResultExecutor   Information: Executing PartialViewResult, running view at path /Views/Menu/AjaxMenuTable.cshtml.
+2017-09-08 16:46:12.178  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 14.0889ms
+2017-09-08 16:46:12.181  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 19.9662ms 200 text/html; charset=utf-8
+2017-09-08 16:46:13.164  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Create  
+2017-09-08 16:46:13.171  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.Create (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-08 16:46:13.795  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Menu/Create.cshtml.
+2017-09-08 16:46:13.856  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[Name] AS [Text], CONVERT(VARCHAR(36), [n].[ID]) AS [Value]
+FROM [Application] AS [n]
+2017-09-08 16:46:14.536  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.Create (AdminSite) in 1366.0966ms
+2017-09-08 16:46:14.541  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 1376.6248ms 200 text/html; charset=utf-8
+2017-09-08 16:46:14.568  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/jquery.ztree.intput.select.js  
+2017-09-08 16:46:14.573  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/pages/model.create.js?v=1.0.0.0  
+2017-09-08 16:46:14.577  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: The file /lib/ztree.3.5.26/jquery.ztree.intput.select.js was not modified
+2017-09-08 16:46:14.577  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: Sending file. Request path: '/pages/model.create.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\pages\model.create.js'
+2017-09-08 16:46:14.584  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 15.655ms 304 application/javascript
+2017-09-08 16:46:14.587  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 13.6652ms 200 application/javascript
+2017-09-08 16:46:14.667  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 50
+2017-09-08 16:46:14.672  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (00000000-0000-0000-0000-000000000001) - ModelState is Valid
+2017-09-08 16:46:14.679  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor   Information: Executing JsonResult, writing value Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[<>f__AnonymousType0`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-08 16:46:14.734  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (1ms) [Parameters=[@__applicationId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n].[ParentID] AS [pId], [n].[Name]
+FROM [Menu] AS [n]
+WHERE [n].[ApplicationID] = @__applicationId_0
+2017-09-08 16:46:14.750  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 78.8892ms
+2017-09-08 16:46:14.753  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 86.9106ms 200 application/json; charset=utf-8
+2017-09-08 16:48:45.254  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/Create application/x-www-form-urlencoded 531
+2017-09-08 16:48:45.286  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.Create (AdminSite) with arguments (ViewModels.AdminWeb.Nav.MenuViewModel) - ModelState is Valid
+2017-09-08 16:48:45.296  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.Create (AdminSite) in 25.1466ms
+2017-09-08 16:48:45.372  Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware   Error: An unhandled exception has occurred while executing the request
+
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ViewModels.Mapper.EntityMapper.MapTo[TSource,TDestination](TSource source) in D:\GitSource\OpenNetCore\YXL.OpenNetCore\ViewModels\Mapper\EntityMapper.cs:line 9
+   at ViewModels.Mapper.MappingExtensions.ToEntity(MenuViewModel model) in D:\GitSource\OpenNetCore\YXL.OpenNetCore\ViewModels\Mapper\MappingExtensions.cs:line 12
+   at AdminSite.Controllers.MenuController.Create(MenuViewModel model) in D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\Controllers\MenuController.cs:line 61
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-09-08 16:48:45.440  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 185.7446ms 500 text/html; charset=utf-8
+2017-09-08 16:49:29.711  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-08 16:49:29.992  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-08 16:49:32.668  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-08 16:49:33.789  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 3770.7175ms
+2017-09-08 16:49:33.834  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/styles/metroStyle/metroStyle.css  
+2017-09-08 16:49:33.867  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 4141.3313ms 200 text/html; charset=utf-8
+2017-09-08 16:49:33.883  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: The file /lib/ztree.3.5.26/styles/metroStyle/metroStyle.css was not modified
+2017-09-08 16:49:33.928  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 103.2754ms 304 text/css
+2017-09-08 16:49:33.942  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/scripts/menu.js  
+2017-09-08 16:49:33.955  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: The file /assets/global/scripts/menu.js was not modified
+2017-09-08 16:49:33.970  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 25.2466ms 304 application/javascript
+2017-09-08 17:01:49.230  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Create  
+2017-09-08 17:01:49.230  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-08 17:01:49.351  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-08 17:01:49.351  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.Create (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-08 17:01:51.541  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Menu/Create.cshtml.
+2017-09-08 17:01:51.541  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-08 17:01:51.817  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[Name] AS [Text], CONVERT(VARCHAR(36), [n].[ID]) AS [Value]
+FROM [Application] AS [n]
+2017-09-08 17:01:52.439  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/Create application/x-www-form-urlencoded 531
+2017-09-08 17:01:52.504  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.Create (AdminSite) in 3162.0381ms
+2017-09-08 17:01:52.504  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 3157.7115ms
+2017-09-08 17:01:52.504  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.Create (AdminSite) with arguments (ViewModels.AdminWeb.Nav.MenuViewModel) - ModelState is Valid
+2017-09-08 17:01:52.510  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 3296.3458ms 200 text/html; charset=utf-8
+2017-09-08 17:01:52.514  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 3300.3014ms 200 text/html; charset=utf-8
+2017-09-08 17:01:52.661  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (27ms) [Parameters=[@p0='?', @p1='?' (Size = 4000), @p2='?', @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?', @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?', @p10='?' (Size = 4000), @p11='?', @p12='?' (Size = 4000), @p13='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Menu] ([ID], [ActionName], [ApplicationID], [AreaName], [Code], [ControllerName], [CreateDate], [Description], [IconCss], [IsNav], [Name], [ParentID], [PyCode], [ShowIndex])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2017-09-08 17:01:52.668  Microsoft.AspNetCore.Mvc.RedirectToActionResult   Information: Executing RedirectResult, redirecting to /Menu.
+2017-09-08 17:01:52.672  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.Create (AdminSite) in 209.9535ms
+2017-09-08 17:01:52.676  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 237.4606ms 302 
+2017-09-08 17:01:52.681  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu  
+2017-09-08 17:01:52.687  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-08 17:01:52.711  Microsoft.EntityFrameworkCore.Query   Warning: Query: '(from Menu n in DbSet<Menu> select new MenuViewModel{ { 
+    ID = [n].ID, , 
+    ApplicationName =...' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2017-09-08 17:01:52.754  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (5ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+    WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+    THEN N'--根目录--' ELSE (
+        SELECT TOP(1) [a].[Name]
+        FROM [Menu] AS [a]
+        WHERE [a].[ID] = [n].[ParentID]
+    )
+END AS [ParentMenuName]
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2017-09-08 17:01:52.789  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-08 17:01:52.951  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Menu/Index.cshtml.
+2017-09-08 17:01:53.479  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 791.2495ms
+2017-09-08 17:01:53.485  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 803.1642ms 200 text/html; charset=utf-8
+2017-09-08 17:01:56.607  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Create  
+2017-09-08 17:01:56.612  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.Create (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-08 17:01:56.615  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Menu/Create.cshtml.
+2017-09-08 17:01:56.620  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[Name] AS [Text], CONVERT(VARCHAR(36), [n].[ID]) AS [Value]
+FROM [Application] AS [n]
+2017-09-08 17:01:56.626  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.Create (AdminSite) in 13.9577ms
+2017-09-08 17:01:56.632  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 24.635ms 200 text/html; charset=utf-8
+2017-09-08 17:01:56.700  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/pages/model.create.js?v=1.0.0.0  
+2017-09-08 17:01:56.708  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Information: The file /pages/model.create.js was not modified
+2017-09-08 17:01:56.713  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 12.9474ms 304 application/javascript
+2017-09-08 17:01:56.771  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 50
+2017-09-08 17:01:56.777  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (00000000-0000-0000-0000-000000000001) - ModelState is Valid
+2017-09-08 17:01:56.785  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor   Information: Executing JsonResult, writing value Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[<>f__AnonymousType0`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-08 17:01:56.838  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (1ms) [Parameters=[@__applicationId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n].[ParentID] AS [pId], [n].[Name]
+FROM [Menu] AS [n]
+WHERE [n].[ApplicationID] = @__applicationId_0
+2017-09-08 17:01:56.854  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 78.0614ms
+2017-09-08 17:01:56.859  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 88.2195ms 200 application/json; charset=utf-8
+2017-09-08 17:02:35.241  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/Create application/x-www-form-urlencoded 505
+2017-09-08 17:02:35.246  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.Create (AdminSite) with arguments (ViewModels.AdminWeb.Nav.MenuViewModel) - ModelState is Valid
+2017-09-08 17:02:35.257  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (2ms) [Parameters=[@p0='?', @p1='?' (Size = 4000), @p2='?', @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?', @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?', @p10='?' (Size = 4000), @p11='?', @p12='?' (Size = 4000), @p13='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Menu] ([ID], [ActionName], [ApplicationID], [AreaName], [Code], [ControllerName], [CreateDate], [Description], [IconCss], [IsNav], [Name], [ParentID], [PyCode], [ShowIndex])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2017-09-08 17:02:35.261  Microsoft.AspNetCore.Mvc.RedirectToActionResult   Information: Executing RedirectResult, redirecting to /Menu.
+2017-09-08 17:02:35.268  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.Create (AdminSite) in 23.0772ms
+2017-09-08 17:02:35.271  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 30.3988ms 302 
+2017-09-08 17:02:35.275  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu  
+2017-09-08 17:02:35.282  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-08 17:02:35.290  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (3ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+    WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+    THEN N'--根目录--' ELSE (
+        SELECT TOP(1) [a].[Name]
+        FROM [Menu] AS [a]
+        WHERE [a].[ID] = [n].[ParentID]
+    )
+END AS [ParentMenuName]
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2017-09-08 17:02:35.298  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-08 17:02:35.304  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Information: Executing ViewResult, running view at path /Views/Menu/Index.cshtml.
+2017-09-08 17:02:35.309  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 27.3795ms
+2017-09-08 17:02:35.316  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 40.8789ms 200 text/html; charset=utf-8
+2017-09-08 17:02:37.287  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu application/x-www-form-urlencoded; charset=UTF-8 234
+2017-09-08 17:02:37.301  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (, 3) - ModelState is Valid
+2017-09-08 17:02:37.306  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (0ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+    WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+    THEN N'--根目录--' ELSE (
+        SELECT TOP(1) [a].[Name]
+        FROM [Menu] AS [a]
+        WHERE [a].[ID] = [n].[ParentID]
+    )
+END AS [ParentMenuName]
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2017-09-08 17:02:37.312  Microsoft.EntityFrameworkCore.Database.Command   Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-08 17:02:37.316  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.PartialViewResultExecutor   Information: Executing PartialViewResult, running view at path /Views/Menu/AjaxMenuTable.cshtml.
+2017-09-08 17:02:37.320  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 22.8107ms
+2017-09-08 17:02:37.323  Microsoft.AspNetCore.Hosting.Internal.WebHost   Information: Request finished in 36.5834ms 200 text/html; charset=utf-8

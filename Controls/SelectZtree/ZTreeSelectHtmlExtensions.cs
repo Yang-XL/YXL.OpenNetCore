@@ -14,8 +14,14 @@ namespace Controls.SelectZtree
         public static IHtmlContent ZtreeTextBoxFor<TModel>(this IHtmlHelper<TModel> helper, Expression<Func<TModel, string>> expression, object htmlAttributes = null)
         {
             var expressionName = (expression.Body as MemberExpression).Member.Name;
-            var zTreeDivId = expressionName + "_ZTreeContent";
-            var zTreeUlId = expressionName + "_ZTree";
+            return ZtreeTextBox(helper, expressionName, htmlAttributes);
+        }
+
+        public static IHtmlContent ZtreeTextBox(this IHtmlHelper helper, string name, object htmlAttributes = null)
+        {
+            
+            var zTreeDivId = name + "_ZTreeContent";
+            var zTreeUlId = name + "_ZTree";
             var tagContent = new TagBuilder("div");
             tagContent.MergeAttribute("id", zTreeDivId);
             tagContent.MergeAttribute("style", "display: none; position: absolute; background-color:darkgrey;z-index: 10000");
@@ -27,8 +33,8 @@ namespace Controls.SelectZtree
             var HtmlAttributes = HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes);
             var input = new TagBuilder("input");
             input.MergeAttribute("type", "text");
-            input.MergeAttribute("id", expressionName);
-            input.MergeAttribute("name", expressionName);
+            input.MergeAttribute("id", name);
+            input.MergeAttribute("name", name);
             input.MergeAttributes(HtmlAttributes);
             return new HtmlContentBuilder().AppendHtml(input).AppendHtml(tagContent);
         }

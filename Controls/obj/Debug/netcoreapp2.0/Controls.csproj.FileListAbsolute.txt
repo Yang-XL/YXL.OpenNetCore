@@ -7,3 +7,9 @@ D:\GitSource\OpenNetCore\YXL.OpenNetCore\Controls\obj\Debug\netcoreapp2.0\Contro
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\Controls\bin\Debug\netcoreapp2.0\Controls.pdb
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\Controls\obj\Debug\netcoreapp2.0\Controls.dll
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\Controls\obj\Debug\netcoreapp2.0\Controls.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Controls\bin\Debug\netcoreapp2.0\Core.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Controls\bin\Debug\netcoreapp2.0\PermissionSystem.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Controls\bin\Debug\netcoreapp2.0\ViewModels.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Controls\bin\Debug\netcoreapp2.0\ViewModels.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Controls\bin\Debug\netcoreapp2.0\Core.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Controls\bin\Debug\netcoreapp2.0\PermissionSystem.pdb

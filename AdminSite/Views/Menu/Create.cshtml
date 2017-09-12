@@ -2,29 +2,7 @@
 @model ViewModels.AdminWeb.Nav.MenuViewModel
 
 @addTagHelper Controls.SelectZtree.*, ZTreeSelectTag
-<div class="page-bar">
-    <ul class="page-breadcrumb">
-        <li>
-            <a asp-controller="Home" asp-action="Index">首页</a>
-            <i class="fa fa-angle-double-right"></i>
-        </li>
-        <li>
-            <span>系统管理</span>
-            <i class="fa fa-angle-double-right"></i>
-        </li>
-        <li>
-            <span>开发人员配置</span>
-            <i class="fa fa-angle-double-right"></i>
-        </li>
-        <li>
-            <a asp-action="Index">菜单管理</a>
-            <i class="fa fa-angle-double-right"></i>
-        </li>
-        <li>
-            <span>新增菜单</span>
-        </li>
-    </ul>
-</div>
+
 <h3 class="page-title">
 
 </h3>
@@ -33,7 +11,7 @@
         <div class="portlet box green">
             <div class="portlet-title">
                 <div class="caption">
-                    <i class="fa fa-gift"></i>Form Sample
+                    <i class="fa fa-gift"></i>添加菜单
                 </div>
                 <div class="actions">
                     <button class="btn btn-default btn-sm" type="submit">
@@ -45,107 +23,7 @@
                 </div>
             </div>
             <div class="portlet-body form">
-                @Html.AntiForgeryToken()
-                <div class="form-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="control-label">应用程序</label>
-                                @Html.DropDownListFor(a => a.ApplicationID, Model.ApplicationViewModels, new {@class = "form-control"})
-                            </div>
-                        </div>
-                        <!--/span-->
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="control-label">父级菜单</label>
-                                @Html.ZtreeTextBoxFor(a => a.ParentMenuName, new {@class = "form-control", @readonly = "readonly", style = "cursor:pointer"})
-                                @Html.HiddenFor(a => a.ParentID)
-                                <span class="help-block"> @Html.ValidationMessageFor(a => a.ParentMenuName)</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                @Html.LabelFor(a => a.Name, new {@class = "control-label"})
-                                @Html.TextBoxFor(a => a.Name, new {placeholder = "请输入菜单名称", @class = "form-control"})
-                                <span class="help-block"> @Html.ValidationMessageFor(a=>a.Name)</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                @Html.LabelFor(a => a.Code, new {@class = "control-label"})
-                                @Html.TextBoxFor(a => a.Code, new {placeholder = "请输入菜单编码", @class = "form-control"})
-                                <span class="help-block"> @Html.ValidationMessageFor(a=>a.Code)</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                @Html.LabelFor(a => a.AreaName, new {@class = "control-label"})
-                                @Html.TextBoxFor(a => a.AreaName, new {@class = "form-control"})
-                                <span class="help-block"> 只允许开发人员配置</span>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                @Html.LabelFor(a => a.ControllerName, new {@class = "control-label"})
-                                @Html.TextBoxFor(a => a.ControllerName, new {@class = "form-control"})
-                                <span class="help-block"> 只允许开发人员修改</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                @Html.LabelFor(a => a.ActionName, new {@class = "control-label"})
-                                @Html.TextBoxFor(a => a.ActionName, new {@class = "form-control"})
-                                <span class="help-block"> 只允许开发人员修改</span>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                @Html.LabelFor(a => a.MenuType, new {@class = "control-label"})
-                                <div class="radio-list">
-                                    <label class="radio-inline">
-                                        <input type="radio" name="MenuType" id="MenuType1" value="1" checked/>分组菜单
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="MenuType" id="MenuType2" value="2"/> 导航菜单
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="MenuType" id="MenuType3" value="3"/> 权限菜单
-                                    </label>
-                                </div>
-                                <span class="help-block">只允许开发人员修改</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                @Html.LabelFor(a => a.ShowIndex, new {@class = "control-label"})
-                                @Html.TextBoxFor(a => a.ShowIndex, new {@class = "form-control"})
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                @Html.LabelFor(a => a.Description, new {@class = "control-label"})
-                                @Html.TextAreaFor(a => a.Description, 5, 10, new {@class = "form-control"})
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-actions right">
-                    <button class="btn green btn-lg" type="submit">
-                        <i class="fa fa-save"></i> 保存
-                    </button>
-                </div>
-
+                @Html.Partial("CreateOrModify",Model)
             </div>
         </div>
     </form>
@@ -156,6 +34,5 @@
 @section scripts_plugins{
     <script src="/lib/ztree.3.5.26/jquery.ztree.core.js"></script>
     <script src="/lib/ztree.3.5.26/jquery.ztree.intput.select.js"></script>
-    <script src="/pages/model.create.js?v=1.0.0.0"></script>
-
+    <script src="~/pages/menu/menu.create.js?v=1.0.0.1"></script>
 }

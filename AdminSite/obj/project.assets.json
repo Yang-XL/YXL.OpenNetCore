@@ -5443,7 +5443,8 @@
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc": "2.0.0",
-          "Microsoft.AspNetCore.Mvc.Abstractions": "2.0.0"
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.0.0",
+          "ViewModels": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Controls.dll": {}

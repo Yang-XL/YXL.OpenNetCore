@@ -1,250 +1,37 @@
-﻿<div class="page-bar">
-    <ul class="page-breadcrumb">
-        <li>
-            <a asp-controller="Home" asp-action="Index">首页</a>
-            <i class="fa fa-angle-double-right"></i>
-        </li>
-        <li>
-            <span>系统管理</span>
-            <i class="fa fa-angle-double-right"></i>
-        </li>
-        <li>
-            <span>开发人员配置</span>
-            <i class="fa fa-angle-double-right"></i>
-        </li>
-        <li>
-            <a asp-action="Index">菜单管理</a>
-            <i class="fa fa-angle-double-right"></i>
-        </li>
-        <li>
-            <span>编辑菜单</span>
-        </li>
-    </ul>
-</div>
-<h3 class="page-title">
-   
-</h3>
+﻿@using Controls.SelectZtree
+@model ViewModels.AdminWeb.Nav.MenuViewModel
+
+@addTagHelper Controls.SelectZtree.*, ZTreeSelectTag
+
+<h3 class="page-title"></h3>
 <div class="row">
-    <div class="portlet box green">
-        <div class="portlet-title">
-            <div class="caption">
-                <i class="fa fa-gift"></i>Form Sample </div>
-            <div class="actions">
-                <button class="btn btn-default btn-sm" type="submit">
-                    <i class="fa fa-save"></i> 保存
-                </button>
-                <a class="btn btn-default btn-sm" asp-action="Index">
-                    <i class="fa fa-arrow-left"></i> 返回
-                </a>
+    <form class="horizontal-form" asp-action="Modify" method="post">
+        <div class="portlet box green">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-gift"></i>编辑菜单
+                </div>
+                <div class="actions">
+                    <button class="btn btn-default btn-sm" type="submit">
+                        <i class="fa fa-save"></i> 保存
+                    </button>
+                    <a class="btn btn-default btn-sm" asp-action="Index">
+                        <i class="fa fa-arrow-left"></i> 返回
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body form">
+                @Html.Partial("CreateOrModify", Model)
             </div>
         </div>
-        <div class="portlet-body form">
-            <!-- BEGIN FORM-->
-            <form class="horizontal-form" action="#">
-                <div class="form-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="control-label">应用程序</label>
-                                <select class="form-control">
-                                    <option value="">Male</option>
-                                    <option value="">Female</option>
-                                </select>
-                                <span class="help-block"> Select your gender </span>
-                          
-                            </div>
-                        </div>
-                        <!--/span-->
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="control-label">父级菜单</label>
-                                <input id="citySel" type="text" class="form-control" readonly="readonly" style="cursor:pointer" />
-                                <div id="menuContent" style="display: none; position: absolute; background-color:darkgrey;z-index: 1000">
-                                    <ul id="treeDemo" class="ztree"></ul>
-                                </div>
-                                <span class="help-block"> This field has error. </span>
-                            </div>
-                        </div>
-                        <!--/span-->
-                    </div>
-                    <!--/row-->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="control-label">菜单名</label>
-                                <input class="form-control" id="firstName" type="text" placeholder="Chee Kin">
-                                <span class="help-block"> This is inline help </span>
-                            </div>
-                        </div>
-                        <!--/span-->
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="control-label">菜单编码</label>
-                                <input class="form-control" id="code" type="text" placeholder="Chee Kin">
-                                <span class="help-block"> 编码唯一</span>
-                            </div>
-                            <!--/span-->
-                        </div>
-                    </div>
-                    <!--/row-->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="control-label">Area</label>
-                                <input class="form-control" id="Area" type="text" placeholder="Chee Kin">
-                                <span class="help-block"> 只允许开发人员配置</span>
-                            </div>
-                        </div>
-                        <!--/span-->
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="control-label">Controller</label>
-                                <input class="form-control" id="Controller" type="text" placeholder="Chee Kin">
-                                <span class="help-block"> 只允许开发人员配置</span>
-                            </div>
-                        </div>
-                        <!--/span-->
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="control-label">Action</label>
-                                <input class="form-control" id="Action" type="text" placeholder="Chee Kin">
-                                <span class="help-block"> 只允许开发人员配置</span>
-                            </div>
-                        </div>
-                        <!--/span-->
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="control-label">菜单类型</label>
-                                <div class="radio-list">
-                                    <label class="radio-inline">
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>分组菜单</label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> 导航菜单 </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option2"> 权限菜单
-                                    </label>
-                                </div>
-                                <span class="help-block"> 只允许开发人员配置</span>
-                            </div>
-                        </div>
-                        <!--/span-->
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label class="control-label">描述</label>
-                                <textarea class="form-control" id="desc" type="text" placeholder="Chee Kin" rows="5"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-actions right">
-                    <button class="btn default" type="button">Cancel</button>
-                    <button class="btn blue" type="submit">
-                        <i class="fa fa-check"></i> Save</button>
-                </div>
-            </form>
-            <!-- END FORM-->
-        </div>
-    </div>
+    </form>
 </div>
 @section style_page{
-    <link href="~/lib/ztree.3.5.26/styles/metroStyle/metroStyle.css" rel="stylesheet" />
+    <link href="/lib/ztree.3.5.26/styles/metroStyle/metroStyle.css" rel="stylesheet" />
 }
 @section scripts_plugins{
-    <script src="~/lib/ztree.3.5.26/jquery.ztree.core.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-           
-            function hideParentMenu() {
-                $("#menuContent").fadeOut("fast");
-                $("body").unbind("mousedown", onBodyDown);
-            }
-            function showParentMenu() {
-                $("#menuContent").slideDown("fast");
-                $("body").bind("mousedown", onBodyDown);
-            }
-            function onBodyDown(event) {
-                if (!(event.target.id === "menuBtn" || event.target.id === "menuContent" || $(event.target).parents("#menuContent").length > 0)) {
-                    hideParentMenu();
-                }
-            }
+    <script src="/lib/ztree.3.5.26/jquery.ztree.core.js"></script>
+    <script src="/lib/ztree.3.5.26/jquery.ztree.intput.select.js"></script>
+<script src="~/pages/menu/menu.modify.js?v=1.0.0.0"></script>
 
-            $("#citySel").click(function() {
-                var tb = $(this);
-                var tbOffset = $(this).offset();
-                $("#menuContent").each(function() {
-                    this.style.left = tbOffset.left;
-                    this.style.width = tb[0].offsetWidth + "px";
-                    this.style.top = tbOffset.top + tb.height() + 5;
-                });
-                if ($("#menuContent").is(":hidden")) {
-                    showParentMenu();
-                } else {
-                    hideParentMenu();
-                }
-            });
-            var setting = {
-                view: {
-                    dblClickExpand: false
-                },
-                data: {
-                    simpleData: {
-                        enable: true
-                    }
-                },
-                callback: {
-                    beforeClick: beforeClick,
-                    onClick: onClick
-                }
-            };
-
-            var zNodes = [
-                { id: 1, pId: 0, name: "北京" },
-                { id: 2, pId: 0, name: "天津" },
-                { id: 3, pId: 0, name: "上海" },
-                { id: 6, pId: 0, name: "重庆" },
-                { id: 4, pId: 0, name: "河北省", open: true },
-                { id: 41, pId: 4, name: "石家庄" },
-                { id: 42, pId: 4, name: "保定" },
-                { id: 43, pId: 4, name: "邯郸" },
-                { id: 44, pId: 4, name: "承德" },
-                { id: 5, pId: 0, name: "广东省", open: true },
-                { id: 51, pId: 5, name: "广州" },
-                { id: 52, pId: 5, name: "深圳" },
-                { id: 53, pId: 5, name: "东莞" },
-                { id: 54, pId: 5, name: "佛山" },
-                { id: 6, pId: 0, name: "福建省", open: true },
-                { id: 61, pId: 6, name: "福州" },
-                { id: 62, pId: 6, name: "厦门" },
-                { id: 63, pId: 6, name: "泉州" },
-                { id: 64, pId: 6, name: "三明" }
-            ];
-
-            function beforeClick(treeId, treeNode) {
-                var check = (treeNode && !treeNode.isParent);
-                if (!check) alert("只能选择城市...");
-                return check;
-            }
-
-            function onClick(e, treeId, treeNode) {
-                var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
-                    nodes = zTree.getSelectedNodes(),
-                    v = "";
-                nodes.sort(function compare(a, b) { return a.id - b.id; });
-                for (var i = 0, l = nodes.length; i < l; i++) {
-                    v += nodes[i].name + ",";
-                }
-                if (v.length > 0) v = v.substring(0, v.length - 1);
-                var cityObj = $("#citySel");
-                cityObj.attr("value", v);
-                hideParentMenu();
-            }
-
-            $.fn.zTree.init($("#treeDemo"), setting, zNodes);
-        });
-    </script>
 }
-

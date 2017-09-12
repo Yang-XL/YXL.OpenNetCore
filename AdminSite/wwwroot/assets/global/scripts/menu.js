@@ -43,11 +43,9 @@
     return {
         init: function () {
             $("ul.page-sidebar-menu").find("li.nav-item").each(function () {
-                if (!$(this).children("a.nav-link").hasClass("nav-toggle")) {
-                    $(this).click(function() {
-                        LinkMenu_OnClick_ClearClass();
-                        LinkMenu_OnClick_AddClass(this);
-                    });
+                if ($(this).hasClass("active") && $(this).hasClass("open")) {
+                    LinkMenu_OnClick_ClearClass();
+                    LinkMenu_OnClick_AddClass(this);
                 }
             });
         }

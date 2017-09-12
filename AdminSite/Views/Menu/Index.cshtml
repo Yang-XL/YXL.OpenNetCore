@@ -1,24 +1,7 @@
-﻿@using ViewModels.AdminWeb.Nav
+﻿@using Controls.SelectZtree
+@using ViewModels.AdminWeb.Nav
 @model Sakura.AspNetCore.IPagedList<MenuViewModel>
-<div class="page-bar">
-    <ul class="page-breadcrumb">
-        <li>
-            <a asp-controller="Home" asp-action="Index">首页</a>
-            <i class="fa fa-angle-double-right"></i>
-        </li>
-        <li>
-            <span>系统管理</span>
-            <i class="fa fa-angle-double-right"></i>
-        </li>
-        <li>
-            <span>开发人员配置</span>
-            <i class="fa fa-angle-double-right"></i>
-        </li>
-        <li>
-            <span>菜单管理</span>
-        </li>
-    </ul>
-</div>
+
 <h2 class="page-title">
 </h2>
 <div class="row">
@@ -42,11 +25,20 @@
                     @Html.AntiForgeryToken()
                     <div class="form-body">
                         <div class="row">
-                            <div class="col-md-5">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label col-md-3">快速搜索</label>
                                     <div class="col-md-9">
                                         <input type="text" class="form-control" name="queryString" id="queryString" placeholder="名称、编码、拼音码">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">父菜单</label>
+                                    <div class="col-md-9">
+                                        @Html.ZtreeTextBox("ParentMenuName", new{@class= "form-control",@readonly = "readonly", style = "cursor:pointer" })
+                                        @Html.Hidden("ParentID")
                                     </div>
                                 </div>
                             </div>
@@ -66,4 +58,12 @@
         </div>
     </div>
 </div>
+@section style_page{
+    <link href="/lib/ztree.3.5.26/styles/metroStyle/metroStyle.css" rel="stylesheet" />
+}
+@section scripts_plugins{
+    <script src="/lib/ztree.3.5.26/jquery.ztree.core.js"></script>
+    <script src="/lib/ztree.3.5.26/jquery.ztree.intput.select.js"></script>
+    <script src="/pages/menu/menu.index.js?v=1.0.0.0"></script>
+}
 

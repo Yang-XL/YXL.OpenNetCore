@@ -5493,11 +5493,28 @@
           "bin/placeholder/IService.dll": {}
         }
       },
-      "PermissionSystem/1.0.0": {
+      "LoggerExtensions/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
           "Core": "1.0.0",
+          "IService": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Primitives": "2.0.0",
+          "PermissionSystem": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LoggerExtensions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LoggerExtensions.dll": {}
+        }
+      },
+      "PermissionSystem/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.0"
         },
         "compile": {
@@ -5528,6 +5545,7 @@
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
           "AutoMapper": "6.1.1",
+          "Core": "1.0.0",
           "IdentityServer4": "1.5.2",
           "Microsoft.AspNetCore.Identity": "2.0.0",
           "Microsoft.AspNetCore.Mvc": "2.0.0",
@@ -14062,6 +14080,11 @@
       "path": "../IService/IService.csproj",
       "msbuildProject": "../IService/IService.csproj"
     },
+    "LoggerExtensions/1.0.0": {
+      "type": "project",
+      "path": "../LoggerExtensions/LoggerExtensions.csproj",
+      "msbuildProject": "../LoggerExtensions/LoggerExtensions.csproj"
+    },
     "PermissionSystem/1.0.0": {
       "type": "project",
       "path": "../PermissionSystem/PermissionSystem.csproj",
@@ -14083,6 +14106,7 @@
       "Controls >= 1.0.0",
       "Core >= 1.0.0",
       "IService >= 1.0.0",
+      "LoggerExtensions >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.0",
@@ -14141,6 +14165,9 @@
             },
             "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\PermissionSystem\\PermissionSystem.csproj": {
               "projectPath": "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\PermissionSystem\\PermissionSystem.csproj"
+            },
+            "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\LoggerExtensions\\LoggerExtensions.csproj": {
+              "projectPath": "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\LoggerExtensions\\LoggerExtensions.csproj"
             },
             "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\Core\\Core.csproj": {
               "projectPath": "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\Core\\Core.csproj"

@@ -4193,7 +4193,6 @@
       },
       "PermissionSystem/1.0.0": {
         "dependencies": {
-          "Core": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.0"
         },
         "runtime": {

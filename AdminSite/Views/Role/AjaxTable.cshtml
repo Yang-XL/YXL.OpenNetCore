@@ -1,0 +1,40 @@
+﻿@using Sakura.AspNetCore
+@using ViewModels.Common
+@model IPagedList<PermissionSystem.Models.Role>
+<table class="table table-bordered table-striped table-condensed flip-content">
+    <thead class="flip-content">
+    <tr>
+        <th>名称</th>
+        <th> 编码 </th>
+        <th> 拼音码 </th>
+        <th> 显示顺序 </th>
+        <th> 描述 </th>
+        <th> 操作 </th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (Model != null && Model.Any())
+    {
+        foreach (var role in Model)
+        {
+            <tr>
+                <td> @role.Name </td>
+                <td> @role.Code </td>
+                <td> @role.PyCode </td>
+                <td> @role.ShowIndex</td>
+                <td> @role.Description</td>
+                <td>
+                    <a  asp-action="Details" asp-route-id="@role.ID"  class="btn btn-link btn-sm font-green-turquoise" title="详细信息">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                    <a  asp-action="Modify" asp-route-id="@role.ID"   class="btn btn-link btn-sm font-green-turquoise" title="修改">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>
+@Html.Partial("Pagger", new PaggerModel(Model, new AjaxOptions("tableResult", "seachForm")))
+

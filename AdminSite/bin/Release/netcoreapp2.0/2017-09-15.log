@@ -1,0 +1,58 @@
+﻿2017-09-15 12:36:33.418  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-15 12:36:33.558  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-15 12:36:35.980  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-15 12:36:36.961  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 12:36:37.013  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 12:36:37.190  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 12:36:37.476  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 3924.6688ms
+2017-09-15 12:36:37.486  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 4091.643ms 200 text/html; charset=utf-8
+2017-09-15 14:08:49.956  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Index  
+2017-09-15 14:08:49.989  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-15 14:08:50.096  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (33ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Log] ([ID], [CreateDate], [FullMessage], [IpAddress], [KeyWord], [LogLeve], [PageUrl], [ReferrerUrl], [ServerIpAddress], [ShortMessage])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2017-09-15 14:08:50.204  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (10ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+    WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+    THEN N'--根目录--' ELSE (
+        SELECT TOP(1) [a].[Name]
+        FROM [Menu] AS [a]
+        WHERE [a].[ID] = [n].[ParentID]
+    )
+END AS [ParentMenuName]
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+ORDER BY [n].[ShowIndex]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2017-09-15 14:08:50.253  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-15 14:08:50.718  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Menu/Index.cshtml.
+2017-09-15 14:08:51.306  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 14:08:51.311  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 14:08:51.316  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 14:08:51.323  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 1346.5018ms
+2017-09-15 14:08:51.328  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 1371.1789ms 200 text/html; charset=utf-8
+2017-09-15 14:08:51.472  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 10
+2017-09-15 14:08:51.499  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (, True) - ModelState is Valid
+2017-09-15 14:08:51.533  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[@__isNav_Value_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE [a].[IsNav] = @__isNav_Value_0
+2017-09-15 14:08:51.538  Information  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor  Information: Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-15 14:08:51.618  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 140.0368ms
+2017-09-15 14:08:51.622  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 150.3203ms 200 application/json; charset=utf-8

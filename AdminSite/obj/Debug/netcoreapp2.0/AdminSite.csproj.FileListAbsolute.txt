@@ -21,3 +21,5 @@ D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\obj\Debug\netcoreapp2.0\Admin
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\obj\Debug\netcoreapp2.0\AdminSite.pdb
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\bin\Debug\netcoreapp2.0\Controls.dll
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\bin\Debug\netcoreapp2.0\Controls.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\bin\Debug\netcoreapp2.0\LoggerExtensions.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\bin\Debug\netcoreapp2.0\LoggerExtensions.pdb

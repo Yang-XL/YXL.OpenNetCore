@@ -1,0 +1,1588 @@
+﻿2017-09-15 10:36:41.576  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-15 10:36:42.085  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-15 10:36:45.300  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-15 10:36:46.571  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (36ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 10:36:46.682  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 10:36:46.911  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 10:36:47.298  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 5383.9887ms
+2017-09-15 10:36:47.315  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/styles/metroStyle/metroStyle.css  
+2017-09-15 10:36:47.345  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 5788.3158ms 200 text/html; charset=utf-8
+2017-09-15 10:36:47.375  Information  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware  Information: The file /lib/ztree.3.5.26/styles/metroStyle/metroStyle.css was not modified
+2017-09-15 10:36:47.403  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 82.3332ms 304 text/css
+2017-09-15 10:36:47.433  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/scripts/menu.js  
+2017-09-15 10:36:47.442  Information  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware  Information: The file /assets/global/scripts/menu.js was not modified
+2017-09-15 10:36:47.453  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 39.9151ms 304 application/javascript
+2017-09-15 10:37:01.329  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Index  
+2017-09-15 10:37:04.119  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-15 10:37:04.271  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (35ms) [Parameters=[@p0='?', @p1='?' (Size = 4000), @p2='?', @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?', @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Log] ([ID], [CodeTypeName], [CreateDate], [FullMessage], [IpAddress], [KeyWord], [LogLeve], [PageUrl], [ReferrerUrl], [ShortMessage])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2017-09-15 10:37:04.389  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (5ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+    WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+    THEN N'--根目录--' ELSE (
+        SELECT TOP(1) [a].[Name]
+        FROM [Menu] AS [a]
+        WHERE [a].[ID] = [n].[ParentID]
+    )
+END AS [ParentMenuName]
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+ORDER BY [n].[ShowIndex]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2017-09-15 10:37:04.424  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-15 10:37:04.777  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Menu/Index.cshtml.
+2017-09-15 10:37:05.499  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 10:37:05.508  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 10:37:05.516  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 10:37:05.534  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 2763.3164ms
+2017-09-15 10:37:05.570  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 11438.1115ms 200 text/html; charset=utf-8
+2017-09-15 10:37:05.579  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/pages/menu/menu.index.js?v=1.0.0.0  
+2017-09-15 10:37:05.589  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/jquery.ztree.intput.select.js  
+2017-09-15 10:37:05.595  Information  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware  Information: The file /pages/menu/menu.index.js was not modified
+2017-09-15 10:37:05.603  Information  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware  Information: The file /lib/ztree.3.5.26/jquery.ztree.intput.select.js was not modified
+2017-09-15 10:37:05.614  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 37.7165ms 304 application/javascript
+2017-09-15 10:37:05.645  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 28.0822ms 304 application/javascript
+2017-09-15 10:37:05.871  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 10
+2017-09-15 10:37:05.914  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (, True) - ModelState is Valid
+2017-09-15 10:37:05.942  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (3ms) [Parameters=[@__isNav_Value_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE [a].[IsNav] = @__isNav_Value_0
+2017-09-15 10:37:05.951  Information  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor  Information: Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-15 10:37:06.031  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 146.5784ms
+2017-09-15 10:37:06.039  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 170.6525ms 200 application/json; charset=utf-8
+2017-09-15 10:37:17.392  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/Log/Index  
+2017-09-15 10:37:17.406  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.LogController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-15 10:37:17.735  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Log/Index.cshtml.
+2017-09-15 10:37:17.756  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 10:37:17.766  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 10:37:17.776  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 10:37:17.816  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.LogController.Index (AdminSite) in 383.771ms
+2017-09-15 10:37:17.846  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 439.4515ms 200 text/html; charset=utf-8
+2017-09-15 10:37:18.901  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Index  
+2017-09-15 10:37:18.910  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-15 10:37:38.763  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (3ms) [Parameters=[@p0='?', @p1='?' (Size = 4000), @p2='?', @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?', @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Log] ([ID], [CodeTypeName], [CreateDate], [FullMessage], [IpAddress], [KeyWord], [LogLeve], [PageUrl], [ReferrerUrl], [ShortMessage])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2017-09-15 10:37:38.785  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (7ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+    WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+    THEN N'--根目录--' ELSE (
+        SELECT TOP(1) [a].[Name]
+        FROM [Menu] AS [a]
+        WHERE [a].[ID] = [n].[ParentID]
+    )
+END AS [ParentMenuName]
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+ORDER BY [n].[ShowIndex]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2017-09-15 10:37:38.796  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-15 10:37:38.805  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Menu/Index.cshtml.
+2017-09-15 10:37:38.825  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 10:37:38.837  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 10:37:38.849  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 10:37:39.109  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 19947.8856ms
+2017-09-15 10:37:39.203  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 20247.6347ms 200 text/html; charset=utf-8
+2017-09-15 10:37:39.308  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 10
+2017-09-15 10:37:39.326  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (, True) - ModelState is Valid
+2017-09-15 10:37:39.339  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[@__isNav_Value_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE [a].[IsNav] = @__isNav_Value_0
+2017-09-15 10:37:39.348  Information  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor  Information: Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-15 10:37:39.359  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 38.9164ms
+2017-09-15 10:37:39.368  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 99.097ms 200 application/json; charset=utf-8
+2017-09-15 10:48:23.543  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-15 10:48:23.671  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-15 10:48:26.098  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-15 10:48:26.987  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 10:48:27.036  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 10:48:27.327  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 10:48:27.598  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 3934.5912ms
+2017-09-15 10:48:27.613  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 4083.1325ms 200 text/html; charset=utf-8
+2017-09-15 10:48:27.635  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/styles/metroStyle/metroStyle.css  
+2017-09-15 10:48:27.644  Information  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware  Information: The file /lib/ztree.3.5.26/styles/metroStyle/metroStyle.css was not modified
+2017-09-15 10:48:27.651  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 15.4872ms 304 text/css
+2017-09-15 10:48:27.659  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/scripts/menu.js  
+2017-09-15 10:48:27.662  Information  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware  Information: The file /assets/global/scripts/menu.js was not modified
+2017-09-15 10:48:27.664  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 6.9058ms 304 application/javascript
+2017-09-15 10:48:31.432  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Index  
+2017-09-15 10:48:31.464  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-15 10:48:31.573  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (26ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Log] ([ID], [CreateDate], [FullMessage], [IpAddress], [KeyWord], [LogLeve], [PageUrl], [ReferrerUrl], [ServerIpAddress], [ShortMessage])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2017-09-15 10:48:31.643  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (3ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+    WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+    THEN N'--根目录--' ELSE (
+        SELECT TOP(1) [a].[Name]
+        FROM [Menu] AS [a]
+        WHERE [a].[ID] = [n].[ParentID]
+    )
+END AS [ParentMenuName]
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+ORDER BY [n].[ShowIndex]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2017-09-15 10:48:31.672  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-15 10:48:31.983  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Menu/Index.cshtml.
+2017-09-15 10:48:32.544  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 10:48:32.548  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 10:48:32.552  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 10:48:32.559  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 1107.3676ms
+2017-09-15 10:48:32.565  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 1133.1688ms 200 text/html; charset=utf-8
+2017-09-15 10:48:32.589  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/jquery.ztree.intput.select.js  
+2017-09-15 10:48:32.593  Information  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware  Information: The file /lib/ztree.3.5.26/jquery.ztree.intput.select.js was not modified
+2017-09-15 10:48:32.596  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/pages/menu/menu.index.js?v=1.0.0.0  
+2017-09-15 10:48:32.601  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 11.9291ms 304 application/javascript
+2017-09-15 10:48:32.606  Information  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware  Information: The file /pages/menu/menu.index.js was not modified
+2017-09-15 10:48:32.617  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 20.8835ms 304 application/javascript
+2017-09-15 10:48:32.749  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 10
+2017-09-15 10:48:32.779  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (, True) - ModelState is Valid
+2017-09-15 10:48:32.810  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[@__isNav_Value_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE [a].[IsNav] = @__isNav_Value_0
+2017-09-15 10:48:32.814  Information  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor  Information: Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-15 10:48:32.866  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 110.3843ms
+2017-09-15 10:48:32.870  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 120.6729ms 200 application/json; charset=utf-8
+2017-09-15 10:48:34.522  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Modify/00000000-0000-0000-0000-100000000000  
+2017-09-15 10:48:34.532  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.Modify (AdminSite) with arguments (00000000-0000-0000-0000-100000000000) - ModelState is Valid
+2017-09-15 10:48:34.539  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Log] ([ID], [CreateDate], [FullMessage], [IpAddress], [KeyWord], [LogLeve], [PageUrl], [ReferrerUrl], [ServerIpAddress], [ShortMessage])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2017-09-15 10:48:34.571  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (3ms) [Parameters=[@__rid_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+    WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+    THEN N'--根目录--' ELSE (
+        SELECT TOP(1) [a].[Name]
+        FROM [Menu] AS [a]
+        WHERE [a].[ID] = [n].[ParentID]
+    )
+END AS [ParentMenuName], CASE
+    WHEN [n].[IsNav] = 1
+    THEN CASE
+        WHEN [n].[ActionName] IS NULL OR ([n].[ActionName] = N'')
+        THEN 1 ELSE 2
+    END ELSE 3
+END AS [MenuType]
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+WHERE [n].[ID] = @__rid_0
+2017-09-15 10:48:34.710  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Menu/Modify.cshtml.
+2017-09-15 10:48:35.151  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[Name] AS [Text], CONVERT(VARCHAR(36), [n].[ID]) AS [Value]
+FROM [Application] AS [n]
+2017-09-15 10:48:35.161  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 10:48:35.165  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 10:48:35.168  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 10:48:35.174  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.Modify (AdminSite) in 642.9077ms
+2017-09-15 10:48:35.178  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 656.3648ms 200 text/html; charset=utf-8
+2017-09-15 10:48:35.201  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/pages/menu/menu.modify.js?v=1.0.0.0  
+2017-09-15 10:48:35.205  Information  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware  Information: Sending file. Request path: '/pages/menu/menu.modify.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\pages\menu\menu.modify.js'
+2017-09-15 10:48:35.210  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 9.2177ms 200 application/javascript
+2017-09-15 10:48:35.296  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 50
+2017-09-15 10:48:35.299  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (00000000-0000-0000-0000-000000000001, True) - ModelState is Valid
+2017-09-15 10:48:35.310  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (2ms) [Parameters=[@__applicationId_0='?', @__isNav_Value_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE ([a].[ApplicationID] = @__applicationId_0) AND ([a].[IsNav] = @__isNav_Value_1)
+2017-09-15 10:48:35.315  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/uniform/images/sprite.png  
+2017-09-15 10:48:35.316  Information  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor  Information: Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-15 10:48:35.317  Information  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware  Information: Sending file. Request path: '/assets/global/plugins/uniform/images/sprite.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\plugins\uniform\images\sprite.png'
+2017-09-15 10:48:35.319  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 20.4402ms
+2017-09-15 10:48:35.323  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 26.7864ms 200 application/json; charset=utf-8
+2017-09-15 10:48:35.340  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 25.4368ms 200 image/png
+2017-09-15 11:48:52.403  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-15 11:48:52.720  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-15 11:48:55.723  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-15 11:48:56.976  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (35ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 11:48:57.050  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 11:48:57.324  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 11:48:57.702  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 4949.6871ms
+2017-09-15 11:48:57.742  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 5358.6298ms 200 text/html; charset=utf-8
+2017-09-15 11:52:45.628  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-15 11:52:45.765  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-15 11:52:48.293  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-15 11:52:49.167  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 11:52:49.219  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 11:52:49.387  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 11:52:49.698  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 3941.328ms
+2017-09-15 11:52:49.709  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 4096.9359ms 200 text/html; charset=utf-8
+2017-09-15 11:53:04.562  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Index  
+2017-09-15 11:53:04.594  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-15 11:53:04.689  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (31ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Log] ([ID], [CreateDate], [FullMessage], [IpAddress], [KeyWord], [LogLeve], [PageUrl], [ReferrerUrl], [ServerIpAddress], [ShortMessage])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2017-09-15 11:53:04.769  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (5ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+    WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+    THEN N'--根目录--' ELSE (
+        SELECT TOP(1) [a].[Name]
+        FROM [Menu] AS [a]
+        WHERE [a].[ID] = [n].[ParentID]
+    )
+END AS [ParentMenuName]
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+ORDER BY [n].[ShowIndex]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2017-09-15 11:53:04.799  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-15 11:53:05.096  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Menu/Index.cshtml.
+2017-09-15 11:53:05.688  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 11:53:05.692  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 11:53:05.696  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 11:53:05.705  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 1121.2082ms
+2017-09-15 11:53:05.708  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 1145.8147ms 200 text/html; charset=utf-8
+2017-09-15 11:53:05.853  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 10
+2017-09-15 11:53:05.882  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (, True) - ModelState is Valid
+2017-09-15 11:53:05.904  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (3ms) [Parameters=[@__isNav_Value_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE [a].[IsNav] = @__isNav_Value_0
+2017-09-15 11:53:05.914  Information  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor  Information: Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-15 11:53:05.983  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 122.4174ms
+2017-09-15 11:53:06.000  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 146.5457ms 200 application/json; charset=utf-8
+2017-09-15 14:17:50.031  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-15 14:17:50.469  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-15 14:17:53.623  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-15 14:17:54.779  Error  Microsoft.EntityFrameworkCore.Query  Error: An exception occurred in the database while iterating the results of a query for context type 'PermissionSystem.PermissionSystemContext'.
+System.ArgumentException: Keyword not supported: 'data source192.168.150.102.;initial catalog'.
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Dictionary`2 parsetable, String connectionString, Boolean buildChain, Dictionary`2 synonyms)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Dictionary`2 synonyms)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+System.ArgumentException: Keyword not supported: 'data source192.168.150.102.;initial catalog'.
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Dictionary`2 parsetable, String connectionString, Boolean buildChain, Dictionary`2 synonyms)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Dictionary`2 synonyms)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+2017-09-15 14:17:54.987  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 4526.3041ms
+2017-09-15 14:17:55.137  Error  Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware  Error: An unhandled exception has occurred while executing the request
+System.ArgumentException: Keyword not supported: 'data source192.168.150.102.;initial catalog'.
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Dictionary`2 parsetable, String connectionString, Boolean buildChain, Dictionary`2 synonyms)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Dictionary`2 synonyms)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.<Aggregate_>d__6`3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Core.Repository.Ef.EfRepository`1.<GetAsync>d__25.MoveNext() in D:\GitSource\OpenNetCore\YXL.OpenNetCore\Core\Repository\Ef\EfRepository.cs:line 134
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AdminSite.Components.SideBarViewComponent.<InvokeAsync>d__3.MoveNext() in D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\ViewComponents\SideBarViewComponent.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentInvoker.<InvokeAsyncCore>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentInvoker.<InvokeAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentHelper.<InvokeCoreAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AspNetCore._Views_Shared__Layout_cshtml.<<ExecuteAsync>b__27_14>d.MoveNext() in D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\Views\Shared\_Layout.cshtml:line 43
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.<SetOutputContentAsync>d__30.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at AspNetCore._Views_Shared__Layout_cshtml.<ExecuteAsync>d__27.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageCoreAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderLayoutAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__21.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-09-15 14:17:55.360  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 5342.5072ms 500 text/html; charset=utf-8
+2017-09-15 14:18:10.570  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-15 14:18:10.688  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-15 14:18:10.819  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-15 14:18:10.936  Error  Microsoft.EntityFrameworkCore.Query  Error: An exception occurred in the database while iterating the results of a query for context type 'PermissionSystem.PermissionSystemContext'.
+System.ArgumentException: Keyword not supported: 'data source192.168.150.102.;initial catalog'.
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Dictionary`2 parsetable, String connectionString, Boolean buildChain, Dictionary`2 synonyms)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Dictionary`2 synonyms)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+System.ArgumentException: Keyword not supported: 'data source192.168.150.102.;initial catalog'.
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Dictionary`2 parsetable, String connectionString, Boolean buildChain, Dictionary`2 synonyms)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Dictionary`2 synonyms)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+2017-09-15 14:18:11.059  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 476.1975ms
+2017-09-15 14:18:11.195  Error  Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware  Error: An unhandled exception has occurred while executing the request
+System.ArgumentException: Keyword not supported: 'data source192.168.150.102.;initial catalog'.
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Dictionary`2 parsetable, String connectionString, Boolean buildChain, Dictionary`2 synonyms)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Dictionary`2 synonyms)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.<Aggregate_>d__6`3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Core.Repository.Ef.EfRepository`1.<GetAsync>d__25.MoveNext() in D:\GitSource\OpenNetCore\YXL.OpenNetCore\Core\Repository\Ef\EfRepository.cs:line 134
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AdminSite.Components.SideBarViewComponent.<InvokeAsync>d__3.MoveNext() in D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\ViewComponents\SideBarViewComponent.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentInvoker.<InvokeAsyncCore>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentInvoker.<InvokeAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentHelper.<InvokeCoreAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AspNetCore._Views_Shared__Layout_cshtml.<<ExecuteAsync>b__27_14>d.MoveNext() in D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\Views\Shared\_Layout.cshtml:line 43
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.<SetOutputContentAsync>d__30.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at AspNetCore._Views_Shared__Layout_cshtml.<ExecuteAsync>d__27.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageCoreAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderLayoutAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__21.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-09-15 14:18:11.449  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 838.3749ms 500 text/html; charset=utf-8
+2017-09-15 14:18:11.469  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/favicon.ico  
+2017-09-15 14:18:11.483  Information  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware  Information: Sending file. Request path: '/favicon.ico'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\favicon.ico'
+2017-09-15 14:18:11.515  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 35.9499ms 200 image/x-icon
+2017-09-15 14:18:42.008  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-15 14:18:42.280  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-15 14:18:45.008  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-15 14:19:00.760  Error  Microsoft.EntityFrameworkCore.Database.Connection  Error: An error occurred using the connection to database 'PermissionSystem' on server '192.168.150.102.'.
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2017-09-15 14:19:00.913  Error  Microsoft.EntityFrameworkCore.Query  Error: An exception occurred in the database while iterating the results of a query for context type 'PermissionSystem.PermissionSystemContext'.
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2017-09-15 14:19:01.204  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 18931.8307ms
+2017-09-15 14:19:01.417  Error  Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware  Error: An unhandled exception has occurred while executing the request
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.<Aggregate_>d__6`3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Core.Repository.Ef.EfRepository`1.<GetAsync>d__25.MoveNext() in D:\GitSource\OpenNetCore\YXL.OpenNetCore\Core\Repository\Ef\EfRepository.cs:line 134
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AdminSite.Components.SideBarViewComponent.<InvokeAsync>d__3.MoveNext() in D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\ViewComponents\SideBarViewComponent.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentInvoker.<InvokeAsyncCore>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentInvoker.<InvokeAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentHelper.<InvokeCoreAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AspNetCore._Views_Shared__Layout_cshtml.<<ExecuteAsync>b__27_14>d.MoveNext() in D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\Views\Shared\_Layout.cshtml:line 43
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.<SetOutputContentAsync>d__30.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at AspNetCore._Views_Shared__Layout_cshtml.<ExecuteAsync>d__27.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageCoreAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderLayoutAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__21.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2017-09-15 14:19:01.828  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 19798.9594ms 500 text/html; charset=utf-8
+2017-09-15 14:19:40.113  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-15 14:19:40.442  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-15 14:19:43.313  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-15 14:19:44.383  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 14:19:44.450  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 14:19:44.711  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 14:19:45.107  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 4639.1715ms
+2017-09-15 14:19:45.160  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 5040.468ms 200 text/html; charset=utf-8
+2017-09-15 14:19:48.196  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Index  
+2017-09-15 14:19:48.279  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-15 14:19:50.540  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (29ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Log] ([ID], [CreateDate], [FullMessage], [IpAddress], [KeyWord], [LogLeve], [PageUrl], [ReferrerUrl], [ServerIpAddress], [ShortMessage])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2017-09-15 14:19:50.708  Error  Microsoft.EntityFrameworkCore.Database.Command  Error: Failed executing DbCommand (5ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+    WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+    THEN N'--根目录--' ELSE (
+        SELECT TOP(1) [a].[Name]
+        FROM [Menu] AS [a]
+        WHERE [a].[ID] = [n].[ParentID]
+    )
+END AS [ParentMenuName]
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+ORDER BY [n].[ShowIndex]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+System.Data.SqlClient.SqlException (0x80131904): 'OFFSET' 附近有语法错误。
+在 FETCH 语句中选项 NEXT 的用法无效。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:777f40a7-bf8d-429d-ba6e-3d40592268bc
+Error Number:102,State:1,Class:15
+2017-09-15 14:19:50.810  Error  Microsoft.EntityFrameworkCore.Query  Error: An exception occurred in the database while iterating the results of a query for context type 'PermissionSystem.PermissionSystemContext'.
+System.Data.SqlClient.SqlException (0x80131904): 'OFFSET' 附近有语法错误。
+在 FETCH 语句中选项 NEXT 的用法无效。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(Boolean buffer)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:777f40a7-bf8d-429d-ba6e-3d40592268bc
+Error Number:102,State:1,Class:15
+System.Data.SqlClient.SqlException (0x80131904): 'OFFSET' 附近有语法错误。
+在 FETCH 语句中选项 NEXT 的用法无效。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(Boolean buffer)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:777f40a7-bf8d-429d-ba6e-3d40592268bc
+Error Number:102,State:1,Class:15
+2017-09-15 14:55:10.563  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-15 14:55:10.707  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-15 14:55:13.311  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-15 14:55:14.211  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 14:55:14.263  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 14:55:14.445  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 14:55:14.751  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 4053.9315ms
+2017-09-15 14:55:14.769  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 4224.2739ms 200 text/html; charset=utf-8
+2017-09-15 14:55:17.393  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Index  
+2017-09-15 14:55:17.431  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-15 14:55:17.550  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (33ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Log] ([ID], [CreateDate], [FullMessage], [IpAddress], [KeyWord], [LogLeve], [PageUrl], [ReferrerUrl], [ServerIpAddress], [ShortMessage])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2017-09-15 14:55:17.654  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (12ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [t].[ID], [t].[ApplicationName], [t].[ActionName], [t].[ApplicationID], [t].[PyCode], [t].[Code], [t].[ControllerName], [t].[CreateDate], [t].[Description], [t].[IconCss], [t].[IsNav], [t].[Name], [t].[ShowIndex], [t].[ParentID], [t].[ParentMenuName]
+FROM (
+    SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+        WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+        THEN N'--根目录--' ELSE (
+            SELECT TOP(1) [a].[Name]
+            FROM [Menu] AS [a]
+            WHERE [a].[ID] = [n].[ParentID]
+        )
+    END AS [ParentMenuName], ROW_NUMBER() OVER(ORDER BY [n].[ShowIndex]) AS [__RowNumber__]
+    FROM [Menu] AS [n]
+    INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_0) AND ([t].[__RowNumber__] <= (@__p_0 + @__p_1))
+2017-09-15 14:55:17.686  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-15 14:55:18.119  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Menu/Index.cshtml.
+2017-09-15 14:55:18.752  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 14:55:18.757  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 14:55:18.764  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 14:55:18.772  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 1355.5922ms
+2017-09-15 14:55:18.777  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 1383.8396ms 200 text/html; charset=utf-8
+2017-09-15 14:55:18.939  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 10
+2017-09-15 14:55:18.970  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (, True) - ModelState is Valid
+2017-09-15 14:55:18.995  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (5ms) [Parameters=[@__isNav_Value_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE [a].[IsNav] = @__isNav_Value_0
+2017-09-15 14:55:19.000  Information  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor  Information: Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-15 14:55:19.057  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 111.6515ms
+2017-09-15 14:55:19.062  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 123.1865ms 200 application/json; charset=utf-8
+2017-09-15 14:55:29.683  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/styles/metroStyle/img/metro.png  
+2017-09-15 14:55:29.707  Information  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware  Information: Sending file. Request path: '/lib/ztree.3.5.26/styles/metroStyle/img/metro.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\ztree.3.5.26\styles\metroStyle\img\metro.png'
+2017-09-15 14:55:29.713  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/styles/metroStyle/img/line_conn.png  
+2017-09-15 14:55:29.727  Information  Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware  Information: Sending file. Request path: '/lib/ztree.3.5.26/styles/metroStyle/img/line_conn.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\ztree.3.5.26\styles\metroStyle\img\line_conn.png'
+2017-09-15 14:55:29.751  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 68.0823ms 200 image/png
+2017-09-15 14:55:29.765  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 52.8202ms 200 image/png
+2017-09-15 15:02:01.977  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-15 15:02:02.284  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-15 15:02:05.263  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-15 15:02:06.541  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:02:06.616  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 15:02:06.943  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:02:07.287  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 4997.997ms
+2017-09-15 15:02:07.462  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 5391.8334ms 200 text/html; charset=utf-8
+2017-09-15 15:02:15.245  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Index  
+2017-09-15 15:02:15.310  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-15 15:02:41.583  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (42ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Log] ([ID], [CreateDate], [FullMessage], [IpAddress], [KeyWord], [LogLeve], [PageUrl], [ReferrerUrl], [ServerIpAddress], [ShortMessage])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2017-09-15 15:02:41.741  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [t].[ID], [t].[ApplicationName], [t].[ActionName], [t].[ApplicationID], [t].[PyCode], [t].[Code], [t].[ControllerName], [t].[CreateDate], [t].[Description], [t].[IconCss], [t].[IsNav], [t].[Name], [t].[ShowIndex], [t].[ParentID], [t].[ParentMenuName]
+FROM (
+    SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+        WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+        THEN N'--根目录--' ELSE (
+            SELECT TOP(1) [a].[Name]
+            FROM [Menu] AS [a]
+            WHERE [a].[ID] = [n].[ParentID]
+        )
+    END AS [ParentMenuName], ROW_NUMBER() OVER(ORDER BY [n].[ShowIndex]) AS [__RowNumber__]
+    FROM [Menu] AS [n]
+    INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_0) AND ([t].[__RowNumber__] <= (@__p_0 + @__p_1))
+2017-09-15 15:02:41.801  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-15 15:02:42.291  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Menu/Index.cshtml.
+2017-09-15 15:02:43.073  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:02:43.084  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 15:02:43.107  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:02:43.273  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 27848.5634ms
+2017-09-15 15:02:43.296  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 28038.6505ms 200 text/html; charset=utf-8
+2017-09-15 15:02:43.547  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 10
+2017-09-15 15:02:43.605  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (, True) - ModelState is Valid
+2017-09-15 15:02:43.656  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[@__isNav_Value_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE [a].[IsNav] = @__isNav_Value_0
+2017-09-15 15:02:43.680  Information  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor  Information: Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-15 15:02:43.778  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 211.1462ms
+2017-09-15 15:02:43.797  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 255.355ms 200 application/json; charset=utf-8
+2017-09-15 15:02:44.864  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/Application/Index  
+2017-09-15 15:02:44.879  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.ApplicationController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-15 15:02:44.903  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[ID], [b].[Code], [b].[CreateDate], [b].[Description], [b].[Name], [b].[PyCode], [b].[ShowIndex]
+FROM [Application] AS [b]
+2017-09-15 15:02:44.912  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[ID], [b].[Code], [b].[CreateDate], [b].[Description], [b].[Name], [b].[PyCode], [b].[ShowIndex]
+FROM [Application] AS [b]
+2017-09-15 15:02:45.100  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Application/Index.cshtml.
+2017-09-15 15:02:45.340  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:02:45.352  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 15:02:45.363  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:02:45.500  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.ApplicationController.Index (AdminSite) in 494.5447ms
+2017-09-15 15:02:45.524  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 649.3171ms 200 text/html; charset=utf-8
+2017-09-15 15:02:46.735  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Index  
+2017-09-15 15:02:46.743  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-15 15:03:44.367  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Log] ([ID], [CreateDate], [FullMessage], [IpAddress], [KeyWord], [LogLeve], [PageUrl], [ReferrerUrl], [ServerIpAddress], [ShortMessage])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2017-09-15 15:03:44.384  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [t].[ID], [t].[ApplicationName], [t].[ActionName], [t].[ApplicationID], [t].[PyCode], [t].[Code], [t].[ControllerName], [t].[CreateDate], [t].[Description], [t].[IconCss], [t].[IsNav], [t].[Name], [t].[ShowIndex], [t].[ParentID], [t].[ParentMenuName]
+FROM (
+    SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+        WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+        THEN N'--根目录--' ELSE (
+            SELECT TOP(1) [a].[Name]
+            FROM [Menu] AS [a]
+            WHERE [a].[ID] = [n].[ParentID]
+        )
+    END AS [ParentMenuName], ROW_NUMBER() OVER(ORDER BY [n].[ShowIndex]) AS [__RowNumber__]
+    FROM [Menu] AS [n]
+    INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_0) AND ([t].[__RowNumber__] <= (@__p_0 + @__p_1))
+2017-09-15 15:03:44.397  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-15 15:03:44.408  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Menu/Index.cshtml.
+2017-09-15 15:03:44.421  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:03:44.433  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 15:03:44.443  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:03:44.534  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 57710.8412ms
+2017-09-15 15:03:44.675  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 57828.2322ms 200 text/html; charset=utf-8
+2017-09-15 15:03:44.848  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 10
+2017-09-15 15:03:44.876  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (, True) - ModelState is Valid
+2017-09-15 15:03:44.887  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[@__isNav_Value_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE [a].[IsNav] = @__isNav_Value_0
+2017-09-15 15:03:44.900  Information  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor  Information: Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-15 15:03:44.911  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 48.3143ms
+2017-09-15 15:03:44.925  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 78.1374ms 200 application/json; charset=utf-8
+2017-09-15 15:22:42.805  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-15 15:22:43.345  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-15 15:22:46.315  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-15 15:22:47.798  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (188ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:22:47.958  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 15:22:48.283  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:22:48.805  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 5319.0729ms
+2017-09-15 15:22:48.821  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 6096.7945ms 200 text/html; charset=utf-8
+2017-09-15 15:23:25.749  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Index  
+2017-09-15 15:23:25.806  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-15 15:23:25.993  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (40ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Log] ([ID], [CreateDate], [FullMessage], [IpAddress], [KeyWord], [LogLeve], [PageUrl], [ReferrerUrl], [ServerIpAddress], [ShortMessage])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2017-09-15 15:23:26.163  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [t].[ID], [t].[ApplicationName], [t].[ActionName], [t].[ApplicationID], [t].[PyCode], [t].[Code], [t].[ControllerName], [t].[CreateDate], [t].[Description], [t].[IconCss], [t].[IsNav], [t].[Name], [t].[ShowIndex], [t].[ParentID], [t].[ParentMenuName]
+FROM (
+    SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+        WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+        THEN N'--根目录--' ELSE (
+            SELECT TOP(1) [a].[Name]
+            FROM [Menu] AS [a]
+            WHERE [a].[ID] = [n].[ParentID]
+        )
+    END AS [ParentMenuName], ROW_NUMBER() OVER(ORDER BY [n].[ShowIndex]) AS [__RowNumber__]
+    FROM [Menu] AS [n]
+    INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_0) AND ([t].[__RowNumber__] <= (@__p_0 + @__p_1))
+2017-09-15 15:23:26.197  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-15 15:23:26.557  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Menu/Index.cshtml.
+2017-09-15 15:23:27.345  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (46ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:23:27.408  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 15:23:27.424  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:23:27.468  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 1655.4356ms
+2017-09-15 15:23:27.492  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 1727.4687ms 200 text/html; charset=utf-8
+2017-09-15 15:23:27.970  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 10
+2017-09-15 15:23:28.069  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (, True) - ModelState is Valid
+2017-09-15 15:23:28.130  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[@__isNav_Value_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE [a].[IsNav] = @__isNav_Value_0
+2017-09-15 15:23:28.189  Information  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor  Information: Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-15 15:23:28.282  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 271.4334ms
+2017-09-15 15:23:28.299  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 533.888ms 200 application/json; charset=utf-8
+2017-09-15 15:50:53.509  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-15 15:50:53.861  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-15 15:50:56.739  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-15 15:50:57.825  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:50:57.899  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 15:50:58.172  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:50:58.618  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 4741.5265ms
+2017-09-15 15:50:58.670  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 5163.6276ms 200 text/html; charset=utf-8
+2017-09-15 15:51:02.503  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Index  
+2017-09-15 15:51:02.650  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-15 15:51:02.782  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (27ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Log] ([ID], [CreateDate], [FullMessage], [IpAddress], [KeyWord], [LogLeve], [PageUrl], [ReferrerUrl], [ServerIpAddress], [ShortMessage])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2017-09-15 15:51:02.890  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [t].[ID], [t].[ApplicationName], [t].[ActionName], [t].[ApplicationID], [t].[PyCode], [t].[Code], [t].[ControllerName], [t].[CreateDate], [t].[Description], [t].[IconCss], [t].[IsNav], [t].[Name], [t].[ShowIndex], [t].[ParentID], [t].[ParentMenuName]
+FROM (
+    SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+        WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+        THEN N'--根目录--' ELSE (
+            SELECT TOP(1) [a].[Name]
+            FROM [Menu] AS [a]
+            WHERE [a].[ID] = [n].[ParentID]
+        )
+    END AS [ParentMenuName], ROW_NUMBER() OVER(ORDER BY [n].[ShowIndex]) AS [__RowNumber__]
+    FROM [Menu] AS [n]
+    INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_0) AND ([t].[__RowNumber__] <= (@__p_0 + @__p_1))
+2017-09-15 15:51:02.926  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-15 15:51:03.367  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Menu/Index.cshtml.
+2017-09-15 15:51:04.140  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:51:04.149  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 15:51:04.162  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:51:04.180  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 1631.6255ms
+2017-09-15 15:51:04.222  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 1696.7302ms 200 text/html; charset=utf-8
+2017-09-15 15:51:04.443  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 10
+2017-09-15 15:51:04.705  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (, True) - ModelState is Valid
+2017-09-15 15:51:04.746  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (5ms) [Parameters=[@__isNav_Value_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE [a].[IsNav] = @__isNav_Value_0
+2017-09-15 15:51:04.761  Information  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor  Information: Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-15 15:51:04.877  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 379.5826ms
+2017-09-15 15:51:04.907  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 460.0418ms 200 application/json; charset=utf-8
+2017-09-15 15:51:13.406  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Index  
+2017-09-15 15:51:13.416  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-15 15:51:13.432  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Log] ([ID], [CreateDate], [FullMessage], [IpAddress], [KeyWord], [LogLeve], [PageUrl], [ReferrerUrl], [ServerIpAddress], [ShortMessage])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2017-09-15 15:51:13.443  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [t].[ID], [t].[ApplicationName], [t].[ActionName], [t].[ApplicationID], [t].[PyCode], [t].[Code], [t].[ControllerName], [t].[CreateDate], [t].[Description], [t].[IconCss], [t].[IsNav], [t].[Name], [t].[ShowIndex], [t].[ParentID], [t].[ParentMenuName]
+FROM (
+    SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+        WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+        THEN N'--根目录--' ELSE (
+            SELECT TOP(1) [a].[Name]
+            FROM [Menu] AS [a]
+            WHERE [a].[ID] = [n].[ParentID]
+        )
+    END AS [ParentMenuName], ROW_NUMBER() OVER(ORDER BY [n].[ShowIndex]) AS [__RowNumber__]
+    FROM [Menu] AS [n]
+    INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_0) AND ([t].[__RowNumber__] <= (@__p_0 + @__p_1))
+2017-09-15 15:51:13.451  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-15 15:51:13.459  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Menu/Index.cshtml.
+2017-09-15 15:51:13.475  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:51:13.484  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 15:51:13.493  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:51:13.541  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 87.3914ms
+2017-09-15 15:51:13.789  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 154.3419ms 200 text/html; charset=utf-8
+2017-09-15 15:51:13.949  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 10
+2017-09-15 15:51:14.034  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (, True) - ModelState is Valid
+2017-09-15 15:51:14.113  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[@__isNav_Value_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE [a].[IsNav] = @__isNav_Value_0
+2017-09-15 15:51:14.123  Information  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor  Information: Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-15 15:51:14.157  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 171.3155ms
+2017-09-15 15:51:14.189  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 350.3627ms 200 application/json; charset=utf-8
+2017-09-15 15:54:42.482  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-15 15:54:42.875  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-15 15:54:45.729  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-15 15:54:46.754  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:54:46.828  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 15:54:47.056  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:54:47.573  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 4565.2837ms
+2017-09-15 15:54:47.623  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 5172.8649ms 200 text/html; charset=utf-8
+2017-09-15 15:55:08.627  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Index  
+2017-09-15 15:55:08.678  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-15 15:56:50.605  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-15 15:56:50.993  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-15 15:56:54.059  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-15 15:56:55.242  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:56:55.308  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 15:56:55.735  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:56:56.138  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 5145.6239ms
+2017-09-15 15:56:56.151  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 5592.159ms 200 text/html; charset=utf-8
+2017-09-15 15:57:04.009  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Index  
+2017-09-15 15:57:04.062  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-15 15:57:48.568  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-15 15:57:48.852  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid
+2017-09-15 15:57:51.701  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2017-09-15 15:57:52.787  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:57:52.857  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 15:57:53.146  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:57:53.522  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 4660.5512ms
+2017-09-15 15:57:53.548  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 5011.7873ms 200 text/html; charset=utf-8
+2017-09-15 15:57:56.449  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/Menu/Index  
+2017-09-15 15:57:56.527  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid
+2017-09-15 15:58:45.230  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (32ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Log] ([ID], [CreateDate], [FullMessage], [IpAddress], [KeyWord], [LogLeve], [PageUrl], [ReferrerUrl], [ServerIpAddress], [ShortMessage])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2017-09-15 15:58:45.387  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [t].[ID], [t].[ApplicationName], [t].[ActionName], [t].[ApplicationID], [t].[PyCode], [t].[Code], [t].[ControllerName], [t].[CreateDate], [t].[Description], [t].[IconCss], [t].[IsNav], [t].[Name], [t].[ShowIndex], [t].[ParentID], [t].[ParentMenuName]
+FROM (
+    SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+        WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+        THEN N'--根目录--' ELSE (
+            SELECT TOP(1) [a].[Name]
+            FROM [Menu] AS [a]
+            WHERE [a].[ID] = [n].[ParentID]
+        )
+    END AS [ParentMenuName], ROW_NUMBER() OVER(ORDER BY [n].[ShowIndex]) AS [__RowNumber__]
+    FROM [Menu] AS [n]
+    INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_0) AND ([t].[__RowNumber__] <= (@__p_0 + @__p_1))
+2017-09-15 15:58:45.427  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+2017-09-15 15:58:45.863  Information  Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor  Information: Executing ViewResult, running view at path /Views/Menu/Index.cshtml.
+2017-09-15 15:58:46.625  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:58:46.636  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a]
+2017-09-15 15:58:46.648  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+2017-09-15 15:58:46.713  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 50182.8847ms
+2017-09-15 15:58:46.945  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 50307.1996ms 200 text/html; charset=utf-8
+2017-09-15 15:58:47.178  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 10
+2017-09-15 15:58:47.250  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (, True) - ModelState is Valid
+2017-09-15 15:58:47.276  Information  Microsoft.EntityFrameworkCore.Database.Command  Information: Executed DbCommand (1ms) [Parameters=[@__isNav_Value_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE [a].[IsNav] = @__isNav_Value_0
+2017-09-15 15:58:47.287  Information  Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor  Information: Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]].
+2017-09-15 15:58:47.427  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 216.2288ms
+2017-09-15 15:58:47.450  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request finished in 300.039ms 200 application/json; charset=utf-8
+2017-09-15 16:01:02.108  Information  Microsoft.AspNetCore.Hosting.Internal.WebHost  Information: Request starting HTTP/1.1 GET http://localhost:27644/  
+2017-09-15 16:01:40.005  Information  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker  Information: Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid

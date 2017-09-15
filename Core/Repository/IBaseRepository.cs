@@ -7,7 +7,7 @@ using Sakura.AspNetCore;
 
 namespace Core.Repository
 {
-    public interface IBaseRepository<T, in TKey> where T : IBaselModel
+    public interface IBaseRepository<T, in TKey>
     {
         #region Get
 

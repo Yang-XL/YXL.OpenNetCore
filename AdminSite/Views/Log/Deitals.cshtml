@@ -1,0 +1,94 @@
+﻿@using ViewModels.AdminWeb.Log
+@model ViewModels.AdminWeb.Log.LogViewModel
+<div class="form">
+    <div class="form-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(a => a.KeyWord, new {@class = "control-label col-md-3"})
+                    <div class="col-md-9">
+                        <p class="form-control-static"> @Html.DisplayFor(m => m.KeyWord) </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(a => a.ShortMessage, new {@class = "control-label col-md-3"})
+                    <div class="col-md-9">
+                        <p class="form-control-static"> @Html.DisplayFor(m => m.ShortMessage) </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(a => a.IpAddress, new {@class = "control-label col-md-3"})
+                    <div class="col-md-9">
+                        <p class="form-control-static"> @Html.DisplayFor(m => m.IpAddress) </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(a => a.ServerIpAddress, new {@class = "control-label col-md-3"})
+                    <div class="col-md-9">
+                        <p class="form-control-static"> @Html.DisplayFor(m => m.ServerIpAddress) </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(a => a.PageUrl, new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <p class="form-control-static"> @Html.DisplayFor(m => m.PageUrl) </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(a => a.ReferrerUrl, new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <p class="form-control-static"> @Html.DisplayFor(m => m.ReferrerUrl) </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(a => a.LogLeveName, new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <p class="form-control-static"> @Html.DisplayFor(m => m.LogLeveName) </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(a => a.CreateDate, new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <p class="form-control-static"> @Html.DisplayFor(m => m.CreateDate) </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                @Html.LabelFor(a => a.FullMessage, new { @class = "control-label col-md-3" })
+                <div class="col-md-10">
+                    <p class="form-control-static"> @Html.DisplayFor(m => m.FullMessage) </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                @Html.LabelFor(a => a.CreateDate, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <p class="form-control-static"> @Html.DisplayFor(m => m.CreateDate) </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -60,6 +60,7 @@ namespace Service.PermissionSystem
                         ApplicationName = n.ApplicationID_Model.Name,
                         ActionName = n.ActionName,
                         ApplicationID = n.ApplicationID,
+                        PyCode = n.PyCode,
                         Code = n.Code,
                         ControllerName = n.ControllerName,
                         CreateDate = n.CreateDate,

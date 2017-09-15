@@ -1,7 +1,27 @@
-﻿
-@{
-    ViewData["Title"] = "Modify";
-}
+﻿@model ViewModels.AdminWeb.Application.ApplicationViewModel
 
-<h2>Modify</h2>
+@addTagHelper Controls.SelectZtree.*, ZTreeSelectTag
 
+<h3 class="page-title"></h3>
+<div class="row">
+    <form class="horizontal-form" asp-action="Modify" method="post">
+        <div class="portlet box green">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-gift"></i>编辑应用程序
+                </div>
+                <div class="actions">
+                    <button class="btn btn-default btn-sm" type="submit">
+                        <i class="fa fa-save"></i> 保存
+                    </button>
+                    <a class="btn btn-default btn-sm" asp-action="Index">
+                        <i class="fa fa-arrow-left"></i> 返回列表
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body form">
+                @Html.Partial("CreateOrModify", Model)
+            </div>
+        </div>
+    </form>
+</div>

@@ -9,11 +9,11 @@ namespace Core.FileManager
     {
         public void CreateDirectory(string path)
         {
-            if (Directory.Exists(path))return;
+            if (Directory.Exists(path)) return;
             Directory.CreateDirectory(path);
         }
 
-        public void Create(string path, string content)
+        public void CreateFile(string path, string content)
         {
             throw new NotImplementedException();
         }
@@ -26,18 +26,6 @@ namespace Core.FileManager
             List<FileInfo> result = null;
             GetFileRecursive(dir, ref result);
             return result;
-        }
-
-        private void GetFileRecursive(DirectoryInfo dir, ref List<FileInfo> list)
-        {
-            foreach (var fileInfo in dir.GetFiles())
-            {
-                list.Add(fileInfo);
-            }
-            foreach (var directoryInfo in dir.GetDirectories())
-            {
-                GetFileRecursive(directoryInfo, ref list);
-            }
         }
 
         public void AppendText(string path, string content)
@@ -53,8 +41,6 @@ namespace Core.FileManager
                     }
                     fs.Dispose();
                 }
-
-            
             }
             catch (Exception e)
             {
@@ -64,8 +50,15 @@ namespace Core.FileManager
 
         public void Dispose()
         {
-           
+
+        }
+
+        private void GetFileRecursive(DirectoryInfo dir, ref List<FileInfo> list)
+        {
+            foreach (var fileInfo in dir.GetFiles())
+                list.Add(fileInfo);
+            foreach (var directoryInfo in dir.GetDirectories())
+                GetFileRecursive(directoryInfo, ref list);
         }
     }
-
 }

@@ -3550,7 +3550,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
-          "Core": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.0"
         },
         "compile": {
@@ -9971,6 +9970,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "AutoMapper >= 6.1.1",
+      "Core >= 1.0.0",
       "IdentityServer4 >= 1.5.2",
       "Microsoft.AspNetCore.Identity >= 2.0.0",
       "Microsoft.AspNetCore.Mvc >= 2.0.0",
@@ -10014,6 +10014,9 @@
           "projectReferences": {
             "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\PermissionSystem\\PermissionSystem.csproj": {
               "projectPath": "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\PermissionSystem\\PermissionSystem.csproj"
+            },
+            "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\Core\\Core.csproj": {
+              "projectPath": "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\Core\\Core.csproj"
             }
           }
         }

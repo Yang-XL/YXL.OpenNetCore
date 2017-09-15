@@ -2348,7 +2348,6 @@
       },
       "PermissionSystem/1.0.0": {
         "dependencies": {
-          "Core": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.0"
         },
         "runtime": {
@@ -2358,6 +2357,7 @@
       "ViewModels/1.0.0": {
         "dependencies": {
           "AutoMapper": "6.1.1",
+          "Core": "1.0.0",
           "IdentityServer4": "1.5.2",
           "Microsoft.AspNetCore.Identity": "2.0.0",
           "Microsoft.AspNetCore.Mvc": "2.0.0",

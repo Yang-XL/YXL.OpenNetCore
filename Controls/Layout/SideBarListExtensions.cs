@@ -121,8 +121,9 @@ namespace Controls.Layout
         private static TagBuilder Icon(Menu menu)
         {
             var tag = new TagBuilder("i");
-            if (string.IsNullOrEmpty(menu.IconCss))
+            if (!string.IsNullOrEmpty(menu.IconCss))
                 tag.MergeAttribute("class", menu.IconCss);
+            tag.InnerHtml.AppendHtml("&nbsp;&nbsp;");
             return tag;
         }
 

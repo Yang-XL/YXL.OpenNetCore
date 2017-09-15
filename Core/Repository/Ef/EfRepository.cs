@@ -9,7 +9,7 @@ using Sakura.AspNetCore;
 
 namespace Core.Repository.Ef
 {
-    public class EfRepository<TEntity> : IEfRepository<TEntity> where TEntity : class, IBaselModel
+    public class EfRepository<TEntity> : IEfRepository<TEntity> where TEntity : class
     {
         /// <summary>
         ///     Initializes a new instance of the <see cref="EfRepository{TEntity,Guid}" /> class.
@@ -100,12 +100,12 @@ namespace Core.Repository.Ef
         }
         public TEntity Single(Expression<Func<TEntity, bool>> predicate)
         {
-            return  _dbSet.SingleOrDefault(predicate);
+            return  _dbSet.FirstOrDefault(predicate);
         }
 
         public async Task<TEntity> SingleAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = new CancellationToken())
         {
-            return await _dbSet.SingleOrDefaultAsync(predicate, cancellationToken);
+            return await _dbSet.FirstOrDefaultAsync(predicate, cancellationToken);
         }
 
         public IQueryable<TEntity> FromSql(string sql, params object[] parameters)

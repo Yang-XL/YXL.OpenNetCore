@@ -9,3 +9,12 @@ D:\ProjectTest\NetCore\YXL.OpenNetCore\PermissionSystem\obj\Release\netcoreapp2.
 D:\ProjectTest\NetCore\YXL.OpenNetCore\PermissionSystem\obj\Release\netcoreapp2.0\PermissionSystem.AssemblyInfo.cs
 D:\ProjectTest\NetCore\YXL.OpenNetCore\PermissionSystem\obj\Release\netcoreapp2.0\PermissionSystem.dll
 D:\ProjectTest\NetCore\YXL.OpenNetCore\PermissionSystem\obj\Release\netcoreapp2.0\PermissionSystem.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PermissionSystem\bin\Release\netcoreapp2.0\PermissionSystem.deps.json
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PermissionSystem\bin\Release\netcoreapp2.0\PermissionSystem.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PermissionSystem\bin\Release\netcoreapp2.0\PermissionSystem.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PermissionSystem\obj\Release\netcoreapp2.0\PermissionSystem.csprojResolveAssemblyReference.cache
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PermissionSystem\obj\Release\netcoreapp2.0\PermissionSystem.csproj.CoreCompileInputs.cache
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PermissionSystem\obj\Release\netcoreapp2.0\PermissionSystem.AssemblyInfoInputs.cache
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PermissionSystem\obj\Release\netcoreapp2.0\PermissionSystem.AssemblyInfo.cs
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PermissionSystem\obj\Release\netcoreapp2.0\PermissionSystem.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PermissionSystem\obj\Release\netcoreapp2.0\PermissionSystem.pdb

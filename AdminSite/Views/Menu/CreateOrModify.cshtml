@@ -31,11 +31,19 @@
                 @Html.TextBoxFor(a => a.ShowIndex, new {@class = "form-control"})
             </div>
         </div>
-
         <div class="col-md-6">
             <div class="form-group">
+                @Html.LabelFor(a => a.IconCss, new { @class = "control-label" })
+                @Html.TextBoxFor(a => a.IconCss, new { @class = "form-control" })
+            </div>
+        </div>
+       
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
                 @Html.LabelFor(a => a.Description, new {@class = "control-label"})
-                @Html.TextAreaFor(a => a.Description, 1, 10, new {@class = "form-control"})
+                @Html.TextAreaFor(a => a.Description, 5, 10, new {@class = "form-control"})
             </div>
         </div>
     </div>
@@ -45,13 +53,13 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label class="control-label">应用程序</label>
+                @Html.LabelFor(a => a.ApplicationID, new { @class = "control-label" })
                 @Html.DropDownListFor(a => a.ApplicationID, Model.ApplicationViewModels, new {@class = "form-control"})
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label class="control-label">父级菜单</label>
+                @Html.LabelFor(a=>a.ParentMenuName,new {@class= "control-label" })
                 @Html.ZtreeTextBoxFor(a => a.ParentMenuName, new {@class = "form-control", @readonly = "readonly", style = "cursor:pointer"})
                 <span class="help-block"> @Html.ValidationMessageFor(a => a.ParentMenuName)</span>
             </div>

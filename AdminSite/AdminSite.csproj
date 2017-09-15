@@ -307,6 +307,7 @@
     <ProjectReference Include="..\Controls\Controls.csproj" />
     <ProjectReference Include="..\Core\Core.csproj" />
     <ProjectReference Include="..\IService\IService.csproj" />
+    <ProjectReference Include="..\LoggerExtensions\LoggerExtensions.csproj" />
     <ProjectReference Include="..\PermissionSystem\PermissionSystem.csproj" />
     <ProjectReference Include="..\Service\Service.csproj" />
     <ProjectReference Include="..\ViewModels\ViewModels.csproj" />
@@ -359,6 +360,12 @@
 
   <ItemGroup>
     <Content Update="Views\Application\Index.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Organization\Index.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\User\Index.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
   </ItemGroup>

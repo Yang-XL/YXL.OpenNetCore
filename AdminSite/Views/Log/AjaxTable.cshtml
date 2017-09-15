@@ -1,0 +1,37 @@
+﻿@using Sakura.AspNetCore
+@using ViewModels.Common
+@model IPagedList<PermissionSystem.Models.Log>
+<table class="table table-bordered table-striped table-condensed flip-content">
+    <thead class="flip-content">
+    <tr>
+        <th> 日志登记 </th>
+        <th>关键字</th>
+        <th> 简短描述 </th>
+        <th> 客户端IP </th>
+        <th> 服务器IP </th>
+        <th> 操作 </th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (Model != null && Model.Any())
+    {
+        foreach (var log in Model)
+        {
+            <tr>
+                <td> @log.LogLeve </td>
+                <td> @log.KeyWord </td>
+                <td> @log.ShortMessage </td>
+                <td> @log.IpAddress</td>
+                <td> @log.ServerIpAddress</td>
+                <td>
+                    <a  asp-action="Details" asp-route-id="@log.ID"  class="btn btn-link btn-sm font-green-turquoise" title="详细信息">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>
+@Html.Partial("Pagger", new PaggerModel(Model, new AjaxOptions("tableResult", "seachForm")))
+

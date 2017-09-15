@@ -26,6 +26,7 @@
           "Controls": "1.0.0",
           "Core": "1.0.0",
           "IService": "1.0.0",
+          "LoggerExtensions": "1.0.0",
           "Microsoft.AspNetCore.All": "2.0.0",
           "Microsoft.NETCore.App": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.0",
@@ -4483,9 +4484,24 @@
           "IService.dll": {}
         }
       },
-      "PermissionSystem/1.0.0": {
+      "LoggerExtensions/1.0.0": {
         "dependencies": {
           "Core": "1.0.0",
+          "IService": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Primitives": "2.0.0",
+          "PermissionSystem": "1.0.0"
+        },
+        "runtime": {
+          "LoggerExtensions.dll": {}
+        },
+        "compile": {
+          "LoggerExtensions.dll": {}
+        }
+      },
+      "PermissionSystem/1.0.0": {
+        "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.0"
         },
         "runtime": {
@@ -4512,6 +4528,7 @@
       "ViewModels/1.0.0": {
         "dependencies": {
           "AutoMapper": "6.1.1",
+          "Core": "1.0.0",
           "IdentityServer4": "1.5.2",
           "Microsoft.AspNetCore.Identity": "2.0.0",
           "Microsoft.AspNetCore.Mvc": "2.0.0",
@@ -6973,6 +6990,11 @@
       "sha512": ""
     },
     "IService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LoggerExtensions/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -4,7 +4,7 @@
 // YXL @ CopyRight 2006-2010
 // 文件： OrganizationEntity.cs
 // 项目名称： 
-// 创建时间：2017-08-28
+// 创建时间：2017-09-13
 // 负责人：YXL
 // ===================================================================
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -28,8 +28,8 @@ namespace PermissionSystem.Mapping
             table.Property(a=>a.ShowIndex);
             table.Property(a=>a.CreateDate).IsRequired();
             table.Property(a=>a.Leader);
-       
-              table.HasMany(a => a.User_OrganizationIDList).WithOne(a => a.OrganizationID_Model);       
+            table.Property(a=>a.ParentOrganizationID);
+           table.HasMany(a => a.User_OrganizationIDList).WithOne(a => a.OrganizationID_Model);       
         
         
         

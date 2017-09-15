@@ -2,9 +2,9 @@
 using AutoMapper;
 using Core;
 using Core.FileManager;
-using Core.Log.FileLog;
 using IService;
 using IService.PermissionSystem;
+using LoggerExtensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -36,10 +36,12 @@ namespace AdminSite
             services.UserCore();
             services.AddSingleton(AutoMapperConfiguration.Init());
 
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
             #region DB
 
             services.AddDbContext<PermissionSystemContext>(
-                option => option.UseSqlServer(Configuration.GetConnectionString("PermissionSystem")),
+                option => option.UseSqlServer(Configuration.GetConnectionString("PermissionSystem"),o=>o.UseRowNumberForPaging()),
                 ServiceLifetime.Singleton);
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IApplicationService, ApplicationService>();
@@ -47,7 +49,10 @@ namespace AdminSite
             services.AddScoped<IClientApiService, ClientApiService>();
             services.AddScoped<IApiService, ApiService>();
             services.AddScoped<IMenuService, MenuService>();
-
+            services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IOrganizationService, OrganizationService>();
+            services.AddScoped<IUserRoleService, UserRoleService>();
+            services.AddScoped<ILogService, LogService>();
             #endregion
 
             #region Other
@@ -57,9 +62,10 @@ namespace AdminSite
 
 
             services.Configure<AdminSiteOption>(Configuration.GetSection("SiteOption"));
-
             services.AddScoped<IRouter, AdminRouter>();
             services.AddScoped<IRouteProvider, RouteProvider>();
+
+            //services.AddLogging(builder => builder.AddFileLog(Configuration.GetSection("Logging")));
 
             #endregion
 
@@ -67,10 +73,12 @@ namespace AdminSite
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory,
-            IFileManager fileManager, IHttpContextAccessor httpContextAccessor, IRouteProvider routeProvider)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, 
+            ILoggerFactory loggerFactory,
+            ILogService logService,
+            IRouteProvider routeProvider)
         {
-            loggerFactory.AddFileLogger(fileManager, httpContextAccessor, Configuration.GetSection("Logging"));
+            loggerFactory.AddLog(Configuration.GetSection("Logging"), logService);
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

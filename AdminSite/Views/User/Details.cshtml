@@ -1,0 +1,90 @@
+﻿@model ViewModels.AdminWeb.Roles.RoleViewModel
+
+<h3 class="page-title"></h3>
+<form asp-action="Remove" asp-route-id="@Model.ID">
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="portlet box green">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-gift"></i>角色详细信息
+                </div>
+                <div class="actions">
+                    <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#removeMenu">
+                        <i class="fa fa-remove"></i> 删除
+                    </button>
+                    <a class="btn btn-default btn-sm" asp-action="Modify" asp-route-id="@Model.ID">
+                        <i class="fa fa-edit"></i> 修改
+                    </a>
+                    <a class="btn btn-default btn-sm" asp-action="Index">
+                        <i class="fa fa-arrow-left"></i> 返回列表
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body form">
+                <div class="form-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.Name, new {@class = "control-label col-md-3"})
+                                <div class="col-md-9">
+                                    <p class="form-control-static"> @Html.DisplayFor(m => m.Name) </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.Code, new {@class = "control-label col-md-3"})
+                                <div class="col-md-9">
+                                    <p class="form-control-static"> @Html.DisplayFor(m => m.Code) </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.ShowIndex, new {@class = "control-label col-md-3"})
+                                <div class="col-md-9">
+                                    <p class="form-control-static"> @Html.DisplayFor(m => m.ShowIndex) </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.Description, new {@class = "control-label col-md-3"})
+                                <div class="col-md-9">
+                                    <p class="form-control-static"> @Html.DisplayFor(m => m.Description) </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="removeMenu" tabindex="-1" role="dialog" aria-labelledby="removeMenulLabel">
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">删除确认</h4>
+                </div>
+                <div class="modal-body">
+                    <p>是否确认删除角色程序：@Model.Name；</p>
+                    <small>(tips：删除之后不可恢复)</small>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-remove"></i>删除
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+

@@ -19,3 +19,9 @@ D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\bin\Debug\netcoreapp2.0\ISer
 D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\bin\Debug\netcoreapp2.0\Service.pdb
 D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\bin\Debug\netcoreapp2.0\Core.pdb
 D:\ProjectTest\NetCore\YXL.OpenNetCore\IdentitySite\bin\Debug\netcoreapp2.0\PermissionSystem.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\IdentitySite\obj\Debug\netcoreapp2.0\IdentitySite.csprojResolveAssemblyReference.cache
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\IdentitySite\obj\Debug\netcoreapp2.0\IdentitySite.csproj.CoreCompileInputs.cache
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\IdentitySite\obj\Debug\netcoreapp2.0\IdentitySite.AssemblyInfoInputs.cache
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\IdentitySite\obj\Debug\netcoreapp2.0\IdentitySite.AssemblyInfo.cs
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\IdentitySite\obj\Debug\netcoreapp2.0\IdentitySite.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\IdentitySite\obj\Debug\netcoreapp2.0\IdentitySite.pdb

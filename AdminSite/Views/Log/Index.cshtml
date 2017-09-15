@@ -1,5 +1,71 @@
-﻿
-@{
-    ViewData["Title"] = "Log";
-}
-<h2>Log</h2>
+﻿@using Controls.SelectZtree
+@model Sakura.AspNetCore.IPagedList<PermissionSystem.Models.Log>
+
+<h2 class="page-title"></h2>
+<div class="row">
+    <div class="portlet box green">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift"></i>日志列表
+            </div>
+            <div class="actions">
+                <a class="btn btn-default btn-sm" href="javascript:;">
+                    <i class="fa fa-refresh"></i> 刷新
+                </a>
+            </div>
+        </div>
+        <div class="portlet-body">
+            <div class="form">
+                <form class="form-horizontal" id="seachForm" asp-action="Index" data-ajax="true" data-ajax-update="#tableResult" data-ajax-mode="replace" data-ajax-method="Post">
+                    @Html.AntiForgeryToken()
+                    <div class="form-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">快速搜索</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="queryString" id="queryString" placeholder="关键字、简短描述">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn green">
+                                    <i class="fa  fa-search"></i>
+                                    搜索
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="tableResult">
+                @Html.Partial("AjaxTable", Model)
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="logDetial" tabindex="-1" role="dialog" aria-labelledby="logDetial">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">详细信息</h4>
+            </div>
+            <div class="modal-body">
+                <p></p>
+                <p></p>
+                <p></p>
+                <small>(tips：删除之后不可恢复)</small>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa fa-remove"></i>删除
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

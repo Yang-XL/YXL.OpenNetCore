@@ -4,7 +4,7 @@
 // YXL @ CopyRight 2006-2010
 // 文件： OrganizationEntity.cs
 // 项目名称： 
-// 创建时间：2017-08-28
+// 创建时间：2017-09-13
 // 负责人：YXL
 // ===================================================================
 using System;
@@ -56,7 +56,12 @@ namespace PermissionSystem.Models
 		///<summary>
 		///管理者、经理
 		///</summary>
-		public Guid Leader { get; set; }
+		public Guid? Leader { get; set; }
+
+		///<summary>
+		///上级部门
+		///</summary>
+		public Guid? ParentOrganizationID { get; set; }
     
 		#endregion	
         

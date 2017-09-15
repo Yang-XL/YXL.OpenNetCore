@@ -1,0 +1,11 @@
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\bin\Debug\netcoreapp2.0\PayCenter.deps.json
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\bin\Debug\netcoreapp2.0\PayCenter.runtimeconfig.json
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\bin\Debug\netcoreapp2.0\PayCenter.runtimeconfig.dev.json
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\bin\Debug\netcoreapp2.0\PayCenter.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\bin\Debug\netcoreapp2.0\PayCenter.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\obj\Debug\netcoreapp2.0\PayCenter.csprojResolveAssemblyReference.cache
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\obj\Debug\netcoreapp2.0\PayCenter.csproj.CoreCompileInputs.cache
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\obj\Debug\netcoreapp2.0\PayCenter.AssemblyInfoInputs.cache
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\obj\Debug\netcoreapp2.0\PayCenter.AssemblyInfo.cs
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\obj\Debug\netcoreapp2.0\PayCenter.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\obj\Debug\netcoreapp2.0\PayCenter.pdb

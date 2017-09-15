@@ -1,0 +1,12 @@
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=PayCenter
+--content-root=D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter
+--file=D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\Views\Home\About.cshtml
+--file=D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\Views\Home\Contact.cshtml
+--file=D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\Views\Home\Index.cshtml
+--file=D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\Views\Shared\Error.cshtml
+--file=D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\Views\Shared\_Layout.cshtml
+--file=D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\Views\_ViewImports.cshtml
+--file=D:\GitSource\OpenNetCore\YXL.OpenNetCore\PayCenter\Views\_ViewStart.cshtml

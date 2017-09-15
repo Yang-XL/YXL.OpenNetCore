@@ -1,31 +1,26 @@
 ﻿using System;
 using System.IO;
+using Core.FileManager;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Core.FileManager;
 
 namespace Core.Log.FileLog
 {
     public class FileLogger : ILogger
     {
         private readonly IHttpContextAccessor _accessor;
-        private readonly string _BaseDirctory = Path.Combine(AppContext.BaseDirectory, "Log");
-        private readonly string _categoryName;
-        private readonly string _dirPath;
         private readonly IFileManager _FileManager;
         private Func<string, LogLevel, bool> _filter;
 
 
-        public FileLogger(IHttpContextAccessor accessor, 
-            string dirPath,
+        public FileLogger(IHttpContextAccessor accessor,
             Func<string, LogLevel, bool> filter,
             string categoryName,
             IFileManager fileManager)
         {
             _accessor = accessor;
-            _dirPath = dirPath ?? _BaseDirctory;
             _filter = filter;
-            _categoryName = categoryName;
+            Name = categoryName;
             _FileManager = fileManager;
         }
 
@@ -37,10 +32,16 @@ namespace Core.Log.FileLog
 
         public bool IncludeScopes { get; set; }
 
-        public string Name => _categoryName;
+        public string LogDirctory { get; set; } = Path.Combine(AppContext.BaseDirectory, "Log");
 
 
-        public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception,
+        public string Name { get; }
+
+
+        public void Log<TState>(LogLevel logLevel,
+            EventId eventId,
+            TState state,
+            Exception exception,
             Func<TState, Exception, string> formatter)
         {
             if (!IsEnabled(logLevel))
@@ -63,16 +64,16 @@ namespace Core.Log.FileLog
 
             if (string.IsNullOrEmpty(message))
                 return;
-            
-            var time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"); 
-            _FileManager.CreateDirectory(_dirPath);
-            var filename = Path.Combine(_dirPath, DateTime.Now.ToString("yyyy-MM-dd") + ".log"); 
-            _FileManager.AppendText(filename, time + "  " + _categoryName+"   "  + message );
+
+            var time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
+            _FileManager.CreateDirectory(LogDirctory);
+            var filename = Path.Combine(LogDirctory, DateTime.Now.ToString("yyyy-MM-dd") + ".log");
+            _FileManager.AppendText(filename, time + "  " + Name + "   " + message);
         }
 
         public bool IsEnabled(LogLevel logLevel)
         {
-            return _filter == null || _filter(_categoryName, logLevel);
+            return _filter == null || _filter(Name, logLevel);
         }
 
         public IDisposable BeginScope<TState>(TState state)

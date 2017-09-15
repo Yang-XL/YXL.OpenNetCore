@@ -1,0 +1,45 @@
+﻿@using Sakura.AspNetCore
+@using ViewModels.Common
+@using ViewModels.AdminWeb.Organization
+@model IPagedList<OrganizationViewModel>
+<table class="table table-bordered table-striped table-condensed flip-content">
+    <thead class="flip-content">
+    <tr>
+        <th>名称</th>
+        <th>编码</th>
+        <th> 拼音码 </th>
+        <th> 显示顺序 </th>
+        <th> 描述 </th>
+        <th> 部门负责人 </th>
+        <th> 上级部门 </th>
+        <th> 操作 </th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (Model != null && Model.Any())
+    {
+        foreach (var organization in Model)
+        {
+            <tr>
+                <td> @organization.Name </td>
+                <td> @organization.Code </td>
+                <td> @organization.PyCode </td>
+                <td> @organization.ShowIndex</td>
+                <td> @organization.Description</td>
+                <td> @organization.LeaderName</td>
+                <td> @organization.ParentOrganizationName</td>
+                <td>
+                    <a  asp-action="Details" asp-route-id="@organization.ID"  class="btn btn-link btn-sm font-green-turquoise" title="详细信息">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                    <a  asp-action="Modify" asp-route-id="@organization.ID"   class="btn btn-link btn-sm font-green-turquoise" title="修改">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>
+@Html.Partial("Pagger", new PaggerModel(Model, new AjaxOptions("tableResult", "seachForm")))
+

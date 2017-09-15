@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Core.Repository.Ef
 {
     public interface IEfRepository<TEntity, in TKey> : IBaseRepository<TEntity, TKey>
-        where TEntity : class, IBaselModel
+        where TEntity : class
     {
         DbContext _dbContext { get; }
 
@@ -41,7 +41,7 @@ namespace Core.Repository.Ef
     }
 
     public interface IEfRepository<TEntity> : IEfRepository<TEntity, Guid>
-        where TEntity : class, IBaselModel
+        where TEntity : class
     {
     }
 }

@@ -9,12 +9,17 @@
 // ===================================================================
 
 using System;
+using System.Threading.Tasks;
 using Core.Repository.Ef;
 using PermissionSystem.Models;
+using Sakura.AspNetCore;
+using ViewModels.AdminWeb.Organization;
 
 namespace IService
 {
     public interface IOrganizationService : IEfRepository<Organization>
     {
+        Task<IPagedList<OrganizationViewModel>> GetPaged(int pageSize, int pageIndex, string queryString,
+            Guid? parentID = null);
     }
 }

@@ -1,0 +1,45 @@
+﻿@model ViewModels.AdminWeb.Roles.RoleViewModel
+@Html.AntiForgeryToken()
+@Html.HiddenFor(a => a.ID)
+<div class="form-body">
+    <h4 class="form-section">基本信息</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(a => a.Name, new {@class = "control-label"})
+                @Html.TextBoxFor(a => a.Name, new { @class = "form-control"})
+                <span class="help-block"> @Html.ValidationMessageFor(a => a.Name)</span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(a => a.Code, new {@class = "control-label"})
+                @Html.TextBoxFor(a => a.Code, new {@class = "form-control"})
+                <span class="help-block"> @Html.ValidationMessageFor(a => a.Code)</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(a => a.ShowIndex, new {@class = "control-label"})
+                @Html.TextBoxFor(a => a.ShowIndex, new {@class = "form-control"})
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                @Html.LabelFor(a => a.Description, new {@class = "control-label"})
+                @Html.TextAreaFor(a => a.Description, 5, 10, new {@class = "form-control"})
+            </div>
+        </div>
+    </div>
+</div>
+<div class="form-actions right">
+    <button class="btn green btn-lg" type="submit">
+        <i class="fa fa-save"></i> 保存
+    </button>
+</div>

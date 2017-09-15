@@ -1,15 +1,24 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using AdminSite.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using PermissionSystem.Models;
 using ViewModels.Options;
+using LoggerExtensions;
 
 namespace AdminSite.Controllers
 {
     public class HomeController : BaseAdminController
     {
-        public IActionResult Index()
+        private  readonly  ILogger<HomeController> _logger;
+        public HomeController(ILoggerFactory loggerFactory)
         {
+            _logger = loggerFactory.CreateLogger<HomeController>();
+        }
+      public IActionResult Index()
+      {
             return View();
         }
         

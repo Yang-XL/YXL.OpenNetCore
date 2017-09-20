@@ -1,6 +1,6 @@
 ﻿var organizationCreate = function () {
 
-    var setting = {
+    var parentOrganizationSetting = {
         view: {
             dblClickExpand: false
         },
@@ -11,40 +11,71 @@
             }
         },
         callback: {
-            onClick: onClick
+            onClick: function (e, treeId, treeNode) {
+                var zTree = $.fn.zTree.getZTreeObj($("#ParentOrganizationName").attr("treeid"));
+                var nodes = zTree.getSelectedNodes();
+                if (nodes.length <= 0) return;
+                $("#ParentOrganizationName").val(nodes[0].name);
+                $("#ParentOrganizationID").val(nodes[0].id);
+                $("#ParentOrganizationName").trigger("hideTree");
+            }
         }
     };
 
-    function onClick(e, treeId, treeNode) {
-        var zTree = $.fn.zTree.getZTreeObj($("#ParentMenuName").attr("treeid"));
-       var nodes = zTree.getSelectedNodes();
-       if (nodes.length <= 0) return ;
-        $("#ParentMenuName").val(nodes[0].name);
-        $("#ParentID").val(nodes[0].id);
-        $("#ParentMenuName").trigger("hideTree");
-    }
+    var leaderSetting = {
+        view: {
+            dblClickExpand: false
+        },
+        check: { enable: true, chkStyle: "radio", radioType: "level" },
+        data: {
+            simpleData: {
+                enable: true
+            }
+        },
+        callback: {
+            onClick: function (e, treeId, treeNode) {
+                var zTree = $.fn.zTree.getZTreeObj($("#LeaderName").attr("treeid"));
+                var nodes = zTree.getSelectedNodes();
+                if (nodes.length <= 0) return;
+                $("#LeaderName").val(nodes[0].name);
+                $("#Leader").val(nodes[0].id);
+                $("#LeaderName").trigger("hideTree");
+            }
+        }
+    };
 
-    function ParentMenuNameBind() {
-        $("#ParentID").val("");
-        $("#ParentMenuName").val("");
+    function ParentOrganizationNameBind() {
+        $("#ParentOrganizationID").val("");
+        $("#ParentOrganizationName").val("");
         $.ajax({
             type: "Post",
             datatype: "Json",
-            url: "/Menu/QueryJson",
-            data: { applicationId: $("#ApplicationID").val(),isNav:true },
+            url: "/Organization/ZtreeOrganization",
             success: function (data) {
-                    $("#ParentMenuName").ztreeSelect(setting, data);
+                $("#ParentOrganizationName").ztreeSelect(parentOrganizationSetting, data);
             }
         });
     }
 
 
+    function LeaderNameBind() {
+        $("#Leader").val("");
+        $("#ParentOrganizationName").val("");
+        $.ajax({
+            type: "Post",
+            datatype: "Json",
+            url: "/User/OrganizationZTreeUsers",
+            success: function (data) {
+                $("#LeaderName").ztreeSelect(leaderSetting, data);
+            }
+        });
+    }
 
     return {
         //main function to initiate the module
         init: function () {
-            ParentMenuNameBind();
-          
+            ParentOrganizationNameBind();
+            LeaderNameBind();
         }
     };
 }();

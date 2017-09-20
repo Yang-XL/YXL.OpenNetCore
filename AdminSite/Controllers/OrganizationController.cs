@@ -6,6 +6,7 @@ using IService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using ViewModels.AdminWeb.Organization;
@@ -121,13 +122,12 @@ namespace AdminSite.Controllers
             }
         }
 
-      
-        public IActionResult All()
+     
+        public async Task<IActionResult> ZtreeOrganization()
         {
-            var result = from n in _organizationService.Query()
-                select new {id = n.ID, pId = n.ParentOrganizationID, name = n.Name, open = true};
-            var model = result.ToList();
-            return Json(model);
+            var result = from n in _organizationService.Queryable()
+                select new { id = n.ID, pId = n.ParentOrganizationID, name = n.Name, open = true };
+            return Json(await result.ToListAsync());
         }
     }
 }

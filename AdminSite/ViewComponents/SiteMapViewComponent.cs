@@ -19,8 +19,8 @@ namespace AdminSite.ViewComponents
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var menus = await _menuService.GetAsync(a => true);
-            return View(menus);
+            var menus = await _menuService.QueryAsync(a => true);
+            return View(menus.ToList());
         }
     }
 }

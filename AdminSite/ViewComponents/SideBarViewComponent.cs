@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using IService;
 using Microsoft.AspNetCore.Mvc;
 using ViewModels.AdminWeb.Nav;
@@ -18,9 +19,12 @@ namespace AdminSite.Components
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var menus = await _menuService.GetAsync(a => true);
-            var application = await _applicationService.GetAsync(a => true);
-            return View("_LayoutSidebar", new NavViewModel {Applications = application, Menus = menus});
+            var menus = await _menuService.QueryAsync(a => true);
+            var application = await _applicationService.QueryAsync(a => true);
+
+            var model = new NavViewModel {Applications = application.ToList(), Menus = menus.ToList()};
+
+            return View("_LayoutSidebar", model);
         }
     }
 }

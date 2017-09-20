@@ -2,7 +2,7 @@
 
 namespace Core.Repository.MongoDB
 {
-    public interface IMongoDBEntity<TKey> 
+    public interface IMongoEntity<TKey> 
     {
         /// <summary>
         ///     主键

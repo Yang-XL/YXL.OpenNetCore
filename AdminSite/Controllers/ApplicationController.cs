@@ -62,10 +62,9 @@ namespace AdminSite.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Modify(ApplicationViewModel model)
         {
-            var entity = await _applicationService.SingleAsync(a => a.ID == model.ID);
+            var entity = await _applicationService.SingleAsync(model.ID);
             entity = model.ToEntity(entity);
             await _applicationService.UpdateAsync(entity);
-            _applicationService.SaveChanges();
             return RedirectToAction("Details", new { id = entity.ID });
         }
 
@@ -86,7 +85,6 @@ namespace AdminSite.Controllers
             var entity = model.ToEntity();
             entity.CreateDate = DateTime.UtcNow;
             await _applicationService.InsertAsync(entity);
-            _applicationService.SaveChanges();
             return RedirectToAction("Details", new { id = entity.ID });
         }
 
@@ -94,8 +92,7 @@ namespace AdminSite.Controllers
         {
             try
             {
-                await _applicationService.DeleteAsync(a => a.ID == id);
-                _applicationService.SaveChanges();
+                await _applicationService.DeleteAsync(id);
             }
             catch (Exception e)
             {

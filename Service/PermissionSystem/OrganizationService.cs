@@ -11,7 +11,7 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Core.Repository.Ef;
+using Core.Repository.Implementation;
 using IService;
 using PermissionSystem.Models;
 using PermissionSystem;
@@ -29,11 +29,11 @@ namespace Service.PermissionSystem
       {
           _userService = userService;
       }
-        public Task<IPagedList<OrganizationViewModel>> GetPaged(int pageSize, int pageIndex, string queryString, Guid? parentID = null)
+        public async Task<IPagedList<OrganizationViewModel>> GetPaged(int pageSize, int pageIndex, string queryString, Guid? parentID = null)
         {
-            return Task.Run<IPagedList<OrganizationViewModel>>(() =>
+            return await Task.Run<IPagedList<OrganizationViewModel>>(() =>
             {
-                var query = _dbSet.AsQueryable();
+                IQueryable<Organization> query = _dbSet;
                 if (!string.IsNullOrEmpty(queryString))
                     query= query.Where(a => a.Name.Contains(queryString) || a.PyCode.Contains(queryString));
                 if (parentID.HasValue)
@@ -50,8 +50,8 @@ namespace Service.PermissionSystem
                         Name = n.Name,
                         PyCode = n.PyCode,
                         ShowIndex = n.ShowIndex,
-                        LeaderName = n.Leader.HasValue? _userService.Single(a=>a.ID==n.Leader).Name:"",
-                        ParentOrganizationName = n.ParentOrganizationID.HasValue?_dbSet.FirstOrDefault(a=>a.ID==n.ParentOrganizationID).Name:""
+                        LeaderName = n.Leader.HasValue ? _userService.Queryable().Single(a => a.ID == n.Leader).Name : "",
+                        ParentOrganizationName = n.ParentOrganizationID.HasValue ? _dbSet.FirstOrDefault(a => a.ID == n.ParentOrganizationID).Name : ""
                     };
                 return result.ToPagedList(pageSize, pageIndex);
             });

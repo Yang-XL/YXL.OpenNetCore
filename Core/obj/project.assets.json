@@ -31,6 +31,35 @@
           "lib/netstandard1.3/AutoMapper.dll": {}
         }
       },
+      "Dapper/1.50.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Collections.Concurrent": "4.0.12",
+          "System.Collections.NonGeneric": "4.0.1",
+          "System.Data.SqlClient": "4.1.0",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Linq": "4.1.0",
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Emit": "4.0.1",
+          "System.Reflection.Emit.Lightweight": "4.0.1",
+          "System.Reflection.Extensions": "4.0.1",
+          "System.Reflection.TypeExtensions": "4.1.0",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Text.RegularExpressions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "System.Xml.XDocument": "4.0.11",
+          "System.Xml.XmlDocument": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Dapper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Dapper.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Http.Abstractions/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -477,11 +506,11 @@
           }
         }
       },
-      "MimeKit/1.18.0": {
+      "MimeKit/1.18.1": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1",
-          "Portable.BouncyCastle": "1.8.1.2",
+          "Portable.BouncyCastle": "1.8.1.3",
           "System.Data.Common": "4.3.0",
           "System.Globalization.Extensions": "4.3.0",
           "System.Net.NameResolution": "4.3.0",
@@ -594,16 +623,13 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Portable.BouncyCastle/1.8.1.2": {
+      "Portable.BouncyCastle/1.8.1.3": {
         "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.0"
-        },
         "compile": {
-          "lib/netstandard1.3/BouncyCastle.Crypto.dll": {}
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/BouncyCastle.Crypto.dll": {}
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
         }
       },
       "Remotion.Linq/2.1.1": {
@@ -2356,6 +2382,27 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "System.Xml.XmlDocument/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Text.Encoding": "4.0.11",
+          "System.Threading": "4.0.11",
+          "System.Xml.ReaderWriter": "4.0.11"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Xml.XmlDocument.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
+        }
       }
     }
   },
@@ -2373,6 +2420,23 @@
         "lib/netstandard1.1/AutoMapper.xml",
         "lib/netstandard1.3/AutoMapper.dll",
         "lib/netstandard1.3/AutoMapper.xml"
+      ]
+    },
+    "Dapper/1.50.2": {
+      "sha512": "PhxIV8TI/5aYdLT4epuIZB+Evf0sv9gcQDpFGa04fSKDfNQIChRq0sKUgQbfpFWbuDW/UDDuiL3Grkhp/cvYrA==",
+      "type": "package",
+      "path": "dapper/1.50.2",
+      "files": [
+        "Dapper.1.50.2.nupkg.sha512",
+        "Dapper.nuspec",
+        "lib/net40/Dapper.dll",
+        "lib/net40/Dapper.xml",
+        "lib/net45/Dapper.dll",
+        "lib/net45/Dapper.xml",
+        "lib/net451/Dapper.dll",
+        "lib/net451/Dapper.xml",
+        "lib/netstandard1.3/Dapper.dll",
+        "lib/netstandard1.3/Dapper.xml"
       ]
     },
     "Microsoft.AspNetCore.Http.Abstractions/2.0.0": {
@@ -3036,10 +3100,10 @@
         "version.txt"
       ]
     },
-    "MimeKit/1.18.0": {
-      "sha512": "4cu/BH/EenesTKaQscYWg6vuAYlh+CIbWZJlYoZ+9RklhqOFZZU1XlS4yI8hwDNtXKVH+COvsU+wpccCtCLdKA==",
+    "MimeKit/1.18.1": {
+      "sha512": "Q37aV+lgqMEn+26pvhChltBYFJjL7gfufDCJLzM6scQu93Iu63PtcUztr06/Z7KHnk81BRq1v+QiiulxNN3Z1g==",
       "type": "package",
-      "path": "mimekit/1.18.0",
+      "path": "mimekit/1.18.1",
       "files": [
         "lib/MonoAndroid10/BouncyCastle.dll",
         "lib/MonoAndroid10/MimeKit.dll",
@@ -3063,7 +3127,7 @@
         "lib/wpa81/MimeKit.dll",
         "lib/wpa81/MimeKit.xml",
         "lib/wpa81/Portable.Text.Encoding.dll",
-        "mimekit.1.18.0.nupkg.sha512",
+        "mimekit.1.18.1.nupkg.sha512",
         "mimekit.nuspec"
       ]
     },
@@ -3261,27 +3325,22 @@
         "tools/install.ps1"
       ]
     },
-    "Portable.BouncyCastle/1.8.1.2": {
-      "sha512": "G0pWrYwtjjiyka+twqqphegc4ddDWskvf2uWu2YiAUNdaAz0UYa/eXBlt+xjafby5Opa6J1ySw5MPezwiGi9aQ==",
+    "Portable.BouncyCastle/1.8.1.3": {
+      "sha512": "imXKRLrhXlEoeus5w5h1t6E1uwSP45N1qn7Gz+kp8GaFKkNuN0GOMMlIWDQ0P0O6OmHL7odRyd+npNmJQTcgwg==",
       "type": "package",
-      "path": "portable.bouncycastle/1.8.1.2",
+      "path": "portable.bouncycastle/1.8.1.3",
       "files": [
-        "Readme.html",
-        "lib/net4/BouncyCastle.Crypto.dll",
-        "lib/net4/BouncyCastle.Crypto.pdb",
-        "lib/net4/BouncyCastle.Crypto.xml",
-        "lib/netstandard1.0/BouncyCastle.Crypto.deps.json",
+        "lib/net40/BouncyCastle.Crypto.dll",
+        "lib/net40/BouncyCastle.Crypto.xml",
         "lib/netstandard1.0/BouncyCastle.Crypto.dll",
-        "lib/netstandard1.0/BouncyCastle.Crypto.pdb",
         "lib/netstandard1.0/BouncyCastle.Crypto.xml",
-        "lib/netstandard1.3/BouncyCastle.Crypto.deps.json",
         "lib/netstandard1.3/BouncyCastle.Crypto.dll",
-        "lib/netstandard1.3/BouncyCastle.Crypto.pdb",
         "lib/netstandard1.3/BouncyCastle.Crypto.xml",
-        "lib/portable-net4+sl5+wp8+win8+wpa81/BouncyCastle.Crypto.dll",
-        "lib/portable-net4+sl5+wp8+win8+wpa81/BouncyCastle.Crypto.pdb",
-        "lib/portable-net4+sl5+wp8+win8+wpa81/BouncyCastle.Crypto.xml",
-        "portable.bouncycastle.1.8.1.2.nupkg.sha512",
+        "lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "lib/netstandard2.0/BouncyCastle.Crypto.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/BouncyCastle.Crypto.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/BouncyCastle.Crypto.xml",
+        "portable.bouncycastle.1.8.1.3.nupkg.sha512",
         "portable.bouncycastle.nuspec"
       ]
     },
@@ -7606,11 +7665,49 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
       ]
+    },
+    "System.Xml.XmlDocument/4.0.1": {
+      "sha512": "2eZu6IP+etFVBBFUFzw2w6J21DqIN5eL9Y8r8JfJWUmV28Z5P0SNU01oCisVHQgHsDhHPnmq2s1hJrJCFZWloQ==",
+      "type": "package",
+      "path": "system.xml.xmldocument/4.0.1",
+      "files": [
+        "System.Xml.XmlDocument.4.0.1.nupkg.sha512",
+        "System.Xml.XmlDocument.nuspec",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Xml.XmlDocument.dll",
+        "lib/netstandard1.3/System.Xml.XmlDocument.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Xml.XmlDocument.dll",
+        "ref/netstandard1.3/System.Xml.XmlDocument.dll",
+        "ref/netstandard1.3/System.Xml.XmlDocument.xml",
+        "ref/netstandard1.3/de/System.Xml.XmlDocument.xml",
+        "ref/netstandard1.3/es/System.Xml.XmlDocument.xml",
+        "ref/netstandard1.3/fr/System.Xml.XmlDocument.xml",
+        "ref/netstandard1.3/it/System.Xml.XmlDocument.xml",
+        "ref/netstandard1.3/ja/System.Xml.XmlDocument.xml",
+        "ref/netstandard1.3/ko/System.Xml.XmlDocument.xml",
+        "ref/netstandard1.3/ru/System.Xml.XmlDocument.xml",
+        "ref/netstandard1.3/zh-hans/System.Xml.XmlDocument.xml",
+        "ref/netstandard1.3/zh-hant/System.Xml.XmlDocument.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "AutoMapper >= 6.1.1",
+      "Dapper >= 1.50.2",
       "Microsoft.AspNetCore.Http.Abstractions >= 2.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.0.0",
       "Microsoft.Extensions.Configuration.Abstractions >= 2.0.0",
@@ -7618,7 +7715,7 @@
       "Microsoft.Extensions.DependencyModel >= 2.0.0",
       "Microsoft.Extensions.Logging.Abstractions >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
-      "MimeKit >= 1.18.0",
+      "MimeKit >= 1.18.1",
       "MongoDB.Bson >= 2.4.4",
       "MongoDB.Driver >= 2.4.4",
       "Sakura.AspNetCore.PagedList >= 2.0.2",
@@ -7673,11 +7770,15 @@
         "dependencies": {
           "MimeKit": {
             "target": "Package",
-            "version": "1.18.0"
+            "version": "1.18.1"
           },
           "MongoDB.Driver": {
             "target": "Package",
             "version": "2.4.4"
+          },
+          "Dapper": {
+            "target": "Package",
+            "version": "1.50.2"
           },
           "Sakura.AspNetCore.PagedList": {
             "target": "Package",

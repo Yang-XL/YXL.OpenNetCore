@@ -40,8 +40,7 @@ namespace AdminSite.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Index(string queryString, int page = 1)
         {
-            var app = await _roleService.GetPagedAsync(page, _setting.PageSize, a => a.ShowIndex,
-                b => b.Name.Contains(queryString) || b.PyCode.Contains(queryString));
+            var app = await _roleService.GetPagedAsync(page, _setting.PageSize, a => a.ShowIndex,b => b.Name.Contains(queryString) || b.PyCode.Contains(queryString));
             return View(app);
         }
 
@@ -55,7 +54,7 @@ namespace AdminSite.Controllers
 
         public async Task<IActionResult> Modify(Guid id)
         {
-            var enitty = await _roleService.SingleAsync(a => a.ID == id);
+            var enitty = await _roleService.SingleAsync(id);
             var model = enitty.ToModel();
             return View(model);
         }
@@ -64,10 +63,9 @@ namespace AdminSite.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Modify(RoleViewModel model)
         {
-            var entity = await _roleService.SingleAsync(a => a.ID == model.ID);
+            var entity = await _roleService.SingleAsync(model.ID);
             entity = model.ToEntity(entity);
             await _roleService.UpdateAsync(entity);
-            _roleService.SaveChanges();
             return RedirectToAction("Details", new { id = entity.ID });
         }
 
@@ -88,7 +86,6 @@ namespace AdminSite.Controllers
             var entity = model.ToEntity();
             entity.CreateDate = DateTime.UtcNow;
            await _roleService.InsertAsync(entity);
-            _roleService.SaveChanges();
             return RedirectToAction("Details", new{ id= entity.ID });
         }
 
@@ -96,8 +93,7 @@ namespace AdminSite.Controllers
         {
             try
             {
-                await _roleService.DeleteAsync(a => a.ID == id);
-                _roleService.SaveChanges();
+                await _roleService.DeleteAsync(id);
             }
             catch (Exception e)
             {

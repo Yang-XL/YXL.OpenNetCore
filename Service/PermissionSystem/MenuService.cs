@@ -18,7 +18,7 @@ using Microsoft.Extensions.Logging;
 using Remotion.Linq.Parsing.Structure.IntermediateModel;
 using Sakura.AspNetCore;
 using Core;
-using Core.Repository.Ef;
+using Core.Repository.Implementation;
 using IService;
 using PermissionSystem.Models;
 using PermissionSystem;
@@ -38,9 +38,9 @@ namespace Service.PermissionSystem
             _logger = loggerFactory.CreateLogger<MenuService>();
         }
 
-        public Task<IPagedList<MenuViewModel>> PageMenuViewModel(int pageSize, int pageIndex, string queryString,Guid? parentID = null)
+        public async Task<IPagedList<MenuViewModel>> PageMenuViewModel(int pageSize, int pageIndex, string queryString,Guid? parentID = null)
         {
-            return Task.Run<IPagedList<MenuViewModel>>(() =>
+            return await Task.Run<IPagedList<MenuViewModel>>(() =>
             {
                 IQueryable<Menu> queryable = _dbSet;
                 if (!string.IsNullOrEmpty(queryString))
@@ -70,7 +70,7 @@ namespace Service.PermissionSystem
                         Name = n.Name,
                         ShowIndex = n.ShowIndex,
                         ParentID = n.ParentID,
-                        ParentMenuName = n.ParentID == default(Guid) ? "--根目录--" : _dbSet.FirstOrDefault(a=>a.ID == n.ParentID).Name
+                        ParentMenuName = n.ParentID == default(Guid) ? "--根目录--" : _dbSet.FirstOrDefault(a => a.ID == n.ParentID).Name
                     };
 
                 return query.ToPagedList(pageSize, pageIndex);

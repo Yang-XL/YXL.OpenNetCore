@@ -98,8 +98,7 @@ namespace Controls
 
         private static object GetModelStateValue(this IHtmlHelper htmlHelper, string key, Type destinationType)
         {
-            ModelStateEntry modelState;
-            if (htmlHelper.ViewData.ModelState.TryGetValue(key, out modelState))
+            if (htmlHelper.ViewData.ModelState.TryGetValue(key, out ModelStateEntry modelState))
             {
 
                 if (modelState.AttemptedValue != null)

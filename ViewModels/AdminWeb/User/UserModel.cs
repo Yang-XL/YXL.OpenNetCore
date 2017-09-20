@@ -11,7 +11,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using PermissionSystem.Models;
-using PermissionSystem.Models;
 
 namespace XL.Admin.ViewModel.Account
 {

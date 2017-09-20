@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Mongo;
 using PermissionSystem;
 using Sakura.AspNetCore.Mvc;
 using Service.PermissionSystem;
@@ -35,8 +36,9 @@ namespace AdminSite
         {
             services.UserCore();
             services.AddSingleton(AutoMapperConfiguration.Init());
-
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.UserMongoLog(Configuration.GetSection("Mongo.Log"));
+
 
             #region DB
 
@@ -56,11 +58,8 @@ namespace AdminSite
             #endregion
 
             #region Other
-
             services.Configure<PagerOptions>(Configuration.GetSection("Pager"));
             services.AddBootstrapPagerGenerator(options => options.ConfigureDefault());
-
-
             services.Configure<AdminSiteOption>(Configuration.GetSection("SiteOption"));
             services.AddScoped<IRouter, AdminRouter>();
             services.AddScoped<IRouteProvider, RouteProvider>();

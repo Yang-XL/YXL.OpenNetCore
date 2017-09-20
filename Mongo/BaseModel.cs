@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Core.Repository.MongoDB;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace Core.Repository.MongoDB
+namespace Mongo
 {
+
     [BsonIgnoreExtraElements(Inherited = true)]
-    public class MongoDBEntity : IMongoDBEntity<string>
+    public  class BaseModel :IMongoEntity<string>
     {
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+        public  string Id { get; set; }
     }
 }

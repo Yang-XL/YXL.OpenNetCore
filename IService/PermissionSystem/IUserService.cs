@@ -10,7 +10,7 @@
 
 using System;
 using System.Collections.Generic;
-using Core.Repository.Ef;
+using Core.Repository;
 using PermissionSystem.Models;
 namespace IService
 {

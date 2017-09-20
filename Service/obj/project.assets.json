@@ -31,6 +31,35 @@
           "lib/netstandard1.3/AutoMapper.dll": {}
         }
       },
+      "Dapper/1.50.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Collections.Concurrent": "4.0.12",
+          "System.Collections.NonGeneric": "4.0.1",
+          "System.Data.SqlClient": "4.1.0",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Linq": "4.1.0",
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Emit": "4.0.1",
+          "System.Reflection.Emit.Lightweight": "4.0.1",
+          "System.Reflection.Extensions": "4.0.1",
+          "System.Reflection.TypeExtensions": "4.1.0",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Text.RegularExpressions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "System.Xml.XDocument": "4.0.11",
+          "System.Xml.XmlDocument": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Dapper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Dapper.dll": {}
+        }
+      },
       "IdentityModel/2.8.1": {
         "type": "package",
         "dependencies": {
@@ -853,17 +882,16 @@
           "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration/1.1.2": {
+      "Microsoft.Extensions.Configuration/2.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "1.1.2",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0"
         },
         "compile": {
-          "lib/netstandard1.1/Microsoft.Extensions.Configuration.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/Microsoft.Extensions.Configuration.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration.Abstractions/2.0.0": {
@@ -878,18 +906,16 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Binder/1.1.2": {
+      "Microsoft.Extensions.Configuration.Binder/2.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration": "1.1.2",
-          "NETStandard.Library": "1.6.1",
-          "System.ComponentModel.TypeConverter": "4.3.0"
+          "Microsoft.Extensions.Configuration": "2.0.0"
         },
         "compile": {
-          "lib/netstandard1.1/Microsoft.Extensions.Configuration.Binder.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/Microsoft.Extensions.Configuration.Binder.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection/2.0.0": {
@@ -1055,20 +1081,19 @@
           "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
         }
       },
-      "Microsoft.Extensions.Options.ConfigurationExtensions/1.1.2": {
+      "Microsoft.Extensions.Options.ConfigurationExtensions/2.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "1.1.2",
-          "Microsoft.Extensions.Configuration.Binder": "1.1.2",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.1",
-          "Microsoft.Extensions.Options": "1.1.2",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.0"
         },
         "compile": {
-          "lib/netstandard1.1/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
         }
       },
       "Microsoft.Extensions.Primitives/2.0.0": {
@@ -1374,11 +1399,11 @@
           }
         }
       },
-      "MimeKit/1.18.0": {
+      "MimeKit/1.18.1": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1",
-          "Portable.BouncyCastle": "1.8.1.2",
+          "Portable.BouncyCastle": "1.8.1.3",
           "System.Data.Common": "4.3.0",
           "System.Globalization.Extensions": "4.3.0",
           "System.Net.NameResolution": "4.3.0",
@@ -1508,16 +1533,13 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
-      "Portable.BouncyCastle/1.8.1.2": {
+      "Portable.BouncyCastle/1.8.1.3": {
         "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.0"
-        },
         "compile": {
-          "lib/netstandard1.3/BouncyCastle.Crypto.dll": {}
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/BouncyCastle.Crypto.dll": {}
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
         }
       },
       "Remotion.Linq/2.1.1": {
@@ -3526,13 +3548,14 @@
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
           "AutoMapper": "6.1.1",
+          "Dapper": "1.50.2",
           "Microsoft.AspNetCore.Http.Abstractions": "2.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
           "Microsoft.Extensions.DependencyModel": "2.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
-          "MimeKit": "1.18.0",
+          "MimeKit": "1.18.1",
           "MongoDB.Bson": "2.4.4",
           "MongoDB.Driver": "2.4.4",
           "Sakura.AspNetCore.PagedList": "2.0.2",
@@ -3551,6 +3574,7 @@
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
           "Core": "1.0.0",
+          "Mongo": "1.0.0",
           "PermissionSystem": "1.0.0",
           "ViewModels": "1.0.0"
         },
@@ -3561,10 +3585,25 @@
           "bin/placeholder/IService.dll": {}
         }
       },
+      "Mongo/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Core": "1.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Mongo.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mongo.dll": {}
+        }
+      },
       "PermissionSystem/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
+          "Core": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.0"
         },
         "compile": {
@@ -3608,6 +3647,23 @@
         "lib/netstandard1.1/AutoMapper.xml",
         "lib/netstandard1.3/AutoMapper.dll",
         "lib/netstandard1.3/AutoMapper.xml"
+      ]
+    },
+    "Dapper/1.50.2": {
+      "sha512": "PhxIV8TI/5aYdLT4epuIZB+Evf0sv9gcQDpFGa04fSKDfNQIChRq0sKUgQbfpFWbuDW/UDDuiL3Grkhp/cvYrA==",
+      "type": "package",
+      "path": "dapper/1.50.2",
+      "files": [
+        "Dapper.1.50.2.nupkg.sha512",
+        "Dapper.nuspec",
+        "lib/net40/Dapper.dll",
+        "lib/net40/Dapper.xml",
+        "lib/net45/Dapper.dll",
+        "lib/net45/Dapper.xml",
+        "lib/net451/Dapper.dll",
+        "lib/net451/Dapper.xml",
+        "lib/netstandard1.3/Dapper.dll",
+        "lib/netstandard1.3/Dapper.xml"
       ]
     },
     "IdentityModel/2.8.1": {
@@ -4296,14 +4352,14 @@
         "microsoft.extensions.caching.memory.nuspec"
       ]
     },
-    "Microsoft.Extensions.Configuration/1.1.2": {
-      "sha512": "eK5BHx/pHLGGO/WDo7CS070MGgx3N7B/ORO/oKeS0qgCyv+ZAR47YWKXmG5aF+lIrAJd3uJjMTdTKgXTU2UDWw==",
+    "Microsoft.Extensions.Configuration/2.0.0": {
+      "sha512": "SsI4RqI8EH00+cYO96tbftlh87sNUv1eeyuBU1XZdQkG0RrHAOjWgl7P0FoLeTSMXJpOnfweeOWj2d1/5H3FxA==",
       "type": "package",
-      "path": "microsoft.extensions.configuration/1.1.2",
+      "path": "microsoft.extensions.configuration/2.0.0",
       "files": [
-        "lib/netstandard1.1/Microsoft.Extensions.Configuration.dll",
-        "lib/netstandard1.1/Microsoft.Extensions.Configuration.xml",
-        "microsoft.extensions.configuration.1.1.2.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.xml",
+        "microsoft.extensions.configuration.2.0.0.nupkg.sha512",
         "microsoft.extensions.configuration.nuspec"
       ]
     },
@@ -4318,14 +4374,14 @@
         "microsoft.extensions.configuration.abstractions.nuspec"
       ]
     },
-    "Microsoft.Extensions.Configuration.Binder/1.1.2": {
-      "sha512": "rhJm4Oznvr+WplIE/kQkaPjPgUxV60k1sPw17VaDrKYiUboZhnNLqzfQM3wR/XdZaf2LCtIsi7PnBUCX38gwyw==",
+    "Microsoft.Extensions.Configuration.Binder/2.0.0": {
+      "sha512": "IznHHzGUtrdpuQqIUdmzF6TYPcsYHONhHh3o9dGp39sX/9Zfmt476UnhvU0UhXgJnXXAikt/MpN6AuSLCCMdEQ==",
       "type": "package",
-      "path": "microsoft.extensions.configuration.binder/1.1.2",
+      "path": "microsoft.extensions.configuration.binder/2.0.0",
       "files": [
-        "lib/netstandard1.1/Microsoft.Extensions.Configuration.Binder.dll",
-        "lib/netstandard1.1/Microsoft.Extensions.Configuration.Binder.xml",
-        "microsoft.extensions.configuration.binder.1.1.2.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.xml",
+        "microsoft.extensions.configuration.binder.2.0.0.nupkg.sha512",
         "microsoft.extensions.configuration.binder.nuspec"
       ]
     },
@@ -4486,14 +4542,14 @@
         "microsoft.extensions.options.nuspec"
       ]
     },
-    "Microsoft.Extensions.Options.ConfigurationExtensions/1.1.2": {
-      "sha512": "RNst3tB30aeieLxxtaeJt9jvPSr4CAIFOP1ojYkB7Hrd9eRtddIWKx311xfWm4uT1A6Ia4NjRZkf9dYbnr2eqw==",
+    "Microsoft.Extensions.Options.ConfigurationExtensions/2.0.0": {
+      "sha512": "Y/lGICwO27fCkQRK3tZseVzFjZaxfGmui990E67sB4MuiPzdJHnJDS/BeYWrHShSSBgCl4KyKRx4ux686fftPg==",
       "type": "package",
-      "path": "microsoft.extensions.options.configurationextensions/1.1.2",
+      "path": "microsoft.extensions.options.configurationextensions/2.0.0",
       "files": [
-        "lib/netstandard1.1/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
-        "lib/netstandard1.1/Microsoft.Extensions.Options.ConfigurationExtensions.xml",
-        "microsoft.extensions.options.configurationextensions.1.1.2.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.xml",
+        "microsoft.extensions.options.configurationextensions.2.0.0.nupkg.sha512",
         "microsoft.extensions.options.configurationextensions.nuspec"
       ]
     },
@@ -4972,10 +5028,10 @@
         "version.txt"
       ]
     },
-    "MimeKit/1.18.0": {
-      "sha512": "4cu/BH/EenesTKaQscYWg6vuAYlh+CIbWZJlYoZ+9RklhqOFZZU1XlS4yI8hwDNtXKVH+COvsU+wpccCtCLdKA==",
+    "MimeKit/1.18.1": {
+      "sha512": "Q37aV+lgqMEn+26pvhChltBYFJjL7gfufDCJLzM6scQu93Iu63PtcUztr06/Z7KHnk81BRq1v+QiiulxNN3Z1g==",
       "type": "package",
-      "path": "mimekit/1.18.0",
+      "path": "mimekit/1.18.1",
       "files": [
         "lib/MonoAndroid10/BouncyCastle.dll",
         "lib/MonoAndroid10/MimeKit.dll",
@@ -4999,7 +5055,7 @@
         "lib/wpa81/MimeKit.dll",
         "lib/wpa81/MimeKit.xml",
         "lib/wpa81/Portable.Text.Encoding.dll",
-        "mimekit.1.18.0.nupkg.sha512",
+        "mimekit.1.18.1.nupkg.sha512",
         "mimekit.nuspec"
       ]
     },
@@ -5210,27 +5266,22 @@
         "newtonsoft.json.bson.nuspec"
       ]
     },
-    "Portable.BouncyCastle/1.8.1.2": {
-      "sha512": "G0pWrYwtjjiyka+twqqphegc4ddDWskvf2uWu2YiAUNdaAz0UYa/eXBlt+xjafby5Opa6J1ySw5MPezwiGi9aQ==",
+    "Portable.BouncyCastle/1.8.1.3": {
+      "sha512": "imXKRLrhXlEoeus5w5h1t6E1uwSP45N1qn7Gz+kp8GaFKkNuN0GOMMlIWDQ0P0O6OmHL7odRyd+npNmJQTcgwg==",
       "type": "package",
-      "path": "portable.bouncycastle/1.8.1.2",
+      "path": "portable.bouncycastle/1.8.1.3",
       "files": [
-        "Readme.html",
-        "lib/net4/BouncyCastle.Crypto.dll",
-        "lib/net4/BouncyCastle.Crypto.pdb",
-        "lib/net4/BouncyCastle.Crypto.xml",
-        "lib/netstandard1.0/BouncyCastle.Crypto.deps.json",
+        "lib/net40/BouncyCastle.Crypto.dll",
+        "lib/net40/BouncyCastle.Crypto.xml",
         "lib/netstandard1.0/BouncyCastle.Crypto.dll",
-        "lib/netstandard1.0/BouncyCastle.Crypto.pdb",
         "lib/netstandard1.0/BouncyCastle.Crypto.xml",
-        "lib/netstandard1.3/BouncyCastle.Crypto.deps.json",
         "lib/netstandard1.3/BouncyCastle.Crypto.dll",
-        "lib/netstandard1.3/BouncyCastle.Crypto.pdb",
         "lib/netstandard1.3/BouncyCastle.Crypto.xml",
-        "lib/portable-net4+sl5+wp8+win8+wpa81/BouncyCastle.Crypto.dll",
-        "lib/portable-net4+sl5+wp8+win8+wpa81/BouncyCastle.Crypto.pdb",
-        "lib/portable-net4+sl5+wp8+win8+wpa81/BouncyCastle.Crypto.xml",
-        "portable.bouncycastle.1.8.1.2.nupkg.sha512",
+        "lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "lib/netstandard2.0/BouncyCastle.Crypto.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/BouncyCastle.Crypto.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/BouncyCastle.Crypto.xml",
+        "portable.bouncycastle.1.8.1.3.nupkg.sha512",
         "portable.bouncycastle.nuspec"
       ]
     },
@@ -9999,6 +10050,11 @@
       "path": "../IService/IService.csproj",
       "msbuildProject": "../IService/IService.csproj"
     },
+    "Mongo/1.0.0": {
+      "type": "project",
+      "path": "../Mongo/Mongo.csproj",
+      "msbuildProject": "../Mongo/Mongo.csproj"
+    },
     "PermissionSystem/1.0.0": {
       "type": "project",
       "path": "../PermissionSystem/PermissionSystem.csproj",
@@ -10013,8 +10069,10 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Core >= 1.0.0",
+      "Dapper >= 1.50.2",
       "IService >= 1.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
+      "Mongo >= 1.0.0",
       "PermissionSystem >= 1.0.0",
       "ViewModels >= 1.0.0"
     ]
@@ -10062,6 +10120,9 @@
             "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\PermissionSystem\\PermissionSystem.csproj": {
               "projectPath": "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\PermissionSystem\\PermissionSystem.csproj"
             },
+            "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\Mongo\\Mongo.csproj": {
+              "projectPath": "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\Mongo\\Mongo.csproj"
+            },
             "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\Core\\Core.csproj": {
               "projectPath": "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\Core\\Core.csproj"
             }
@@ -10077,6 +10138,10 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "Dapper": {
+            "target": "Package",
+            "version": "1.50.2"
+          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",

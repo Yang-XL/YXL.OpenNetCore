@@ -9,7 +9,7 @@
 // ===================================================================
 
 using System;
-using Core.Repository.Ef;
+using Core.Repository;
 using PermissionSystem.Models;
 
 namespace IService

@@ -15,3 +15,5 @@ D:\GitSource\OpenNetCore\YXL.OpenNetCore\LoggerExtensions\bin\Debug\netcoreapp2.
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\LoggerExtensions\bin\Debug\netcoreapp2.0\ViewModels.dll
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\LoggerExtensions\bin\Debug\netcoreapp2.0\IService.pdb
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\LoggerExtensions\bin\Debug\netcoreapp2.0\ViewModels.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\LoggerExtensions\bin\Debug\netcoreapp2.0\Mongo.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\LoggerExtensions\bin\Debug\netcoreapp2.0\Mongo.pdb

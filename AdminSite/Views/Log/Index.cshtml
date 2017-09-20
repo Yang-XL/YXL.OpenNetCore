@@ -1,5 +1,6 @@
 ﻿@using Controls.SelectZtree
-@model Sakura.AspNetCore.IPagedList<PermissionSystem.Models.Log>
+@using Mongo.Models
+@model Sakura.AspNetCore.IPagedList<PermissionSystemLogs>
 
 <h2 class="page-title"></h2>
 <div class="row">
@@ -22,6 +23,22 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
+                                    <label class="control-label col-md-3">日志等级</label>
+                                    <div class="col-md-9">
+                                        <select class="form-control" id="queryLogLevel"name="queryLogLevel">
+                                            <option value="-1" selected="selected">全部</option>
+                                            <option value="0">Trace</option>
+                                            <option value="1">Debug</option>
+                                            <option value="2">Information</option>
+                                            <option value="3">Warning</option>
+                                            <option value="4">Error</option>
+                                            <option value="5">Critical</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
                                     <label class="control-label col-md-3">快速搜索</label>
                                     <div class="col-md-9">
                                         <input type="text" class="form-control" name="queryString" id="queryString" placeholder="关键字、简短描述">
@@ -38,34 +55,137 @@
                     </div>
                 </form>
             </div>
-            <div id="tableResult">
+            <div id="tableResult"  class="flip-scroll">
                 @Html.Partial("AjaxTable", Model)
             </div>
         </div>
     </div>
 </div>
 
-<div class="modal fade" id="logDetial" tabindex="-1" role="dialog" aria-labelledby="logDetial">
-    <div class="modal-dialog" role="document">
+<div class="modal fade bs-example-modal-lg" id="logDetial" tabindex="-1" role="dialog" aria-labelledby="logDetial">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">详细信息</h4>
             </div>
+            <form class="form-horizontal" role="form">
             <div class="modal-body">
-                <p></p>
-                <p></p>
-                <p></p>
-                <small>(tips：删除之后不可恢复)</small>
+                <div class="form-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class = "control-label col-md-3">Id</label>
+                                <div class="col-md-9">
+                                    <p class="form-control-static"  id="logID">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class = "control-label col-md-3">关键词</label>
+                                <div class="col-md-9">
+                                    <p class="form-control-static"  id="logKeyWord">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="ShortMessage" class = "control-label col-md-3">简短描述</label>
+                                <div class="col-md-9">
+                                    <p class="form-control-static" id="ShortMessage">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="CreateDate" class = "control-label col-md-3">创建时间</label>
+                                <div class="col-md-9">
+                                    <p class="form-control-static"  id="CreateDate">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="LogLeve" class="control-label col-md-3">日志等级</label>
+                                <div class="col-md-9">
+                                    <p class="form-control-static" id="LogLeve">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="IpAddress" class="control-label col-md-3">客户端IP</label>
+                                <div class="col-md-9">
+                                    <p class="form-control-static"  id="IpAddress">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="ServerIpAddress" class="control-label col-md-3">服务端IP</label>
+                                <div class="col-md-9">
+                                    <p class="form-control-static" id="ServerIpAddress">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="PageUrl" class="control-label col-md-3">记录页面</label>
+                                <div class="col-md-9">
+                                    <p class="form-control-static"  id="PageUrl">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="ReferrerUrl" class="control-label col-md-3">ReferrerUrl</label>
+                                <div class="col-md-9">
+                                    <p class="form-control-static"  id="ReferrerUrl">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="FullMessage" class="control-label col-md-3">记录页面</label>
+                                <div class="col-md-9">
+                                    <p class="form-control-static"  id="FullMessage">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="submit" class="btn btn-primary">
-                    <i class="fa fa-remove"></i>删除
+                <button type="button" class="btn btn-default green" data-dismiss="modal">
+                    <i class="fa fa-close"></i>  关闭
                 </button>
             </div>
+            </form>
         </div>
     </div>
 </div>
-
+@section scripts_plugins{
+    <script src="~/pages/logs/logs.index.js?v=1.0.0.0"></script>
+}
 

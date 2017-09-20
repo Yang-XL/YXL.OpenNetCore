@@ -29,10 +29,10 @@ namespace AdminSite.Controllers
             _setting = setting.Value;
         }
 
-        public IActionResult Index(int page = 1)
+        public async Task<IActionResult> Index(int page = 1)
         {
             _logger.Debug("访问Index");
-            var model = _menuService.PageMenuViewModel(_setting.PageSize, page, "").Result;
+            var model = await _menuService.PageMenuViewModel(_setting.PageSize, page, "");
             return View(model);
         }
 
@@ -49,7 +49,7 @@ namespace AdminSite.Controllers
             var model = new MenuViewModel
             {
                 ID = Guid.NewGuid(),
-                ApplicationViewModels = from n in _applicationService._dbSet
+                ApplicationViewModels = from n in _applicationService.Query()
                     select new SelectListItem {Text = n.Name, Value = n.ID.ToString()}
             };
             return View(model);
@@ -65,7 +65,6 @@ namespace AdminSite.Controllers
                 entity.ID = Guid.NewGuid();
                 entity.CreateDate = DateTime.UtcNow;
                 _menuService.Insert(entity);
-                _menuService.SaveChanges();
             }
             return RedirectToAction("Index");
         }
@@ -74,7 +73,7 @@ namespace AdminSite.Controllers
         {
             _logger.Debug("编辑菜单");
             var model = await _menuService.GetMenuViewModel(id);
-            model.ApplicationViewModels = from n in _applicationService._dbSet
+            model.ApplicationViewModels = from n in _applicationService.Query()
                 select new SelectListItem {Text = n.Name, Value = n.ID.ToString()};
             return View(model);
         }
@@ -84,9 +83,8 @@ namespace AdminSite.Controllers
         public IActionResult Modify(MenuViewModel model)
         {
             model.CreateDate = DateTime.UtcNow;
-            var entity = model.ToEntity(_menuService.Single(a => a.ID == model.ID));
+            var entity = model.ToEntity(_menuService.Single(model.ID));
             _menuService.Update(entity);
-            _menuService.SaveChanges();
             return RedirectToAction("Index");
         }
 
@@ -100,7 +98,7 @@ namespace AdminSite.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Remove(Guid id)
         {
-            var menu = await _menuService.SingleAsync(a => a.ID == id);
+            var menu = await _menuService.SingleAsync(id);
             if (menu == null)
                 return RedirectToAction("Index");
             if (await _menuService.CountAsync(a => a.ParentID == id) > 0)
@@ -115,7 +113,7 @@ namespace AdminSite.Controllers
         [HttpPost]
         public IActionResult QueryJson(Guid? applicationId = null, bool? isNav = true)
         {
-            var query = _menuService._dbSet.AsQueryable();
+            var query = _menuService.Query();
             if (applicationId.HasValue)
                 query = query.Where(a => a.ApplicationID == applicationId);
             if (isNav.HasValue)

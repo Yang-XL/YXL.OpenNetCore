@@ -10,7 +10,7 @@
 
 using System;
 using System.Threading.Tasks;
-using Core.Repository.Ef;
+using Core.Repository;
 using PermissionSystem.Models;
 using Sakura.AspNetCore;
 using ViewModels.AdminWeb.Organization;

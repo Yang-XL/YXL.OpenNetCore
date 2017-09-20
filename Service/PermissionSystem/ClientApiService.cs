@@ -8,7 +8,7 @@
 // 负责人：YXL
 // ===================================================================
 
-using Core.Repository.Ef;
+using Core.Repository.Implementation;
 using PermissionSystem.Models;
 using PermissionSystem;
 using IService.PermissionSystem;

@@ -10,17 +10,18 @@
 
 using System;
 using System.Threading.Tasks;
-using Core.Repository.Ef;
+using Core.Repository.MongoDB;
 using Microsoft.Extensions.Logging;
-using PermissionSystem.Models;
+using Mongo.Models;
+
 namespace IService
 {
-    public interface ILogService : IEfRepository<Log>
+    public interface ILogService : IMongoRepository<PermissionSystemLogs>
     {
         Task Log<TState>(string categoryName, LogLevel logLevel, EventId eventId, TState state, Exception exception,
             Func<TState, Exception, string> formatter,string fileLogPath);
         Task Log<TState>(string categoryName, LogLevel logLevel, EventId eventId, TState state, Exception exception,
             Func<TState, Exception, string> formatter);
-        Task Log(string categoryName, LogLevel logLevel, EventId eventId, Log state);
+        Task Log(string categoryName, LogLevel logLevel, EventId eventId, PermissionSystemLogs state);
     }
 }

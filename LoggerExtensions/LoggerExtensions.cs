@@ -26,7 +26,8 @@ namespace LoggerExtensions
                 CreateDate = DateTime.UtcNow,
                 FullMessage = message,
                 ShortMessage = shortMessage,
-                KeyWord = keyWord
+                KeyWord = keyWord,
+                LogLeve = Convert.ToInt32(logLevel)
             };
             Log(logger, logLevel, eventId, log, e, formatter);
         }
@@ -34,7 +35,7 @@ namespace LoggerExtensions
 
         private static string MessageFormatter(Log state, Exception error)
         {
-            return state.ToString();
+            return state.FullMessage;
         }
 
 

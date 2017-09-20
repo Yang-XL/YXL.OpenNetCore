@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "592f7d6ef298d0eea22c4bcc13bca3d41c7e5e2b"
+    "signature": "76f824d5a6bd521c8dd1482d215b46420afd615f"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,13 +9,14 @@
       "Core/1.0.0": {
         "dependencies": {
           "AutoMapper": "6.1.1",
+          "Dapper": "1.50.2",
           "Microsoft.AspNetCore.Http.Abstractions": "2.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
           "Microsoft.Extensions.DependencyModel": "2.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
-          "MimeKit": "1.18.0",
+          "MimeKit": "1.18.1",
           "MongoDB.Bson": "2.4.4",
           "MongoDB.Driver": "2.4.4",
           "Sakura.AspNetCore.PagedList": "2.0.2",
@@ -49,6 +50,31 @@
         },
         "runtime": {
           "lib/netstandard1.3/AutoMapper.dll": {}
+        }
+      },
+      "Dapper/1.50.2": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Collections.Concurrent": "4.3.0",
+          "System.Collections.NonGeneric": "4.3.0",
+          "System.Data.SqlClient": "4.4.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.Emit.Lightweight": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Xml.XDocument": "4.0.11",
+          "System.Xml.XmlDocument": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Dapper.dll": {}
         }
       },
       "Microsoft.AspNetCore.Http.Abstractions/2.0.0": {
@@ -224,9 +250,9 @@
           }
         }
       },
-      "MimeKit/1.18.0": {
+      "MimeKit/1.18.1": {
         "dependencies": {
-          "Portable.BouncyCastle": "1.8.1.2",
+          "Portable.BouncyCastle": "1.8.1.3",
           "System.Data.Common": "4.3.0",
           "System.Globalization.Extensions": "4.3.0",
           "System.Net.NameResolution": "4.3.0",
@@ -302,9 +328,9 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Portable.BouncyCastle/1.8.1.2": {
+      "Portable.BouncyCastle/1.8.1.3": {
         "runtime": {
-          "lib/netstandard1.3/BouncyCastle.Crypto.dll": {}
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
         }
       },
       "Remotion.Linq/2.1.1": {
@@ -1496,6 +1522,20 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.0.11"
         }
+      },
+      "System.Xml.XmlDocument/4.0.1": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Xml.ReaderWriter": "4.0.11"
+        }
       }
     }
   },
@@ -1511,6 +1551,13 @@
       "sha512": "sha512-A+6PAblvzmkXPS20nFBQJvlNSW5oEdyfN5+cxT/Du35fTNyuP5pNDXT64KT/jBgxt7CPduOM0Y7oLnNe0E5IXg==",
       "path": "automapper/6.1.1",
       "hashPath": "automapper.6.1.1.nupkg.sha512"
+    },
+    "Dapper/1.50.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PhxIV8TI/5aYdLT4epuIZB+Evf0sv9gcQDpFGa04fSKDfNQIChRq0sKUgQbfpFWbuDW/UDDuiL3Grkhp/cvYrA==",
+      "path": "dapper/1.50.2",
+      "hashPath": "dapper.1.50.2.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Http.Abstractions/2.0.0": {
       "type": "package",
@@ -1652,12 +1699,12 @@
       "path": "microsoft.win32.registry/4.4.0",
       "hashPath": "microsoft.win32.registry.4.4.0.nupkg.sha512"
     },
-    "MimeKit/1.18.0": {
+    "MimeKit/1.18.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4cu/BH/EenesTKaQscYWg6vuAYlh+CIbWZJlYoZ+9RklhqOFZZU1XlS4yI8hwDNtXKVH+COvsU+wpccCtCLdKA==",
-      "path": "mimekit/1.18.0",
-      "hashPath": "mimekit.1.18.0.nupkg.sha512"
+      "sha512": "sha512-Q37aV+lgqMEn+26pvhChltBYFJjL7gfufDCJLzM6scQu93Iu63PtcUztr06/Z7KHnk81BRq1v+QiiulxNN3Z1g==",
+      "path": "mimekit/1.18.1",
+      "hashPath": "mimekit.1.18.1.nupkg.sha512"
     },
     "MongoDB.Bson/2.4.4": {
       "type": "package",
@@ -1687,12 +1734,12 @@
       "path": "newtonsoft.json/9.0.1",
       "hashPath": "newtonsoft.json.9.0.1.nupkg.sha512"
     },
-    "Portable.BouncyCastle/1.8.1.2": {
+    "Portable.BouncyCastle/1.8.1.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-G0pWrYwtjjiyka+twqqphegc4ddDWskvf2uWu2YiAUNdaAz0UYa/eXBlt+xjafby5Opa6J1ySw5MPezwiGi9aQ==",
-      "path": "portable.bouncycastle/1.8.1.2",
-      "hashPath": "portable.bouncycastle.1.8.1.2.nupkg.sha512"
+      "sha512": "sha512-imXKRLrhXlEoeus5w5h1t6E1uwSP45N1qn7Gz+kp8GaFKkNuN0GOMMlIWDQ0P0O6OmHL7odRyd+npNmJQTcgwg==",
+      "path": "portable.bouncycastle/1.8.1.3",
+      "hashPath": "portable.bouncycastle.1.8.1.3.nupkg.sha512"
     },
     "Remotion.Linq/2.1.1": {
       "type": "package",
@@ -2421,6 +2468,13 @@
       "sha512": "sha512-Mk2mKmPi0nWaoiYeotq1dgeNK1fqWh61+EK+w4Wu8SWuTYLzpUnschb59bJtGywaPq7SmTuPf44wrXRwbIrukg==",
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
+    },
+    "System.Xml.XmlDocument/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2eZu6IP+etFVBBFUFzw2w6J21DqIN5eL9Y8r8JfJWUmV28Z5P0SNU01oCisVHQgHsDhHPnmq2s1hJrJCFZWloQ==",
+      "path": "system.xml.xmldocument/4.0.1",
+      "hashPath": "system.xml.xmldocument.4.0.1.nupkg.sha512"
     }
   }
 }

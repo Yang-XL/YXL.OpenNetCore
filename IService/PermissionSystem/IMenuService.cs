@@ -14,7 +14,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Sakura.AspNetCore;
 using Core;
-using Core.Repository.Ef;
+using Core.Repository;
 using PermissionSystem.Models;
 using ViewModels.AdminWeb.Nav;
 

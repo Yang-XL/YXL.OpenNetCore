@@ -28,9 +28,9 @@ namespace AdminSite.Controllers
             _setting = setting.Value;
         }
 
-        public IActionResult Index(int page = 1)
+        public async Task<IActionResult> Index(int page = 1)
         {
-            var model = _organizationService.GetPaged(_setting.PageSize, page, "").Result;
+            var model = await _organizationService.GetPaged(_setting.PageSize, page,"");
             return View(model);
         }
 
@@ -124,7 +124,7 @@ namespace AdminSite.Controllers
       
         public IActionResult All()
         {
-            var result = from n in _organizationService._dbSet
+            var result = from n in _organizationService.Query()
                 select new {id = n.ID, pId = n.ParentOrganizationID, name = n.Name, open = true};
             var model = result.ToList();
             return Json(model);

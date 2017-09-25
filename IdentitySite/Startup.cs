@@ -2,7 +2,6 @@
 using System.Linq;
 using Core;
 using Core.FileManager;
-using Core.Log.FileLog;
 using IdentityServer4;
 using IdentityServer4.Validation;
 using IdentitySite.Services;
@@ -10,6 +9,7 @@ using IdentitySite.Services.IdentityService;
 using IdentitySite.Services.IdentityService.Validation;
 using IService;
 using IService.PermissionSystem;
+using LoggerExtensions;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -53,6 +53,7 @@ namespace IdentitySite
             services.AddScoped<IClientService, ClientService>();
             services.AddScoped<IClientApiService, ClientApiService>();
             services.AddScoped<IApiService, ApiService>();
+            services.AddScoped<ILogService, LogService>();
 
             #endregion
 
@@ -80,10 +81,11 @@ namespace IdentitySite
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory,
-            IFileManager fileManager, IHttpContextAccessor httpContextAccessor)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,
+            ILoggerFactory loggerFactory,
+            ILogService logService)
         {
-            loggerFactory.AddFileLogger(fileManager, httpContextAccessor, Configuration.GetSection("Logging"));
+            loggerFactory.AddLog(Configuration.GetSection("Logging"), logService);
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

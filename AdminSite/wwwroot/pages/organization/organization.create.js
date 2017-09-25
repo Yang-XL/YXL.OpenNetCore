@@ -1,78 +1,80 @@
 ﻿var organizationCreate = function () {
 
-    var parentOrganizationSetting = {
+    var leaderSetting = {
         view: {
             dblClickExpand: false
         },
-        check: { enable: true, chkStyle: "radio", radioType: "level" },
+        check: {
+            enable: true,
+            chkStyle: "radio"
+        },
         data: {
             simpleData: {
                 enable: true
             }
         },
         callback: {
-            onClick: function (e, treeId, treeNode) {
-                var zTree = $.fn.zTree.getZTreeObj($("#ParentOrganizationName").attr("treeid"));
-                var nodes = zTree.getSelectedNodes();
-                if (nodes.length <= 0) return;
-                $("#ParentOrganizationName").val(nodes[0].name);
-                $("#ParentOrganizationID").val(nodes[0].id);
+            beforeClick: function (treeId, treeNode) {
+                return !treeNode.chkDisabled;
+            }, onClick: function (e, treeId, treeNode) {
+                $("#LeaderName").val(treeNode.name);
+                $("#Leader").val(treeNode.id);
+                $("#LeaderName").trigger("hideTree");
+            }
+        }
+    };
+    
+
+    var parentOrganizationSetting = {
+        view: {
+            dblClickExpand: false
+        },
+        data: {
+            simpleData: {
+                enable: true
+            }
+        },
+        callback: {
+            onClick: function(e, treeId, treeNode) {
+                $("#ParentOrganizationName").val(treeNode.name);
+                $("#ParentOrganizationID").val(treeNode.id);
                 $("#ParentOrganizationName").trigger("hideTree");
             }
         }
     };
 
-    var leaderSetting = {
-        view: {
-            dblClickExpand: false
-        },
-        check: { enable: true, chkStyle: "radio", radioType: "level" },
-        data: {
-            simpleData: {
-                enable: true
-            }
-        },
-        callback: {
-            onClick: function (e, treeId, treeNode) {
-                var zTree = $.fn.zTree.getZTreeObj($("#LeaderName").attr("treeid"));
-                var nodes = zTree.getSelectedNodes();
-                if (nodes.length <= 0) return;
-                $("#LeaderName").val(nodes[0].name);
-                $("#Leader").val(nodes[0].id);
-                $("#LeaderName").trigger("hideTree");
-            }
-        }
-    };
+
 
     function ParentOrganizationNameBind() {
-        $("#ParentOrganizationID").val("");
-        $("#ParentOrganizationName").val("");
         $.ajax({
             type: "Post",
             datatype: "Json",
             url: "/Organization/ZtreeOrganization",
             success: function (data) {
                 $("#ParentOrganizationName").ztreeSelect(parentOrganizationSetting, data);
+            },
+            error: function (result) {
+                alert("加载部门树错误："+result.status);
             }
         });
     }
 
 
     function LeaderNameBind() {
-        $("#Leader").val("");
-        $("#ParentOrganizationName").val("");
         $.ajax({
             type: "Post",
             datatype: "Json",
             url: "/User/OrganizationZTreeUsers",
             success: function (data) {
                 $("#LeaderName").ztreeSelect(leaderSetting, data);
+            },
+            error: function (result) {
+                alert("加载用户树错误："+ result.status);
             }
         });
     }
 
     return {
-        //main function to initiate the module
         init: function () {
             ParentOrganizationNameBind();
             LeaderNameBind();

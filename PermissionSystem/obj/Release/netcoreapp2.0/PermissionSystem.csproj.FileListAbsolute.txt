@@ -18,3 +18,5 @@ D:\GitSource\OpenNetCore\YXL.OpenNetCore\PermissionSystem\obj\Release\netcoreapp
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\PermissionSystem\obj\Release\netcoreapp2.0\PermissionSystem.AssemblyInfo.cs
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\PermissionSystem\obj\Release\netcoreapp2.0\PermissionSystem.dll
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\PermissionSystem\obj\Release\netcoreapp2.0\PermissionSystem.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PermissionSystem\bin\Release\netcoreapp2.0\Core.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\PermissionSystem\bin\Release\netcoreapp2.0\Core.pdb

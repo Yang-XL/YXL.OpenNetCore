@@ -1,11 +1,13 @@
-﻿@model Sakura.AspNetCore.IPagedList<PermissionSystem.Models.Role>
+﻿@using PermissionSystem.Models
+@using Sakura.AspNetCore
+@model IPagedList<User>
 
 <h2 class="page-title"></h2>
 <div class="row">
     <div class="portlet box green">
         <div class="portlet-title">
             <div class="caption">
-                <i class="fa fa-gift"></i>角色列表
+                <i class="fa fa-gift"></i>用户列表
             </div>
             <div class="actions">
                 <a class="btn btn-default btn-sm" href="javascript:;">

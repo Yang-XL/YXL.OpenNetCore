@@ -83,7 +83,7 @@ namespace AdminSite.Controllers
         public async Task<IActionResult> Create(ApplicationViewModel model)
         {
             var entity = model.ToEntity();
-            entity.CreateDate = DateTime.UtcNow;
+            entity.CreateDate = DateTime.Now;
             await _applicationService.InsertAsync(entity);
             return RedirectToAction("Details", new { id = entity.ID });
         }

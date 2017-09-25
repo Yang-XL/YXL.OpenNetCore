@@ -1,0 +1,11 @@
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Mongo\bin\Release\netcoreapp2.0\Mongo.deps.json
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Mongo\bin\Release\netcoreapp2.0\Mongo.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Mongo\bin\Release\netcoreapp2.0\Mongo.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Mongo\bin\Release\netcoreapp2.0\Core.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Mongo\bin\Release\netcoreapp2.0\Core.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Mongo\obj\Release\netcoreapp2.0\Mongo.csprojResolveAssemblyReference.cache
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Mongo\obj\Release\netcoreapp2.0\Mongo.csproj.CoreCompileInputs.cache
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Mongo\obj\Release\netcoreapp2.0\Mongo.AssemblyInfoInputs.cache
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Mongo\obj\Release\netcoreapp2.0\Mongo.AssemblyInfo.cs
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Mongo\obj\Release\netcoreapp2.0\Mongo.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Mongo\obj\Release\netcoreapp2.0\Mongo.pdb

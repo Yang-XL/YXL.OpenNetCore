@@ -11,6 +11,7 @@
 using System;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Reflection;
 
 namespace Core.Repository.Specification
 {
@@ -94,12 +95,12 @@ namespace Core.Repository.Specification
         /// <returns></returns>
         public static ISpecification<T> StartWith<T>(this ISpecification<T> q, Expression<Func<T, string>> property, string value)
         {
-            value = value.Trim();
-            if (!string.IsNullOrEmpty(value))
+            if (!string.IsNullOrWhiteSpace(value))
             {
+                Type[] types = {typeof(string)};
                 var expression = Expression.Lambda<Func<T, bool>>(
-                    Expression.Call(property.Body, typeof(string).GetMethod("StartsWith"),
-                        Expression.Constant(value)), property.Parameters);
+                    Expression.Call(property.Body, typeof(string).GetMethod("StartsWith", types),
+                        Expression.Constant(value.Trim())), property.Parameters);
                 q.Predicate = q.Predicate.And(expression);
             }
             return q;

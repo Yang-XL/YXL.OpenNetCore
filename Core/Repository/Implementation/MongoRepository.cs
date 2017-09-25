@@ -404,9 +404,25 @@ namespace Core.Repository.MongoDB
             return await SingleAsync(specification.Predicate, cancellationToken);
         }
 
+
+
         #endregion
 
         #region Paged
+
+        public IPagedList<TEntity> GetPaged<TProperty>(int pageIndex, int pageSize, Func<TEntity, TProperty> sortBy, bool isDesc = false)
+        {
+            if(isDesc)
+                return _collection.AsQueryable().OrderByDescending(sortBy).ToPagedList(pageSize, pageIndex);
+            return _collection.AsQueryable().OrderBy(sortBy).ToPagedList(pageSize, pageIndex);
+        }
+
+        public Task<IPagedList<TEntity>> GetPagedAsync<TProperty>(int pageIndex, int pageSize, Func<TEntity, TProperty> sortBy, bool isDesc = false,
+            CancellationToken cancellationToken = new CancellationToken())
+        {
+            return Task.Run(() => GetPaged(pageIndex, pageSize, sortBy, isDesc), cancellationToken);
+        }
+
 
         /// <summary>
         /// </summary>
@@ -415,10 +431,12 @@ namespace Core.Repository.MongoDB
         /// <param name="pageSize">每页数量</param>
         /// <param name="keySelector">排序</param>
         /// <param name="predicate">过滤条件</param>
+        /// <param name="isDesc"></param>
         /// <returns></returns>
-        public IPagedList<TEntity> GetPaged<TProperty>(int pageIndex, int pageSize,
-            Func<TEntity, TProperty> keySelector, Expression<Func<TEntity, bool>> predicate)
+        public IPagedList<TEntity> GetPaged<TProperty>(int pageIndex, int pageSize, Func<TEntity, TProperty> keySelector, Expression<Func<TEntity, bool>> predicate, bool isDesc = false)
         {
+            if(isDesc)
+                return _collection.AsQueryable().Where(predicate).OrderByDescending(keySelector).ToPagedList(pageSize, pageIndex);
             return _collection.AsQueryable().Where(predicate).OrderBy(keySelector).ToPagedList(pageSize, pageIndex);
         }
 
@@ -429,13 +447,12 @@ namespace Core.Repository.MongoDB
         /// <param name="pageSize">每页数量</param>
         /// <param name="keySelector">排序</param>
         /// <param name="predicate">过滤条件</param>
+        /// <param name="isDesc"></param>
         /// <param name="cancellationToken">异步取消凭据</param>
         /// <returns></returns>
-        public Task<IPagedList<TEntity>> GetPagedAsync<TProperty>(int pageIndex, int pageSize,
-            Func<TEntity, TProperty> keySelector, Expression<Func<TEntity, bool>> predicate,
-            CancellationToken cancellationToken = new CancellationToken())
+        public Task<IPagedList<TEntity>> GetPagedAsync<TProperty>(int pageIndex, int pageSize, Func<TEntity, TProperty> keySelector, Expression<Func<TEntity, bool>> predicate, bool isDesc = false, CancellationToken cancellationToken = default(CancellationToken))
         {
-            return Task.Run(() => GetPaged(pageIndex, pageSize, keySelector, predicate), cancellationToken);
+            return Task.Run(() => GetPaged(pageIndex, pageSize, keySelector, predicate, isDesc), cancellationToken);
         }
 
         /// <summary>
@@ -445,11 +462,12 @@ namespace Core.Repository.MongoDB
         /// <param name="pageSize">每页数量</param>
         /// <param name="sortBy"></param>
         /// <param name="specification">过滤条件组合</param>
+        /// <param name="isDesc"></param>
         /// <returns></returns>
         public IPagedList<TEntity> GetPaged<TProperty>(int pageIndex, int pageSize, Func<TEntity, TProperty> sortBy,
-            ISpecification<TEntity> specification)
+            ISpecification<TEntity> specification, bool isDesc = false)
         {
-            return GetPaged(pageIndex, pageSize, sortBy, specification.Predicate);
+            return GetPaged(pageIndex, pageSize, sortBy, specification.Predicate, isDesc);
         }
 
         /// <summary>
@@ -459,13 +477,14 @@ namespace Core.Repository.MongoDB
         /// <param name="pageSize">每页数量</param>
         /// <param name="sortBy"></param>
         /// <param name="specification">过滤条件组合</param>
+        /// <param name="isDesc"></param>
         /// <param name="cancellationToken">异步取消凭据</param>
         /// <returns></returns>
         public Task<IPagedList<TEntity>> GetPagedAsync<TProperty>(int pageIndex, int pageSize,
-            Func<TEntity, TProperty> sortBy, ISpecification<TEntity> specification,
+            Func<TEntity, TProperty> sortBy, ISpecification<TEntity> specification, bool isDesc = false,
             CancellationToken cancellationToken = new CancellationToken())
         {
-            return GetPagedAsync(pageIndex, pageSize, sortBy, specification.Predicate, cancellationToken);
+            return GetPagedAsync(pageIndex, pageSize, sortBy, specification.Predicate, isDesc,cancellationToken);
         }
 
         #endregion

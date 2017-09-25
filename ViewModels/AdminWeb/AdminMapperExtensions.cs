@@ -5,6 +5,7 @@ using ViewModels.AdminWeb.Application;
 using ViewModels.AdminWeb.Nav;
 using ViewModels.AdminWeb.Organization;
 using ViewModels.AdminWeb.Roles;
+using ViewModels.AdminWeb.User;
 using ViewModels.Mapper;
 
 namespace ViewModels.AdminWeb
@@ -75,6 +76,25 @@ namespace ViewModels.AdminWeb
         {
             return entity.MapTo<PermissionSystem.Models.Organization, OrganizationViewModel>();
         }
+        #endregion
+
+        #region User
+
+        public static PermissionSystem.Models.User ToEntity(this UserViewModel model)
+        {
+            return model.MapTo<UserViewModel, PermissionSystem.Models.User>();
+        }
+
+        public static PermissionSystem.Models.User ToEntity(this UserViewModel model, PermissionSystem.Models.User entity)
+        {
+            return model.MapTo(entity);
+        }
+
+        public static UserViewModel ToModel(this PermissionSystem.Models.User entity)
+        {
+            return entity.MapTo<PermissionSystem.Models.User, UserViewModel>();
+        }
+
         #endregion
 
     }

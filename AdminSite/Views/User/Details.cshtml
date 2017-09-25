@@ -1,13 +1,13 @@
-﻿@model ViewModels.AdminWeb.Roles.RoleViewModel
+﻿@model ViewModels.AdminWeb.User.UserViewModel
 
 <h3 class="page-title"></h3>
-<form asp-action="Remove" asp-route-id="@Model.ID">
+<form asp-action="Remove" class="form-horizontal" asp-route-id="@Model.ID">
     @Html.AntiForgeryToken()
     <div class="row">
         <div class="portlet box green">
             <div class="portlet-title">
                 <div class="caption">
-                    <i class="fa fa-gift"></i>角色详细信息
+                    <i class="fa fa-gift"></i>用户详细信息
                 </div>
                 <div class="actions">
                     <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#removeMenu">
@@ -23,20 +23,21 @@
             </div>
             <div class="portlet-body form">
                 <div class="form-body">
+                    <h4 class="form-section">基本信息</h4>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 @Html.LabelFor(a => a.Name, new {@class = "control-label col-md-3"})
                                 <div class="col-md-9">
-                                    <p class="form-control-static"> @Html.DisplayFor(m => m.Name) </p>
+                                    <p class="form-control-static"> @Model.Name </p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                @Html.LabelFor(a => a.Code, new {@class = "control-label col-md-3"})
+                                @Html.LabelFor(a => a.OrganizationName, new {@class = "control-label col-md-3"})
                                 <div class="col-md-9">
-                                    <p class="form-control-static"> @Html.DisplayFor(m => m.Code) </p>
+                                    <p class="form-control-static">@Model.OrganizationName</p>
                                 </div>
                             </div>
                         </div>
@@ -44,17 +45,128 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                @Html.LabelFor(a => a.ShowIndex, new {@class = "control-label col-md-3"})
+                                @Html.LabelFor(a => a.LoginName, new {@class = "control-label col-md-3"})
                                 <div class="col-md-9">
-                                    <p class="form-control-static"> @Html.DisplayFor(m => m.ShowIndex) </p>
+                                    <p class="form-control-static">@Model.LoginName</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                @Html.LabelFor(a => a.Description, new {@class = "control-label col-md-3"})
+                                @Html.LabelFor(a => a.Password, new {@class = "control-label col-md-3"})
                                 <div class="col-md-9">
-                                    <p class="form-control-static"> @Html.DisplayFor(m => m.Description) </p>
+                                    <p class="form-control-static">@Model.Password</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.Email, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9">
+                                    <p class="form-control-static">@Model.Email</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.EmailConfirmed, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9">
+                                    @if (Model.EmailConfirmed)
+                                    {
+                                        <p class="form-control-static" style="color: green">已确认</p>
+                                    }
+                                    else
+                                    {
+                                        <p class="form-control-static" style="color: red">未确认</p>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.MobilePhone, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9">
+                                    <p class="form-control-static">@Model.MobilePhone</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.MobilePhoneConfirmed, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9">
+                                    @if (Model.MobilePhoneConfirmed)
+                                    {
+                                        <p class="form-control-static" style="color: green">已确认</p>
+                                    }
+                                    else
+                                    {
+                                        <p class="form-control-static" style="color: red">未确认</p>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.LockoutEnd, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9">
+                                    <p class="form-control-static">@Model.LockoutEnd</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.LockoutEnabled, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9">
+                                    @if (Model.LockoutEnabled)
+                                    {
+                                        <p class="form-control-static" style="color: red">锁定</p>
+                                    }
+                                    else
+                                    {
+                                        <p class="form-control-static" style="color: green">正常</p>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.CreateDate, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9">
+                                    <p class="form-control-static">@Model.CreateDate</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.UpdateDate, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9">
+                                    <p class="form-control-static">@Model.UpdateDate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.AccessFailedCount, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9">
+                                    @if (Model.AccessFailedCount>10)
+                                    {
+                                        <p class="form-control-static" style="color: red">@Model.AccessFailedCount</p>
+                                    }
+                                    else
+                                    {
+                                        <p class="form-control-static" >@Model.AccessFailedCount</p>
+                                    }
                                 </div>
                             </div>
                         </div>

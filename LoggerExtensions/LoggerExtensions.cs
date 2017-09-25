@@ -1,15 +1,16 @@
 ﻿using System;
 using Microsoft.Extensions.Logging;
+using Mongo.Models;
 using PermissionSystem.Models;
 
 namespace LoggerExtensions
 {
     public static class LoggerExtensions
     {
-        private static readonly Func<Log, Exception, string> _messageFormatter = MessageFormatter;
+        private static readonly Func<PermissionSystemLogs, Exception, string> _messageFormatter = MessageFormatter;
 
-        public static void Log(this ILogger logger, LogLevel logLevel, EventId eventId, Log log, Exception e,
-            Func<Log, Exception, string> formatter)
+        public static void Log(this ILogger logger, LogLevel logLevel, EventId eventId, PermissionSystemLogs log, Exception e,
+            Func<PermissionSystemLogs, Exception, string> formatter)
         {
             if (logger == null)
                 throw new ArgumentNullException(nameof(logger));
@@ -18,12 +19,11 @@ namespace LoggerExtensions
 
 
         public static void Log(this ILogger logger, LogLevel logLevel, EventId eventId, string message, Exception e,
-            Func<Log, Exception, string> formatter, string keyWord = "", string shortMessage = "")
+            Func<PermissionSystemLogs, Exception, string> formatter, string keyWord = "", string shortMessage = "")
         {
-            var log = new Log
+            var log = new PermissionSystemLogs
             {
-                ID = Guid.NewGuid(),
-                CreateDate = DateTime.UtcNow,
+                CreateDate = DateTime.Now,
                 FullMessage = message,
                 ShortMessage = shortMessage,
                 KeyWord = keyWord,
@@ -33,7 +33,7 @@ namespace LoggerExtensions
         }
 
 
-        private static string MessageFormatter(Log state, Exception error)
+        private static string MessageFormatter(PermissionSystemLogs state, Exception error)
         {
             return state.FullMessage;
         }
@@ -41,7 +41,7 @@ namespace LoggerExtensions
 
         #region Debug
 
-        public static void Debug(this ILogger logger, Log log)
+        public static void Debug(this ILogger logger, PermissionSystemLogs log)
         {
             Log(logger, LogLevel.Debug, 0, log, null, MessageFormatter);
         }
@@ -55,7 +55,7 @@ namespace LoggerExtensions
 
         #region Critical
 
-        public static void Critical(this ILogger logger, Log log)
+        public static void Critical(this ILogger logger, PermissionSystemLogs log)
         {
             Log(logger, LogLevel.Critical, 0, log, null, MessageFormatter);
         }
@@ -70,7 +70,7 @@ namespace LoggerExtensions
 
         #region Error
 
-        public static void Error(this ILogger logger, Log log)
+        public static void Error(this ILogger logger, PermissionSystemLogs log)
         {
             Log(logger, LogLevel.Error, 0, log, null, MessageFormatter);
         }
@@ -79,12 +79,15 @@ namespace LoggerExtensions
         {
             Log(logger, LogLevel.Error, 0, message, null, MessageFormatter, keyWord, shortMessage);
         }
-
+        public static void Error(this ILogger logger, Exception e, string keyWord = "")
+        {
+            Log(logger, LogLevel.Error, 0, e.ToString(), null, MessageFormatter, keyWord, e.Message);
+        }
         #endregion
 
         #region Information
 
-        public static void Information(this ILogger logger, Log log)
+        public static void Information(this ILogger logger, PermissionSystemLogs log)
         {
             Log(logger, LogLevel.Information, 0, log, null, MessageFormatter);
         }
@@ -99,7 +102,7 @@ namespace LoggerExtensions
 
         #region Warning
 
-        public static void Warning(this ILogger logger, Log log)
+        public static void Warning(this ILogger logger, PermissionSystemLogs log)
         {
             Log(logger, LogLevel.Warning, 0, log, null, MessageFormatter);
         }
@@ -114,7 +117,7 @@ namespace LoggerExtensions
 
         #region Trace
 
-        public static void Trace(this ILogger logger, Log log)
+        public static void Trace(this ILogger logger, PermissionSystemLogs log)
         {
             Log(logger, LogLevel.Trace, 0, log, null, MessageFormatter);
         }

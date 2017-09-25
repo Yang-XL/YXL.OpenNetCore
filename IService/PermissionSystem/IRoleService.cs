@@ -9,12 +9,15 @@
 // ===================================================================
 
 using System;
+using System.Threading.Tasks;
 using Core.Repository;
 using PermissionSystem.Models;
+using ViewModels.AdminWeb.Roles;
+
 namespace IService
 {
     public interface IRoleService : IEfRepository<Role>
     {
-        
+        Task SaveRole(RoleViewModel model);
     }
 }

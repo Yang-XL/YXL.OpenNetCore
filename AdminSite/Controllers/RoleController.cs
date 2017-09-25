@@ -1,14 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using IService;
+using LoggerExtensions;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using ViewModels.AdminWeb;
-using ViewModels.AdminWeb.Application;
 using ViewModels.AdminWeb.Roles;
 using ViewModels.Options;
 
@@ -16,16 +16,18 @@ namespace AdminSite.Controllers
 {
     public class RoleController : BaseAdminController
     {
-        private readonly IRoleService _roleService;
-        private readonly IMapper _mapper;
-        private readonly AdminSiteOption _setting;
         private readonly ILogger _logger;
+        private readonly IMapper _mapper;
+        private readonly IRoleService _roleService;
+        private readonly IUserRoleJurisdictionService _userRoleJurisdictionService;
+        private readonly AdminSiteOption _setting;
 
         public RoleController(IRoleService roleService, IOptions<AdminSiteOption> setting,
-            IMapper mapper, ILoggerFactory loggerFactory)
+            IMapper mapper, ILoggerFactory loggerFactory, IUserRoleJurisdictionService userRoleJurisdictionService)
         {
             _roleService = roleService;
             _mapper = mapper;
+            _userRoleJurisdictionService = userRoleJurisdictionService;
             _logger = loggerFactory.CreateLogger<RoleController>();
             _setting = setting.Value;
         }
@@ -40,7 +42,8 @@ namespace AdminSite.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Index(string queryString, int page = 1)
         {
-            var app = await _roleService.GetPagedAsync(page, _setting.PageSize, a => a.ShowIndex,b => b.Name.Contains(queryString) || b.PyCode.Contains(queryString));
+            var app = await _roleService.GetPagedAsync(page, _setting.PageSize, a => a.ShowIndex,
+                b => b.Name.Contains(queryString) || b.PyCode.Contains(queryString));
             return View(app);
         }
 
@@ -56,6 +59,9 @@ namespace AdminSite.Controllers
         {
             var enitty = await _roleService.SingleAsync(id);
             var model = enitty.ToModel();
+            var roleMenu = (from n in _userRoleJurisdictionService.Query()
+                select n.ID + "|" + n.ApplicationID).ToList();
+            model.RoleMenus = roleMenu;
             return View(model);
         }
 
@@ -63,10 +69,18 @@ namespace AdminSite.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Modify(RoleViewModel model)
         {
-            var entity = await _roleService.SingleAsync(model.ID);
-            entity = model.ToEntity(entity);
-            await _roleService.UpdateAsync(entity);
-            return RedirectToAction("Details", new { id = entity.ID });
+            try
+            {
+                model.CreateDate = DateTime.Now;
+                await _roleService.SaveRole(model);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e, "修改角色");
+                ModelState.TryAddModelError(nameof(model.CustomizeErrorMessage), e.Message);
+                return View(model);
+            }
+            return RedirectToAction("Details", new {id = model.ID});
         }
 
         public IActionResult Create()
@@ -83,10 +97,18 @@ namespace AdminSite.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(RoleViewModel model)
         {
-            var entity = model.ToEntity();
-            entity.CreateDate = DateTime.UtcNow;
-           await _roleService.InsertAsync(entity);
-            return RedirectToAction("Details", new{ id= entity.ID });
+            try
+            {
+                model.CreateDate = DateTime.Now;
+                await _roleService.SaveRole(model);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e, "添加角色");
+                ModelState.TryAddModelError(nameof(model.CustomizeErrorMessage), e.Message);
+                return View(model);
+            }
+            return RedirectToAction("Details", new {id = model.ID});
         }
 
         public async Task<IActionResult> Remove(Guid id)
@@ -102,5 +124,18 @@ namespace AdminSite.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        #region JsonData
+
+        [HttpPost]
+        public async Task<IActionResult> QueryJson()
+        {
+            var list = _roleService.Queryable();
+
+            var models = await (from n in list select new {id = n.ID, text = n.Name}).ToListAsync();
+            return Json(models);
+        }
+
+        #endregion
     }
 }

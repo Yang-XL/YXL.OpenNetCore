@@ -32,3 +32,5 @@ D:\GitSource\OpenNetCore\YXL.OpenNetCore\Service\obj\Release\netcoreapp2.0\Servi
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\Service\obj\Release\netcoreapp2.0\Service.AssemblyInfo.cs
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\Service\obj\Release\netcoreapp2.0\Service.dll
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\Service\obj\Release\netcoreapp2.0\Service.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Service\bin\Release\netcoreapp2.0\Mongo.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Service\bin\Release\netcoreapp2.0\Mongo.pdb

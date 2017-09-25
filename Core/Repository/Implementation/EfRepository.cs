@@ -276,7 +276,7 @@ namespace Core.Repository.Implementation
 
         public async Task<TEntity> SingleAsync(Guid id, CancellationToken cancellationToken = new CancellationToken())
         {
-            return await _dbSet.FindAsync(id, cancellationToken);
+            return await _dbSet.FindAsync(new object[] {id}, cancellationToken);
         }
 
         public TEntity Single(Expression<Func<TEntity, bool>> predicate)
@@ -305,30 +305,43 @@ namespace Core.Repository.Implementation
 
         #region Paged
 
-        public IPagedList<TEntity> GetPaged<TProperty>(int pageIndex, int pageSize, Func<TEntity, TProperty> sortKey,
-            Expression<Func<TEntity, bool>> predicate)
+
+        public IPagedList<TEntity> GetPaged<TProperty>(int pageIndex, int pageSize, Func<TEntity, TProperty> sortBy, bool isDesc = false)
         {
+            if(isDesc)
+                return _dbSet.OrderByDescending(sortBy).ToPagedList(pageSize, pageIndex);
+            return _dbSet.OrderBy(sortBy).ToPagedList(pageSize, pageIndex);
+        }
+
+        public async Task<IPagedList<TEntity>> GetPagedAsync<TProperty>(int pageIndex, int pageSize, Func<TEntity, TProperty> sortBy, bool isDesc = false,
+            CancellationToken cancellationToken = new CancellationToken())
+        {
+            return await  Task.Run(()=> GetPaged(pageIndex, pageSize, sortBy, isDesc), cancellationToken);
+        }
+
+        public IPagedList<TEntity> GetPaged<TProperty>(int pageIndex, int pageSize, Func<TEntity, TProperty> sortKey, Expression<Func<TEntity, bool>> predicate, bool isDesc = false)
+        {
+            if(isDesc)
+                return _dbSet.Where(predicate).OrderByDescending(sortKey).ToPagedList(pageSize, pageIndex);
             return _dbSet.Where(predicate).OrderBy(sortKey).ToPagedList(pageSize, pageIndex);
         }
 
-        public Task<IPagedList<TEntity>> GetPagedAsync<TProperty>(int pageIndex, int pageSize,
-            Func<TEntity, TProperty> sortKey, Expression<Func<TEntity, bool>> predicate,
-            CancellationToken cancellationToken = default(CancellationToken))
+        public Task<IPagedList<TEntity>> GetPagedAsync<TProperty>(int pageIndex, int pageSize, Func<TEntity, TProperty> sortKey, Expression<Func<TEntity, bool>> predicate, bool isDesc = false, CancellationToken cancellationToken = default(CancellationToken))
         {
-            return Task.Run(() => GetPaged(pageIndex, pageSize, sortKey, predicate), cancellationToken);
+            return Task.Run(() => GetPaged(pageIndex, pageSize, sortKey, predicate, isDesc), cancellationToken);
         }
 
         public IPagedList<TEntity> GetPaged<TProperty>(int pageIndex, int pageSize, Func<TEntity, TProperty> sortBy,
-            ISpecification<TEntity> specification)
+            ISpecification<TEntity> specification, bool isDesc = false)
         {
-            return GetPaged(pageIndex, pageSize, sortBy, specification.Predicate);
+            return GetPaged(pageIndex, pageSize, sortBy, specification.Predicate, isDesc);
         }
 
         public Task<IPagedList<TEntity>> GetPagedAsync<TProperty>(int pageIndex, int pageSize,
-            Func<TEntity, TProperty> sortBy, ISpecification<TEntity> specification,
+            Func<TEntity, TProperty> sortBy, ISpecification<TEntity> specification, bool isDesc = false,
             CancellationToken cancellationToken = new CancellationToken())
         {
-            return GetPagedAsync(pageIndex, pageSize, sortBy, specification.Predicate, cancellationToken);
+            return GetPagedAsync(pageIndex, pageSize, sortBy, specification.Predicate, isDesc, cancellationToken);
         }
 
         #endregion

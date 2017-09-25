@@ -15,3 +15,5 @@ D:\GitSource\OpenNetCore\YXL.OpenNetCore\LoggerExtensions\obj\Release\netcoreapp
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\LoggerExtensions\obj\Release\netcoreapp2.0\LoggerExtensions.AssemblyInfo.cs
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\LoggerExtensions\obj\Release\netcoreapp2.0\LoggerExtensions.dll
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\LoggerExtensions\obj\Release\netcoreapp2.0\LoggerExtensions.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\LoggerExtensions\bin\Release\netcoreapp2.0\Mongo.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\LoggerExtensions\bin\Release\netcoreapp2.0\Mongo.pdb

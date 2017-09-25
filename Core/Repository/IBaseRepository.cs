@@ -186,10 +186,32 @@ namespace Core.Repository
         /// <param name="pageIndex">当前页</param>
         /// <param name="pageSize">每页条数</param>
         /// <param name="sortBy">排序</param>
+        /// <param name="isDesc"></param>
+        /// <returns></returns>
+        IPagedList<T> GetPaged<TProperty>(int pageIndex, int pageSize, Func<T, TProperty> sortBy,bool isDesc = false);
+
+        /// <summary>
+        /// </summary>
+        /// <typeparam name="TProperty">属性</typeparam>
+        /// <param name="pageIndex">当前页</param>
+        /// <param name="pageSize">每页数量</param>
+        /// <param name="sortBy">排序</param>
+        /// <param name="isDesc"></param>
+        /// <param name="cancellationToken">异步取消凭据</param>
+        /// <returns></returns>
+        Task<IPagedList<T>> GetPagedAsync<TProperty>(int pageIndex, int pageSize, Func<T, TProperty> sortBy, bool isDesc = false, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// </summary>
+        /// <typeparam name="TProperty">属性</typeparam>
+        /// <param name="pageIndex">当前页</param>
+        /// <param name="pageSize">每页条数</param>
+        /// <param name="sortBy">排序</param>
         /// <param name="predicate">条件</param>
+        /// <param name="isDesc"></param>
         /// <returns></returns>
         IPagedList<T> GetPaged<TProperty>(int pageIndex, int pageSize, Func<T, TProperty> sortBy,
-            Expression<Func<T, bool>> predicate);
+            Expression<Func<T, bool>> predicate, bool isDesc = false);
 
         /// <summary>
         /// </summary>
@@ -198,10 +220,11 @@ namespace Core.Repository
         /// <param name="pageSize">每页数量</param>
         /// <param name="sortBy">排序</param>
         /// <param name="predicate">条件</param>
+        /// <param name="isDesc"></param>
         /// <param name="cancellationToken">异步取消凭据</param>
         /// <returns></returns>
         Task<IPagedList<T>> GetPagedAsync<TProperty>(int pageIndex, int pageSize, Func<T, TProperty> sortBy,
-            Expression<Func<T, bool>> predicate, CancellationToken cancellationToken = default(CancellationToken));
+            Expression<Func<T, bool>> predicate, bool isDesc = false, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// </summary>
@@ -210,9 +233,10 @@ namespace Core.Repository
         /// <param name="pageSize">每页条数</param>
         /// <param name="sortBy">排序</param>
         /// <param name="specification">组合查询条件</param>
+        /// <param name="isDesc"></param>
         /// <returns></returns>
         IPagedList<T> GetPaged<TProperty>(int pageIndex, int pageSize, Func<T, TProperty> sortBy,
-            ISpecification<T> specification);
+            ISpecification<T> specification, bool isDesc = false);
 
         /// <summary>
         /// </summary>
@@ -221,10 +245,11 @@ namespace Core.Repository
         /// <param name="pageSize">每页条数</param>
         /// <param name="sortBy">排序</param>
         /// <param name="specification">组合查询条件</param>
+        /// <param name="isDesc"></param>
         /// <param name="cancellationToken">异步取消凭据</param>
         /// <returns></returns>
         Task<IPagedList<T>> GetPagedAsync<TProperty>(int pageIndex, int pageSize, Func<T, TProperty> sortBy,
-            ISpecification<T> specification, CancellationToken cancellationToken = default(CancellationToken));
+            ISpecification<T> specification, bool isDesc = false, CancellationToken cancellationToken = default(CancellationToken));
 
         #endregion
     }

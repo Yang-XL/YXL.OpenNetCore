@@ -1,50 +1,90 @@
 ﻿var organizationCreate = function () {
 
-    var setting = {
+
+
+    var leaderSetting = {
         view: {
             dblClickExpand: false
         },
-        check: { enable: true, chkStyle: "radio", radioType: "level" },
+        check: {
+            enable: true,
+            chkStyle: "radio"
+        },
         data: {
             simpleData: {
                 enable: true
             }
         },
         callback: {
-            onClick: onClick
+            beforeClick: function (treeId, treeNode) {
+                return !treeNode.chkDisabled;
+            }, onClick: function (e, treeId, treeNode) {
+                $("#LeaderName").val(treeNode.name);
+                $("#Leader").val(treeNode.id);
+                $("#LeaderName").trigger("hideTree");
+            }
         }
     };
-
-    function onClick(e, treeId, treeNode) {
-        var zTree = $.fn.zTree.getZTreeObj($("#ParentMenuName").attr("treeid"));
-       var nodes = zTree.getSelectedNodes();
-       if (nodes.length <= 0) return ;
-        $("#ParentMenuName").val(nodes[0].name);
-        $("#ParentID").val(nodes[0].id);
-        $("#ParentMenuName").trigger("hideTree");
-    }
-
-    function ParentMenuNameBind() {
-        $("#ParentID").val("");
-        $("#ParentMenuName").val("");
+    function LeaderNameBind() {
+        $("#Leader").val("");
+        $("#LeaderName").val("");
         $.ajax({
             type: "Post",
             datatype: "Json",
-            url: "/Menu/QueryJson",
-            data: { applicationId: $("#ApplicationID").val(),isNav:true },
+            contentType: "application/json;charset=utf-8", 
+            url: "/User/OrganizationZTreeUsers",
             success: function (data) {
-                    $("#ParentMenuName").ztreeSelect(setting, data);
+                $("#LeaderName").ztreeSelect(leaderSetting, data);
+            },
+            error: function (result) {
+                alert(result.status + "：" + result.statusText);
+            }
+        });
+    }
+
+
+    var parentOrganizationSetting = {
+        view: {
+            dblClickExpand: false
+        },
+        data: {
+            simpleData: {
+                enable: true
+            }
+        },
+        callback: {
+            onClick: function(e, treeId, treeNode) {
+                $("#ParentOrganizationName").val(treeNode.name);
+                $("#ParentOrganizationID").val(treeNode.id);
+                $("#ParentOrganizationName").trigger("hideTree");
+            }
+        }
+    };
+    function ParentOrganizationNameBind() {
+        $("#ParentOrganizationID").val("");
+        $("#ParentOrganizationName").val("");
+        $.ajax({
+            type: "Post",
+            datatype: "Json",
+            contentType: "application/json;charset=utf-8", 
+            url: "/Organization/ZtreeOrganization",
+            success: function (data) {
+                $("#ParentOrganizationName").ztreeSelect(parentOrganizationSetting, data);
+            },
+            error: function (result) {
+                alert(result.status + "：" + result.statusText);
             }
         });
     }
 
 
 
+
     return {
         //main function to initiate the module
         init: function () {
-            ParentMenuNameBind();
-          
+            LeaderNameBind();
+            ParentOrganizationNameBind();
         }
     };
 }();

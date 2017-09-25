@@ -23,3 +23,5 @@ D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\obj\Release\netcoreapp2.0\Adm
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\obj\Release\netcoreapp2.0\AdminSite.AssemblyInfo.cs
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\obj\Release\netcoreapp2.0\AdminSite.dll
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\obj\Release\netcoreapp2.0\AdminSite.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\bin\Release\netcoreapp2.0\Mongo.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\bin\Release\netcoreapp2.0\Mongo.pdb

@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayCenter", "PayCenter\PayC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{AB913E34-CE9A-48EB-8FD3-9A4996EA4ABB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mongo", "Mongo\Mongo.csproj", "{72448E39-80A7-446C-908A-1949417BD697}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mongo", "Mongo\Mongo.csproj", "{72448E39-80A7-446C-908A-1949417BD697}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentitySite", "IdentitySite\IdentitySite.csproj", "{91BE6797-8075-46C0-B665-B5C11C26584C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +81,10 @@ Global
 		{72448E39-80A7-446C-908A-1949417BD697}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72448E39-80A7-446C-908A-1949417BD697}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72448E39-80A7-446C-908A-1949417BD697}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91BE6797-8075-46C0-B665-B5C11C26584C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91BE6797-8075-46C0-B665-B5C11C26584C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91BE6797-8075-46C0-B665-B5C11C26584C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91BE6797-8075-46C0-B665-B5C11C26584C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

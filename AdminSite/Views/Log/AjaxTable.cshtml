@@ -3,14 +3,15 @@
 @using Sakura.AspNetCore
 @using ViewModels.Common
 @model IPagedList<PermissionSystemLogs>
-<table class="table table-bordered table-striped table-condensed flip-content table-hover">
+<table class="table table-bordered table-striped table-condensed  table-hover">
     <thead class="flip-content">
     <tr>
+        <th> 操作 </th>
         <th style="min-width: 80px">日志等级</th>
         <th>关键字</th>
         <th> 简短描述 </th>
-        <th> 创建时间 </th>
-        <th> 操作 </th>
+        <th style="min-width: 120px"> 创建时间 </th>
+
     </tr>
     </thead>
     <tbody>
@@ -19,15 +20,15 @@
         foreach (var log in Model)
         {
             <tr>
-                <td> @Enum.Parse(typeof(LogLevel),log.LogLeve.ToString())</td>
-                <td> @log.KeyWord </td>
-                <td> @log.ShortMessage </td>
-                <td> @log.CreateDate</td>
                 <td>
                     <a onclick="loadDetials('@log.Id')"    class="btn btn-link btn-sm font-green-turquoise" title="详细信息">
                         <i class="fa fa-eye"></i>
                     </a>
                 </td>
+                <td> @Enum.Parse(typeof(LogLevel), log.LogLeve.ToString())</td>
+                <td> @log.KeyWord </td>
+                <td> @log.ShortMessage </td>
+                <td> @log.CreateDate</td>
             </tr>
         }
     }

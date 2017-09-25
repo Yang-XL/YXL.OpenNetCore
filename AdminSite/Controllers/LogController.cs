@@ -25,7 +25,7 @@ namespace AdminSite.Controllers
 
         public async Task<IActionResult> Index(int page = 1)
         {
-          var model = await   _logService.GetPagedAsync(page, _setting.PageSize, a => a.CreateDate, b => true);
+          var model = await   _logService.GetPagedAsync(page, _setting.PageSize, a => a.CreateDate,true);
             return View(model);
         }
 
@@ -34,7 +34,7 @@ namespace AdminSite.Controllers
         public async Task<IActionResult> Index( string queryString, int queryLogLevel, int page = 1)
         {
             var query = SpecificationBuilder.Create<PermissionSystemLogs>();
-
+         
             if (!string.IsNullOrEmpty(queryString))
             {
                 query.StartWith(a => a.KeyWord, queryString);
@@ -44,7 +44,7 @@ namespace AdminSite.Controllers
             {
                 query.Equals(a => a.LogLeve, queryLogLevel);
             }
-            var model =  await _logService.GetPagedAsync(page, _setting.PageSize, a => a.CreateDate, query);
+            var model =  await _logService.GetPagedAsync(page, _setting.PageSize, a => a.CreateDate, query,true);
             return PartialView("AjaxTable", model);
         }
 

@@ -54,7 +54,8 @@ namespace AdminSite
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IOrganizationService, OrganizationService>();
             services.AddScoped<IUserRoleService, UserRoleService>();
-            services.AddScoped<ILogService, LogService>();
+            services.AddScoped<IUserRoleJurisdictionService, UserRoleJurisdictionService>();
+            services.AddScoped<ILogService, LogService>(); 
             #endregion
 
             #region Other

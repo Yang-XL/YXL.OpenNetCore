@@ -1,7 +1,36 @@
-﻿
-@{
-    ViewData["Title"] = "Modify";
+﻿@model  ViewModels.AdminWeb.Organization.OrganizationViewModel
+
+@addTagHelper Controls.SelectZtree.*, ZTreeSelectTag
+
+<h3 class="page-title"></h3>
+<div class="row">
+    <form class="horizontal-form" asp-action="Modify" method="post">
+        <div class="portlet box green">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-gift"></i>修改组织架构
+                </div>
+                <div class="actions">
+                    <button class="btn btn-default btn-sm" type="submit">
+                        <i class="fa fa-save"></i> 保存
+                    </button>
+                    <a class="btn btn-default btn-sm" asp-action="Index">
+                        <i class="fa fa-arrow-left"></i> 返回列表
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body form">
+                @Html.Partial("CreateOrModify", Model)
+            </div>
+        </div>
+    </form>
+</div>
+
+@section style_page{
+    <link href="/lib/ztree.3.5.26/styles/metroStyle/metroStyle.css" rel="stylesheet" />
 }
-
-<h2>Modify</h2>
-
+@section scripts_plugins{
+    <script src="/lib/ztree.3.5.26/jquery.ztree.core.js"></script>
+    <script src="/lib/ztree.3.5.26/jquery.ztree.intput.select.js"></script>
+    <script src="/pages/organization/organization.modify.js?v=1.0.0.0"></script>
+}

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using IdentityServer4.Extensions;
 using IService;
 using LoggerExtensions;
 using Microsoft.AspNetCore.Mvc;
@@ -19,19 +20,21 @@ namespace AdminSite.Controllers
         private readonly ILogger _logger;
         private readonly IMenuService _menuService;
         private readonly AdminSiteOption _setting;
+        private readonly IUserRoleJurisdictionService _roleJurisdictionService;
 
         public MenuController(IApplicationService applicationService, IMenuService menuService,
-            IOptions<AdminSiteOption> setting, ILogger<MenuController> logger)
+            IOptions<AdminSiteOption> setting, ILogger<MenuController> logger,
+            IUserRoleJurisdictionService roleJurisdictionService)
         {
             _applicationService = applicationService;
             _menuService = menuService;
             _logger = logger;
+            _roleJurisdictionService = roleJurisdictionService;
             _setting = setting.Value;
         }
 
         public async Task<IActionResult> Index(int page = 1)
         {
-            _logger.Debug("访问Index");
             var model = await _menuService.PageMenuViewModel(_setting.PageSize, page, "");
             return View(model);
         }
@@ -63,7 +66,7 @@ namespace AdminSite.Controllers
             {
                 var entity = model.ToEntity();
                 entity.ID = Guid.NewGuid();
-                entity.CreateDate = DateTime.UtcNow;
+                entity.CreateDate = DateTime.Now;
                 _menuService.Insert(entity);
             }
             return RedirectToAction("Index");
@@ -71,7 +74,6 @@ namespace AdminSite.Controllers
 
         public async Task<IActionResult> Modify(Guid id)
         {
-            _logger.Debug("编辑菜单");
             var model = await _menuService.GetMenuViewModel(id);
             model.ApplicationViewModels = from n in _applicationService.Query()
                 select new SelectListItem {Text = n.Name, Value = n.ID.ToString()};
@@ -82,7 +84,7 @@ namespace AdminSite.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Modify(MenuViewModel model)
         {
-            model.CreateDate = DateTime.UtcNow;
+            model.CreateDate = DateTime.Now;
             var entity = model.ToEntity(_menuService.Single(model.ID));
             _menuService.Update(entity);
             return RedirectToAction("Index");
@@ -110,6 +112,10 @@ namespace AdminSite.Controllers
             return RedirectToAction("Index");
         }
 
+
+
+
+
         [HttpPost]
         public IActionResult QueryJson(Guid? applicationId = null, bool? isNav = true)
         {
@@ -124,5 +130,35 @@ namespace AdminSite.Controllers
             model.Add(new {id = default(Guid), pId = default(Guid), name = "--根目录--", open = true});
             return Json(model);
         }
+
+
+        [HttpPost]
+        public async Task<IActionResult> RoleMenus(Guid roleID)
+        {
+            try
+            {
+                var menus = await _menuService.QueryAsync();
+                var roleMenus = await _roleJurisdictionService.QueryAsync(a => a.RoleID == roleID);
+                var result = from n in menus
+                    select new
+                    {
+                        id = n.ID+"|"+n.ApplicationID,
+                        pId = n.ParentID+"|"+n.ApplicationID,
+                        name = $"<span style='font-size: 13px; '>{n.Name}</span>",
+                        @checked = roleMenus.FirstOrDefault(a => a.MenuID == n.ID) != null,
+                        Description = n.Description.IsNullOrEmpty() ? n.Name : n.Description,
+                        open = true
+                    };
+                var model = result.ToList();
+                return Json(model);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e, "角色菜单树Json错误");
+            }
+            return Json("");
+        }
+
+
     }
 }

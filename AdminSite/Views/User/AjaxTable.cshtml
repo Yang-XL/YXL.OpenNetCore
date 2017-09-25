@@ -1,33 +1,45 @@
-﻿@using Sakura.AspNetCore
+﻿@using PermissionSystem.Models
+@using Sakura.AspNetCore
 @using ViewModels.Common
-@model IPagedList<PermissionSystem.Models.Role>
+@model IPagedList<User>
 <table class="table table-bordered table-striped table-condensed flip-content">
     <thead class="flip-content">
     <tr>
         <th>名称</th>
-        <th> 编码 </th>
-        <th> 拼音码 </th>
-        <th> 显示顺序 </th>
-        <th> 描述 </th>
+        <th> 登录名 </th>
+        <th> 是否锁定 </th>
+        <th> 手机号 </th>
+        <th> 邮箱 </th>
+        <th> 最后修改 </th>
         <th> 操作 </th>
     </tr>
     </thead>
     <tbody>
     @if (Model != null && Model.Any())
     {
-        foreach (var role in Model)
+        foreach (var user in Model)
         {
             <tr>
-                <td> @role.Name </td>
-                <td> @role.Code </td>
-                <td> @role.PyCode </td>
-                <td> @role.ShowIndex</td>
-                <td> @role.Description</td>
+                <td> @user.Name </td>
+                <td> @user.LoginName </td>
                 <td>
-                    <a  asp-action="Details" asp-route-id="@role.ID"  class="btn btn-link btn-sm font-green-turquoise" title="详细信息">
+                     @if (user.LockoutEnabled)
+                          {
+                              <span style="color: red">锁定</span>
+                          }
+                          else
+                          {
+                              <span style="color:green">正常</span>
+                          }
+                </td>
+                <td> @user.MobilePhone</td>
+                <td> @user.Email</td>
+                <td> @user.UpdateDate</td>
+                <td>
+                    <a  asp-action="Details" asp-route-id="@user.ID"  class="btn btn-link btn-sm font-green-turquoise" title="详细信息">
                         <i class="fa fa-eye"></i>
                     </a>
-                    <a  asp-action="Modify" asp-route-id="@role.ID"   class="btn btn-link btn-sm font-green-turquoise" title="修改">
+                    <a  asp-action="Modify" asp-route-id="@user.ID"   class="btn btn-link btn-sm font-green-turquoise" title="修改">
                         <i class="fa fa-edit"></i>
                     </a>
                 </td>

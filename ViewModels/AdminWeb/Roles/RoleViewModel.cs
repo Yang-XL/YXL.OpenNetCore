@@ -8,6 +8,7 @@
 // 负责人：YXL
 // ===================================================================
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using ViewModels;
 
@@ -68,6 +69,9 @@ namespace ViewModels.AdminWeb.Roles
         public string Description { get; set; }
 
         #endregion
+
+        [Display(Name = "权限菜单")]
+        public List<string> RoleMenus { get; set; }
     }
 
 }

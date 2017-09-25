@@ -36,7 +36,7 @@ namespace PermissionSystem.Models
 		///<summary>
 		///创建时间
 		///</summary>
-		public Guid CreateDate { get; set; }
+		public DateTime CreateDate { get; set; }
     
 		#endregion	
         

@@ -11,6 +11,8 @@ D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite
 --file=D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\Views\Home\About.cshtml
 --file=D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\Views\Home\Contact.cshtml
 --file=D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\Views\Home\Index.cshtml
+--file=D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\Views\Log\AjaxTable.cshtml
+--file=D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\Views\Log\Deitals.cshtml
 --file=D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\Views\Log\Index.cshtml
 --file=D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\Views\Menu\AjaxMenuTable.cshtml
 --file=D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\Views\Menu\Create.cshtml

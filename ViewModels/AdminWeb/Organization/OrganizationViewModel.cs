@@ -38,7 +38,6 @@ namespace ViewModels.AdminWeb.Organization
         ///拼音码
         ///</summary>
         [Display(Name = "拼音码")]
-        [Required(ErrorMessage = "此项不能为空")]
         public string PyCode { get; set; }
 
         ///<summary>
@@ -57,22 +56,28 @@ namespace ViewModels.AdminWeb.Organization
         ///创建时间
         ///</summary>
         [Display(Name = "创建时间")]
-        [Required(ErrorMessage = "此项不能为空")]
         public DateTime CreateDate { get; set; }
+
 
         ///<summary>
         ///管理者、经理
         ///</summary>
         [Display(Name = "管理者、经理")]
+        [Required(ErrorMessage = "此项不能为空")]
         public Guid? Leader { get; set; }
-
         [Display(Name = "管理者、经理")]
         public string LeaderName { get; set; }
         [Display(Name = "管理者、经理")]
         public IEnumerable<SelectListItem> LeaderSelectListItems { get; set; }
 
+
+        /// <summary>
+        /// 上级部门
+        /// </summary>
         [Display(Name = "上级部门")]
-        public Guid? ParentOrganizationID { get; set; }
+
+        [Required(ErrorMessage = "此项不能为空")]
+        public Guid ParentOrganizationID { get; set; }
         [Display(Name = "上级部门")]
         public string ParentOrganizationName { get; set; }
 

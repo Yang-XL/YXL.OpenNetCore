@@ -10,13 +10,17 @@
 
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Core.Repository;
 using PermissionSystem.Models;
+using ViewModels.AdminWeb.User;
+
 namespace IService
 {
     public interface IUserService : IEfRepository<User>
     {
 
+        Task SaveUser(UserViewModel model);
         bool ValidateCredentials(string loginName, string password);
 
         User FindByExternalProvider(string provider, Guid userId);

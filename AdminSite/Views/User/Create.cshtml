@@ -1,14 +1,16 @@
-﻿@model ViewModels.AdminWeb.Roles.RoleViewModel
+﻿@using Controls.SelectZtree
+@model ViewModels.AdminWeb.User.UserViewModel
 
 @addTagHelper Controls.SelectZtree.*, ZTreeSelectTag
 
 <h3 class="page-title"></h3>
 <div class="row">
     <form class="horizontal-form" asp-action="Create" method="post">
+        @Html.HiddenFor(a=>a.ID)
         <div class="portlet box green">
             <div class="portlet-title">
                 <div class="caption">
-                    <i class="fa fa-gift"></i>添加角色
+                    <i class="fa fa-gift"></i>添加用户
                 </div>
                 <div class="actions">
                     <button class="btn btn-default btn-sm" type="submit">
@@ -20,8 +22,89 @@
                 </div>
             </div>
             <div class="portlet-body form">
-                @Html.Partial("CreateOrModify", Model)
+                <div class="form-body">
+                    <h4 class="form-section">基本信息</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.Name, new {@class = "control-label"})
+                                @Html.TextBoxFor(a => a.Name, new {@class = "form-control"})
+                                <span class="help-block"> @Html.ValidationMessageFor(a => a.Name)</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.OrganizationName, new {@class = "control-label"})
+                                @Html.ZtreeTextBoxFor(a => a.OrganizationName, new {@class = "form-control", @readonly = "readonly", style = "cursor:pointer"})
+                                @Html.HiddenFor(a => a.OrganizationID)
+                                <span class="help-block"> @Html.ValidationMessageFor(a => a.OrganizationID)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.LoginName, new {@class = "control-label"})
+                                @Html.TextBoxFor(a => a.LoginName, new {@class = "form-control"})
+                                <span class="help-block"> @Html.ValidationMessageFor(a => a.LoginName)</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.Password, new {@class = "control-label"})
+                                @Html.TextBoxFor(a => a.Password, new {@class = "form-control"})
+                                <span class="help-block"> @Html.ValidationMessageFor(a => a.Password)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.MobilePhone, new {@class = "control-label"})
+                                @Html.TextBoxFor(a => a.MobilePhone, new {@class = "form-control"})
+                                <span class="help-block"> @Html.ValidationMessageFor(a => a.MobilePhone)</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.Email, new {@class = "control-label"})
+                                @Html.TextBoxFor(a => a.Email, new {@class = "form-control"})
+                                <span class="help-block"> @Html.ValidationMessageFor(a => a.Email)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.RoleID, new {@class = "control-label"})
+                                <div>
+                                    @Html.DropDownListFor(a=>a.RoleID,Model.Roles,new{ multiple = "multiple" , @class = "form-control select2" })
+                                </div>
+                                <span class="help-block"> @Html.ValidationMessageFor(a => a.RoleID)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions right">
+                    <button class="btn green btn-lg" onclick="" type="submit">
+                        <i class="fa fa-save"></i> 保存
+                    </button>
+                </div>
             </div>
         </div>
     </form>
 </div>
+@section style_page{
+    <link href="/lib/ztree.3.5.26/styles/metroStyle/metroStyle.css" rel="stylesheet" />
+<link href="~/assets/global/plugins/select2/css/select2.css" rel="stylesheet" />
+<link href="~/assets/global/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" />
+}
+@section scripts_plugins{
+    <script src="/lib/ztree.3.5.26/jquery.ztree.core.js"></script>
+    <script src="/lib/ztree.3.5.26/jquery.ztree.intput.select.js"></script>
+<script src="~/assets/global/plugins/select2/js/select2.js"></script>
+<script src="~/assets/global/plugins/select2/js/i18n/zh-CN.js"></script>
+    <script src="/pages/user/user.create.js?v=1.0.0.0"></script>
+}
+
+

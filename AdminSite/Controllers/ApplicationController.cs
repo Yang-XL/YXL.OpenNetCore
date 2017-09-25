@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Net;
 using System.Threading.Tasks;
 using AutoMapper;
 using IService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -27,7 +29,7 @@ namespace AdminSite.Controllers
             _logger = loggerFactory.CreateLogger<ApplicationController>();
             _setting = setting.Value;
         }
-
+        [Authorize(Policy = "")]
         public async Task<IActionResult> Index(int page = 1)
         {
             var app = await _applicationService.GetPagedAsync(page, _setting.PageSize, a => a.ShowIndex, b => true);

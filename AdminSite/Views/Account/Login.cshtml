@@ -1,0 +1,130 @@
+﻿@{
+    Layout = null;
+}
+
+@model ViewModels.AdminWeb.Login.LoginViewModel
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8"/>
+    <title>@ViewData["Title"]</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <link href="/lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+    <link href="/lib/simple-line-icons/simple-line-icons.min.css" rel="stylesheet"/>
+    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/lib/uniform/css/uniform.default.min.css" rel="stylesheet"/>
+    <link href="/lib/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet"/>
+    <link href="/lib/select2/css/select2.min.css" rel="stylesheet"/>
+    <link href="/lib/select2/css/select2-bootstrap.min.css" rel="stylesheet"/>
+    <link href="/assets/global/css/components.min.css" rel="stylesheet"/>
+    <link href="/assets/global/css/plugins.min.css" rel="stylesheet"/>
+    <link href="/assets/pages/css/login-2.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body class="login">
+<!-- BEGIN : LOGIN PAGE 5-1 -->
+<div class="user-login-5">
+    <div class="row bs-reset">
+        <div class="col-md-6 bs-reset">
+            <div class="login-bg" style="background-image: url('/assets/pages/img/login/bg1.jpg');">
+                <img class="login-logo" src="/assets/pages/img/logo.png" alt=""/>
+            </div>
+        </div>
+        <div class="col-md-6 login-container bs-reset">
+            <div class="login-content">
+                <h1>用户登录</h1>
+                <p> 旨在打造一个全平台、全应用的用户登录授权方式 </p>
+                <form asp-action="Login" class="login-form" method="post">
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(a => a.ReturnUrl, null)
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="用户名" name="LoginName" required/>
+                        </div>
+                        <div class="col-xs-6">
+                            <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="密码" name="LoginPassword" required/>
+                        </div>
+                    </div>
+                    <div class="alert alert-danger display-hide">
+                        <button class="close" data-close="alert"></button>
+                        <span>请输入您的用户名密码</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="rem-password">
+                                <p>
+                                    记住我
+                                    <input type="checkbox" class="rem-checkbox" name="Remember"/>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-8 text-right">
+                            <div class="forgot-password">
+                                <a href="javascript:;" id="forget-password" class="forget-password">忘记密码?</a>
+                            </div>
+                            <button class="btn blue" type="submit">登录</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="login-footer">
+                <div class="row bs-reset">
+                    <div class="col-xs-4 bs-reset">
+                        <ul class="login-social">
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="icon-social-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="icon-social-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="icon-social-dribbble"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-8 bs-reset">
+                        <div class="login-copyright text-right">
+                            <p>Copyright &copy; YXL 2017</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--[if lt IE 9]>
+    <script src="/lib/respond.min.js"></script>
+    <script src="/lib/excanvas.min.js"></script>
+<![endif]-->
+<script src="/lib/jquery/dist/jquery.min.js"></script>
+<script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/lib/js.cookie.min.js"></script>
+<script src="/lib/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+<script src="/lib/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/lib/jquery.blockui.min.js"></script>
+<script src="/lib/uniform/jquery.uniform.min.js"></script>
+<script src="/lib/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/lib/jquery-validation/dist/additional-methods.min.js"></script>
+<script src="/lib/select2/js/select2.full.min.js"></script>
+<script src="/lib/backstretch/jquery.backstretch.min.js"></script>
+<script src="~/js/app.min.js"></script>
+<script src="~/assets/pages/scripts/login-5.js"></script>
+
+@RenderSection("Scripts", false)
+</body>
+</html>

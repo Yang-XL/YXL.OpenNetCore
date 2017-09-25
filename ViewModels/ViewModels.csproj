@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <Folder Include="AdminWeb\UserRole\" />
-    <Folder Include="AdminWeb\Login\" />
   </ItemGroup>
 
 </Project>

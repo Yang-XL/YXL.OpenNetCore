@@ -29,7 +29,6 @@ namespace AdminSite.Controllers
             _logger = loggerFactory.CreateLogger<ApplicationController>();
             _setting = setting.Value;
         }
-        [Authorize(Policy = "")]
         public async Task<IActionResult> Index(int page = 1)
         {
             var app = await _applicationService.GetPagedAsync(page, _setting.PageSize, a => a.ShowIndex, b => true);

@@ -10,16 +10,15 @@
 
 using Core.Repository.Implementation;
 using IService;
-using PermissionSystem.Models;
 using PermissionSystem;
+using PermissionSystem.Models;
+
 namespace Service.PermissionSystem
 {
-    public class UserRoleJurisdictionService  :EfRepository< UserRoleJurisdiction>,IUserRoleJurisdictionService
+    public class UserRoleJurisdictionService : EfRepository<UserRoleJurisdiction>, IUserRoleJurisdictionService
     {
-      public UserRoleJurisdictionService(PermissionSystemContext context):base(context)
+        public UserRoleJurisdictionService(PermissionSystemContext context) : base(context)
         {
-            
-        }		
-				
+        }
     }
 }

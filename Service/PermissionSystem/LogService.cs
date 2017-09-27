@@ -25,6 +25,7 @@ using Microsoft.Extensions.Logging;
 using Mongo;
 using Mongo.Models;
 using MongoDB.Driver;
+using Newtonsoft.Json;
 
 namespace Service.PermissionSystem
 {
@@ -71,13 +72,10 @@ namespace Service.PermissionSystem
             }
             catch (Exception e)
             {
-                message = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff}   {logLevel}   {categoryName}   {message}";
-                _fileManager.AppendText(
-                    Path.Combine(AppContext.BaseDirectory, "Logs", DateTime.Now.ToString("yyyy-MM-dd") + ".log"),
-                    message);
-                _fileManager.AppendText(
-                    Path.Combine(AppContext.BaseDirectory, "Logs", DateTime.Now.ToString("yyyy-MM-dd") + ".log"),
-                    $"{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff}   {LogLevel.Error}   Service.PermissionSystem.LogService   {e}");
+                var filePath = Path.Combine(AppContext.BaseDirectory, "Logs");
+                var fileName = DateTime.Now.ToString("yyyy-MM-dd") + ".log";
+                _fileManager.CreateDirectory(filePath);
+                _fileManager.AppendText(Path.Combine(filePath, fileName), $"{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff}   {logLevel}   {categoryName}   {message}");
             }
             
         }

@@ -9,12 +9,12 @@
 // ===================================================================
 
 using System;
+using System.Threading.Tasks;
 using Core.Repository;
 using PermissionSystem.Models;
 namespace IService
 {
     public interface IUserRoleJurisdictionService : IEfRepository<UserRoleJurisdiction>
     {
-        
     }
 }

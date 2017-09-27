@@ -15,7 +15,6 @@ namespace Core.FileManager
 
         public void CreateFile(string path, string content)
         {
-            throw new NotImplementedException();
         }
 
         public IList<FileInfo> Get(string path, bool isRecursive = false)
@@ -45,6 +44,7 @@ namespace Core.FileManager
             catch (Exception e)
             {
                 // ignored
+                var ex= e;
             }
         }
 

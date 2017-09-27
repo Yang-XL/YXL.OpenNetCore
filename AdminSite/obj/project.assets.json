@@ -5574,6 +5574,7 @@
           "Core": "1.0.0",
           "Dapper": "1.50.2",
           "IService": "1.0.0",
+          "LoggerExtensions": "1.0.0",
           "Mongo": "1.0.0",
           "PermissionSystem": "1.0.0",
           "ViewModels": "1.0.0"

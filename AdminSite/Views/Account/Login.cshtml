@@ -26,7 +26,7 @@
     <link href="/lib/select2/css/select2-bootstrap.min.css" rel="stylesheet"/>
     <link href="/assets/global/css/components.min.css" rel="stylesheet"/>
     <link href="/assets/global/css/plugins.min.css" rel="stylesheet"/>
-    <link href="/assets/pages/css/login-2.css" rel="stylesheet"/>
+    <link href="/assets/pages/css/login-5.css" rel="stylesheet" />
     <link rel="shortcut icon" href="favicon.ico"/>
 </head>
 <body class="login">
@@ -41,7 +41,7 @@
         <div class="col-md-6 login-container bs-reset">
             <div class="login-content">
                 <h1>用户登录</h1>
-                <p> 旨在打造一个全平台、全应用的用户登录授权方式 </p>
+                <p>后台用户登录</p>
                 <form asp-action="Login" class="login-form" method="post">
                     @Html.AntiForgeryToken()
                     @Html.HiddenFor(a => a.ReturnUrl, null)
@@ -67,9 +67,9 @@
                             </div>
                         </div>
                         <div class="col-sm-8 text-right">
-                            <div class="forgot-password">
+                            @*<div class="forgot-password">
                                 <a href="javascript:;" id="forget-password" class="forget-password">忘记密码?</a>
-                            </div>
+                            </div>*@
                             <button class="btn blue" type="submit">登录</button>
                         </div>
                     </div>
@@ -122,9 +122,7 @@
 <script src="/lib/jquery-validation/dist/additional-methods.min.js"></script>
 <script src="/lib/select2/js/select2.full.min.js"></script>
 <script src="/lib/backstretch/jquery.backstretch.min.js"></script>
-<script src="~/js/app.min.js"></script>
+<script src="~/assets/global/scripts/app.js"></script>
 <script src="~/assets/pages/scripts/login-5.js"></script>
-
-@RenderSection("Scripts", false)
 </body>
 </html>

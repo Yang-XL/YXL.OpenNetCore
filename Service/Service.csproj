@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj" />
     <ProjectReference Include="..\IService\IService.csproj" />
+    <ProjectReference Include="..\LoggerExtensions\LoggerExtensions.csproj" />
     <ProjectReference Include="..\Mongo\Mongo.csproj" />
     <ProjectReference Include="..\PermissionSystem\PermissionSystem.csproj" />
     <ProjectReference Include="..\ViewModels\ViewModels.csproj" />

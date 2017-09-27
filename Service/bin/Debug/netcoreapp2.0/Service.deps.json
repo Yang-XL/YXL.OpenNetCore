@@ -11,6 +11,7 @@
           "Core": "1.0.0",
           "Dapper": "1.50.2",
           "IService": "1.0.0",
+          "LoggerExtensions": "1.0.0",
           "Mongo": "1.0.0",
           "PermissionSystem": "1.0.0",
           "ViewModels": "1.0.0"
@@ -2374,6 +2375,19 @@
           "IService.dll": {}
         }
       },
+      "LoggerExtensions/1.0.0": {
+        "dependencies": {
+          "Core": "1.0.0",
+          "IService": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Primitives": "2.0.0",
+          "PermissionSystem": "1.0.0"
+        },
+        "runtime": {
+          "LoggerExtensions.dll": {}
+        }
+      },
       "Mongo/1.0.0": {
         "dependencies": {
           "Core": "1.0.0",
@@ -3875,6 +3889,11 @@
       "sha512": ""
     },
     "IService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LoggerExtensions/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

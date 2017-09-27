@@ -17,10 +17,10 @@
                 <div class="number">
                     <span data-counter="counterup" data-value="1349">0</span>
                 </div>
-                <div class="desc"> New Feedbacks </div>
+                <div class="desc"> Demo </div>
             </div>
             <a class="more" href="javascript:;">
-                View more
+                更多
                 <i class="m-icon-swapright m-icon-white"></i>
             </a>
         </div>
@@ -34,10 +34,10 @@
                 <div class="number">
                     <span data-counter="counterup" data-value="12,5">0</span>M$
                 </div>
-                <div class="desc"> Total Profit </div>
+                <div class="desc"> 客户总量 </div>
             </div>
             <a class="more" href="javascript:;">
-                View more
+                更多
                 <i class="m-icon-swapright m-icon-white"></i>
             </a>
         </div>
@@ -51,10 +51,10 @@
                 <div class="number">
                     <span data-counter="counterup" data-value="549">0</span>
                 </div>
-                <div class="desc"> New Orders </div>
+                <div class="desc"> 新订单 </div>
             </div>
             <a class="more" href="javascript:;">
-                View more
+                更多
                 <i class="m-icon-swapright m-icon-white"></i>
             </a>
         </div>
@@ -69,10 +69,10 @@
                     +
                     <span data-counter="counterup" data-value="89"></span>%
                 </div>
-                <div class="desc"> Brand Popularity </div>
+                <div class="desc"> 同比增长 </div>
             </div>
             <a class="more" href="javascript:;">
-                View more
+                更多
                 <i class="m-icon-swapright m-icon-white"></i>
             </a>
         </div>
@@ -80,14 +80,7 @@
 </div>
 
 
-<div class="row">
-    <div class="col-md-10 col-md-offset-2">
-        <input id="citySel" type="text" onclick="showSeletTree(this)" readonly="readonly" style="width: 120px;cursor:pointer"/>
-        <div id="menuContent" style="display: none; position: absolute; background-color: darkgray; min-width: 120px;">
-            <ul id="treeDemo" class="ztree" style="margin-top: 0; "></ul>
-        </div>
-    </div>
-</div>
+
 
 @section style_page{ 
     <link href="~/lib/ztree.3.5.26/styles/metroStyle/metroStyle.css" rel="stylesheet" />
@@ -98,100 +91,6 @@
 }
 
 @section scripts_plugins{
-    <script src="~/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js" type="text/javascript"></script>
-    <script src="~/assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
-    <script src="~/lib/ztree.3.5.26/jquery.ztree.core.js"></script>
-
-    <script type="text/javascript">
-        <!--
-        var setting = {
-            view: {
-                dblClickExpand: false
-            },
-            data: {
-                simpleData: {
-                    enable: true
-                }
-            },
-            callback: {
-                beforeClick: beforeClick,
-                onClick: onClick
-            }
-        };
-
-        var zNodes = [
-            { id: 1, pId: 0, name: "北京" },
-            { id: 2, pId: 0, name: "天津" },
-            { id: 3, pId: 0, name: "上海" },
-            { id: 6, pId: 0, name: "重庆" },
-            { id: 4, pId: 0, name: "河北省", open: true },
-            { id: 41, pId: 4, name: "石家庄" },
-            { id: 42, pId: 4, name: "保定" },
-            { id: 43, pId: 4, name: "邯郸" },
-            { id: 44, pId: 4, name: "承德" },
-            { id: 5, pId: 0, name: "广东省", open: true },
-            { id: 51, pId: 5, name: "广州" },
-            { id: 52, pId: 5, name: "深圳" },
-            { id: 53, pId: 5, name: "东莞" },
-            { id: 54, pId: 5, name: "佛山" },
-            { id: 6, pId: 0, name: "福建省", open: true },
-            { id: 61, pId: 6, name: "福州" },
-            { id: 62, pId: 6, name: "厦门" },
-            { id: 63, pId: 6, name: "泉州" },
-            { id: 64, pId: 6, name: "三明" }
-        ];
-
-        function beforeClick(treeId, treeNode) {
-            var check = (treeNode && !treeNode.isParent);
-            if (!check) alert("只能选择城市...");
-            return check;
-        }
-
-        function onClick(e, treeId, treeNode) {
-            var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
-                nodes = zTree.getSelectedNodes(),
-                v = "";
-            nodes.sort(function compare(a, b) { return a.id - b.id; });
-            for (var i = 0, l = nodes.length; i < l; i++) {
-                v += nodes[i].name + ",";
-            }
-            if (v.length > 0) v = v.substring(0, v.length - 1);
-            var cityObj = $("#citySel");
-            cityObj.attr("value", v);
-        }
-
-        $(document).ready(function() {
-            $.fn.zTree.init($("#treeDemo"), setting, zNodes);
-        });
-        //-->
-    </script>
-
-    
-    <script type="text/javascript">
-        function showSeletTree(tbox) {
-            var tboxOffset = $(tbox).offset();
-            $("#menuContent").each(function () {
-                this.style.left = tboxOffset.left;
-                this.style.top = tboxOffset.top + $(tbox).height() + 5;
-            });
-            $("#menuContent").slideDown("fast");
-            $("body").bind("mousedown", onBodyDown);
-        }
-
-        function showMenu() {
-            var cityObj = $("#citySel");
-            var cityOffset = $("#citySel").offset();
-            $("#menuContent").css({left:cityOffset.left + "px", top:cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");
-        }
-        function hideMenu() {
-            $("#menuContent").fadeOut("fast");
-            $("body").unbind("mousedown", onBodyDown);
-        }
-        function onBodyDown(event) {
-            if (!(event.target.id === "menuBtn" || event.target.id === "menuContent" || $(event.target).parents("#menuContent").length>0)) {
-                hideMenu();
-            }
-        }
-
-    </script>
+    <script src="~/lib/jquery-easypiechart/jquery.easypiechart.min.js" type="text/javascript"></script>
+    <script src="~/lib/jquery.sparkline.min.js" type="text/javascript"></script>
 }

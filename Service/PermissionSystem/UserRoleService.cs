@@ -8,18 +8,30 @@
 // 负责人：YXL
 // ===================================================================
 
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 using Core.Repository.Implementation;
 using IService;
+using Microsoft.EntityFrameworkCore;
 using PermissionSystem.Models;
 using PermissionSystem;
 namespace Service.PermissionSystem
 {
     public class UserRoleService  :EfRepository< UserRole>,IUserRoleService
     {
-      public UserRoleService(PermissionSystemContext context):base(context)
+        private readonly IUserRoleJurisdictionService _userRoleJurisdictionService;
+      public UserRoleService(PermissionSystemContext context, IUserRoleJurisdictionService userRoleJurisdictionService):base(context)
+      {
+          _userRoleJurisdictionService = userRoleJurisdictionService;
+      }
+
+        public async Task<bool> IsPermissionsMenu(Guid userId, Guid menuId)
         {
-            
-        }		
-				
+            return await (from ur in Queryable()
+                join urm in _userRoleJurisdictionService.Queryable() on ur.RoleID equals urm.RoleID
+                where ur.UserID == userId && urm.MenuID == menuId
+                select urm).AnyAsync();
+        }
     }
 }

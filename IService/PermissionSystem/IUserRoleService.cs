@@ -9,12 +9,13 @@
 // ===================================================================
 
 using System;
+using System.Threading.Tasks;
 using Core.Repository;
 using PermissionSystem.Models;
 namespace IService
 {
     public interface IUserRoleService : IEfRepository<UserRole>
     {
-        
+        Task<bool> IsPermissionsMenu(Guid userId, Guid menuId);
     }
 }

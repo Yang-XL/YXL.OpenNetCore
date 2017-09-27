@@ -3585,6 +3585,24 @@
           "bin/placeholder/IService.dll": {}
         }
       },
+      "LoggerExtensions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Core": "1.0.0",
+          "IService": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Primitives": "2.0.0",
+          "PermissionSystem": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LoggerExtensions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LoggerExtensions.dll": {}
+        }
+      },
       "Mongo/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
@@ -10050,6 +10068,11 @@
       "path": "../IService/IService.csproj",
       "msbuildProject": "../IService/IService.csproj"
     },
+    "LoggerExtensions/1.0.0": {
+      "type": "project",
+      "path": "../LoggerExtensions/LoggerExtensions.csproj",
+      "msbuildProject": "../LoggerExtensions/LoggerExtensions.csproj"
+    },
     "Mongo/1.0.0": {
       "type": "project",
       "path": "../Mongo/Mongo.csproj",
@@ -10071,6 +10094,7 @@
       "Core >= 1.0.0",
       "Dapper >= 1.50.2",
       "IService >= 1.0.0",
+      "LoggerExtensions >= 1.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
       "Mongo >= 1.0.0",
       "PermissionSystem >= 1.0.0",
@@ -10119,6 +10143,9 @@
             },
             "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\PermissionSystem\\PermissionSystem.csproj": {
               "projectPath": "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\PermissionSystem\\PermissionSystem.csproj"
+            },
+            "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\LoggerExtensions\\LoggerExtensions.csproj": {
+              "projectPath": "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\LoggerExtensions\\LoggerExtensions.csproj"
             },
             "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\Mongo\\Mongo.csproj": {
               "projectPath": "D:\\GitSource\\OpenNetCore\\YXL.OpenNetCore\\Mongo\\Mongo.csproj"

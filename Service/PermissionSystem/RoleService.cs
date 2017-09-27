@@ -25,6 +25,7 @@ namespace Service.PermissionSystem
     {
         private readonly IUserRoleJurisdictionService _roleJurisdiction;
 
+
         public RoleService(PermissionSystemContext context,
             IUserRoleJurisdictionService roleJurisdiction) : base(context)
         {
@@ -80,5 +81,7 @@ namespace Service.PermissionSystem
                 }
             }
         }
+
+
     }
 }

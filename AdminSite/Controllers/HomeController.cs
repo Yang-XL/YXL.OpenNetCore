@@ -10,6 +10,7 @@ using LoggerExtensions;
 
 namespace AdminSite.Controllers
 {
+  
     public class HomeController : BaseAdminController
     {
         private  readonly  ILogger<HomeController> _logger;

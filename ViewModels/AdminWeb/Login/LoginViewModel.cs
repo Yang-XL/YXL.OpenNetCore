@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ViewModels.AdminWeb.Login
 {
-   public  class LoginViewModel
+   public  class LoginViewModel:BaseViewModel
     {
         [Required(AllowEmptyStrings = false, ErrorMessage = "请输入登录名")]
         [Display(Name = "登录名")]
@@ -20,5 +20,7 @@ namespace ViewModels.AdminWeb.Login
         public bool Remember { get; set; }
 
         public string ReturnUrl { get; set; }
+
+        public string NormalizedLoginName => LoginName.ToUpper();
     }
 }

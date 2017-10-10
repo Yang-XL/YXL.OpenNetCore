@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using AdminSite.SiteAttributes;
 using IdentityServer4.Extensions;
 using IService;
 using IService.Identity;
@@ -27,10 +28,12 @@ namespace AdminSite.Controllers
             _userService = userService;
             _userRoleService = userRoleService;
         }
+    
         [AllowAnonymous]
         public IActionResult Login(string ReturnUrl)
         {
-            return View();
+            var mode = new LoginViewModel{ReturnUrl = ReturnUrl };
+            return View(mode);
         }
 
         [HttpPost]
@@ -57,8 +60,8 @@ namespace AdminSite.Controllers
                 ModelState.TryAddModelError(nameof(model.CustomizeErrorMessage), "账户被锁定");
                 return View(model);
             }
-            var roles = await _userRoleService.QueryAsync(a => a.UserID == user.ID);
 
+            var roles = await _userRoleService.QueryAsync(a => a.UserID == user.ID);
             var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
             identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, user.ID.ToString()));
             identity.AddClaim(new Claim(ClaimTypes.Name, user.Name));
@@ -66,20 +69,17 @@ namespace AdminSite.Controllers
             {
                 identity.AddClaim(new Claim(ClaimTypes.Role, role.RoleID.ToString()));
             }
-
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
-                new ClaimsPrincipal(identity));
-            var u = User.IsAuthenticated();
-            //var r = User.IsInRole();
-            var b = HttpContext.User.IsAuthenticated();
+                new ClaimsPrincipal(identity), new AuthenticationProperties {IsPersistent = model.Remember});
+        
+            if (!string.IsNullOrEmpty(model.ReturnUrl))
+                return Redirect(model.ReturnUrl);
             return RedirectToAction("Index", "Home");
         }
         [AllowAnonymous]
         public async Task<IActionResult> LogOut()
         {
-            SignOut(CookieAuthenticationDefaults.AuthenticationScheme);
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-
             return RedirectToAction("Login");
         }
         [AllowAnonymous]

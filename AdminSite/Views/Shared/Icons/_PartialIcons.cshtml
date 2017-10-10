@@ -1,0 +1,167 @@
+﻿<form class="form-horizontal" role="form">
+    <div class="portlet light bordered">
+        <div class="portlet-title tabbable-line">
+            <div class="caption">
+                <i class="icon-globe font-red"></i>
+                <span class="caption-subject font-red bold uppercase">图标</span>
+            </div>
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#Glyphicon_Icons" data-toggle="tab">Glyphicon</a>
+                </li>
+                <li>
+                    <a href="#Simple_Line_Icons_Icons" data-toggle="tab">Simple Line Icons</a>
+                </li>
+                <li class="dropdown" role="presentation">
+                    <a class="dropdown-toggle" id="font_icons" aria-expanded="false" aria-controls="font_icons-contents"
+                       href="#" data-toggle="dropdown">字体图标<span class="caret"></span></a>
+                    <ul class="dropdown-menu" id="font_icons-contents" aria-labelledby="font_icons">
+                        <li >
+                            <a href="#News_Icons" data-toggle="tab">最新</a>
+                        </li>
+                        <li>
+                            <a href="#wa_Icons" data-toggle="tab"> Web应用图标 </a>
+                        </li>
+                        <li>
+                            <a href="#Hand_Icons" data-toggle="tab"> 小手 </a>
+                        </li>
+                        <li>
+                            <a href="#FileType_Icon" data-toggle="tab"> 文件 </a>
+                        </li>
+                        <li>
+                            <a href="#Spinner_Icon" data-toggle="tab"> 旋转图标 </a>
+                        </li>
+                        <li>
+                            <a href="#FormControl_Icon" data-toggle="tab"> 表单控件 </a>
+                        </li>
+                        <li>
+                            <a href="#Payment_Icon" data-toggle="tab"> 财务 </a>
+                        </li>
+                        <li>
+                            <a href="#Chart_Icon" data-toggle="tab"> 图表 </a>
+                        </li>
+                        <li>
+                            <a href="#Currency_Icon" data-toggle="tab"> 货币 </a>
+                        </li>
+                        <li>
+                            <a href="#TextEditor_Icon" data-toggle="tab"> 文本编辑器 </a>
+                        </li>
+                        <li>
+                            <a href="#Directional_Icon" data-toggle="tab"> 箭头 </a>
+                        </li>
+                        <li>
+                            <a href="#VideoPlayer_Icon" data-toggle="tab"> 播放器 </a>
+                        </li>
+                        <li>
+                            <a href="#Brand_Icon" data-toggle="tab"> 品牌Logo </a>
+                        </li>
+                        <li>
+                            <a href="#Medical_Icon" data-toggle="tab"> 医疗 </a>
+                        </li>
+                        <li>
+                            <a href="#Transportatios_Icon" data-toggle="tab"> 交通工具 </a>
+                        </li>
+                        <li>
+                            <a href="#Gender_Icon" data-toggle="tab"> 性别 </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="portlet-body form">
+            <div class="tab-content">
+                <div class="tab-pane active" id="Glyphicon_Icons">
+                    <div class="skin skin-minimal">
+                        @await Html.PartialAsync("GlyphiconIcons.cshtml")
+                    </div>
+                </div>
+                <div class="tab-pane" id="Simple_Line_Icons_Icons">
+                    <div class="skin skin-minimal">
+                        @await Html.PartialAsync("SimpleLineIcons.cshtml")
+                    </div>
+                </div>
+                <div class="tab-pane" id="News_Icons">
+                    <div class="skin skin-minimal">
+                        @await Html.PartialAsync("new60.cshtml")
+                    </div>
+                </div>
+                <div class="tab-pane" id="wa_Icons">
+                    <div class="skin skin-square">
+                        @await Html.PartialAsync("WebApplicationIcons.cshtml")
+                        @* @await Html.PartialAsync("WebApplicationIcons.cshtml")*@
+                    </div>
+                </div>
+                <div class="tab-pane" id="Hand_Icons">
+                    <div class="skin skin-flat">
+                        @await Html.PartialAsync("HandIcons.cshtml")
+                    </div>
+                </div>
+                <div class="tab-pane" id="Transportatios_Icon">
+                    <div class="skin skin-line">
+                        @await Html.PartialAsync("TransportationIcons.cshtml")
+                    </div>
+                </div>
+                <div class="tab-pane" id="Gender_Icon">
+                    <div class="skin skin-line">
+                        @await Html.PartialAsync("GenderIcons.cshtml")
+                    </div>
+                </div>
+                <div class="tab-pane" id="FileType_Icon">
+                    <div class="skin skin-line">
+                        @await Html.PartialAsync("FileTypeIcons.cshtml")
+                    </div>
+                </div>
+                <div class="tab-pane" id="Spinner_Icon">
+                    <div class="skin skin-line">
+                        @await Html.PartialAsync("SpinnerIcons.cshtml")
+                    </div>
+                </div>
+                <div class="tab-pane" id="FormControl_Icon">
+                    <div class="skin skin-line">
+                        @await Html.PartialAsync("FormControlIcons.cshtml")
+                    </div>
+                </div>
+                <div class="tab-pane" id="Payment_Icon">
+                    <div class="skin skin-line">
+                        @await Html.PartialAsync("Payment.cshtml")
+                    </div>
+                </div>
+                <div class="tab-pane" id="Chart_Icon">
+                    <div class="skin skin-line">
+                        @await Html.PartialAsync("Chart.cshtml")
+                    </div>
+                </div>
+                <div class="tab-pane" id="Currency_Icon">
+                    <div class="skin skin-line">
+                        @await Html.PartialAsync("Currency.cshtml")
+                    </div>
+                </div>
+                <div class="tab-pane" id="TextEditor_Icon">
+                    <div class="skin skin-line">
+                        @await Html.PartialAsync("TextEditor.cshtml")
+                    </div>
+                </div>
+                <div class="tab-pane" id="Directional_Icon">
+                    <div class="skin skin-line">
+                        @await Html.PartialAsync("Directional.cshtml")
+                    </div>
+                </div>
+                <div class="tab-pane" id="VideoPlayer_Icon">
+                    <div class="skin skin-line">
+                        @await Html.PartialAsync("VideoPlayer.cshtml")
+                    </div>
+                </div>
+                <div class="tab-pane" id="Brand_Icon">
+                    <div class="skin skin-line">
+                        @await Html.PartialAsync("Brand.cshtml")
+                    </div>
+                </div>
+                <div class="tab-pane" id="Medical_Icon">
+                    <div class="skin skin-line">
+                        @await Html.PartialAsync("Medical.cshtml")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -90,22 +91,19 @@ namespace AdminSite
             //基于策略
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("User", configurePolicy =>
+                options.AddPolicy("AuthorizedUser", configurePolicy =>
                 {
                     configurePolicy.RequireClaim(ClaimTypes.NameIdentifier);
                     configurePolicy.AddRequirements(new UserRequirement());
                 });
-                options.AddPolicy("Role", configurePolicy =>
+                options.AddPolicy("AdminSiteRole", configurePolicy =>
                 {
-                    //configurePolicy.RequireClaim(ClaimTypes.Role);
+                    configurePolicy.RequireClaim(ClaimTypes.Role);
                     configurePolicy.AddRequirements(new RoleRequirement(services.BuildServiceProvider()));
                 });
             });
+            services.AddSingleton<IAuthorizationHandler, UserAuthorizationHandler>();
             services.AddSingleton<IAuthorizationHandler, RoleAuthorizationHandler>();
-
-
-            ////基于过滤器
-            //services.AddMvc(options => options.Filters.Add<AdminSiteAuthorizationFilter>());
 
             #endregion
 

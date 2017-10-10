@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AdminSite.SiteAttributes;
 using Core.Repository.Specification;
 using IService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Mongo.Models;
@@ -11,6 +13,7 @@ using ViewModels.Options;
 
 namespace AdminSite.Controllers
 {
+    [Authorize(PolicysModels.PolicysRole)]
     public class LogController : BaseAdminController
     {
         private readonly ILogService _logService;

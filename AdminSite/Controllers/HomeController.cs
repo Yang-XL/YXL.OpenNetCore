@@ -1,28 +1,27 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using AdminSite.Models;
+using AdminSite.SiteAttributes;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using PermissionSystem.Models;
-using ViewModels.Options;
-using LoggerExtensions;
 
 namespace AdminSite.Controllers
 {
-  
+    [Authorize(PolicysModels.PolicysRole)]
     public class HomeController : BaseAdminController
     {
-        private  readonly  ILogger<HomeController> _logger;
+        private readonly ILogger<HomeController> _logger;
+
         public HomeController(ILoggerFactory loggerFactory)
         {
             _logger = loggerFactory.CreateLogger<HomeController>();
         }
-      public IActionResult Index()
-      {
+
+        public IActionResult Index()
+        {
             return View();
         }
-        
+
         public IActionResult About(int id)
         {
             ViewData["Message"] = $"参数为：{id}";
@@ -41,7 +40,5 @@ namespace AdminSite.Controllers
         {
             return View(new ErrorViewModel {RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier});
         }
-
-        
     }
 }

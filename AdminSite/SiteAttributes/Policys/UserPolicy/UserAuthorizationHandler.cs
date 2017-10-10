@@ -11,11 +11,12 @@ namespace AdminSite.SiteAttributes.Policys.UserPolicy
     {
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserRequirement requirement)
         {
-            var filterContext = context.Resource as AuthorizationFilterContext;
-
-           
-
-            throw new NotImplementedException();
+            
+            if (context.User.Identity.IsAuthenticated)
+            {
+                    context.Succeed(requirement);
+            }
+            return Task.CompletedTask;
         }
     }
 }

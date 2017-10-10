@@ -20,6 +20,7 @@
                 </div>
             </div>
             <div class="portlet-body form">
+                @Html.ValidationMessageDangerFor(a => a.CustomizeErrorMessage)
                 <div class="form-body">
                     <h4 class="form-section">基本信息</h4>
                     <div class="row">
@@ -55,21 +56,20 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                @Html.LabelFor(a => a.LockoutEnabled, new { @class = "control-label" })
+                                @Html.LabelFor(a => a.LockoutEnabled, new {@class = "control-label"})
                                 <div class="checkbox">
-                                    @Html.CheckBoxFor(a => a.LockoutEnabled, new { @class = "form-control" })
+                                    @Html.CheckBoxFor(a => a.LockoutEnabled, new {@class = "form-control"})
                                 </div>
                                 <span class="help-block"> @Html.ValidationMessageFor(a => a.LockoutEnabled)</span>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                @Html.LabelFor(a => a.LockoutEnd, new { @class = "control-label" })
-                                @Html.TextBoxFor(a => a.LockoutEnd, new { @class = "form-control" })
+                                @Html.LabelFor(a => a.LockoutEnd, new {@class = "control-label"})
+                                @Html.TextBoxFor(a => a.LockoutEnd, new {@class = "form-control"})
                                 <span class="help-block"> @Html.ValidationMessageFor(a => a.LockoutEnd)</span>
                             </div>
                         </div>
@@ -122,6 +122,5 @@
     <script src="/lib/ztree.3.5.26/jquery.ztree.intput.select.js"></script>
     <script src="/lib/select2/js/select2.js"></script>
     <script src="/lib/select2/js/i18n/zh-CN.js"></script>
-
     <script src="/pages/user/user.modify.js?v=1.0.0.0"></script>
 }

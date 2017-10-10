@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using AdminSite.SiteAttributes;
 using Core.Repository.Specification;
 using IService;
 using LoggerExtensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -37,7 +39,7 @@ namespace AdminSite.Controllers
             _userRoleService = userRoleService;
             _setting = setting.Value;
         }
-
+        [Authorize(PolicysModels.PolicysRole)]
         public async Task<IActionResult> Index(int page = 1)
         {
             var entityList = await _userService.GetPagedAsync( page, _setting.PageSize, a=>a.CreateDate,true);
@@ -46,6 +48,7 @@ namespace AdminSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(PolicysModels.PolicysRole)]
         public async Task<IActionResult> Index(string queryString, Guid? ParentID = null, int page = 1)
         {
             var query = SpecificationBuilder.Create<User>();
@@ -72,6 +75,7 @@ namespace AdminSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(PolicysModels.PolicysRole)]
         public async Task<ActionResult> Create(UserViewModel model, IFormCollection form)
         {
             try
@@ -108,6 +112,7 @@ namespace AdminSite.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(PolicysModels.PolicysRole)]
         public async Task<IActionResult> Modify(UserViewModel model, IFormCollection form)
         {
             try
@@ -136,6 +141,7 @@ namespace AdminSite.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(PolicysModels.PolicysRole)]
         public async Task<IActionResult> Remove(Guid id)
         {
             try
@@ -151,6 +157,8 @@ namespace AdminSite.Controllers
             }
             return RedirectToAction(nameof(Details),id);
         }
+
+        #region JsonResult
         /// <summary>
         ///     按照部门组织树形用户
         /// </summary>
@@ -196,5 +204,7 @@ namespace AdminSite.Controllers
                 }).ToListAsync();
             return Json(modle);
         }
+        
+        #endregion
     }
 }

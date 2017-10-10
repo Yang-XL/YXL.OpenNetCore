@@ -6,13 +6,11 @@ using System.Security.Principal;
 using System.Threading.Tasks;
 using IdentityModel;
 using IdentityServer4;
-using IdentityServer4.Events;
 using IdentityServer4.Services;
 using IdentitySite.Common;
 using IdentitySite.Services;
 using IService;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -20,17 +18,16 @@ using Microsoft.Extensions.Options;
 using ViewModels.IdentitySite.Account;
 using ViewModels.IdentitySite.Options;
 
-
 namespace IdentitySite.Controllers
 {
     public class AccountController : Controller
     {
         private readonly AccountService _accountService;
+        private readonly IEventService _eventService;
         private readonly IIdentityServerInteractionService _interaction;
         private readonly ILogger _logger;
         private readonly AccountOption _options;
         private readonly IUserService _userService;
-        private readonly IEventService _eventService;
 
         public AccountController(IUserService userService,
             IIdentityServerInteractionService interaction,
@@ -82,16 +79,15 @@ namespace IdentitySite.Controllers
 
                     // issue authentication cookie with subject ID and username
                     var user = await _userService.SingleAsync(a => a.LoginName == model.LoginName);
-                    
+
                     //var identity = MembershipHelper.CreateIdentity(user);
                     //await _eventService.RaiseAsync(new UserLoginSuccessEvent(user.LoginName, user.ID.ToString(), user.Name));
                     await HttpContext.SignInAsync(user.ID.ToString(), user.Name, props, MembershipHelper.Claims(user));
-                    
+
                     var result = _interaction.IsValidReturnUrl(model.ReturnUrl);
                     return Redirect(result ? model.ReturnUrl : "~/");
                 }
-
-                ModelState.AddModelError("", _options.InvalidCredentialsErrorMessage);
+                ModelState.AddModelError(nameof(model.LoginName), _options.InvalidCredentialsErrorMessage);
             }
 
             // something went wrong, show form with error
@@ -124,11 +120,12 @@ namespace IdentitySite.Controllers
             var vm = await _accountService.BuildLoggedOutViewModelAsync(model.LogoutId);
             if (vm.TriggerExternalSignout)
             {
-                var url = Url.Action("Logout", new { logoutId = vm.LogoutId });
+                var url = Url.Action("Logout", new {logoutId = vm.LogoutId});
                 try
                 {
                     // hack: try/catch to handle social providers that throw
-                    await HttpContext.SignOutAsync(vm.ExternalAuthenticationScheme,new AuthenticationProperties { RedirectUri = url });
+                    await HttpContext.SignOutAsync(vm.ExternalAuthenticationScheme,
+                        new AuthenticationProperties {RedirectUri = url});
                 }
                 catch (NotSupportedException) // this is for the external providers that don't have signout
                 {
@@ -145,17 +142,15 @@ namespace IdentitySite.Controllers
         }
 
         /// <summary>
-        /// initiate roundtrip to external authentication provider
+        ///     initiate roundtrip to external authentication provider
         /// </summary>
         [HttpGet]
         public async Task<IActionResult> ExternalLogin(string provider, string returnUrl)
         {
-            returnUrl = Url.Action("ExternalLoginCallback", new { returnUrl = returnUrl });
+            returnUrl = Url.Action("ExternalLoginCallback", new {returnUrl});
 
             // windows authentication is modeled as external in the asp.net core authentication manager, so we need special handling
             if (_options.WindowsAuthenticationSchemes.Contains(provider))
-            {
-                // but they don't support the redirect uri, so this URL is re-triggered when we call challenge
                 if (HttpContext.User is WindowsPrincipal)
                 {
                     var props = new AuthenticationProperties();
@@ -165,7 +160,8 @@ namespace IdentitySite.Controllers
                     id.AddClaim(new Claim(ClaimTypes.NameIdentifier, HttpContext.User.Identity.Name));
                     id.AddClaim(new Claim(ClaimTypes.Name, HttpContext.User.Identity.Name));
 
-                    await HttpContext.SignInAsync(IdentityServerConstants.ExternalCookieAuthenticationScheme, new ClaimsPrincipal(id), props);
+                    await HttpContext.SignInAsync(IdentityServerConstants.ExternalCookieAuthenticationScheme,
+                        new ClaimsPrincipal(id), props);
                     return Redirect(returnUrl);
                 }
                 else
@@ -173,21 +169,19 @@ namespace IdentitySite.Controllers
                     // this triggers all of the windows auth schemes we're supporting so the browser can use what it supports
                     return new ChallengeResult(_options.WindowsAuthenticationSchemes);
                 }
-            }
-            else
             {
                 // start challenge and roundtrip the return URL
                 var props = new AuthenticationProperties
                 {
                     RedirectUri = returnUrl,
-                    Items = { { "scheme", provider } }
+                    Items = {{"scheme", provider}}
                 };
                 return new ChallengeResult(provider, props);
             }
         }
 
         /// <summary>
-        /// Post processing of external authentication
+        ///     Post processing of external authentication
         /// </summary>
         [HttpGet]
         public async Task<IActionResult> ExternalLoginCallback(string returnUrl)
@@ -196,9 +190,7 @@ namespace IdentitySite.Controllers
             var info = await HttpContext.AuthenticateAsync(IdentityServerConstants.ExternalCookieAuthenticationScheme);
             var tempUser = info?.Principal;
             if (tempUser == null)
-            {
                 throw new Exception("External authentication error");
-            }
 
             // retrieve claims of the external user
             var claims = tempUser.Claims.ToList();
@@ -207,13 +199,9 @@ namespace IdentitySite.Controllers
             // depending on the external provider, some other claim type might be used
             var userIdClaim = claims.FirstOrDefault(x => x.Type == JwtClaimTypes.Subject);
             if (userIdClaim == null)
-            {
                 userIdClaim = claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier);
-            }
             if (userIdClaim == null)
-            {
                 throw new Exception("Unknown userid");
-            }
 
             // remove the user id claim from the claims collection and move to the userId property
             // also set the name of the external authentication provider
@@ -236,9 +224,7 @@ namespace IdentitySite.Controllers
             // if the external system sent a session id claim, copy it over
             var sid = claims.FirstOrDefault(x => x.Type == JwtClaimTypes.SessionId);
             if (sid != null)
-            {
                 additionalClaims.Add(new Claim(JwtClaimTypes.SessionId, sid.Value));
-            }
 
             // if the external provider issued an id_token, we'll keep it for signout
             AuthenticationProperties props = null;
@@ -246,7 +232,7 @@ namespace IdentitySite.Controllers
             if (id_token != null)
             {
                 props = new AuthenticationProperties();
-                props.StoreTokens(new[] { new AuthenticationToken { Name = "id_token", Value = id_token } });
+                props.StoreTokens(new[] {new AuthenticationToken {Name = "id_token", Value = id_token}});
             }
 
             // issue authentication cookie for user
@@ -258,9 +244,7 @@ namespace IdentitySite.Controllers
 
             // validate return URL and redirect back to authorization endpoint
             if (_interaction.IsValidReturnUrl(returnUrl))
-            {
                 return Redirect(returnUrl);
-            }
 
             return Redirect("~/");
         }

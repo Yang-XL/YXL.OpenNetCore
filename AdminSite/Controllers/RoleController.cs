@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using AdminSite.SiteAttributes;
 using AutoMapper;
 using IService;
 using LoggerExtensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -31,7 +33,7 @@ namespace AdminSite.Controllers
             _logger = loggerFactory.CreateLogger<RoleController>();
             _setting = setting.Value;
         }
-
+        [Authorize(PolicysModels.PolicysRole)]
         public async Task<IActionResult> Index(int page = 1)
         {
             var app = await _roleService.GetPagedAsync(page, _setting.PageSize, a => a.ShowIndex, b => true);
@@ -40,6 +42,7 @@ namespace AdminSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(PolicysModels.PolicysRole)]
         public async Task<IActionResult> Index(string queryString, int page = 1)
         {
             var app = await _roleService.GetPagedAsync(page, _setting.PageSize, a => a.ShowIndex,
@@ -47,14 +50,14 @@ namespace AdminSite.Controllers
             return View(app);
         }
 
-
+        [Authorize(PolicysModels.PolicysRole)]
         public async Task<IActionResult> Details(Guid id)
         {
             var enitty = await _roleService.SingleAsync(a => a.ID == id);
             var model = enitty.ToModel();
             return View(model);
         }
-
+        [Authorize(PolicysModels.PolicysRole)]
         public async Task<IActionResult> Modify(Guid id)
         {
             var enitty = await _roleService.SingleAsync(id);
@@ -67,6 +70,7 @@ namespace AdminSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(PolicysModels.PolicysRole)]
         public async Task<IActionResult> Modify(RoleViewModel model)
         {
             try
@@ -82,7 +86,7 @@ namespace AdminSite.Controllers
             }
             return RedirectToAction("Details", new {id = model.ID});
         }
-
+        [Authorize(PolicysModels.PolicysRole)]
         public IActionResult Create()
         {
             var model = new RoleViewModel
@@ -95,6 +99,7 @@ namespace AdminSite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(PolicysModels.PolicysRole)]
         public async Task<IActionResult> Create(RoleViewModel model)
         {
             try
@@ -110,7 +115,7 @@ namespace AdminSite.Controllers
             }
             return RedirectToAction("Details", new {id = model.ID});
         }
-
+        [Authorize(PolicysModels.PolicysRole)]
         public async Task<IActionResult> Remove(Guid id)
         {
             try
@@ -126,7 +131,7 @@ namespace AdminSite.Controllers
         }
 
         #region JsonData
-
+        [Authorize("AuthorizedUser")]
         [HttpPost]
         public async Task<IActionResult> QueryJson()
         {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Threading.Tasks;
+using AdminSite.SiteAttributes;
 using AutoMapper;
 using IService;
 using Microsoft.AspNetCore.Authorization;
@@ -14,6 +15,7 @@ using ViewModels.Options;
 
 namespace AdminSite.Controllers
 {
+    [Authorize(PolicysModels.PolicysRole)]
     public class ApplicationController : BaseAdminController
     {
         private readonly IApplicationService _applicationService;
@@ -43,8 +45,7 @@ namespace AdminSite.Controllers
                 b => b.Name.Contains(queryString) || b.PyCode.Contains(queryString));
             return View(app);
         }
-
-
+        
         public async Task<IActionResult> Details(Guid id)
         {
 

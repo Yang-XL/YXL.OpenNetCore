@@ -7,6 +7,7 @@
 @Html.HiddenFor(a => a.ParentOrganizationID)
 <div class="form-body">
     <h4 class="form-section">基本信息</h4>
+    @Html.ValidationMessageDangerFor(a => a.CustomizeErrorMessage)
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">

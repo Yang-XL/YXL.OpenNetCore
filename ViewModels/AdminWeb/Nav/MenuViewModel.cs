@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Linq;
+using FluentValidation;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using PermissionSystem.Models;
 using ViewModels.AdminWeb.Application;
@@ -56,11 +59,11 @@ namespace ViewModels.AdminWeb.Nav
 
         [Display(Name = "导航菜单", Description = "导航菜单：将显示在导航，非导航菜：为上级菜单的功能权限菜单")]
         public bool IsNav { get; set; }
-        
+
 
         [Display(Name = "应用程序外键")]
         public Guid ApplicationID { get; set; }
-        
+
 
         [Display(Name = "父级菜单")]
         public Guid ParentID { get; set; }
@@ -81,6 +84,7 @@ namespace ViewModels.AdminWeb.Nav
         /// 3：权限菜单
         /// </summary>
         [Display(Name = "菜单类型", Description = "所有的应用程序")]
+        [Required(ErrorMessage = "请选择菜单类型")]
         public int MenuType { get; set; }
 
         /// <summary>
@@ -89,13 +93,17 @@ namespace ViewModels.AdminWeb.Nav
         /// 3：权限菜单
         /// </summary>
         [Display(Name = "菜单类型", Description = "所有的应用程序")]
-        public string MenuTypeName {get { return MenuTypeList.FirstOrDefault(a => a.Value == MenuType.ToString()).Text; } }
+        [Required(ErrorMessage = "请选择菜单类型")]
+        public string MenuTypeName
+        {
+            get { return MenuTypeList.FirstOrDefault(a => a.Value == MenuType.ToString()).Text; }
+        }
 
         public IEnumerable<SelectListItem> MenuTypeList => new List<SelectListItem>
         {
-            new SelectListItem{Text =  "分组菜单",Value = "1"},
-            new SelectListItem{Text =  "导航菜单",Value = "2"},
-            new SelectListItem{Text =  "权限菜单",Value = "3"}
+            new SelectListItem {Text = "分组菜单", Value = "1"},
+            new SelectListItem {Text = "导航菜单", Value = "2"},
+            new SelectListItem {Text = "权限菜单", Value = "3"}
         };
     }
 }

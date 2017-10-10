@@ -60,6 +60,18 @@
           "lib/netstandard1.3/Dapper.dll": {}
         }
       },
+      "FluentValidation/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/FluentValidation.dll": {}
+        }
+      },
       "IdentityModel/2.10.0": {
         "type": "package",
         "dependencies": {
@@ -5559,7 +5571,8 @@
         "dependencies": {
           "AutoMapper": "6.1.1",
           "Core": "1.0.0",
-          "IdentityServer4": "1.5.2",
+          "FluentValidation": "7.2.0",
+          "IdentityServer4": "2.0.0",
           "Microsoft.AspNetCore.Identity": "2.0.0",
           "Microsoft.AspNetCore.Mvc": "2.0.0",
           "PermissionSystem": "1.0.0"
@@ -5604,6 +5617,19 @@
         "lib/net451/Dapper.xml",
         "lib/netstandard1.3/Dapper.dll",
         "lib/netstandard1.3/Dapper.xml"
+      ]
+    },
+    "FluentValidation/7.2.0": {
+      "sha512": "p6orm2GMxanNpP9iWTvmXmCBWlsIrA3Ftf4QUxx5fuMy4WN4UcsWDAbi7kQz/1Uh7bzASdYZtTBzkumNcqOTgQ==",
+      "type": "package",
+      "path": "fluentvalidation/7.2.0",
+      "files": [
+        "fluentvalidation.7.2.0.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net45/FluentValidation.dll",
+        "lib/net45/FluentValidation.xml",
+        "lib/netstandard1.0/FluentValidation.dll",
+        "lib/netstandard1.0/FluentValidation.xml"
       ]
     },
     "IdentityModel/2.10.0": {
@@ -14219,5 +14245,16 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "检测到包降级: IdentityServer4 从 2.0.0 降级到 2.0.0-preview3。直接从项目引用包以选择不同版本。 \r\n IdentitySite (>= 1.0.0) -> ViewModels (>= 1.0.0) -> IdentityServer4 (>= 2.0.0) \r\n IdentitySite (>= 1.0.0) -> IdentityServer4 (>= 2.0.0-preview3)",
+      "libraryId": "IdentityServer4",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }

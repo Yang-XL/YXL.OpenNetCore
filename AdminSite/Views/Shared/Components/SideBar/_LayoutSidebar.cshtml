@@ -1,6 +1,4 @@
-﻿@using Controls.Layout
-@using ViewModels.AdminWeb.Nav
-@model NavViewModel
+﻿@model Microsoft.AspNetCore.Html.IHtmlContent
 
     <div class="page-sidebar-wrapper">
         <div class="page-sidebar navbar-collapse collapse">
@@ -40,7 +38,9 @@
                         </li>
                     </ul>
                 </li>*@
-                @Html.MenuNavItem(Model)
+
+                @*@Html.MenuNavItem(Model)*@
+                @Model
             </ul>
         </div>
     </div>

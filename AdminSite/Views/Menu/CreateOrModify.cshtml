@@ -5,13 +5,14 @@
 @Html.HiddenFor(a => a.ID)
 @Html.HiddenFor(a => a.ParentID)
 <div class="form-body">
+    @Html.ValidationMessageDangerFor(a=>a.CustomizeErrorMessage)
     <h4 class="form-section">基本信息</h4>
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
                 @Html.LabelFor(a => a.Name, new {@class = "control-label"})
                 @Html.TextBoxFor(a => a.Name, new {placeholder = "请输入菜单名称", @class = "form-control"})
-                <span class="help-block"> @Html.ValidationMessageFor(a => a.Name)</span>
+                <span class="help-block font-red" > @Html.ValidationMessageFor(a => a.Name)</span>
             </div>
         </div>
 
@@ -19,7 +20,7 @@
             <div class="form-group">
                 @Html.LabelFor(a => a.Code, new {@class = "control-label"})
                 @Html.TextBoxFor(a => a.Code, new {placeholder = "请输入菜单编码", @class = "form-control"})
-                <span class="help-block"> @Html.ValidationMessageFor(a => a.Code)</span>
+                <span class="help-block font-red"> @Html.ValidationMessageFor(a => a.Code)</span>
             </div>
         </div>
     </div>
@@ -29,15 +30,16 @@
             <div class="form-group">
                 @Html.LabelFor(a => a.ShowIndex, new {@class = "control-label"})
                 @Html.TextBoxFor(a => a.ShowIndex, new {@class = "form-control"})
+                <span class="help-block font-red"> @Html.ValidationMessageFor(a => a.ShowIndex)</span>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                @Html.LabelFor(a => a.IconCss, new { @class = "control-label" })
-                @Html.TextBoxFor(a => a.IconCss, new { @class = "form-control" })
+                @Html.LabelFor(a => a.IconCss, new {@class = "control-label"})
+                @Html.TextBoxFor(a => a.IconCss, new {@class = "form-control"})
             </div>
         </div>
-       
+
     </div>
     <div class="row">
         <div class="col-md-12">
@@ -53,15 +55,15 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                @Html.LabelFor(a => a.ApplicationID, new { @class = "control-label" })
+                @Html.LabelFor(a => a.ApplicationID, new {@class = "control-label"})
                 @Html.DropDownListFor(a => a.ApplicationID, Model.ApplicationViewModels, new {@class = "form-control"})
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                @Html.LabelFor(a=>a.ParentMenuName,new {@class= "control-label" })
+                @Html.LabelFor(a => a.ParentMenuName, new {@class = "control-label"})
                 @Html.ZtreeTextBoxFor(a => a.ParentMenuName, new {@class = "form-control", @readonly = "readonly", style = "cursor:pointer"})
-                <span class="help-block"> @Html.ValidationMessageFor(a => a.ParentMenuName)</span>
+                <span class="help-block font-red"> @Html.ValidationMessageFor(a => a.ParentMenuName)</span>
             </div>
         </div>
     </div>
@@ -72,6 +74,7 @@
                 <div class="radio-list">
                     @Html.RadioButtonListFor(a => a.MenuType, Model.MenuTypeList, "", new {@class = "radio-inline"})
                 </div>
+                <span class="help-block font-red"> @Html.ValidationMessageFor(a => a.MenuType)</span>
             </div>
         </div>
         <div class="col-md-6">

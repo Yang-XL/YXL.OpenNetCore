@@ -9,6 +9,7 @@
 // ===================================================================
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
@@ -25,5 +26,11 @@ namespace IService
         Task<IPagedList<MenuViewModel>> PageMenuViewModel(int pageSize, int pageIndex,string queryString,Guid? parentID = null);
 
         Task<MenuViewModel> GetMenuViewModel(Guid rid);
+
+        Task<IEnumerable<Menu>> QueryMenuViewModel(IEnumerable<Guid> roleList);
+
+        Task<IEnumerable<Menu>> QueryMenuViewModel(Guid userID);
+
+        Task<Menu> SingleAsync(string areaName, string controllerName, string actionName);
     }
 }

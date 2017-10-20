@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
@@ -12,15 +13,17 @@ namespace AdminSite.Middleware
         private readonly ILogger _logger;
         private readonly RequestDelegate _next;
         private readonly IConfiguration _configuration;
+        private readonly ApplicationPartManager _part;
 
         public CustomErrorPagesMiddleware(
             RequestDelegate next,
             ILogger<CustomErrorPagesMiddleware> logger,
-            IConfiguration configuration)
+            IConfiguration configuration, ApplicationPartManager part)
         {
             _next = next;
             _logger = logger;
             _configuration = configuration;
+            _part = part;
         }
 
         public async Task Invoke(HttpContext context)

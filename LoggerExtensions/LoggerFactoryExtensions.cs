@@ -1,5 +1,4 @@
-﻿using System;
-using IService;
+﻿using IService;
 using LoggerExtensions.FileLogger;
 using LoggerExtensions.Setting;
 using Microsoft.Extensions.Configuration;
@@ -9,17 +8,14 @@ namespace LoggerExtensions
 {
     public static class LoggerFactoryExtensions
     {
-        #region FileLog
-
         /// <summary>
         /// </summary>
         /// <param name="factory">The <see cref="ILoggerFactory" /> to use.</param>
-        /// <param name="settings">The settings to apply to created <see cref="FileLogger" />'s.</param>
+        /// <param name="settings">The settings to apply to created <see cref="Logger" />'s.</param>
         /// <param name="logService"></param>
         /// <returns></returns>
-        public static ILoggerFactory AddLog(
-            this ILoggerFactory factory,
-            ILoggerSettings settings, ILogService logService)
+        public static ILoggerFactory AddLog(this ILoggerFactory factory, ILoggerSettings settings,
+            ILogService logService)
         {
             factory.AddProvider(new LoggerProvider(settings, logService));
             return factory;
@@ -37,7 +33,5 @@ namespace LoggerExtensions
             var settings = new LoggerSettings(configuration);
             return factory.AddLog(settings, logService);
         }
-
-        #endregion
     }
 }

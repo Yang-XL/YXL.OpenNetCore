@@ -1,0 +1,10 @@
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\Plugins\WxPay\netcoreapp2.0\PluginDescription.json
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\Plugins\WxPay\netcoreapp2.0\WxPay.deps.json
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\Plugins\WxPay\netcoreapp2.0\WxPay.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\Plugins\WxPay\netcoreapp2.0\WxPay.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\WxPay\obj\Debug\netcoreapp2.0\WxPay.csproj.CoreCompileInputs.cache
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\WxPay\obj\Debug\netcoreapp2.0\WxPay.AssemblyInfoInputs.cache
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\WxPay\obj\Debug\netcoreapp2.0\WxPay.AssemblyInfo.cs
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\WxPay\obj\Debug\netcoreapp2.0\WxPay.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\WxPay\obj\Debug\netcoreapp2.0\WxPay.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\WxPay\obj\Debug\netcoreapp2.0\WxPay.csprojResolveAssemblyReference.cache

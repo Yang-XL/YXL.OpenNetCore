@@ -1,0 +1,10 @@
+{
+  "FriendlyName": "阿里支付",
+  "SystemName": "AliPay",
+  "Version": "1.0",
+  "SupportedVersions": [ "1.0", "1.1" ],
+  "Author": "YXL",
+  "Description": "阿里支付",
+  "DisplayOrder": "0",
+  "Installed": "false"
+}

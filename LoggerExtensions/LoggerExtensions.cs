@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.Extensions.Logging;
 using Mongo.Models;
-using PermissionSystem.Models;
 
 namespace LoggerExtensions
 {
@@ -9,7 +8,8 @@ namespace LoggerExtensions
     {
         private static readonly Func<PermissionSystemLogs, Exception, string> _messageFormatter = MessageFormatter;
 
-        public static void Log(this ILogger logger, LogLevel logLevel, EventId eventId, PermissionSystemLogs log, Exception e,
+        public static void Log(this ILogger logger, LogLevel logLevel, EventId eventId, PermissionSystemLogs log,
+            Exception e,
             Func<PermissionSystemLogs, Exception, string> formatter)
         {
             if (logger == null)
@@ -79,10 +79,12 @@ namespace LoggerExtensions
         {
             Log(logger, LogLevel.Error, 0, message, null, MessageFormatter, keyWord, shortMessage);
         }
+
         public static void Error(this ILogger logger, Exception e, string keyWord = "")
         {
             Log(logger, LogLevel.Error, 0, e.ToString(), null, MessageFormatter, keyWord, e.Message);
         }
+
         #endregion
 
         #region Information

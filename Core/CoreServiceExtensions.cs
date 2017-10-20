@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Core.Cache;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,21 +19,19 @@ namespace Core
        
         public static IServiceCollection UserCore(this IServiceCollection services)
         {
-            services.AddScoped<IFileManager, FileManager.FileManager>();
-            services.AddScoped<ITypeFinder, TypeFinder>();
-            //services.AddScoped<IPluginFinder, PluginFinder>();
-
-            services.AddScoped<IAssemblyLoader, NetCoreAssemblyLoader>();
-            //services.AddScoped<IPluginLoader, PluginLoader>();
+            services.AddSingleton<IFileManager, FileManager.FileManager>();
+            services.AddSingleton<ITypeFinder, TypeFinder>();
+            services.AddSingleton<IAssemblyLoader, NetCoreAssemblyLoader>();
+            services.AddSingleton<IPluginFinder, PluginFinder>();
             return services;
         }
 
 
-        public static IServiceCollection UserRedisCache(this IServiceCollection service ,IConfiguration configuration)
+        public static IServiceCollection UserRedisCache(this IServiceCollection services, IConfiguration configuration)
         {
-            
-
-            return service;
+            services.Configure<CacheOption>(configuration.GetSection("Cache"));
+            services.AddSingleton<ICache, RedisCache>();
+            return services;
         }
 
 

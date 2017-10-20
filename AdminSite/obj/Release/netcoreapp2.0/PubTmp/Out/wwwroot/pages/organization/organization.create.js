@@ -1,7 +1,5 @@
 ﻿var organizationCreate = function () {
 
-
-
     var leaderSetting = {
         view: {
             dblClickExpand: false
@@ -25,23 +23,7 @@
             }
         }
     };
-    function LeaderNameBind() {
-        $("#Leader").val("");
-        $("#LeaderName").val("");
-        $.ajax({
-            type: "Post",
-            datatype: "Json",
-            contentType: "application/json;charset=utf-8", 
-            url: "/User/OrganizationZTreeUsers",
-            success: function (data) {
-                $("#LeaderName").ztreeSelect(leaderSetting, data);
-            },
-            error: function (result) {
-                alert(result.status + "：" + result.statusText);
-            }
-        });
-    }
-
+    
 
     var parentOrganizationSetting = {
         view: {
@@ -60,31 +42,42 @@
             }
         }
     };
+
+
+
     function ParentOrganizationNameBind() {
-        $("#ParentOrganizationID").val("");
-        $("#ParentOrganizationName").val("");
         $.ajax({
             type: "Post",
             datatype: "Json",
-            contentType: "application/json;charset=utf-8", 
             url: "/Organization/ZtreeOrganization",
             success: function (data) {
                 $("#ParentOrganizationName").ztreeSelect(parentOrganizationSetting, data);
             },
             error: function (result) {
-                alert(result.status + "：" + result.statusText);
+                alert("加载部门树错误："+result.status);
             }
         });
     }
 
 
-
+    function LeaderNameBind() {
+        $.ajax({
+            type: "Post",
+            datatype: "Json",
+            url: "/User/OrganizationZTreeUsers",
+            success: function (data) {
+                $("#LeaderName").ztreeSelect(leaderSetting, data);
+            },
+            error: function (result) {
+                alert("加载用户树错误："+ result.status);
+            }
+        });
+    }
 
     return {
-        //main function to initiate the module
         init: function () {
-            LeaderNameBind();
             ParentOrganizationNameBind();
+            LeaderNameBind();
         }
     };
 }();

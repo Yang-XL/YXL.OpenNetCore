@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "10097b28d0a7761dca0cb996964f26c17374266a"
+    "signature": "a7b34c92b6e47dc088d4b5c20bdc38850e773eaf"
   },
   "compilationOptions": {
     "defines": [
@@ -100,7 +100,18 @@
           "lib/netstandard1.3/Dapper.dll": {}
         }
       },
-      "IdentityModel/2.8.1": {
+      "FluentValidation/7.2.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.0/FluentValidation.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.0/FluentValidation.dll": {}
+        }
+      },
+      "IdentityModel/2.12.0": {
         "dependencies": {
           "NETStandard.Library": "2.0.0",
           "Newtonsoft.Json": "10.0.1",
@@ -117,26 +128,25 @@
           "lib/netstandard1.4/IdentityModel.dll": {}
         }
       },
-      "IdentityServer4/1.5.2": {
+      "IdentityServer4/2.0.0": {
         "dependencies": {
-          "IdentityModel": "2.8.1",
+          "IdentityModel": "2.12.0",
+          "Microsoft.AspNetCore.Authentication": "2.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "2.0.0",
+          "Microsoft.AspNetCore.Authentication.OpenIdConnect": "2.0.0",
           "Microsoft.AspNetCore.Cors": "2.0.0",
-          "Microsoft.AspNetCore.Http.Abstractions": "2.0.0",
-          "Microsoft.Extensions.Caching.Abstractions": "2.0.0",
           "Microsoft.Extensions.Caching.Memory": "2.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging": "2.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "2.0.0",
-          "NETStandard.Library": "2.0.0",
-          "System.Collections.Specialized": "4.3.0",
-          "System.Diagnostics.Process": "4.3.0",
-          "System.IdentityModel.Tokens.Jwt": "5.1.4"
+          "System.IdentityModel.Tokens.Jwt": "5.1.4",
+          "System.Security.Cryptography.Cng": "4.4.0",
+          "System.ValueTuple": "4.4.0"
         },
         "runtime": {
-          "lib/netstandard1.4/IdentityServer4.dll": {}
+          "lib/netstandard2.0/IdentityServer4.dll": {}
         },
         "compile": {
-          "lib/netstandard1.4/IdentityServer4.dll": {}
+          "lib/netstandard2.0/IdentityServer4.dll": {}
         }
       },
       "Libuv/1.10.0": {
@@ -2572,7 +2582,7 @@
         "dependencies": {
           "NETStandard.Library": "2.0.0",
           "System.Collections.NonGeneric": "4.3.0",
-          "System.Diagnostics.Process": "4.3.0",
+          "System.Diagnostics.Process": "4.1.0",
           "System.Dynamic.Runtime": "4.3.0",
           "System.Reflection.Emit.Lightweight": "4.3.0"
         },
@@ -3310,7 +3320,7 @@
           }
         }
       },
-      "System.Diagnostics.Process/4.3.0": {
+      "System.Diagnostics.Process/4.1.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
           "Microsoft.Win32.Primitives": "4.3.0",
@@ -4002,29 +4012,18 @@
           }
         }
       },
-      "System.Security.Cryptography.Cng/4.3.0": {
+      "System.Security.Cryptography.Cng/4.4.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.0.0",
-          "System.IO": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.Handles": "4.3.0",
-          "System.Runtime.InteropServices": "4.3.0",
-          "System.Security.Cryptography.Algorithms": "4.3.0",
-          "System.Security.Cryptography.Encoding": "4.3.0",
-          "System.Security.Cryptography.Primitives": "4.3.0",
-          "System.Text.Encoding": "4.3.0"
+          "Microsoft.NETCore.Platforms": "2.0.0"
         },
         "runtimeTargets": {
-          "runtime/unix/lib/_._": {
-            "rid": "unix",
-            "assetType": "runtime"
-          },
           "runtime/win/lib/_._": {
             "rid": "win",
             "assetType": "runtime"
           }
+        },
+        "compile": {
+          "ref/netcoreapp2.0/System.Security.Cryptography.Cng.dll": {}
         }
       },
       "System.Security.Cryptography.Csp/4.3.0": {
@@ -4131,7 +4130,7 @@
           "System.Runtime.InteropServices": "4.3.0",
           "System.Runtime.Numerics": "4.3.0",
           "System.Security.Cryptography.Algorithms": "4.3.0",
-          "System.Security.Cryptography.Cng": "4.3.0",
+          "System.Security.Cryptography.Cng": "4.4.0",
           "System.Security.Cryptography.Csp": "4.3.0",
           "System.Security.Cryptography.Encoding": "4.3.0",
           "System.Security.Cryptography.OpenSsl": "4.3.0",
@@ -4479,11 +4478,16 @@
           "AutoMapper": "6.1.1",
           "Dapper": "1.50.2",
           "Microsoft.AspNetCore.Http.Abstractions": "2.0.0",
+          "Microsoft.AspNetCore.Mvc": "2.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Configuration.Json": "2.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
           "Microsoft.Extensions.DependencyModel": "2.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.0.0",
+          "Microsoft.Extensions.PlatformAbstractions": "1.1.0",
           "MimeKit": "1.18.1",
           "MongoDB.Bson": "2.4.4",
           "MongoDB.Driver": "2.4.4",
@@ -4557,6 +4561,7 @@
           "Core": "1.0.0",
           "Dapper": "1.50.2",
           "IService": "1.0.0",
+          "LoggerExtensions": "1.0.0",
           "Mongo": "1.0.0",
           "PermissionSystem": "1.0.0",
           "ViewModels": "1.0.0"
@@ -4572,7 +4577,8 @@
         "dependencies": {
           "AutoMapper": "6.1.1",
           "Core": "1.0.0",
-          "IdentityServer4": "1.5.2",
+          "FluentValidation": "7.2.0",
+          "IdentityServer4": "2.0.0",
           "Microsoft.AspNetCore.Identity": "2.0.0",
           "Microsoft.AspNetCore.Mvc": "2.0.0",
           "PermissionSystem": "1.0.0"
@@ -4782,19 +4788,26 @@
       "path": "dapper/1.50.2",
       "hashPath": "dapper.1.50.2.nupkg.sha512"
     },
-    "IdentityModel/2.8.1": {
+    "FluentValidation/7.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bVY5P/wNHvglbNwB3dsdI63sLa6GQAdhjynfRb7sBknbq0Rcz2s/u8VPT/k1+OqnMEjQE1RzRRIeHV0hj02poA==",
-      "path": "identitymodel/2.8.1",
-      "hashPath": "identitymodel.2.8.1.nupkg.sha512"
+      "sha512": "sha512-p6orm2GMxanNpP9iWTvmXmCBWlsIrA3Ftf4QUxx5fuMy4WN4UcsWDAbi7kQz/1Uh7bzASdYZtTBzkumNcqOTgQ==",
+      "path": "fluentvalidation/7.2.0",
+      "hashPath": "fluentvalidation.7.2.0.nupkg.sha512"
     },
-    "IdentityServer4/1.5.2": {
+    "IdentityModel/2.12.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-RJILiNmbTXef87Don/sGWu1i8sVj48OBHI2dBP2ZI33+HtZGkqIOzROTyqc1qh4aNFBNC0IVKt74uRomtrU/Yg==",
-      "path": "identityserver4/1.5.2",
-      "hashPath": "identityserver4.1.5.2.nupkg.sha512"
+      "sha512": "sha512-mkBihxR9LrQlMLTvhW+bszcc5Be8vLx9O5NFiOd+eFwUdQvy0bxxP+lDk2D4OZV8SG8qzLilWQq8Waly3ydiTQ==",
+      "path": "identitymodel/2.12.0",
+      "hashPath": "identitymodel.2.12.0.nupkg.sha512"
+    },
+    "IdentityServer4/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CNidhBHlkb3PmXS8ED64v2xVD7eanlIcSZ8O3tfJpTUREJ9IHbM41DnySHV4kHxYl4j6g5cet0C+BTrgKzIMdg==",
+      "path": "identityserver4/2.0.0",
+      "hashPath": "identityserver4.2.0.0.nupkg.sha512"
     },
     "Libuv/1.10.0": {
       "type": "package",
@@ -6621,12 +6634,12 @@
       "path": "system.diagnostics.fileversioninfo/4.3.0",
       "hashPath": "system.diagnostics.fileversioninfo.4.3.0.nupkg.sha512"
     },
-    "System.Diagnostics.Process/4.3.0": {
+    "System.Diagnostics.Process/4.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ipii9dAhRZqy5c2cPY7F1OakfhicKV0PIiq1Q7kSCm2Y2F0C1k0U/W98x7RP0KylkAUmpQHyk/AAgiY70TQtOA==",
-      "path": "system.diagnostics.process/4.3.0",
-      "hashPath": "system.diagnostics.process.4.3.0.nupkg.sha512"
+      "sha512": "sha512-mpVZ5bnlSs3tTeJ6jYyDJEIa6tavhAd88lxq1zbYhkkCu0Pno2+gHXcvZcoygq2d8JxW3gojXqNJMTAshduqZA==",
+      "path": "system.diagnostics.process/4.1.0",
+      "hashPath": "system.diagnostics.process.4.1.0.nupkg.sha512"
     },
     "System.Diagnostics.StackTrace/4.3.0": {
       "type": "package",
@@ -6974,12 +6987,12 @@
       "path": "system.security.cryptography.algorithms/4.3.0",
       "hashPath": "system.security.cryptography.algorithms.4.3.0.nupkg.sha512"
     },
-    "System.Security.Cryptography.Cng/4.3.0": {
+    "System.Security.Cryptography.Cng/4.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-LMpcprvEAtvD1VNWldT5Vi4rPtnAemJXChpJHuHFy1v5X++c+/651JQGTGFpwENeHUQb8BdywQr7A+a0CdVcJg==",
-      "path": "system.security.cryptography.cng/4.3.0",
-      "hashPath": "system.security.cryptography.cng.4.3.0.nupkg.sha512"
+      "sha512": "sha512-3d/d+7sdNpfYfqJFzuE/o6Pl/reaMbH7rlUMNvtm4+XVYHY32tdFa45yjB3vhb6q0YY+IV8GUuiBPRsBFP3yaw==",
+      "path": "system.security.cryptography.cng/4.4.0",
+      "hashPath": "system.security.cryptography.cng.4.4.0.nupkg.sha512"
     },
     "System.Security.Cryptography.Csp/4.3.0": {
       "type": "package",

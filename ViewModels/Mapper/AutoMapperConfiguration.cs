@@ -1,11 +1,5 @@
-﻿using System.Collections.Generic;
-using AutoMapper;
-using Core.Utility.Extensions;
-using IdentityServer4.Models;
-using PermissionSystem.Models;
+﻿using AutoMapper;
 using ViewModels.AdminWeb;
-using ViewModels.AdminWeb.Application;
-using ViewModels.AdminWeb.Nav;
 using ViewModels.IdentitySite;
 
 namespace ViewModels.Mapper

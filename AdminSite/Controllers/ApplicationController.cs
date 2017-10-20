@@ -6,6 +6,7 @@ using AutoMapper;
 using IService;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using ViewModels.AdminWeb;
@@ -22,6 +23,7 @@ namespace AdminSite.Controllers
         private readonly IMapper _mapper;
         private readonly AdminSiteOption _setting;
         private readonly ILogger _logger;
+
 
         public ApplicationController(IApplicationService applicationService, IOptions<AdminSiteOption> setting,
             IMapper mapper, ILoggerFactory loggerFactory)
@@ -43,7 +45,7 @@ namespace AdminSite.Controllers
         {
             var app = await _applicationService.GetPagedAsync(page, _setting.PageSize, a => a.ShowIndex,
                 b => b.Name.Contains(queryString) || b.PyCode.Contains(queryString));
-            return View(app);
+            return PartialView("AjaxTable", app);
         }
         
         public async Task<IActionResult> Details(Guid id)

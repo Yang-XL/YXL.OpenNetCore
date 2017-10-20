@@ -1,0 +1,10 @@
+﻿{
+  "FriendlyName": "微信支付",
+  "SystemName": "WxPay",
+  "Version": "1.0",
+  "SupportedVersions": [ "1.0", "1.1" ],
+  "Author": "YXL",
+  "Description": "微信支付",
+  "DisplayOrder": "0",
+  "Installed": "false"
+}

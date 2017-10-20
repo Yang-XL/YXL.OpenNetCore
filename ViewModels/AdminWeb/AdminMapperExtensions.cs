@@ -1,6 +1,4 @@
-﻿
-using IdentityServer4.Models;
-using PermissionSystem.Models;
+﻿using PermissionSystem.Models;
 using ViewModels.AdminWeb.Application;
 using ViewModels.AdminWeb.Nav;
 using ViewModels.AdminWeb.Organization;
@@ -10,8 +8,12 @@ using ViewModels.Mapper;
 
 namespace ViewModels.AdminWeb
 {
-   public  static class AdminMapperExtensions
+    /// <summary>
+    /// </summary>
+    public static class AdminMapperExtensions
     {
+        #region Menu
+
         public static Menu ToEntity(this MenuViewModel model)
         {
             return model.MapTo<MenuViewModel, Menu>();
@@ -27,13 +29,17 @@ namespace ViewModels.AdminWeb
             return entity.MapTo<Menu, MenuViewModel>();
         }
 
+        #endregion
+
+        #region PermissionSystem.Models.Application
 
         public static PermissionSystem.Models.Application ToEntity(this ApplicationViewModel model)
         {
             return model.MapTo<ApplicationViewModel, PermissionSystem.Models.Application>();
         }
 
-        public static PermissionSystem.Models.Application ToEntity(this ApplicationViewModel model, PermissionSystem.Models.Application entity)
+        public static PermissionSystem.Models.Application ToEntity(this ApplicationViewModel model,
+            PermissionSystem.Models.Application entity)
         {
             return model.MapTo(entity);
         }
@@ -43,8 +49,10 @@ namespace ViewModels.AdminWeb
             return entity.MapTo<PermissionSystem.Models.Application, ApplicationViewModel>();
         }
 
+        #endregion
 
         #region  Role MappingExtension
+
         public static Role ToEntity(this RoleViewModel model)
         {
             return model.MapTo<RoleViewModel, Role>();
@@ -59,15 +67,18 @@ namespace ViewModels.AdminWeb
         {
             return entity.MapTo<Role, RoleViewModel>();
         }
+
         #endregion
 
         #region  Organization MappingExtension
+
         public static PermissionSystem.Models.Organization ToEntity(this OrganizationViewModel model)
         {
             return model.MapTo<OrganizationViewModel, PermissionSystem.Models.Organization>();
         }
 
-        public static PermissionSystem.Models.Organization ToEntity(this OrganizationViewModel model, PermissionSystem.Models.Organization entity)
+        public static PermissionSystem.Models.Organization ToEntity(this OrganizationViewModel model,
+            PermissionSystem.Models.Organization entity)
         {
             return model.MapTo(entity);
         }
@@ -76,6 +87,7 @@ namespace ViewModels.AdminWeb
         {
             return entity.MapTo<PermissionSystem.Models.Organization, OrganizationViewModel>();
         }
+
         #endregion
 
         #region User
@@ -85,7 +97,8 @@ namespace ViewModels.AdminWeb
             return model.MapTo<UserViewModel, PermissionSystem.Models.User>();
         }
 
-        public static PermissionSystem.Models.User ToEntity(this UserViewModel model, PermissionSystem.Models.User entity)
+        public static PermissionSystem.Models.User ToEntity(this UserViewModel model,
+            PermissionSystem.Models.User entity)
         {
             return model.MapTo(entity);
         }
@@ -96,6 +109,5 @@ namespace ViewModels.AdminWeb
         }
 
         #endregion
-
     }
 }

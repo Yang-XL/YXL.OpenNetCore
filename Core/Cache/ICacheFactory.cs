@@ -2,8 +2,8 @@
 {
     public interface ICacheFactory
     {
-        ICacher CreCacher();
+        ICache CreateCacher();
 
-        ICacheProvider CreataeProvider();
+        ICacheProvider CreateProvider();
     }
 }

@@ -9,23 +9,17 @@
 // ===================================================================
 
 using System;
-using System.Data;
 using System.IO;
 using System.Threading.Tasks;
 using Core.FileManager;
-using Core.Repository.Implementation;
 using Core.Repository.MongoDB;
-using Dapper;
 using IdentityServer4.Extensions;
 using IService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Extensions;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Mongo;
 using Mongo.Models;
-using MongoDB.Driver;
-using Newtonsoft.Json;
 
 namespace Service.PermissionSystem
 {
@@ -33,6 +27,8 @@ namespace Service.PermissionSystem
     {
         private readonly IHttpContextAccessor _accessor;
         private readonly IFileManager _fileManager;
+
+        private readonly string DefaultFileLogPath = Path.Combine(AppContext.BaseDirectory, "Logs");
 
         public LogService(MongoContext context, IFileManager fileManager,
             IHttpContextAccessor accessor) : base(context.PermissionSystemLogs)
@@ -70,27 +66,19 @@ namespace Service.PermissionSystem
             {
                 await InsertAsync(logEntity);
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                var filePath = Path.Combine(AppContext.BaseDirectory, "Logs");
-                var fileName = DateTime.Now.ToString("yyyy-MM-dd") + ".log";
-                _fileManager.CreateDirectory(filePath);
-                _fileManager.AppendText(Path.Combine(filePath, fileName), $"{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff}   {logLevel}   {categoryName}   {message}");
+                var filePath = Path.Combine(DefaultFileLogPath, DateTime.Now.ToString("yyyy-MM-dd") + ".log");
+                await _fileManager.WriteAsync(filePath,
+                    $"{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff}   {logLevel}   {categoryName}   {message} \r\n");
             }
-            
         }
 
 
-        public Task Log<TState>(string categoryName, LogLevel logLevel, EventId eventId, TState state,
+        public async Task Log<TState>(string categoryName, LogLevel logLevel, EventId eventId, TState state,
             Exception exception, Func<TState, Exception, string> formatter)
         {
-            return Log(categoryName, logLevel, eventId, state, exception, formatter,
-                Path.Combine(AppContext.BaseDirectory, "Logs"));
-        }
-
-        public Task Log(string categoryName, LogLevel logLevel, EventId eventId, PermissionSystemLogs state)
-        {
-            throw new NotImplementedException();
+            await Log(categoryName, logLevel, eventId, state, exception, formatter, DefaultFileLogPath);
         }
     }
 }

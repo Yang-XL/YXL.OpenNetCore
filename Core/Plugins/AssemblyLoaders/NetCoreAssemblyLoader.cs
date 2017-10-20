@@ -2,6 +2,7 @@
 using System.IO;
 using System.Reflection;
 using System.Runtime.Loader;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
 namespace Core.Plugins.AssemblyLoaders
@@ -21,6 +22,7 @@ namespace Core.Plugins.AssemblyLoaders
         {
             try
             {
+                
                 return AssemblyContext.LoadFromAssemblyName(assemblyName);
             }
             catch (Exception e)

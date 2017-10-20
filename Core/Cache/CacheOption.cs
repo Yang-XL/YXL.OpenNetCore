@@ -15,11 +15,15 @@ namespace Core.Cache
         /// Redis 连接
         /// </summary>
         public ConfigurationOptions Configuration { get; set; }
-
         /// <summary>
         /// Redis实例
         /// </summary>
         public  string InstanceName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public int DataBase { get; set; } = 0;
 
     }
 }

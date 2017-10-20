@@ -34,3 +34,5 @@ D:\GitSource\OpenNetCore\YXL.OpenNetCore\Service\obj\Release\netcoreapp2.0\Servi
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\Service\obj\Release\netcoreapp2.0\Service.pdb
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\Service\bin\Release\netcoreapp2.0\Mongo.dll
 D:\GitSource\OpenNetCore\YXL.OpenNetCore\Service\bin\Release\netcoreapp2.0\Mongo.pdb
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Service\bin\Release\netcoreapp2.0\LoggerExtensions.dll
+D:\GitSource\OpenNetCore\YXL.OpenNetCore\Service\bin\Release\netcoreapp2.0\LoggerExtensions.pdb

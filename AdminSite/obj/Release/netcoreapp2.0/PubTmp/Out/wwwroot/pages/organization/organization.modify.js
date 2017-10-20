@@ -1,96 +1,102 @@
-﻿var modelModify = function () {
+﻿var organizationCreate = function () {
 
-    var setting = {
+    function LoadLeaderData() {
+        var leader = $("#Leader").val();
+        var zTree = $.fn.zTree.getZTreeObj($("#LeaderName").attr("treeid"));
+        var nodes = zTree.getNodeByParam("id", leader, null);
+        zTree.selectNode(nodes);
+        $("#LeaderName").val(nodes.name);
+    }
+
+    function LoadParentOrganizatioData() {
+        var pid = $("#ParentOrganizationID").val();
+
+        var zTree = $.fn.zTree.getZTreeObj($("#ParentOrganizationName").attr("treeid"));
+        var nodes = zTree.getNodeByParam("id", pid, null);
+        zTree.selectNode(nodes);
+        $("#ParentOrganizationName").val(nodes.name);
+    }
+
+
+    var leaderSetting = {
         view: {
             dblClickExpand: false
         },
-        check: { enable: true, chkStyle: "radio", radioType: "level" },
+        check: {
+            enable: true,
+            chkStyle: "radio"
+        },
         data: {
             simpleData: {
                 enable: true
             }
         },
         callback: {
-            beforeClick: beforeClick,
-            onClick: onClick
+            beforeClick: function (treeId, treeNode) {
+                return !treeNode.chkDisabled;
+            }, onClick: function (e, treeId, treeNode) {
+                $("#LeaderName").val(treeNode.name);
+                $("#Leader").val(treeNode.id);
+                $("#LeaderName").trigger("hideTree");
+            }
         }
     };
-    var zNodes = [
-        { id: "00000000-0000-0000-0000-000000000000", pId: "00000000-0000-0000-0000-000000000000", name: "--根目录--" }
-    ];
+    var parentOrganizationSetting = {
+        view: {
+            dblClickExpand: false
+        },
+        data: {
+            simpleData: {
+                enable: true
+            }
+        },
+        callback: {
+            onClick: function(e, treeId, treeNode) {
+                $("#ParentOrganizationName").val(treeNode.name);
+                $("#ParentOrganizationID").val(treeNode.id);
+                $("#ParentOrganizationName").trigger("hideTree");
+            }
+        }
+    };
 
-    function beforeClick(treeId, treeNode) {
-        return treeNode.id !== 1;
-    }
-
-    function onClick(e, treeId, treeNode) {
-        var zTree = $.fn.zTree.getZTreeObj($("#ParentMenuName").attr("treeid"));
-       var nodes = zTree.getSelectedNodes();
-       if (nodes.length <= 0) return ;
-        $("#ParentMenuName").val(nodes[0].name);
-        $("#ParentID").val(nodes[0].id);
-        $("#ParentMenuName").trigger("hideTree");
-    }
-
-    function ParentMenuNameBind() {
+    function ParentOrganizationNameBind() {
         $.ajax({
             type: "Post",
             datatype: "Json",
-            url: "/Menu/QueryJson",
-            data: { applicationId: $("#ApplicationID").val() },
+            url: "/Organization/ZtreeOrganization",
             success: function (data) {
-                if (data.length <= 0) {
-                    $("#ParentMenuName").ztreeSelect(setting, zNodes);
-                } else {
-                    $("#ParentMenuName").ztreeSelect(setting, data);
-                }
-                loadEditData();
+                $("#ParentOrganizationName").ztreeSelect(parentOrganizationSetting, data);
+                LoadParentOrganizatioData();
+            },
+            error: function (result) {
+                alert("加载部门树错误："+result.status);
+            }
+        });
+    }
+    function LeaderNameBind() {
+        $.ajax({
+            type: "Post",
+            datatype: "Json",
+            url: "/User/OrganizationZTreeUsers",
+            success: function (data) {
+                $("#LeaderName").ztreeSelect(leaderSetting, data);
+                LoadLeaderData();
+            },
+            error: function (result) {
+                alert("加载用户树错误："+ result.status);
             }
         });
     }
 
-    function menuTypeClick() {
-        if ($('input[name="MenuType"]:checked').val() === "1") {
-            $("#ActionName").val("").prop("readonly", "readonly");
-            $("#ControllerName").val("").prop("readonly", "readonly");
-            $("#AreaName").val("").prop("readonly", "readonly");
-        } else {
-            $("#ActionName").removeAttr("readonly");
-            $("#ControllerName").removeAttr("readonly");
-            $("#AreaName").removeAttr("readonly");
-        }
-    }
 
-    function loadEditData() {
-        var pid = $("#ParentID").val();
-        var zTree = $.fn.zTree.getZTreeObj($("#ParentMenuName").attr("treeid"));
-        var nodes = zTree.getNodeByParam("id", pid, null);
-        zTree.selectNode(nodes);
-        $("#ParentMenuName").val(nodes.name);
-
-        var menuType = $("#MenuType").val();
-
-        $('input[name="MenuType"]').each(function() {
-            if ($(this).val() === menuType) {
-                $(this).attr("checked", 'checked');
-            }
-        });
-    }
     return {
-        //main function to initiate the module
         init: function () {
-            ParentMenuNameBind();
-            menuTypeClick();
-            $('input[name="MenuType"]').change(menuTypeClick);
-            $("#ApplicationID").change(function() {
-                $("#ParentID").val("");
-                $("#ParentMenuName").val("");
-                ParentMenuNameBind();
-            });
+            ParentOrganizationNameBind();
+            LeaderNameBind();
         }
     };
 }();
 
 jQuery(document).ready(function () {
-    modelModify.init();
+    organizationCreate.init();
 });

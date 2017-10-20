@@ -17,7 +17,6 @@
             $(li).children("a.nav-link").children("span.arrow").addClass("open");
         }
     }
-
     /*
     * 链接菜单点击清除其他的CSS样式
     */
@@ -29,7 +28,7 @@
         });
     }
     /*
-   * 更当前链接添加选中样式
+   * 当前链接添加选中样式
    */
     var LinkMenu_OnClick_AddClass = function (li) {
         NavItem_AddClass(li);

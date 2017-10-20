@@ -2,7 +2,6 @@
 using System.IO;
 using IService;
 using LoggerExtensions.Setting;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace LoggerExtensions.FileLogger

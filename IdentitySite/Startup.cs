@@ -18,6 +18,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Mongo;
 using PermissionSystem;
 using Service.PermissionSystem;
 using ViewModels.IdentitySite.Options;
@@ -38,21 +39,32 @@ namespace IdentitySite
         public void ConfigureServices(IServiceCollection services)
         {
 
-            //xl.Core
-            services.UserCore();
+            #region XL.Core
 
+            services.UserCore();
             services.AddSingleton(AutoMapperConfiguration.Init());
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.UserMongoLog(Configuration.GetSection("Mongo.Log"));
+
+
+            #endregion
 
             #region DB
 
             services.AddDbContext<PermissionSystemContext>(
-                option => option.UseSqlServer(Configuration.GetConnectionString("PermissionSystem")),
+                option => option.UseSqlServer(Configuration.GetConnectionString("PermissionSystem"),
+                    o => o.UseRowNumberForPaging()),
                 ServiceLifetime.Singleton);
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IApplicationService, ApplicationService>();
             services.AddScoped<IClientService, ClientService>();
             services.AddScoped<IClientApiService, ClientApiService>();
             services.AddScoped<IApiService, ApiService>();
+            services.AddScoped<IMenuService, MenuService>();
+            services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IOrganizationService, OrganizationService>();
+            services.AddScoped<IUserRoleService, UserRoleService>();
+            services.AddScoped<IUserRoleJurisdictionService, UserRoleJurisdictionService>();
             services.AddScoped<ILogService, LogService>();
 
             #endregion
@@ -67,14 +79,15 @@ namespace IdentitySite
          
             var builder = services.AddIdentityServer(options=>
             {
-                options.Authentication.AuthenticationScheme = IdentityServerConstants.DefaultCookieAuthenticationScheme;
+                //options.Authentication.AuthenticationScheme = IdentityServerConstants.DefaultCookieAuthenticationScheme;
                 options.Authentication.CookieLifetime = TimeSpan.FromHours(24);
+                
             });
             builder.AddClientStore<ClientStore>();
             builder.AddResourceStore<ResourceStore>();
             builder.AddResourceOwnerValidator<ResourceOwnerPasswordValidator>();
             builder.AddDeveloperSigningCredential();
-            
+         
             #endregion
 
             services.AddMvc();

@@ -3,9 +3,9 @@
 //====================================================================
 // YXL @ CopyRight 2006-2010
 // 文件： RoleEntity.cs
-// 项目名称： 
-// 创建时间：2017-08-28
-// 负责人：YXL
+// 项目名称：Asp.Net Core 2.0 mvc 开源权限系统Demo 
+// 创建时间：2017-10-25
+// 负责人：杨小乐
 // ===================================================================
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PermissionSystem.Models;
@@ -28,9 +28,8 @@ namespace PermissionSystem.Mapping
             table.Property(a=>a.ShowIndex);
             table.Property(a=>a.Description);
        
-              table.HasMany(a => a.RoleClaim_RoleIDList).WithOne(a => a.RoleID_Model);       
-              table.HasMany(a => a.UserRole_RoleIDList).WithOne(a => a.RoleID_Model);       
-              table.HasMany(a => a.UserRoleJurisdiction_RoleIDList).WithOne(a => a.RoleID_Model);       
+            table.HasMany(a => a.UserRole_RoleIDList).WithOne(a => a.RoleID_Model);       
+            table.HasMany(a => a.UserRoleJurisdiction_RoleIDList).WithOne(a => a.RoleID_Model);       
         
         
         

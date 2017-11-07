@@ -8,12 +8,17 @@
 // 负责人：YXL
 // ===================================================================
 
+using System;
+using System.Threading.Tasks;
 using Core.Repository;
 using PermissionSystem.Models;
+using ViewModels.OpenPlatform.ClientModel;
+
 namespace IService.PermissionSystem
 {
     public interface IClientService : IEfRepository<Client>
     {
-        
+        Task<ClientViewModel> SingleAsyncByID(Guid clientID);
+        Task<int> Save(ClientViewModel model);
     }
 }

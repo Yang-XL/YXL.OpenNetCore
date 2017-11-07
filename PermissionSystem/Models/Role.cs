@@ -3,9 +3,9 @@
 //====================================================================
 // YXL @ CopyRight 2006-2010
 // 文件： RoleEntity.cs
-// 项目名称： 
-// 创建时间：2017-08-28
-// 负责人：YXL
+// 项目名称：Asp.Net Core 2.0 mvc 开源权限系统Demo 
+// 创建时间：2017-10-25
+// 负责人：杨小乐
 // ===================================================================
 using System;
 using System.Collections.Generic;
@@ -56,7 +56,6 @@ namespace PermissionSystem.Models
 		#endregion	
         
         #region 子表
-          public virtual IEnumerable<RoleClaim> RoleClaim_RoleIDList { get; set; }          
           public virtual IEnumerable<UserRole> UserRole_RoleIDList { get; set; }          
           public virtual IEnumerable<UserRoleJurisdiction> UserRoleJurisdiction_RoleIDList { get; set; }          
         #endregion

@@ -20,8 +20,7 @@ namespace AdminSite.SiteAttributes.Policys.UserPolicy
         {
             var filterContext = context.Resource as AuthorizationFilterContext;
             var actionDescriptor = filterContext.ActionDescriptor as ControllerActionDescriptor;
-            var areaName = "";
-            actionDescriptor.RouteValues.TryGetValue("area", out areaName);
+            actionDescriptor.RouteValues.TryGetValue("area", out string areaName);
             var rolseClaims = context.User.Claims.Where(a => a.Type == ClaimTypes.Role);
             var roleList = from n in rolseClaims select new Guid(n.Value);
             if (await requirement.IsAuth(roleList, areaName, actionDescriptor.ControllerName,

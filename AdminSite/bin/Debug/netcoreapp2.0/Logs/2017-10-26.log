@@ -1,0 +1,1591 @@
+2017-10-26 16:20:13.317   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/   
+2017-10-26 16:20:13.495   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies wa2017-10-26 16:20:13.495   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+2017-10-26 16:20:13.496   Information   Microsoft.AspNetCore.Mvc.ChallengeResult   Executing ChallengeResult with authentication schemes (). 
+2017-10-26 16:20:13.510   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.HomeController.Index (AdminSite) in 31.6056ms 
+2017-10-26 16:20:13.511   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 257.5039ms 302  
+ocalhost:27644/Account/Login?ReturnUrl=%2F   
+2017-10-26 16:20:13.637   Information   Microsoft.EntityFrameworkCore.Infrastructure   Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging  
+2017-10-26 16:20:13.665   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.AccountController.Login (AdminSite) with arguments (/) - ModelState is Valid 
+2017-10-26 16:20:16.496   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Account/Login.cshtml. 
+2017-10-26 16:20:16.577   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.AccountController.Login (AdminSite) in 3024.5506ms 
+2017-10-26 16:20:16.577   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 3053.1376ms 200 text/html; charset=utf-8 
+2017-10-26 16:20:16.620   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   The file /assets/global/scripts/app.js was not modified 
+2017-10-26 16:20:16.620   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/global/scripts/app.js   
+ 
+2017-10-26 16:20:16.635   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 21.2635ms 304 application/javascript 
+2017-10-26 16:20:24.593   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 POST http://localhost:27644/Account/Login application/x-www-form-urlencoded 228 
+2017-10-26 16:20:24.620   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.AccountController.Login (AdminSite) with arguments (ViewModels.AdminWeb.Login.LoginViewModel) - ModelState is Valid 
+2017-10-26 16:20:24.820   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (35ms) [Parameters=[@__model_NormalizedLoginName_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[AccessFailedCount], [a].[CreateDate], [a].[Email], [a].[EmailConfirmed], [a].[ImgUrl], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[LoginName], [a].[MobilePhone], [a].[MobilePhoneConfirmed], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedLoginName], [a].[OrganizationID], [a].[Password], [a].[PyCode], [a].[UpdateDate]
+FROM [User] AS [a]
+WHERE [a].[NormalizedLoginName] = @__model_NormalizedLoginName_0 
+2017-10-26 16:20:24.873   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (2ms) [Parameters=[@__user_ID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[CreateDate], [a].[RoleID], [a].[UserID]
+FROM [UserRole] AS [a]
+WHERE [a].[UserID] = @__user_ID_0 
+2017-10-26 16:20:24.887   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.AccountController.Login (AdminSite) in 277.8915ms 
+2017-10-26 16:20:24.887   Information   Microsoft.AspNetCore.Mvc.Internal.RedirectResultExecutor   Executing RedirectResult, redirecting to /. 
+2017-10-26 16:20:24.888   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:20:24.889   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:20:24.890   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/   
+2017-10-26 16:20:24.892   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 287.9146ms 302  
+2017-10-26 16:20:24.899   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.HomeController.Index (AdminSite) with arguments ((null)) - ModelState is Valid 
+2017-10-26 16:20:25.205   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Home/Index.cshtml. 
+2017-10-26 16:21:45.051   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Client/Index   
+2017-10-26 16:21:45.074   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:21:45.210   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:21:45.311   Information   Microsoft.EntityFrameworkCore.Infrastructure   Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging  
+2017-10-26 16:21:45.320   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.ClientController.Index (AdminSite) with arguments (1) - ModelState is Valid 
+2017-10-26 16:21:45.451   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[ID], [b].[AppKey], [b].[AppSecrets], [b].[Avaiable], [b].[CreateDate], [b].[IsAllowApi], [b].[IsAllowPay], [b].[Name], [b].[PyCode], [b].[Remark], [b].[UpdateDate]
+FROM [Client] AS [b] 
+2017-10-26 16:21:45.481   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[ID], [b].[AppKey], [b].[AppSecrets], [b].[Avaiable], [b].[CreateDate], [b].[IsAllowApi], [b].[IsAllowPay], [b].[Name], [b].[PyCode], [b].[Remark], [b].[UpdateDate]
+FROM [Client] AS [b] 
+2017-10-26 16:21:47.728   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Client/Index.cshtml. 
+2017-10-26 16:21:48.762   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'INDEX'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'CLIENT'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:21:48.845   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (25ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:21:48.861   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+2017-10-26 16:21:49.012   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:21:49.423   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.ClientController.Index (AdminSite) in 4219.7929ms 
+2017-10-26 16:21:49.435   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 4445.5382ms 200 text/html; charset=utf-8 
+2017-10-26 16:21:50.749   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Client/Index   
+2017-10-26 16:21:50.764   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[ID], [b].[AppKey], [b].[AppSecrets], [b].[Avaiable], [b].[CreateDate], [b].[IsAllowApi], [b].[IsAllowPay], [b].[Name], [b].[PyCode], [b].[Remark], [b].[UpdateDate]
+FROM [Client] AS [b] 
+2017-10-26 16:21:50.766   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.ClientController.Index (AdminSite) with arguments (1) - ModelState is Valid 
+.[Avaiable], [b].[CreateDate], [b].[IsAllowApi], [b].[IsAllowPay], [b].[Name], [b].[PyCode], [b].[Remark], [b].[UpdateDate]
+FROM [Client] AS [b] 
+2017-10-26 16:21:50.766   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:21:50.772   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'INDEX'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'CLIENT'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:21:50.773   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:21:50.775   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 18.5761ms 200 text/html; charset=utf-8 
+2017-10-26 16:21:50.776   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:21:50.778   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+2017-10-26 16:21:50.780   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:25:03.575   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Menu/Index   
+ully authenticated. 
+2017-10-26 16:25:03.595   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+dex (AdminSite) with arguments (1) - ModelState is Valid 
+2017-10-26 16:25:03.634   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (4ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [t].[ID], [t].[ApplicationName], [t].[ActionName], [t].[ApplicationID], [t].[PyCode], [t].[Code], [t].[ControllerName], [t].[CreateDate], [t].[Description], [t].[IconCss], [t].[IsNav], [t].[Name], [t].[ShowIndex], [t].[ParentID], [t].[ParentMenuName]
+FROM (
+    SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+        WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+        THEN N'--根目录--' ELSE (
+            SELECT TOP(1) [a].[Name]
+            FROM [Menu] AS [a]
+            WHERE [a].[ID] = [n].[ParentID]
+        )
+    END AS [ParentMenuName], ROW_NUMBER() OVER(ORDER BY [n].[ShowIndex]) AS [__RowNumber__]
+    FROM [Menu] AS [n]
+    INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_0) AND ([t].[__RowNumber__] <= (@__p_0 + @__p_1)) 
+2017-10-26 16:25:03.669   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID] 
+2017-10-26 16:25:03.967   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Menu/Index.cshtml. 
+2017-10-26 16:25:04.165   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'INDEX'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'MENU'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:25:04.182   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (3ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:25:04.182   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+2017-10-26 16:25:04.184   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 610.2899ms 200 text/html; charset=utf-8 
+2017-10-26 16:25:04.280   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+m-urlencoded; charset=UTF-8 10 
+2017-10-26 16:25:04.292   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (, True) - ModelState is Valid 
+2017-10-26 16:25:04.306   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (2ms) [Parameters=[@__isNav_Value_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE [a].[IsNav] = @__isNav_Value_0 
+2017-10-26 16:25:04.321   Information   Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor   Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]]. 
+2017-10-26 16:25:04.378   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 92.2787ms 
+2017-10-26 16:25:05.677   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+eate (AdminSite) with arguments ((null)) - ModelState is Valid 
+2017-10-26 16:25:05.835   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Menu/Create.cshtml. 
+2017-10-26 16:25:06.265   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+2017-10-26 16:25:06.276   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[@__currentMenu_ParentID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE [a].[ID] = @__currentMenu_ParentID_0 
+AST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'MENU'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:25:06.292   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:25:06.293   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.MenuController.Create (AdminSite) in 617.4014ms 
+2017-10-26 16:25:06.321   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   The file /pages/menu/menu.modify.js was not modified 
+/menu.modify.js   
+2017-10-26 16:25:06.385   Information   Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor   Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]]. 
+2017-10-26 16:25:06.386   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 7.7862ms 
+2017-10-26 16:25:06.391   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[@__applicationId_0='?', @__isNav_Value_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE ([a].[ApplicationID] = @__applicationId_0) AND ([a].[IsNav] = @__isNav_Value_1) 
+2017-10-26 16:25:06.397   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:25:06.397   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 50 
+2017-10-26 16:25:09.453   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Application/Index   
+thenticated. 
+2017-10-26 16:25:09.463   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:25:09.464   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.ApplicationController.Index (AdminSite) with arguments (1) - ModelState is Valid 
+2017-10-26 16:25:09.477   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[ID], [b].[Code], [b].[CreateDate], [b].[Description], [b].[Name], [b].[PyCode], [b].[ShowIndex]
+FROM [Application] AS [b] 
+2017-10-26 16:25:09.477   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[ID], [b].[Code], [b].[CreateDate], [b].[Description], [b].[Name], [b].[PyCode], [b].[ShowIndex]
+FROM [Application] AS [b] 
+2017-10-26 16:25:09.618   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Application/Index.cshtml. 
+2017-10-26 16:25:09.806   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'INDEX'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'APPLICATION'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:25:09.821   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:25:09.823   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.ApplicationController.Index (AdminSite) in 359.0411ms 
+2017-10-26 16:25:09.824   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 366.2251ms 200 text/html; charset=utf-8 
+2017-10-26 16:25:10.691   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Application/Create   
+2017-10-26 16:25:10.692   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.ApplicationController.Create (AdminSite) with arguments ((null)) - ModelState is Valid 
+2017-10-26 16:25:10.695   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:25:10.836   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Application/Create.cshtml. 
+2017-10-26 16:25:11.028   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__currentMenu_ParentID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE [a].[ID] = @__currentMenu_ParentID_0 
+AST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'APPLICATION'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:25:11.050   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:25:11.051   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.ApplicationController.Create (AdminSite) in 353.7754ms 
+2017-10-26 16:25:11.052   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:25:13.748   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+thenticated. 
+2017-10-26 16:25:13.749   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:25:13.750   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.UserController.Index (AdminSite) with arguments (1) - ModelState is Valid 
+2017-10-26 16:25:13.760   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[ID], [u].[AccessFailedCount], [u].[CreateDate], [u].[Email], [u].[EmailConfirmed], [u].[ImgUrl], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[LoginName], [u].[MobilePhone], [u].[MobilePhoneConfirmed], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedLoginName], [u].[OrganizationID], [u].[Password], [u].[PyCode], [u].[UpdateDate]
+FROM [User] AS [u] 
+2017-10-26 16:25:13.766   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[ID], [u].[AccessFailedCount], [u].[CreateDate], [u].[Email], [u].[EmailConfirmed], [u].[ImgUrl], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[LoginName], [u].[MobilePhone], [u].[MobilePhoneConfirmed], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedLoginName], [u].[OrganizationID], [u].[Password], [u].[PyCode], [u].[UpdateDate]
+FROM [User] AS [u] 
+2017-10-26 16:25:13.932   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/User/Index.cshtml. 
+2017-10-26 16:25:14.104   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'INDEX'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'USER'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:25:14.120   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:25:14.120   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+ion], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:25:14.122   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 384.0183ms 200 text/html; charset=utf-8 
+2017-10-26 16:25:14.998   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.UserController.Create (AdminSite) with arguments ((null)) - ModelState is Valid 
+2017-10-26 16:25:15.002   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/User/Create   
+2017-10-26 16:25:15.007   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:25:15.010   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:25:15.014   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CONVERT(VARCHAR(36), [n].[ID]) AS [Value], [n].[Name] AS [Text]
+FROM [Role] AS [n] 
+2017-10-26 16:25:15.290   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/User/Create.cshtml. 
+2017-10-26 16:25:15.352   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__currentMenu_ParentID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE [a].[ID] = @__currentMenu_ParentID_0 
+2017-10-26 16:25:15.354   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 357.3454ms 200 text/html; charset=utf-8 
+CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'CREATE'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'USER'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:25:15.359   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:25:15.360   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.UserController.Create (AdminSite) in 352.1926ms 
+2017-10-26 16:25:15.363   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:25:15.367   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/select2/css/select2-bootstrap.min.css   
+2017-10-26 16:25:15.368   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.261ms 404  
+2017-10-26 16:25:15.375   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:25:15.378   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/select2/css/select2.css   
+2017-10-26 16:25:15.379   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.6645ms 404  
+2017-10-26 16:25:15.381   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/select2/js/select2.js   
+2017-10-26 16:25:15.384   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/select2/js/i18n/zh-CN.js   
+re\YXL.OpenNetCore\AdminSite\wwwroot\pages\user\user.create.js' 
+2017-10-26 16:25:15.384   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/pages/user/user.create.js?v=1.0.0.0   
+2017-10-26 16:25:15.385   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.8781ms 404  
+2017-10-26 16:25:15.389   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:25:15.399   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 5.5219ms 200 application/javascript 
+2017-10-26 16:25:15.431   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:25:15.431   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.7232ms 404  
+/localhost:27644/assets/global/plugins/select2/js/select2.js   
+2017-10-26 16:25:15.477   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+/zh-CN.js   
+2017-10-26 16:25:15.479   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 POST http://localhost:27644/Organization/ZtreeOrganization  0 
+2017-10-26 16:25:15.489   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.OrganizationController.ZtreeOrganization (AdminSite) with arguments ((null)) - ModelState is Valid 
+2017-10-26 16:25:15.496   Information   Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor   Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Nullable`1[System.Guid],System.String,System.Boolean]]. 
+2017-10-26 16:25:15.509   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 36.872ms 200 application/json; charset=utf-8 
+oller.ZtreeOrganization (AdminSite) in 28.5324ms 
+2017-10-26 16:25:23.598   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.UserController.Cr2017-10-26 16:25:23.598   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/User/Create   
+2017-10-26 16:25:23.599   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:25:23.612   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CONVERT(VARCHAR(36), [n].[ID]) AS [Value], [n].[Name] AS [Text]
+FROM [Role] AS [n] 
+2017-10-26 16:25:23.608   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'CREATE'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'USER'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:25:23.614   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/User/Create.cshtml. 
+2017-10-26 16:25:23.620   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+2017-10-26 16:25:23.620   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 22.0104ms 200 text/html; charset=utf-8 
+2017-10-26 16:25:23.622   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (3ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:25:23.625   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:25:23.627   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.UserController.Create (AdminSite) in 20.7474ms 
+imeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE [a].[ID] = @__currentMenu_ParentID_0 
+2017-10-26 16:25:23.635   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/simple-line-icons/simple-line-icons.min.css   
+:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\simple-line-icons\simple-line-icons.min.css' 
+2017-10-26 16:25:23.650   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/bootstrap/css/bootstrap.min.css   
+sical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\bootstrap-switch\css\bootstrap-switch.min.css' 
+2017-10-26 16:25:23.651   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/bootstrap-daterangepicker/daterangepicker.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.min.css' 
+2017-10-26 16:25:23.653   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/font-awesome/css/font-awesome.min.css   
+2017-10-26 16:25:23.656   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/uniform/css/uniform.default.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\uniform\css\uniform.default.css' 
+2017-10-26 16:25:23.657   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/bootstrap-daterangepicker/daterangepicker.min.css   
+2017-10-26 16:25:23.661   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/uniform/css/uniform.default.css   
+2017-10-26 16:25:23.661   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/bootstrap/css/bootstrap.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\bootstrap\css\bootstrap.min.css' 
+2017-10-26 16:25:23.665   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/font-awesome/css/font-awesome.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\font-awesome\css\font-awesome.min.css' 
+2017-10-26 16:25:23.666   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 11.8899ms 200 text/css 
+2017-10-26 16:25:23.669   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 7.5896ms 200 text/css 
+2017-10-26 16:25:23.669   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 18.1402ms 200 text/css 
+2017-10-26 16:25:23.680   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/fullcalendar/fullcalen2017-10-26 16:25:23.681   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/fullcalendar/fullcalendar.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\fullcalendar\fullcalendar.min.css' 
+2017-10-26 16:25:23.685   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/morris/morris.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\morris\morris.css' 
+2017-10-26 16:25:23.699   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 49.2113ms 200 text/css 
+2017-10-26 16:25:23.701   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/styles/metroStyle/metroStyle.css   
+2017-10-26 16:25:23.714   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:25:23.715   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/select2/css/select2.css   
+2017-10-26 16:25:23.716   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.6825ms 404  
+2017-10-26 16:25:23.719   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/ztree.3.5.26/styles/metroStyle/metroStyle.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\ztree.3.5.26\styles\metroStyle\metroStyle.css' 
+2017-10-26 16:25:23.720   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/select2/css/select2-bootstrap.min.css   
+2017-10-26 16:25:23.724   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.4547ms 404  
+2017-10-26 16:25:23.734   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/custom.min.css   
+.css   
+ce\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\layout.min.css' 
+2017-10-26 16:25:23.734   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/global/css/components.min.css   
+2017-10-26 16:25:23.736   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/layouts/layout/css/custom.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\custom.min.css' 
+2017-10-26 16:25:23.736   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 19.4049ms 200 text/css 
+2017-10-26 16:25:23.742   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/global/css/plugins.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\css\plugins.min.css' 
+2017-10-26 16:25:23.744   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/global/css/components.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\css\components.min.css' 
+2017-10-26 16:25:23.747   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/layouts/layout/css/themes/darkblue.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\themes\darkblue.min.css' 
+2017-10-26 16:25:23.749   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 18.8943ms 200 text/css 
+2017-10-26 16:25:23.750   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 3.5539ms 200 text/css 
+st:27644/assets/global/css/plugins.min.css   
+2017-10-26 16:25:23.759   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 38.0064ms 200 text/css 
+ery/dist/jquery.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\jquery\dist\jquery.min.js' 
+2017-10-26 16:25:23.760   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/jquery/dist/jquery.min.js   
+2017-10-26 16:25:23.763   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 5.3314ms 200 application/javascript 
+2017-10-26 16:25:23.810   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.5831ms 200 application/javascript 
+2017-10-26 16:25:23.811   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/js.cookie.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\js.cookie.min.js' 
+2017-10-26 16:25:23.812   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/js.cookie.min.js   
+2017-10-26 16:25:23.813   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 67.4603ms 200 text/css 
+2017-10-26 16:25:23.817   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.8989ms 200 application/javascript 
+2017-10-26 16:25:23.817   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/bootstrap/js/bootstrap.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\bootstrap\js\bootstrap.min.js' 
+2017-10-26 16:25:23.821   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/bootstrap/js/bootstrap.min.js   
+2017-10-26 16:25:23.822   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/jquery-slimscroll/jquery.slimscroll.min.js   
+:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\jquery-slimscroll\jquery.slimscroll.min.js' 
+2017-10-26 16:25:23.828   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\bootstrap-hover-dropdown\bootstrap-hover-dropdown.min.js' 
+2017-10-26 16:25:23.829   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.9673ms 200 application/javascript 
+2017-10-26 16:25:23.830   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.0439ms 200 application/javascript 
+2017-10-26 16:25:23.868   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 2.1947ms 200 application/javascript 
+2017-10-26 16:25:23.869   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/morris/raphael-min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\morris\raphael-min.js' 
+2017-10-26 16:25:23.870   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 4.2339ms 200 application/javascript 
+2017-10-26 16:25:23.872   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/bootstrap-daterangepicker/daterangepicker.min.js   
+2017-10-26 16:25:23.874   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.9288ms 200 application/javascript 
+2017-10-26 16:25:23.884   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/moment.min.js   
+:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\moment.min.js' 
+2017-10-26 16:25:23.889   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/uniform/jquery.uniform.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\uniform\jquery.uniform.min.js' 
+:23.890   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.1988ms 200 application/javascript 
+2017-10-26 16:25:23.893   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/bootstrap-daterangepicker/daterangepicker.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.min.js' 
+2017-10-26 16:25:23.894   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/morris/raphael-min.js   
+2017-10-26 16:25:23.895   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.9124ms 200 application/javascript 
+2017-10-26 16:25:23.896   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/morris/morris.min.js   
+/jquery.unobtrusive-ajax.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\Microsoft.jQuery.Unobtrusive.Ajax-master\jquery.unobtrusive-ajax.js' 
+2017-10-26 16:25:23.902   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/bootstrap-switch/js/bootstrap-switch.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\bootstrap-switch\js\bootstrap-switch.min.js' 
+jquery.validate.unobtrusive.js' 
+2017-10-26 16:25:23.907   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/uniform/jquery.uniform.min.js   
+ry.validate.unobtrusive.js   
+js   
+2017-10-26 16:25:23.912   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/jquery-validation/js/jquery.validate.js   
+2017-10-26 16:25:23.913   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.008ms 200 application/javascript 
+2017-10-26 16:25:23.925   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/select2/js/i18n/zh-CN.js   
+:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\ztree.3.5.26\jquery.ztree.intput.select.js' 
+2017-10-26 16:25:23.925   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.8303ms 404  
+ication/javascript 
+2017-10-26 16:25:23.919   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.7482ms 404  
+2017-10-26 16:25:23.931   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/ztree.3.5.26/jquery.ztree.core.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\ztree.3.5.26\jquery.ztree.core.js' 
+2017-10-26 16:25:23.932   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/jquery.ztree.core.js   
+2017-10-26 16:25:23.934   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/jquery.ztree.intput.select.js   
+2017-10-26 16:25:23.935   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/select2/js/select2.js   
+2017-10-26 16:25:23.936   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:25:23.949   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/asset2017-10-26 16:25:23.949   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/font-awesome/fonts/fontawesome-webfont.woff2'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2' 
+2017-10-26 16:25:23.949   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.1363ms 200 application/javascript 
+2017-10-26 16:25:23.951   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/layouts/layout/scripts/layout.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\scripts\layout.js' 
+2017-10-26 16:25:23.952   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.677ms 200 application/javascript 
+ate.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\pages\user\user.create.js' 
+2017-10-26 16:25:23.957   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.4.0   
+YXL.OpenNetCore\AdminSite\wwwroot\assets\global\scripts\app.min.js' 
+2017-10-26 16:25:23.958   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/global/scripts/app.min.js   
+ne-Icons.woff   
+:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\simple-line-icons\fonts\Simple-Line-Icons.woff' 
+2017-10-26 16:25:23.969   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/logo.png   
+2017-10-26 16:25:23.969   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/layouts/layout/img/logo.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\logo.png' 
+2017-10-26 16:25:23.974   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/scripts/demo.js   
+:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\scripts\demo.js' 
+2017-10-26 16:25:23.997   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/avatar3_small.jpg   
+2017-10-26 16:25:23.998   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/layouts/layout/img/avatar3_small.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\avatar3_small.jpg' 
+2017-10-26 16:25:24.009   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 20.3119ms 200 image/jpeg 
+ont-woff 
+2017-10-26 16:25:24.015   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/layouts/layout/img/sidebar_toggler_icon_darkblue.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\sidebar_toggler_icon_darkblue.png' 
+2017-10-26 16:25:24.016   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/sidebar_toggler_icon_darkblue.png   
+2017-10-26 16:25:24.044   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/global/scripts/menu.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\scripts\menu.js' 
+2017-10-26 16:25:24.050   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:25:24.055   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.7761ms 404  
+2017-10-26 16:25:24.057   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.7886ms 200 application/javascript 
+2017-10-26 16:25:24.060   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/layouts/global/scripts/quick-sidebar.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\global\scripts\quick-sidebar.min.js' 
+2017-10-26 16:25:24.064   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/global/scripts/quick-sidebar.min.js   
+2017-10-26 16:25:24.072   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/layouts/layout3/img/avatar3.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar3.jpg' 
+2017-10-26 16:25:24.073   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar3.jpg   
+2017-10-26 16:25:24.078   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar5.jpg   
+2017-10-26 16:25:24.079   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/layouts/layout3/img/avatar2.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar2.jpg' 
+2017-10-26 16:25:24.079   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/layouts/layout3/img/avatar5.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar5.jpg' 
+2017-10-26 16:25:24.083   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar2.jpg   
+2017-10-26 16:25:24.089   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.3213ms 404  
+2017-10-26 16:25:24.090   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:25:24.094   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 16.8535ms 200 image/jpeg 
+2017-10-26 16:25:24.094   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/global/plugins/select2/js/i18n/zh-CN.js   
+2017-10-26 16:25:24.100   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 5.5174ms 200 image/jpeg 
+
+2017-10-26 16:25:24.105   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 12.218ms 200 image/jpeg 
+:27644/assets/layouts/layout3/img/avatar4.jpg   
+2017-10-26 16:25:24.106   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/layouts/layout3/img/avatar4.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar4.jpg' 
+2017-10-26 16:25:24.122   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 POST http://localhost:27644/Organization/ZtreeOrganization  0 
+nization (AdminSite) with arguments ((null)) - ModelState is Valid 
+2017-10-26 16:25:24.122   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:25:24.136   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 13.1735ms 200 application/json; charset=utf-8 
+2017-10-26 16:25:24.136   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/favicon.ico'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\favicon.ico' 
+2017-10-26 16:25:24.140   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/favicon.ico   
+2017-10-26 16:25:24.141   Information   Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor   Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Nullable`1[System.Guid],System.String,System.Boolean]]. 
+2017-10-26 16:25:24.142   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.OrganizationController.ZtreeOrganization (AdminSite) in 10.8293ms 
+2017-10-26 16:25:24.148   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n].[ParentOrganizationID] AS [pId], [n].[Name]
+FROM [Organization] AS [n] 
+2017-10-26 16:25:24.152   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 17.1543ms 200 image/x-icon 
+2017-10-26 16:25:26.166   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+dex (AdminSite) with arguments (1) - ModelState is Valid 
+ateDate], [u].[Email], [u].[EmailConfirmed], [u].[ImgUrl], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[LoginName], [u].[MobilePhone], [u].[MobilePhoneConfirmed], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedLoginName], [u].[OrganizationID], [u].[Password], [u].[PyCode], [u].[UpdateDate]
+FROM [User] AS [u] 
+2017-10-26 16:25:26.167   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:25:26.172   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[ID], [u].[AccessFailedCount], [u].[CreateDate], [u].[Email], [u].[EmailConfirmed], [u].[ImgUrl], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[LoginName], [u].[MobilePhone], [u].[MobilePhoneConfirmed], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedLoginName], [u].[OrganizationID], [u].[Password], [u].[PyCode], [u].[UpdateDate]
+FROM [User] AS [u] 
+2017-10-26 16:25:26.184   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:25:26.186   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.UserController.Index (AdminSite) in 13.0497ms 
+2017-10-26 16:25:26.188   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+ion], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:25:26.188   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'INDEX'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'USER'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:25:26.383   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/bootstrap/fonts/bootstrap/glyphicons-halflings-regular.woff2   
+:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\bootstrap\fonts\bootstrap\glyphicons-halflings-regular.woff2' 
+2017-10-26 16:25:26.411   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 13.6036ms 200 font/woff2 
+2017-10-26 16:25:28.431   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:25:28.450   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:25:28.452   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/User/Index.cshtml. 
+2017-10-26 16:25:28.458   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:25:28.459   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.UserController.Index (AdminSite) in 7.5608ms 
+2017-10-26 16:25:28.461   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 8.4578ms 200 text/html; charset=utf-8 
+��管理员. 
+2017-10-26 16:25:28.475   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[ID], [u].[AccessFailedCount], [u].[CreateDate], [u].[Email], [u].[EmailConfirmed], [u].[ImgUrl], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[LoginName], [u].[MobilePhone], [u].[MobilePhoneConfirmed], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedLoginName], [u].[OrganizationID], [u].[Password], [u].[PyCode], [u].[UpdateDate]
+FROM [User] AS [u] 
+2017-10-26 16:25:28.476   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.UserController.Index (AdminSite) with arguments (1) - ModelState is Valid 
+2017-10-26 16:25:28.478   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[ID], [u].[AccessFailedCount], [u].[CreateDate], [u].[Email], [u].[EmailConfirmed], [u].[ImgUrl], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[LoginName], [u].[MobilePhone], [u].[MobilePhoneConfirmed], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedLoginName], [u].[OrganizationID], [u].[Password], [u].[PyCode], [u].[UpdateDate]
+FROM [User] AS [u] 
+2017-10-26 16:25:28.479   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'INDEX'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'USER'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:25:30.200   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+00000000000   
+2017-10-26 16:25:30.217   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:25:30.217   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.UserController.Modify (AdminSite) with arguments (00000000-0000-0000-0000-100000000000) - ModelState is Valid 
+2017-10-26 16:25:30.226   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[AccessFailedCount], [a].[CreateDate], [a].[Email], [a].[EmailConfirmed], [a].[ImgUrl], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[LoginName], [a].[MobilePhone], [a].[MobilePhoneConfirmed], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedLoginName], [a].[OrganizationID], [a].[Password], [a].[PyCode], [a].[UpdateDate]
+FROM [User] AS [a]
+WHERE [a].[ID] = @__id_0 
+2017-10-26 16:25:30.294   Warning   Microsoft.EntityFrameworkCore.Query   The LINQ expression 'Any()' could not be translated and will be evaluated locally. 
+ated locally. 
+imeout='30']
+SELECT [n].[RoleID]
+FROM [UserRole] AS [n]
+WHERE [n].[UserID] = @__model_ID_0 
+2017-10-26 16:25:30.296   Warning   Microsoft.EntityFrameworkCore.Query   The LINQ expression 'Any()' could not be translated and will be evaluated locally. 
+2017-10-26 16:25:30.306   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CONVERT(VARCHAR(36), [n].[ID]) AS [Value], [n].[Name] AS [Text], [n].[ID]
+FROM [Role] AS [n] 
+2017-10-26 16:25:30.532   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/User/Modify.cshtml. 
+2017-10-26 16:25:30.572   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:25:30.575   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'MODIFY'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'USER'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:25:30.587   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.UserController.Modify (AdminSite) in 368.6398ms 
+2017-10-26 16:25:30.622   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/pages/user/user.modify.js?v=1.0.0.0   
+2017-10-26 16:25:30.623   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.5612ms 304 application/javascript 
+ed 
+2017-10-26 16:25:30.745   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+nization (AdminSite) with arguments ((null)) - ModelState is Valid 
+2017-10-26 16:25:30.750   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 2.0722ms 200 application/json; charset=utf-8 
+oller.ZtreeOrganization (AdminSite) in 1.2254ms 
+stem.Guid,System.Nullable`1[System.Guid],System.String,System.Boolean]]. 
+2017-10-26 16:25:30.753   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[ID], [n].[ParentOrganizationID] AS [pId], [n].[Name]
+FROM [Organization] AS [n] 
+2017-10-26 16:27:06.496   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Client/Index   
+ly authenticated. 
+2017-10-26 16:27:06.635   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:27:06.713   Information   Microsoft.EntityFrameworkCore.Infrastructure   Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging  
+2017-10-26 16:27:06.730   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.ClientController.Index (AdminSite) with arguments (1) - ModelState is Valid 
+2017-10-26 16:27:06.840   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[ID], [b].[AppKey], [b].[AppSecrets], [b].[Avaiable], [b].[CreateDate], [b].[IsAllowApi], [b].[IsAllowPay], [b].[Name], [b].[PyCode], [b].[Remark], [b].[UpdateDate]
+FROM [Client] AS [b] 
+2017-10-26 16:27:06.885   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[ID], [b].[AppKey], [b].[AppSecrets], [b].[Avaiable], [b].[CreateDate], [b].[IsAllowApi], [b].[IsAllowPay], [b].[Name], [b].[PyCode], [b].[Remark], [b].[UpdateDate]
+FROM [Client] AS [b] 
+2017-10-26 16:27:09.164   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Client/Index.cshtml. 
+2017-10-26 16:27:10.268   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'INDEX'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'CLIENT'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:27:10.359   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (27ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:27:10.384   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+2017-10-26 16:27:10.555   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:27:10.806   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 4398.027ms 200 text/html; charset=utf-8 
+ller.Index (AdminSite) in 4179.3137ms 
+2017-10-26 16:27:34.749   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:27:34.764   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.ClientController.Create (AdminSite) with arguments ((null)) - ModelState is Valid 
+2017-10-26 16:27:34.903   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Client/Create.cshtml. 
+2017-10-26 16:27:35.385   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'CREATE'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'CLIENT'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:27:35.401   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 647.9112ms 200 text/html; charset=utf-8 
+2017-10-26 16:27:35.402   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.ClientController.Create (AdminSite) in 643.6914ms 
+2017-10-26 16:27:35.403   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (3ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:27:35.404   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+2017-10-26 16:27:35.405   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:31:12.111   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:31:12.111   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.ClientController.Create (AdminSite) with arguments ((null)) - ModelState is Valid 
+2017-10-26 16:31:12.112   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:31:12.111   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Client/Create.cshtml. 
+2017-10-26 16:31:12.114   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Client/Create   
+2017-10-26 16:31:12.291   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+meout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'CREATE'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'CLIENT'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:31:12.293   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (5ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:31:12.433   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/favicon.ico   
+2017-10-26 16:31:12.448   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 9.3376ms 200 image/x-icon 
+2017-10-26 16:31:12.448   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/favicon.ico'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\favicon.ico' 
+2017-10-26 16:32:03.913   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:32:03.914   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.ClientController.Create (AdminSite) with arguments ((null)) - ModelState is Valid 
+2017-10-26 16:32:03.915   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Client/Create   
+2017-10-26 16:32:03.921   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:32:03.922   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Client/Create.cshtml. 
+2017-10-26 16:32:04.213   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'CREATE'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'CLIENT'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:32:04.236   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (3ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:32:04.244   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 310.5617ms 200 text/html; charset=utf-8 
+2017-10-26 16:32:04.246   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+ion], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:32:04.249   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.ClientController.Create (AdminSite) in 309.2823ms 
+2017-10-26 16:32:04.353   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/favicon.ico'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\favicon.ico' 
+2017-10-26 16:32:04.356   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/favicon.ico   
+2017-10-26 16:32:29.456   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:32:29.464   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.ClientController.Create (AdminSite) with arguments ((null)) - ModelState is Valid 
+2017-10-26 16:32:29.466   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:32:29.470   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Client/Create.cshtml. 
+2017-10-26 16:32:29.637   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.ClientController.Create (AdminSite) in 175.2539ms 
+2017-10-26 16:32:29.637   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:32:29.638   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+2017-10-26 16:32:29.639   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'CREATE'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'CLIENT'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:32:29.643   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 176.2286ms 200 text/html; charset=utf-8 
+2017-10-26 16:32:29.796   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 3.9115ms 200 image/x-icon 
+o'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\favicon.ico' 
+2017-10-26 16:33:23.360   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Client/Create   
+lient/Create.cshtml. 
+2017-10-26 16:33:23.362   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.ClientController.Create (AdminSite) with arguments ((null)) - ModelState is Valid 
+2017-10-26 16:33:23.364   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:33:23.531   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'CREATE'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'CLIENT'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:33:23.544   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 180.9968ms 200 text/html; charset=utf-8 
+2017-10-26 16:33:23.547   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:33:23.550   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+2017-10-26 16:33:23.554   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (4ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:33:23.555   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.ClientController.Create (AdminSite) in 179.9901ms 
+2017-10-26 16:33:23.696   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 8.2946ms 200 image/x-icon 
+2017-10-26 16:33:23.697   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/favicon.ico   
+2017-10-26 16:33:23.697   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/favicon.ico'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\favicon.ico' 
+2017-10-26 16:34:05.139   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.ClientController.Create (AdminSite) with arguments ((null)) - ModelState is Valid 
+2017-10-26 16:34:05.143   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Client/Create.cshtml. 
+2017-10-26 16:34:05.144   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:34:05.145   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Client/Create   
+2017-10-26 16:34:05.325   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'CREATE'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'CLIENT'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:34:05.339   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (4ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[Cr2017-10-26 16:34:05.340   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 199.6102ms 200 text/html; charset=utf-8 
+serRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:34:05.341   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:34:05.477   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/favicon.ico   
+2017-10-26 16:34:05.493   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.1857ms 200 image/x-icon 
+o'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\favicon.ico' 
+2017-10-26 16:39:16.761   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Client/Create   
+y authenticated. 
+2017-10-26 16:39:16.764   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:39:16.776   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.ClientController.Create (AdminSite) with arguments ((null)) - ModelState is Valid 
+2017-10-26 16:39:16.963   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (4ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:39:16.977   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 209.8981ms 200 text/html; charset=utf-8 
+ller.Create (AdminSite) in 208.2121ms 
+a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+ion], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:39:17.126   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.9256ms 200 image/x-icon 
+7644/favicon.ico   
+2017-10-26 16:39:17.127   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/favicon.ico'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\favicon.ico' 
+2017-10-26 16:41:27.200   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+t/Create.cshtml. 
+2017-10-26 16:41:27.204   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.ClientController.Create (AdminSite) with arguments ((null)) - ModelState is Valid 
+2017-10-26 16:41:27.405   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30mandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:41:27.407   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:41:27.414   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 216.753ms 200 text/html; charset=utf-8 
+oller.Create (AdminSite) in 215.1818ms 
+2017-10-26 16:41:27.438   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/simple-line-icons/simple-line-icons.min.css   
+OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\uniform\css\uniform.default.css' 
+2017-10-26 16:41:27.439   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/bootstrap/css/bootstrap.min.css   
+2017-10-26 16:41:27.439   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 4.3253ms 200 text/css 
+2017-10-26 16:41:27.442   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/simple-line-icons/simple-line-icons.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\simple-line-icons\simple-line-icons.min.css' 
+2017-10-26 16:41:27.443   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/font-awesome/css/font-awesome.min.css   
+2017-10-26 16:41:27.446   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/bootstrap/css/bootstrap.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\bootstrap\css\bootstrap.min.css' 
+2017-10-26 16:41:27.446   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/uniform/css/uniform.default.css   
+sical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\bootstrap-switch\css\bootstrap-switch.min.css' 
+2017-10-26 16:41:27.447   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/font-awesome/css/font-awesome.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\font-awesome\css\font-awesome.min.css' 
+2017-10-26 16:41:27.454   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 2.5164ms 200 text/css 
+otstrap-daterangepicker/daterangepicker.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.min.css' 
+2017-10-26 16:41:27.454   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/bootstrap-switch/css/bootstrap-switch.min.css   
+2017-10-26 16:41:27.458   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.0818ms 200 text/css 
+2017-10-26 16:41:27.460   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/bootstrap-daterangepicker/daterangepicker.min.css   
+2017-10-26 16:41:27.462   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 3.1803ms 200 text/css 
+2017-10-26 16:41:27.484   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/global/css/components.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\css\components.min.css' 
+2017-10-26 16:41:27.484   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/global/css/plugins.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\css\plugins.min.css' 
+2017-10-26 16:41:27.486   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/morris/morris.css   
+2017-10-26 16:41:27.486   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/layouts/layout/css/layout.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\layout.min.css' 
+2017-10-26 16:41:27.490   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.4743ms 200 text/css 
+st:27644/assets/global/css/components.min.css   
+2017-10-26 16:41:27.495   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/morris/morris.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\morris\morris.css' 
+2017-10-26 16:41:27.496   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.8778ms 200 text/css 
+2017-10-26 16:41:27.498   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/layouts/layout/css/custom.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\custom.min.css' 
+2017-10-26 16:41:27.499   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.4297ms 200 text/css 
+2017-10-26 16:41:27.501   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/css/custom.min.css   
+2017-10-26 16:41:27.501   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.9612ms 200 text/css 
+2017-10-26 16:41:27.506   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.9669ms 200 text/css 
+/layouts/layout/css/themes/darkblue.min.css'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\css\themes\darkblue.min.css' 
+2017-10-26 16:41:27.522   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\jquery\dist\jquery.min.js' 
+2017-10-26 16:41:27.524   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.9981ms 200 application/javascript 
+2017-10-26 16:41:27.560   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/bootstrap/js/bootstrap.min.js   
+2017-10-26 16:41:27.570   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/bootstrap/js/bootstrap.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\bootstrap\js\bootstrap.min.js' 
+2017-10-26 16:41:27.588   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/jquery-slimscroll/jquery.slimscroll.min.js   
+wn.min.js   
+2017-10-26 16:41:27.589   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/js.cookie.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\js.cookie.min.js' 
+2017-10-26 16:41:27.589   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/js.cookie.min.js   
+2017-10-26 16:41:27.590   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/jquery-slimscroll/jquery.slimscroll.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\jquery-slimscroll\jquery.slimscroll.min.js' 
+2017-10-26 16:41:27.593   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\bootstrap-hover-dropdown\bootstrap-hover-dropdown.min.js' 
+2017-10-26 16:41:27.593   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.9596ms 200 application/javascript 
+2017-10-26 16:41:27.594   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 2.0497ms 200 application/javascript 
+2017-10-26 16:41:27.605   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/bootstrap-switch/js/bootstrap-switch.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\bootstrap-switch\js\bootstrap-switch.min.js' 
+2017-10-26 16:41:27.605   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/bootstrap-switch/js/bootstrap-switch.min.js   
+2017-10-26 16:41:27.606   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.7213ms 200 application/javascript 
+2017-10-26 16:41:27.610   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/bootstrap-daterangepicker/daterangepicker.min.js   
+2017-10-26 16:41:27.611   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/morris/morris.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\morris\morris.min.js' 
+lib\bootstrap-daterangepicker\daterangepicker.min.js' 
+2017-10-26 16:41:27.613   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.1555ms 200 application/javascript 
+2017-10-26 16:41:27.670   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/uniform/jquery.uniform.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\uniform\jquery.uniform.min.js' 
+2017-10-26 16:41:27.672   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/layouts/layout3/img/avatar5.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar5.jpg' 
+2017-10-26 16:41:27.676   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/moment.min.js   
+2017-10-26 16:41:27.677   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/jquery.blockui.min.js   
+ical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar3.jpg' 
+2017-10-26 16:41:27.680   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.3941ms 200 application/javascript 
+2017-10-26 16:41:27.680   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.7674ms 200 application/javascript 
+2017-10-26 16:41:27.682   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/jquery.blockui.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\jquery.blockui.min.js' 
+nal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar4.jpg   
+ce\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\scripts\menu.js' 
+2017-10-26 16:41:27.690   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.7184ms 200 image/jpeg 
+2017-10-26 16:41:27.691   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout3/img/avatar3.jpg   
+:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout3\img\avatar4.jpg' 
+2017-10-26 16:41:27.695   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/moment.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\moment.min.js' 
+re.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/layouts/layout/img/logo.png'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\logo.png' 
+2017-10-26 16:41:27.704   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/logo.png   
+2017-10-26 16:41:27.705   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/layouts/layout/scripts/demo.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\scripts\demo.js' 
+s\quick-sidebar.min.js' 
+2017-10-26 16:41:27.708   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 2.4744ms 200 application/javascript 
+2017-10-26 16:41:27.713   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/morris/raphael-min.js   
+ Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/global/scripts/quick-sidebar.min.js   
+2017-10-26 16:41:27.718   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/morris/raphael-min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\morris\raphael-min.js' 
+st   Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/scripts/layout.js   
+2017-10-26 16:41:27.729   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 4.1697ms 200 application/javascript 
+s/layouts/layout/scripts/demo.js   
+2017-10-26 16:41:27.730   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/global/scripts/app.min.js   
+2017-10-26 16:41:27.730   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/Microsoft.jQuery.Unobtrusive.Ajax-master/jquery.unobtrusive-ajax.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\Microsoft.jQuery.Unobtrusive.Ajax-master\jquery.unobtrusive-ajax.js' 
+2017-10-26 16:41:27.733   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/layouts/layout/scripts/layout.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\scripts\layout.js' 
+2017-10-26 16:41:27.737   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 4.3342ms 200 application/javascript 
+n/js/jquery.validate.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\jquery-validation\js\jquery.validate.js' 
+2017-10-26 16:41:27.740   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/global/scripts/app.min.js'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\global\scripts\app.min.js' 
+jquery-validation-unobtrusive\jquery.validate.unobtrusive.js' 
+2017-10-26 16:41:27.741   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/jquery-validation/js/jquery.validate.js   
+rosoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/Microsoft.jQuery.Unobtrusive.Ajax-master/jquery.unobtrusive-ajax.js   
+2017-10-26 16:41:27.746   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   
+26 16:41:27.752   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/lib/font-awesome/fonts/fontawesome-webfont.woff2'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2' 
+' 
+2017-10-26 16:41:27.752   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/avatar3_small.jpg   
+hysical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\sidebar_toggler_icon_darkblue.png' 
+2017-10-26 16:41:27.757   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/assets/layouts/layout/img/sidebar_toggler_icon_darkblue.png   
+2017-10-26 16:41:27.759   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   Sending file. Request path: '/assets/layouts/layout/img/avatar3_small.jpg'. Physical path: 'D:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\assets\layouts\layout\img\avatar3_small.jpg' 
+2017-10-26 16:41:27.760   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 4.9003ms 200 image/jpeg 
+2017-10-26 16:41:27.763   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/simple-line-icons/fonts/Simple-Line-Icons.woff   
+2017-10-26 16:41:27.765   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 1.0676ms 200 font/woff2 
+2017-10-26 16:41:27.828   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/uniform/images/sprite.png   
+:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\uniform\images\sprite.png' 
+2017-10-26 16:41:27.854   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/favicon.ico   
+:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\favicon.ico' 
+2017-10-26 16:41:27.854   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 0.7469ms 200 image/x-icon 
+2017-10-26 16:45:44.992   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Menu/Index   
+onts/bootstrap/glyphicons-halflings-regular.woff2   
+:\GitSource\OpenNetCore\YXL.OpenNetCore\AdminSite\wwwroot\lib\bootstrap\fonts\bootstrap\glyphicons-halflings-regular.woff2' 
+2017-10-26 16:45:45.014   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 87.7645ms 200 font/woff2 
+ Cookies was successfully authenticated. 
+2017-10-26 16:45:45.198   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:45:45.214   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:45:45.306   Information   Microsoft.EntityFrameworkCore.Infrastructure   Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging  
+2017-10-26 16:45:45.327   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid 
+2017-10-26 16:45:45.533   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (31ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [t].[ID], [t].[ApplicationName], [t].[ActionName], [t].[ApplicationID], [t].[PyCode], [t].[Code], [t].[ControllerName], [t].[CreateDate], [t].[Description], [t].[IconCss], [t].[IsNav], [t].[Name], [t].[ShowIndex], [t].[ParentID], [t].[ParentMenuName]
+FROM (
+    SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+        WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+        THEN N'--根目录--' ELSE (
+            SELECT TOP(1) [a].[Name]
+            FROM [Menu] AS [a]
+            WHERE [a].[ID] = [n].[ParentID]
+        )
+    END AS [ParentMenuName], ROW_NUMBER() OVER(ORDER BY [n].[ShowIndex]) AS [__RowNumber__]
+    FROM [Menu] AS [n]
+    INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_0) AND ([t].[__RowNumber__] <= (@__p_0 + @__p_1)) 
+2017-10-26 16:45:45.566   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID] 
+2017-10-26 16:45:48.037   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Menu/Index.cshtml. 
+2017-10-26 16:45:49.053   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'INDEX'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'MENU'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:45:49.107   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (4ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:45:49.140   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+2017-10-26 16:45:49.301   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:45:49.628   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 4709.8091ms 200 text/html; charset=utf-8 
+r.Index (AdminSite) in 4431.1074ms 
+2017-10-26 16:45:49.798   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:45:49.798   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 10 
+2017-10-26 16:45:49.825   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (, True) - ModelState is Valid 
+2017-10-26 16:45:49.843   Information   Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor   Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]]. 
+[a]
+WHERE [a].[IsNav] = @__isNav_Value_0 
+2017-10-26 16:45:49.888   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 89.2386ms 
+2017-10-26 16:52:58.002   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Menu/Index   
+2017-10-26 16:52:58.011   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:52:58.154   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:52:58.167   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:52:58.260   Information   Microsoft.EntityFrameworkCore.Infrastructure   Entity Framework Core 2.0.0-rtm-26452 initialized 'PermissionSystemContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging  
+2017-10-26 16:52:58.275   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid 
+2017-10-26 16:52:58.464   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (29ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [t].[ID], [t].[ApplicationName], [t].[ActionName], [t].[ApplicationID], [t].[PyCode], [t].[Code], [t].[ControllerName], [t].[CreateDate], [t].[Description], [t].[IconCss], [t].[IsNav], [t].[Name], [t].[ShowIndex], [t].[ParentID], [t].[ParentMenuName]
+FROM (
+    SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+        WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+        THEN N'--根目录--' ELSE (
+            SELECT TOP(1) [a].[Name]
+            FROM [Menu] AS [a]
+            WHERE [a].[ID] = [n].[ParentID]
+        )
+    END AS [ParentMenuName], ROW_NUMBER() OVER(ORDER BY [n].[ShowIndex]) AS [__RowNumber__]
+    FROM [Menu] AS [n]
+    INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_0) AND ([t].[__RowNumber__] <= (@__p_0 + @__p_1)) 
+2017-10-26 16:52:58.494   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID] 
+2017-10-26 16:53:00.949   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Menu/Index.cshtml. 
+2017-10-26 16:53:02.046   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'INDEX'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'MENU'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:53:02.125   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (5ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:53:02.138   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+2017-10-26 16:53:02.291   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:53:02.546   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 4399.7859ms 
+2017-10-26 16:53:02.554   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 4631.955ms 200 text/html; charset=utf-8 
+2017-10-26 16:53:02.651   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+ation/x-www-form-urlencoded; charset=UTF-8 10 
+2017-10-26 16:53:02.670   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (, True) - ModelState is Valid 
+2017-10-26 16:53:02.683   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (2ms) [Parameters=[@__isNav_Value_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE [a].[IsNav] = @__isNav_Value_0 
+2017-10-26 16:53:02.695   Information   Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor   Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]]. 
+2017-10-26 16:53:02.744   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 98.5079ms 
+2017-10-26 16:53:02.758   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 108.3109ms 200 application/json; charset=utf-8 
+2017-10-26 16:53:13.627   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/styles/metroStyle/img/line_conn.png   
+2017-10-26 16:53:13.636   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 8.2484ms 304 image/png 
+roStyle/img/line_conn.png was not modified 
+2017-10-26 16:53:13.638   Information   Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware   The file /lib/ztree.3.5.26/styles/metroStyle/img/metro.png was not modified 
+2017-10-26 16:53:13.639   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 6.0485ms 304 image/png 
+2017-10-26 16:53:13.642   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/lib/ztree.3.5.26/styles/metroStyle/img/metro.png   
+2017-10-26 16:53:16.293   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:53:16.294   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 POST http://localhost:27644/Menu application/x-www-form-urlencoded; charset=UTF-8 359 
+2017-10-26 16:53:16.295   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:53:16.296   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:53:16.307   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (, b180015e-792d-4656-9b5a-dedaadd7a2d2, 1) - ModelState is Valid 
+2017-10-26 16:53:16.328   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (4ms) [Parameters=[@__parentID_0='?', @__p_1='?', @__p_2='?'], CommandType='Text', CommandTimeout='30']
+SELECT [t].[ID], [t].[ApplicationName], [t].[ActionName], [t].[ApplicationID], [t].[PyCode], [t].[Code], [t].[ControllerName], [t].[CreateDate], [t].[Description], [t].[IconCss], [t].[IsNav], [t].[Name], [t].[ShowIndex], [t].[ParentID], [t].[ParentMenuName]
+FROM (
+    SELECT [a].[ID], [a.ApplicationID_Model].[Name] AS [ApplicationName], [a].[ActionName], [a].[ApplicationID], [a].[PyCode], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ShowIndex], [a].[ParentID], CASE
+        WHEN [a].[ParentID] = '00000000-0000-0000-0000-000000000000'
+        THEN N'--根目录--' ELSE (
+            SELECT TOP(1) [a0].[Name]
+            FROM [Menu] AS [a0]
+            WHERE [a0].[ID] = [a].[ParentID]
+        )
+    END AS [ParentMenuName], ROW_NUMBER() OVER(ORDER BY [a].[ShowIndex]) AS [__RowNumber__]
+    FROM [Menu] AS [a]
+    INNER JOIN [Application] AS [a.ApplicationID_Model] ON [a].[ApplicationID] = [a.ApplicationID_Model].[ID]
+    WHERE [a].[ParentID] = @__parentID_0
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2)) 
+2017-10-26 16:53:16.337   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 42.1482ms 200 text/html; charset=utf-8 
+ler.Index (AdminSite) in 35.0538ms 
+2017-10-26 16:53:16.339   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.PartialViewResultExecutor   Executing PartialViewResult, running view at path /Views/Menu/AjaxMenuTable.cshtml. 
+2017-10-26 16:53:19.519   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+thenticated. 
+ed; charset=UTF-8 368 
+2017-10-26 16:53:19.520   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:53:19.525   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.PartialViewResultExecutor   Executing PartialViewResult, running view at path /Views/Menu/AjaxMenuTable.cshtml. 
+2017-10-26 16:53:19.526   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__parentID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [a]
+INNER JOIN [Application] AS [a.ApplicationID_Model] ON [a].[ApplicationID] = [a.ApplicationID_Model].[ID]
+WHERE [a].[ParentID] = @__parentID_0 
+2017-10-26 16:53:19.528   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 4.9815ms 
+2017-10-26 16:53:19.532   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (, 1c1e3c35-d6bc-40e7-9e95-a313ebd9bf0a, 1) - ModelState is Valid 
+2017-10-26 16:53:19.533   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__parentID_0='?', @__p_1='?', @__p_2='?'], CommandType='Text', CommandTimeout='30']
+SELECT [t].[ID], [t].[ApplicationName], [t].[ActionName], [t].[ApplicationID], [t].[PyCode], [t].[Code], [t].[ControllerName], [t].[CreateDate], [t].[Description], [t].[IconCss], [t].[IsNav], [t].[Name], [t].[ShowIndex], [t].[ParentID], [t].[ParentMenuName]
+FROM (
+    SELECT [a].[ID], [a.ApplicationID_Model].[Name] AS [ApplicationName], [a].[ActionName], [a].[ApplicationID], [a].[PyCode], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ShowIndex], [a].[ParentID], CASE
+        WHEN [a].[ParentID] = '00000000-0000-0000-0000-000000000000'
+        THEN N'--根目录--' ELSE (
+            SELECT TOP(1) [a0].[Name]
+            FROM [Menu] AS [a0]
+            WHERE [a0].[ID] = [a].[ParentID]
+        )
+    END AS [ParentMenuName], ROW_NUMBER() OVER(ORDER BY [a].[ShowIndex]) AS [__RowNumber__]
+    FROM [Menu] AS [a]
+    INNER JOIN [Application] AS [a.ApplicationID_Model] ON [a].[ApplicationID] = [a.ApplicationID_Model].[ID]
+    WHERE [a].[ParentID] = @__parentID_0
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2)) 
+2017-10-26 16:53:24.155   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Menu/Create   
+lly authenticated. 
+2017-10-26 16:53:24.164   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.MenuController.Create (AdminSite) with arguments ((null)) - ModelState is Valid 
+2017-10-26 16:53:24.305   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Menu/Create.cshtml. 
+2017-10-26 16:53:24.723   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+2017-10-26 16:53:24.735   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'CREATE'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'MENU'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:53:24.743   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:53:24.760   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:53:24.760   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.MenuController.Create (AdminSite) in 593.2584ms 
+2017-10-26 16:53:24.856   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 9.2622ms 200 application/json; charset=utf-8 
+n application/x-www-form-urlencoded; charset=UTF-8 50 
+2017-10-26 16:53:24.856   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+8.3129ms 
+2017-10-26 16:53:24.857   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (00000000-0000-0000-0000-000000000001, True) - ModelState is Valid 
+2017-10-26 16:53:24.860   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:53:24.861   Information   Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor   Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]]. 
+.[Name]
+FROM [Menu] AS [a]
+WHERE ([a].[ApplicationID] = @__applicationId_0) AND ([a].[IsNav] = @__isNav_Value_1) 
+2017-10-26 16:54:01.515   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 POST http://localhost:27644/Menu/Create application/x-www-form-urlencoded 555 
+2017-10-26 16:54:01.530   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+thenticated. 
+2017-10-26 16:54:01.557   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.MenuController.Create (AdminSite) with arguments (ViewModels.AdminWeb.Nav.MenuViewModel) - ModelState is Valid 
+2017-10-26 16:54:01.650   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.MenuController.Create (AdminSite) in 118.2724ms 
+2017-10-26 16:54:01.651   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (2ms) [Parameters=[@p0='?', @p1='?' (Size = 4000), @p2='?', @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?', @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?', @p10='?' (Size = 4000), @p11='?', @p12='?' (Size = 4000), @p13='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Menu] ([ID], [ActionName], [ApplicationID], [AreaName], [Code], [ControllerName], [CreateDate], [Description], [IconCss], [IsNav], [Name], [ParentID], [PyCode], [ShowIndex])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13); 
+2017-10-26 16:54:01.659   Information   Microsoft.AspNetCore.Mvc.RedirectToActionResult   Executing RedirectResult, redirecting to /Menu. 
+2017-10-26 16:54:01.665   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (5ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [t].[ID], [t].[ApplicationName], [t].[ActionName], [t].[ApplicationID], [t].[PyCode], [t].[Code], [t].[ControllerName], [t].[CreateDate], [t].[Description], [t].[IconCss], [t].[IsNav], [t].[Name], [t].[ShowIndex], [t].[ParentID], [t].[ParentMenuName]
+FROM (
+    SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+        WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+        THEN N'--根目录--' ELSE (
+            SELECT TOP(1) [a].[Name]
+            FROM [Menu] AS [a]
+            WHERE [a].[ID] = [n].[ParentID]
+        )
+    END AS [ParentMenuName], ROW_NUMBER() OVER(ORDER BY [n].[ShowIndex]) AS [__RowNumber__]
+    FROM [Menu] AS [n]
+    INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_0) AND ([t].[__RowNumber__] <= (@__p_0 + @__p_1)) 
+2017-10-26 16:54:01.665   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:54:01.669   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID] 
+2017-10-26 16:54:01.676   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid 
+2017-10-26 16:54:01.681   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (4ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:54:01.684   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'INDEX'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'MENU'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:54:01.685   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 25.0179ms 200 text/html; charset=utf-8 
+ CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:54:01.687   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Menu   
+2017-10-26 16:54:01.690   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+2017-10-26 16:54:01.776   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+ation/x-www-form-urlencoded; charset=UTF-8 10 
+2017-10-26 16:54:01.798   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 17.7445ms 200 application/json; charset=utf-8 
+ller.QueryJson (AdminSite) with arguments (, True) - ModelState is Valid 
+2017-10-26 16:54:01.799   Information   Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor   Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]]. 
+2017-10-26 16:54:01.798   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[@__isNav_Value_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE [a].[IsNav] = @__isNav_Value_0 
+2017-10-26 16:54:01.800   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 16.9548ms 
+2017-10-26 16:54:06.407   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 POST http://localhost:27644/Menu application/x-www-form-urlencoded; charset=UTF-8 359 
+2017-10-26 16:54:06.421   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 9.2138ms 
+Table.cshtml. 
+2017-10-26 16:54:06.434   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (, b180015e-792d-4656-9b5a-dedaadd7a2d2, 1) - ModelState is Valid 
+cationID_Model] ON [a].[ApplicationID] = [a.ApplicationID_Model].[ID]
+WHERE [a].[ParentID] = @__parentID_0 
+2017-10-26 16:54:06.434   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (4ms) [Parameters=[@__parentID_0='?', @__p_1='?', @__p_2='?'], CommandType='Text', CommandTimeout='30']
+SELECT [t].[ID], [t].[ApplicationName], [t].[ActionName], [t].[ApplicationID], [t].[PyCode], [t].[Code], [t].[ControllerName], [t].[CreateDate], [t].[Description], [t].[IconCss], [t].[IsNav], [t].[Name], [t].[ShowIndex], [t].[ParentID], [t].[ParentMenuName]
+FROM (
+    SELECT [a].[ID], [a.ApplicationID_Model].[Name] AS [ApplicationName], [a].[ActionName], [a].[ApplicationID], [a].[PyCode], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ShowIndex], [a].[ParentID], CASE
+        WHEN [a].[ParentID] = '00000000-0000-0000-0000-000000000000'
+        THEN N'--根目录--' ELSE (
+            SELECT TOP(1) [a0].[Name]
+            FROM [Menu] AS [a0]
+            WHERE [a0].[ID] = [a].[ParentID]
+        )
+    END AS [ParentMenuName], ROW_NUMBER() OVER(ORDER BY [a].[ShowIndex]) AS [__RowNumber__]
+    FROM [Menu] AS [a]
+    INNER JOIN [Application] AS [a.ApplicationID_Model] ON [a].[ApplicationID] = [a.ApplicationID_Model].[ID]
+    WHERE [a].[ParentID] = @__parentID_0
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2)) 
+2017-10-26 16:54:06.436   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:54:06.439   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:54:06.442   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:54:09.306   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+escription], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'CREATE'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'MENU'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:54:09.312   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+eate (AdminSite) with arguments ((null)) - ModelState is Valid 
+2017-10-26 16:54:09.312   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:54:09.316   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Menu/Create   
+2017-10-26 16:54:09.328   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 16.8573ms 200 text/html; charset=utf-8 
+2017-10-26 16:54:09.331   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[@__currentMenu_ParentID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE [a].[ID] = @__currentMenu_ParentID_0 
+2017-10-26 16:54:09.333   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:54:09.334   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.MenuController.Create (AdminSite) in 15.6665ms 
+2017-10-26 16:54:09.334   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:54:09.336   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+2017-10-26 16:54:09.426   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:54:09.428   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+ite) with arguments (00000000-0000-0000-0000-000000000001, True) - ModelState is Valid 
+2017-10-26 16:54:09.430   Information   Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor   Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]]. 
+2017-10-26 16:54:09.431   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[@__applicationId_0='?', @__isNav_Value_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE ([a].[ApplicationID] = @__applicationId_0) AND ([a].[IsNav] = @__isNav_Value_1) 
+2017-10-26 16:54:09.433   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 3.1453ms 
+2017-10-26 16:54:30.281   Information   Microsoft.AspNetCore.Mvc.RedirectToActionResult   Executing RedirectResult, redirecting to /Menu. 
+er: 超级管理员. 
+2017-10-26 16:54:30.282   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 POST http://localhost:27644/Menu/Create application/x-www-form-urlencoded 573 
+2017-10-26 16:54:30.284   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 7.1371ms 302  
+AdminSite.Controllers.MenuController.Create (AdminSite) with arguments (ViewModels.AdminWeb.Nav.MenuViewModel) - ModelState is Valid 
+2017-10-26 16:54:30.285   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@p0='?', @p1='?' (Size = 4000), @p2='?', @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?', @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?', @p10='?' (Size = 4000), @p11='?', @p12='?' (Size = 4000), @p13='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Menu] ([ID], [ActionName], [ApplicationID], [AreaName], [Code], [ControllerName], [CreateDate], [Description], [IconCss], [IsNav], [Name], [ParentID], [PyCode], [ShowIndex])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13); 
+2017-10-26 16:54:30.286   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.MenuController.Create (AdminSite) in 5.9103ms 
+2017-10-26 16:54:30.290   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:54:30.293   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Menu/Index.cshtml. 
+TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'INDEX'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'MENU'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:54:30.294   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Menu] AS [n]
+INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID] 
+2017-10-26 16:54:30.296   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [t].[ID], [t].[ApplicationName], [t].[ActionName], [t].[ApplicationID], [t].[PyCode], [t].[Code], [t].[ControllerName], [t].[CreateDate], [t].[Description], [t].[IconCss], [t].[IsNav], [t].[Name], [t].[ShowIndex], [t].[ParentID], [t].[ParentMenuName]
+FROM (
+    SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+        WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+        THEN N'--根目录--' ELSE (
+            SELECT TOP(1) [a].[Name]
+            FROM [Menu] AS [a]
+            WHERE [a].[ID] = [n].[ParentID]
+        )
+    END AS [ParentMenuName], ROW_NUMBER() OVER(ORDER BY [n].[ShowIndex]) AS [__RowNumber__]
+    FROM [Menu] AS [n]
+    INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_0) AND ([t].[__RowNumber__] <= (@__p_0 + @__p_1)) 
+2017-10-26 16:54:30.297   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.MenuController.Index (AdminSite) with arguments (1) - ModelState is Valid 
+2017-10-26 16:54:30.298   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:54:30.302   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+thenticated. 
+2017-10-26 16:54:30.309   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 18.7673ms 200 text/html; charset=utf-8 
+ CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:54:30.315   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+eateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:54:30.451   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.MenuController.QueryJson (AdminSite) in 1.6828ms 
+2017-10-26 16:54:30.453   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 2.6145ms 200 application/json; charset=utf-8 
+2017-10-26 16:54:30.454   Information   Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor   Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]]. 
+2017-10-26 16:54:30.465   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (, True) - ModelState is Valid 
+], [a].[Name]
+FROM [Menu] AS [a]
+WHERE [a].[IsNav] = @__isNav_Value_0 
+2017-10-26 16:54:30.467   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:54:30.471   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:54:30.471   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 10 
+2017-10-26 16:54:32.073   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.MenuController.Create (AdminSite) with arguments ((null)) - ModelState is Valid 
+ription], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+escription], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'CREATE'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'MENU'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:54:32.076   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__currentMenu_ParentID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE [a].[ID] = @__currentMenu_ParentID_0 
+2017-10-26 16:54:32.079   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:54:32.080   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Menu/Create   
+2017-10-26 16:54:32.081   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Menu/Create.cshtml. 
+2017-10-26 16:54:32.083   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:54:32.089   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 12.4159ms 200 text/html; charset=utf-8 
+ CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+2017-10-26 16:54:32.089   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:54:32.166   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+eryJson (AdminSite) with arguments (00000000-0000-0000-0000-000000000001, True) - ModelState is Valid 
+2017-10-26 16:54:32.170   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__applicationId_0='?', @__isNav_Value_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ParentID] AS [pId], [a].[Name]
+FROM [Menu] AS [a]
+WHERE ([a].[ApplicationID] = @__applicationId_0) AND ([a].[IsNav] = @__isNav_Value_1) 
+2017-10-26 16:54:32.170   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 50 
+2017-10-26 16:54:32.182   Information   Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor   Executing JsonResult, writing value System.Collections.Generic.List`1[<>f__AnonymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]]. 
+2017-10-26 16:55:01.532   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.MenuController.Create (AdminSite) in 6.2496ms 
+2017-10-26 16:55:01.535   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+eate (AdminSite) with arguments (ViewModels.AdminWeb.Nav.MenuViewModel) - ModelState is Valid 
+2017-10-26 16:55:01.539   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 POST http://localhost:27644/Menu/Create application/x-www-form-urlencoded 578 
+2017-10-26 16:55:01.540   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:55:01.543   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 7.6355ms 302  
+ing to /Menu. 
+2017-10-26 16:55:01.544   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (2ms) [Parameters=[@p0='?', @p1='?' (Size = 4000), @p2='?', @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?', @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?', @p10='?' (Size = 4000), @p11='?', @p12='?' (Size = 4000), @p13='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Menu] ([ID], [ActionName], [ApplicationID], [AreaName], [Code], [ControllerName], [CreateDate], [Description], [IconCss], [IsNav], [Name], [ParentID], [PyCode], [ShowIndex])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13); 
+2017-10-26 16:55:01.549   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+2017-10-26 16:55:01.557   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (3ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [t].[ID], [t].[ApplicationName], [t].[ActionName], [t].[ApplicationID], [t].[PyCode], [t].[Code], [t].[ControllerName], [t].[CreateDate], [t].[Description], [t].[IconCss], [t].[IsNav], [t].[Name], [t].[ShowIndex], [t].[ParentID], [t].[ParentMenuName]
+FROM (
+    SELECT [n].[ID], [n.ApplicationID_Model].[Name] AS [ApplicationName], [n].[ActionName], [n].[ApplicationID], [n].[PyCode], [n].[Code], [n].[ControllerName], [n].[CreateDate], [n].[Description], [n].[IconCss], [n].[IsNav], [n].[Name], [n].[ShowIndex], [n].[ParentID], CASE
+        WHEN [n].[ParentID] = '00000000-0000-0000-0000-000000000000'
+        THEN N'--根目录--' ELSE (
+            SELECT TOP(1) [a].2017-10-26 16:55:01.561   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+dex]) AS [__RowNumber__]
+    FROM [Menu] AS [n]
+    INNER JOIN [Application] AS [n.ApplicationID_Model] ON [n].[ApplicationID] = [n.ApplicationID_Model].[ID]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_0) AND ([t].[__RowNumber__] <= (@__p_0 + @__p_1)) 
+2017-10-26 16:55:01.562   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 23.7212ms 200 text/html; charset=utf-8 
+2017-10-26 16:55:01.569   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:55:01.569   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Menu   
+2017-10-26 16:55:01.571   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.MenuController.Index (AdminSite) in 22.5233ms 
+2017-10-26 16:55:01.575   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:55:01.736   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:55:01.737   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 4.0629ms 200 application/json; charset=utf-8 
+eryJson (AdminSite) in 3.0584ms 
+nymousType1`4[System.Guid,System.Guid,System.String,System.Boolean]]. 
+2017-10-26 16:55:01.739   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:55:01.740   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.MenuController.QueryJson (AdminSite) with arguments (, True) - ModelState is Valid 
+], [a].[Name]
+FROM [Menu] AS [a]
+WHERE [a].[IsNav] = @__isNav_Value_0 
+2017-10-26 16:55:01.743   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 POST http://localhost:27644/Menu/QueryJson application/x-www-form-urlencoded; charset=UTF-8 10 
+2017-10-26 16:55:04.391   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.ClientController.Index (AdminSite) with arguments (1) - ModelState is Valid 
+oft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:55:04.399   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[ID], [b].[AppKey], [b].[AppSecrets], [b].[Avaiable], [b].[CreateDate], [b].[IsAllowApi], [b].[IsAllowPay], [b].[Name], [b].[PyCode], [b].[Remark], [b].[UpdateDate]
+FROM [Client] AS [b] 
+2017-10-26 16:55:04.430   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[ID], [b].[AppKey], [b].[AppSecrets], [b].[Avaiable], [b].[CreateDate], [b].[IsAllowApi], [b].[IsAllowPay], [b].[Name], [b].[PyCode], [b].[Remark], [b].[UpdateDate]
+FROM [Client] AS [b] 
+2017-10-26 16:55:04.556   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Client/Index.cshtml. 
+2017-10-26 16:55:04.752   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.ClientController.Index (AdminSite) in 355.8316ms 
+2017-10-26 16:55:04.753   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:55:04.764   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+2017-10-26 16:55:04.766   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:55:04.769   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'INDEX'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'CLIENT'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:55:05.874   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Client/Create   
+y authenticated. 
+2017-10-26 16:55:05.883   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.ClientController.Create (AdminSite) with arguments ((null)) - ModelState is Valid 
+2017-10-26 16:55:06.030   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Client/Create.cshtml. 
+2017-10-26 16:55:06.252   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'CREATE'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'CLIENT'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:55:06.256   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__currentMenu_ParentID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE [a].[ID] = @__currentMenu_ParentID_0 
+2017-10-26 16:55:06.259   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:55:06.263   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.ClientController.Create (AdminSite) in 365.2504ms 
+2017-10-26 16:55:06.264   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+2017-10-26 16:55:50.568   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+-urlencoded 435 
+2017-10-26 16:55:50.571   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+2017-10-26 16:55:50.588   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.Cli2017-10-26 16:55:50.589   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.ClientController.Create (AdminSite) in 13.5131ms 
+ [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:55:50.593   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+ion], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+ [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'CREATE'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'CLIENT'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:55:50.595   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Client/Create.cshtml. 
+2017-10-26 16:56:37.552   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Client/Index.cshtml. 
+2017-10-26 16:56:37.554   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[ID], [b].[AppKey], [b].[AppSecrets], [b].[Avaiable], [b].[CreateDate], [b].[IsAllowApi], [b].[IsAllowPay], [b].[Name], [b].[PyCode], [b].[Remark], [b].[UpdateDate]
+FROM [Client] AS [b] 
+2017-10-26 16:56:37.557   Information   Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler   AuthenticationScheme: Cookies was successfully authenticated. 
+2017-10-26 16:56:37.562   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request starting HTTP/1.1 GET http://localhost:27644/Client/Index   
+2017-10-26 16:56:37.563   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executing action method AdminSite.Controllers.ClientController.Index (AdminSite) with arguments (1) - ModelState is Valid 
+2017-10-26 16:56:37.576   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.ClientController.Index (AdminSite) in 18.6319ms 
+].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'INDEX'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'CLIENT'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:56:37.576   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[Code], [a].[CreateDate], [a].[Description], [a].[Name], [a].[PyCode], [a].[ShowIndex]
+FROM [Application] AS [a] 
+ion], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+2017-10-26 16:56:37.577   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 20.1961ms 200 text/html; charset=utf-8 
+2017-10-26 16:56:37.582   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (3ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:56:39.025   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+Modify (AdminSite) with arguments (00000000-0000-0000-0000-000000000001) - ModelState is Valid 
+2017-10-26 16:56:39.042   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[ID], [a].[AppKey], [a].[AppSecrets], [a].[Avaiable], [a].[CreateDate], [a].[IsAllowApi], [a].[IsAllowPay], [a].[Name], [a].[PyCode], [a].[Remark], [a].[UpdateDate]
+FROM [Client] AS [a]
+WHERE [a].[ID] = @__id_0 
+2017-10-26 16:56:39.187   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.ClientController.Modify (AdminSite) in 152.7325ms 
+2017-10-26 16:56:39.226   Error   Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware   An unhandled exception has occurred while executing the request 
+2017-10-26 16:56:39.232   Information   Microsoft.AspNetCore.Hosting.Internal.WebHost   Request finished in 211.6894ms 500 text/html; charset=utf-8 
+2017-10-26 16:56:40.940   Information   Microsoft.AspNetCore.Authorization.DefaultAuthorizationService   Authorization was successful for user: 超级管理员. 
+Index (AdminSite) with arguments (1) - ModelState is Valid 
+2017-10-26 16:56:40.954   Information   Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker   Executed action AdminSite.Controllers.ClientController.Index (AdminSite) in 7.5883ms 
+, [b].[AppKey], [b].[AppSecrets], [b].[Avaiable], [b].[CreateDate], [b].[IsAllowApi], [b].[IsAllowPay], [b].[Name], [b].[PyCode], [b].[Remark], [b].[UpdateDate]
+FROM [Client] AS [b] 
+2017-10-26 16:56:40.955   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[@__userID_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT DISTINCT [m].[ID], [m].[ActionName], [m].[ApplicationID], [m].[AreaName], [m].[Code], [m].[ControllerName], [m].[CreateDate], [m].[Description], [m].[IconCss], [m].[IsNav], [m].[Name], [m].[ParentID], [m].[PyCode], [m].[ShowIndex]
+FROM [Menu] AS [m]
+INNER JOIN [UserRoleJurisdiction] AS [urj] ON [m].[ID] = [urj].[MenuID]
+INNER JOIN [UserRole] AS [ur] ON [urj].[RoleID] = [ur].[RoleID]
+WHERE [ur].[UserID] = @__userID_0 
+2017-10-26 16:56:40.963   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ID], [a].[ActionName], [a].[ApplicationID], [a].[AreaName], [a].[Code], [a].[ControllerName], [a].[CreateDate], [a].[Description], [a].[IconCss], [a].[IsNav], [a].[Name], [a].[ParentID], [a].[PyCode], [a].[ShowIndex]
+FROM [Menu] AS [a] 
+ [a]
+WHERE ((1 & CASE
+    WHEN UPPER([a].[ActionName]) = N'INDEX'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) & CASE
+    WHEN UPPER([a].[ControllerName]) = N'CLIENT'
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END) = 1 
+2017-10-26 16:56:40.964   Information   Microsoft.EntityFrameworkCore.Database.Command   Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[ID], [b].[AppKey], [b].[AppSecrets], [b].[Avaiable], [b].[CreateDate], [b].[IsAllowApi], [b].[IsAllowPay], [b].[Name], [b].[PyCode], [b].[Remark], [b].[UpdateDate]
+FROM [Client] AS [b] 
+2017-10-26 16:56:40.964   Information   Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor   Executing ViewResult, running view at path /Views/Client/Index.cshtml. 

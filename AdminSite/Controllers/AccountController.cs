@@ -6,9 +6,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Controllers;
 using ViewModels.AdminWeb.Login;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace AdminSite.Controllers
 {
@@ -18,17 +16,15 @@ namespace AdminSite.Controllers
         private readonly IUserRoleService _userRoleService;
         private readonly IUserService _userService;
 
-        public AccountController(IUserService userService, IUserRoleService userRoleService,IServiceProvider serviceProvider)
+        public AccountController(IUserService userService, IUserRoleService userRoleService,
+            IServiceProvider serviceProvider)
         {
-            //IControllerActivator
-           var a =  serviceProvider.GetService<IControllerActivator>();
             _userService = userService;
             _userRoleService = userRoleService;
         }
 
         public IActionResult Login(string ReturnUrl)
         {
-          
             var mode = new LoginViewModel {ReturnUrl = ReturnUrl};
             return View(mode);
         }

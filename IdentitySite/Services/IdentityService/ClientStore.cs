@@ -4,6 +4,7 @@ using IdentityServer4;
 using IdentityServer4.Models;
 using IdentityServer4.Stores;
 using IService.PermissionSystem;
+using ViewModels.IdentitySite;
 
 namespace IdentitySite.Services.IdentityService
 {
@@ -45,21 +46,7 @@ namespace IdentitySite.Services.IdentityService
         public async Task<Client> FindClientByIdAsync(string clientId)
         {
             var client = await _clientService.SingleAsync(a => a.AppKey == clientId);
-            return new Client
-            {
-                ClientId = client.AppKey,
-                ClientSecrets = new[] {new Secret(client.AppSecrets)},
-                ClientName = client.Name,
-                AllowedGrantTypes = GrantTypes.ImplicitAndClientCredentials,
-                RedirectUris = {client.ClientUri},
-                ClientUri =  client.ClientUri,
-                PostLogoutRedirectUris = {client.LogOutUri},
-                RequireConsent =  false,
-                AllowedScopes = new List<string>
-                {
-                    IdentityServerConstants.StandardScopes.OpenId
-                }
-            };
+            return client.ToIdentityClient();
         }
     }
 }

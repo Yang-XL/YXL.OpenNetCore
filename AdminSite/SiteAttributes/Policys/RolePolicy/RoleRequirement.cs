@@ -25,6 +25,10 @@ namespace AdminSite.SiteAttributes.Policys.UserPolicy
         public async Task<bool> IsAuth(IEnumerable<Guid> roleList, string areaName, string controllerName,
             string actionName)
         {
+            if (roleList.Any(a=>a.Equals(new Guid("24F8290B-029D-4976-B171-D4DA02925CCB"))))
+            {
+                return true;
+            }
             if (string.IsNullOrEmpty(areaName) && controllerName.ToUpper() == "HOME" && actionName.ToUpper() == "INDEX")
                 return true;
             var query = SpecificationBuilder.Create<Menu>();

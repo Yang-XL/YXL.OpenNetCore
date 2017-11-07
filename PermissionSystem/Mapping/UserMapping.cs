@@ -3,9 +3,9 @@
 //====================================================================
 // YXL @ CopyRight 2006-2010
 // 文件： UserEntity.cs
-// 项目名称： 
-// 创建时间：2017-08-28
-// 负责人：YXL
+// 项目名称：Asp.Net Core 2.0 mvc 开源权限系统Demo 
+// 创建时间：2017-10-25
+// 负责人：杨小乐
 // ===================================================================
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PermissionSystem.Models;
@@ -39,12 +39,9 @@ namespace PermissionSystem.Mapping
             table.Property(a=>a.CreateDate).IsRequired();
             table.Property(a=>a.UpdateDate).IsRequired();
        
-              table.HasMany(a => a.UserClaim_UserIDList).WithOne(a => a.UserID_Model);       
-              table.HasMany(a => a.UserLoginProvider_UserIDList).WithOne(a => a.UserID_Model);       
-              table.HasMany(a => a.UserRole_UserIDList).WithOne(a => a.UserID_Model);       
-              table.HasMany(a => a.UserToken_UserIDList).WithOne(a => a.UserID_Model);       
+            table.HasMany(a => a.UserRole_UserIDList).WithOne(a => a.UserID_Model);       
         
-              table.HasOne(a => a.OrganizationID_Model).WithMany(a => a.User_OrganizationIDList);
+            table.HasOne(a => a.OrganizationID_Model).WithMany(a => a.User_OrganizationIDList);
         
         
       

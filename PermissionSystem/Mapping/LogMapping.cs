@@ -4,7 +4,7 @@
 // YXL @ CopyRight 2006-2010
 // 文件： LogEntity.cs
 // 项目名称：Asp.Net Core 2.0 mvc 开源权限系统Demo 
-// 创建时间：2017-09-15
+// 创建时间：2017-10-25
 // 负责人：杨小乐
 // ===================================================================
 using Microsoft.EntityFrameworkCore.Metadata.Builders;

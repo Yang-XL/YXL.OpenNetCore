@@ -3,9 +3,9 @@
 //====================================================================
 // YXL @ CopyRight 2006-2010
 // 文件： ApiEntity.cs
-// 项目名称： 
-// 创建时间：2017-08-28
-// 负责人：YXL
+// 项目名称：Asp.Net Core 2.0 mvc 开源权限系统Demo 
+// 创建时间：2017-10-25
+// 负责人：杨小乐
 // ===================================================================
 using System;
 using System.Collections.Generic;
@@ -69,7 +69,7 @@ namespace PermissionSystem.Models
 		public DateTime UpdateDate { get; set; }
 
 		///<summary>
-		///资源类型IdentityService4区分为普通Api资源和身份资源
+		///IdentityService4区分为普通Api资源和身份资源, identity 为0 api 为1
 		///</summary>
 		public int ApiType { get; set; }
     

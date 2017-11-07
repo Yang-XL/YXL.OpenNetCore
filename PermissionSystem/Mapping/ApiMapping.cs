@@ -3,9 +3,9 @@
 //====================================================================
 // YXL @ CopyRight 2006-2010
 // 文件： ApiEntity.cs
-// 项目名称： 
-// 创建时间：2017-08-28
-// 负责人：YXL
+// 项目名称：Asp.Net Core 2.0 mvc 开源权限系统Demo 
+// 创建时间：2017-10-25
+// 负责人：杨小乐
 // ===================================================================
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PermissionSystem.Models;
@@ -32,9 +32,9 @@ namespace PermissionSystem.Mapping
             table.Property(a=>a.UpdateDate).IsRequired();
             table.Property(a=>a.ApiType);
        
-              table.HasMany(a => a.ClientApi_ApiIDList).WithOne(a => a.ApiID_Model);       
+            table.HasMany(a => a.ClientApi_ApiIDList).WithOne(a => a.ApiID_Model);       
         
-              table.HasOne(a => a.ApplicationID_Model).WithMany(a => a.Api_ApplicationIDList);
+            table.HasOne(a => a.ApplicationID_Model).WithMany(a => a.Api_ApplicationIDList);
         
         
       

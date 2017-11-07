@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using ViewModels.AdminWeb;
 using ViewModels.IdentitySite;
+using ViewModels.OpenPlatform;
 
 namespace ViewModels.Mapper
 {
@@ -22,6 +23,7 @@ namespace ViewModels.Mapper
             {
                 cfg.AddProfile<AdminWebProfile>();
                 cfg.AddProfile<IdentityProfile>();
+                cfg.AddProfile<OpenPlatformProfile>();
             });
             return Mapper = MapperConfiguration.CreateMapper();
         }

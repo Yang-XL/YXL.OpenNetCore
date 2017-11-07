@@ -1,0 +1,43 @@
+﻿
+@using Sakura.AspNetCore
+@using ViewModels.Common
+@model IPagedList<PermissionSystem.Models.Client>
+<table class="table table-bordered table-striped table-condensed flip-content">
+    <thead class="flip-content">
+    <tr>
+        <th>商户名</th>
+        <th> appkey </th>
+        <th> 创建时间 </th>
+        <th> 最后修改时间 </th>
+        <th> 是否启用 </th>
+        <th> 备注 </th>
+        <th> 操作 </th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (Model != null && Model.Any())
+    {
+        foreach (var client in Model)
+        {
+            <tr>
+                <td> @client.Name </td>
+                <td> @client.AppKey </td>
+                <td> @client.CreateDate </td>
+                <td> @client.UpdateDate</td>
+                <td> @client.Avaiable</td>
+                <td> @client.Remark</td>
+                <td>
+                    <a  asp-action="Details" asp-route-id="@client.ID"  class="btn btn-link btn-sm font-green-turquoise" title="详细信息">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                    <a  asp-action="Modify" asp-route-id="@client.ID"   class="btn btn-link btn-sm font-green-turquoise" title="修改应用程序信息">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>
+@Html.Partial("Pagger", new PaggerModel(Model, new AjaxOptions("tableResult", "seachForm")))
+

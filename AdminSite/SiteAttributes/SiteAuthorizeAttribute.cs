@@ -8,7 +8,6 @@ namespace AdminSite.SiteAttributes
 {
     public class SiteAuthorizeAttribute : AuthorizeAttribute
     {
-        
 
         public SiteAuthorizeAttribute(string policy) : base(policy)
         {

@@ -8,7 +8,7 @@ using ViewModels.IdentitySite.Consent;
 namespace XL.Identity.WebSite.Controllers
 {
     /// <summary>
-    ///     This controller processes the consent UI
+    ///    用户同意界面
     /// </summary>
     [SecurityHeaders]
     public class ConsentController : Controller
@@ -23,7 +23,7 @@ namespace XL.Identity.WebSite.Controllers
         }
 
         /// <summary>
-        ///     Shows the consent screen
+        ///    显示同意
         /// </summary>
         /// <param name="returnUrl"></param>
         /// <returns></returns>

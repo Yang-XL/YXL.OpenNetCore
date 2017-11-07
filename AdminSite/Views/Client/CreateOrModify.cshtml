@@ -1,0 +1,81 @@
+﻿@using ViewModels.OpenPlatform.ClientModel
+@model  ClientViewModel
+@Html.AntiForgeryToken()
+@Html.HiddenFor(a => a.ID)
+<div class="form-body">
+    <h4 class="form-section">基本信息</h4>
+    @Html.ValidationMessageDangerFor(a => a.CustomizeErrorMessage)
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(a => a.Name, new {@class = "control-label"})
+                @Html.TextBoxFor(a => a.Name, new { @class = "form-control"})
+                <span class="help-block"> @Html.ValidationMessageFor(a => a.Name)</span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(a => a.Avaiable, new {@class = "control-label"})
+                <div class="checkbox">
+                    @Html.CheckBoxFor(a => a.Avaiable, new {@class = "form-control"})
+                </div>
+                <span class="help-block"> @Html.ValidationMessageFor(a => a.Avaiable)</span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(a => a.AppKey, new {@class = "control-label"})
+                @Html.TextBoxFor(a => a.AppKey, new { @class = "form-control"})
+                <span class="help-block"> @Html.ValidationMessageFor(a => a.AppKey)</span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(a => a.AppSecrets, new {@class = "control-label"})
+                <div class=" input-group">
+                    @Html.TextBoxFor(a => a.AppSecrets, new {@class = "form-control"})
+                    <span class="input-group-btn">
+                        <button type="button" class="btn green">随机生成</button>
+                    </span>
+                </div>
+                <span class="help-block"> @Html.ValidationMessageFor(a => a.AppSecrets)</span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(a => a.IsAllowApi, new { @class = "control-label" })
+                <div class="checkbox">
+                    @Html.CheckBoxFor(a => a.IsAllowApi, new { @class = "form-control" })
+                </div>
+                <span class="help-block"> @Html.ValidationMessageFor(a => a.IsAllowApi)</span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(a => a.IsAllowPay, new { @class = "control-label" })
+                <div class="checkbox">
+                    @Html.CheckBoxFor(a => a.IsAllowPay, new { @class = "form-control" })
+                </div>
+                <span class="help-block"> @Html.ValidationMessageFor(a => a.IsAllowPay)</span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                @Html.LabelFor(a => a.Remark, new {@class = "control-label"})
+                @Html.TextAreaFor(a => a.Remark,5,10, new { @class = "form-control"})
+                <span class="help-block"> @Html.ValidationMessageFor(a => a.Remark)</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="form-actions right">
+    <button class="btn green btn-lg" type="submit">
+        <i class="fa fa-save"></i> 保存
+    </button>
+</div>

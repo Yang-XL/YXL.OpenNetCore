@@ -19,6 +19,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.AspNetCore.Mvc.Razor.TagHelpers;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
 using Microsoft.AspNetCore.Routing;
@@ -68,6 +69,7 @@ namespace AdminSite
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IApplicationService, ApplicationService>();
             services.AddScoped<IClientService, ClientService>();
+            services.AddScoped<IClientUrisService, ClientUrisService>();
             services.AddScoped<IClientApiService, ClientApiService>();
             services.AddScoped<IApiService, ApiService>();
             services.AddScoped<IMenuService, MenuService>();
@@ -122,10 +124,17 @@ namespace AdminSite
 
             #region mvc
 
-            
+            ////查找视图
+            //services.Configure<RazorViewEngineOptions>(options =>
+            //{
+            //    options.AreaViewLocationFormats.Clear();
+            //    options.AreaViewLocationFormats.Add("/Plugins/{2}/Views/{1}/{0}.cshtml");
+            //    options.AreaViewLocationFormats.Add("/Plugins/{2}/Views/Shared/{0}.cshtml");
+            //    options.AreaViewLocationFormats.Add("/Views/Shared/{0}.cshtml");
+            //});
 
             var builder = services.AddMvc();
-
+            
 
             //加载插件的DLL
             builder.ConfigureApplicationPartManager(opstions =>
@@ -133,7 +142,6 @@ namespace AdminSite
                 var _hostingEnvironment = services.BuildServiceProvider().GetService<IHostingEnvironment>();
 
                 var pluginsDirectory = new DirectoryInfo(Path.Combine(_hostingEnvironment.ContentRootPath, "Plugins"));
-
                 foreach (var pluginDirectory in pluginsDirectory.GetDirectories())
                 {
                     foreach (var file in pluginDirectory.GetFiles())
@@ -150,9 +158,7 @@ namespace AdminSite
             
 
             #endregion
-
-
-            services.AddSingleton<IPluginFinder, PluginFinder>();
+            
         }
 
     

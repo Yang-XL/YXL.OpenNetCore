@@ -2,13 +2,11 @@
 using System.Threading.Tasks;
 using IdentityModel;
 using IdentityServer4;
-using IdentityServer4.Extensions;
 using IdentityServer4.Services;
 using IdentityServer4.Stores;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
-using  Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using ViewModels.IdentitySite.Account;
 using ViewModels.IdentitySite.Options;
 
@@ -22,7 +20,7 @@ namespace IdentitySite.Services
         private readonly AccountOption _options;
         private readonly IAuthenticationSchemeProvider _schemeProvider;
 
-        public AccountService(IHttpContextAccessor httpContextAccessor, 
+        public AccountService(IHttpContextAccessor httpContextAccessor,
             IIdentityServerInteractionService interaction,
             IClientStore clientStore, IOptions<AccountOption> options, IAuthenticationSchemeProvider schemeProvider)
         {
@@ -49,7 +47,7 @@ namespace IdentitySite.Services
             //var schemes = _httpContextAccessor.HttpContext.Authentication.GetAuthenticationSchemes();
             var schemes = await _schemeProvider.GetRequestHandlerSchemesAsync();
             //非Windows登录的provider
-               var providers = (from n in schemes
+            var providers = (from n in schemes
                 where !string.IsNullOrEmpty(n.DisplayName) &&
                       !_options.WindowsAuthenticationSchemes.Contains(n.Name)
                 select new ExternalProvider
@@ -108,7 +106,7 @@ namespace IdentitySite.Services
         {
             var vm = new LogoutViewModel {LogoutId = logoutId, ShowLogoutPrompt = _options.ShowLogoutPrompt};
 
-            var user = await _httpContextAccessor.HttpContext.GetIdentityServerUserAsync();
+            var user = _httpContextAccessor.HttpContext.User;
             if (user == null || user.Identity.IsAuthenticated == false)
             {
                 // if the user is not authenticated, then just show logged out page
@@ -143,7 +141,7 @@ namespace IdentitySite.Services
                 LogoutId = logoutId
             };
 
-            var user = await _httpContextAccessor.HttpContext.GetIdentityServerUserAsync();
+            var user = _httpContextAccessor.HttpContext.User;
             if (user != null)
             {
                 var idp = user.FindFirst(JwtClaimTypes.IdentityProvider)?.Value;
